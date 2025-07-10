@@ -19,7 +19,7 @@ export default function Apply() {
       return;
     }
     if (!form.commitment) {
-      setError('You must commit to the $833.33 founder contribution to join.');
+      setError('You must commit to the $1,000 founder contribution to join.');
       return;
     }
     setSubmitted(true);
@@ -43,7 +43,7 @@ export default function Apply() {
                 🎉 Welcome to the Legendary 100!
               </div>
               <p className="text-gray-700 mb-4">
-                Thank you for your application and commitment to the $833.33 founder contribution.
+                Thank you for your application and commitment to the $1,000 founder contribution.
               </p>
               <p className="text-sm text-gray-600">
                 We'll be in touch within 24 hours with next steps for your investment and onboarding.
@@ -90,7 +90,7 @@ export default function Apply() {
               <div className="bg-indigo-50 rounded-lg p-4 border border-indigo-200">
                 <h3 className="font-semibold text-indigo-800 mb-2">Founder Investment</h3>
                 <div className="text-center mb-3">
-                  <div className="text-2xl font-bold text-indigo-600">$833.33</div>
+                  <div className="text-2xl font-bold text-indigo-600">$1,000</div>
                   <div className="text-sm text-gray-600">One-time founder contribution</div>
                 </div>
                 <ul className="text-sm text-gray-700 space-y-1 mb-3">
@@ -109,7 +109,7 @@ export default function Apply() {
                     className="mr-2"
                   />
                   <label htmlFor="commitment" className="text-sm text-gray-700">
-                    I commit to the $833.33 founder contribution and understand this is an investment in the venture studio
+                    I commit to the $1,000 founder contribution and understand this is an investment in the venture studio
                   </label>
                 </div>
               </div>

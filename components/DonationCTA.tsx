@@ -15,7 +15,7 @@ export default function DonationCTA() {
             Join the <span className="text-yellow-300">Legendary</span> 100
           </h2>
           <p className="text-xl md:text-2xl mb-8 opacity-90">
-            Each founder contributes $833.33 to bootstrap Vision Infinity Ventures and achieve our $1M first-year operations goal
+            Each founder contributes $1,000 to bootstrap Vision Infinity Ventures and achieve our $1M first-year operations goal
           </p>
         </div>
 
@@ -23,12 +23,12 @@ export default function DonationCTA() {
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <div className="text-3xl mb-4">💎</div>
             <h3 className="font-bold text-lg mb-2">Founder Investment</h3>
-            <p className="text-sm opacity-90">$833.33 per founder to join the legendary 100</p>
+            <p className="text-sm opacity-90">$1,000 per founder to join the legendary 100</p>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <div className="text-3xl mb-4">🎯</div>
             <h3 className="font-bold text-lg mb-2">Goal Achievement</h3>
-            <p className="text-sm opacity-90">100 founders × $833.33 = $1,000,000 target</p>
+            <p className="text-sm opacity-90">100 founders × $1,000 = $1,000,000 target</p>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <div className="text-3xl mb-4">⚡</div>
@@ -38,7 +38,7 @@ export default function DonationCTA() {
         </div>
 
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-8">
-          <div className="text-6xl font-black text-yellow-300 mb-4">$833.33</div>
+          <div className="text-6xl font-black text-yellow-300 mb-4">$1,000</div>
           <p className="text-lg mb-6">Per Founder Contribution</p>
           <div className="w-full bg-white/20 rounded-full h-4 mb-4">
             <div className="bg-yellow-300 h-4 rounded-full" style={{ width: '25%' }}></div>
@@ -51,13 +51,13 @@ export default function DonationCTA() {
             Join as Founder
           </button>
           <p className="text-sm opacity-80">
-            Your $833.33 investment directly supports the venture studio and gives you access to all resources
+            Your $1,000 investment directly supports the venture studio and gives you access to all resources
           </p>
         </div>
 
         <div className="mt-12 grid md:grid-cols-2 gap-6 text-left">
           <div className="bg-white/5 rounded-xl p-6">
-            <h4 className="font-semibold mb-3">What Your $833.33 Supports:</h4>
+            <h4 className="font-semibold mb-3">What Your $1,000 Supports:</h4>
             <ul className="space-y-2 text-sm">
               <li>• Founder workspace and infrastructure</li>
               <li>• Mentorship and expert guidance</li>
@@ -88,7 +88,7 @@ export default function DonationCTA() {
               <div>Founders</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-yellow-300">$833.33</div>
+              <div className="text-2xl font-bold text-yellow-300">$1,000</div>
               <div>Per Founder</div>
             </div>
             <div className="text-center">
