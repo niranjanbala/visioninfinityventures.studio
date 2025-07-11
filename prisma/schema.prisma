@@ -1,0 +1,216 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  name          String
+  password      String
+  phone         String?
+  company       String?
+  role          UserRole  @default(FOUNDER)
+  persona       Persona?
+  stage         Stage?
+  industry      Industry?
+  location      Location?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  
+  // Progress tracking
+  progress      Progress[]
+  checklists    Checklist[]
+  milestones    Milestone[]
+  
+  // Financial tracking
+  contributions Contribution[]
+  
+  // Session management
+  sessions      Session[]
+  accounts      Account[]
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model Progress {
+  id          String   @id @default(cuid())
+  userId      String
+  phase       Int      // 1-12 phases
+  status      ProgressStatus @default(NOT_STARTED)
+  startDate   DateTime?
+  completedDate DateTime?
+  notes       String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  checklists  Checklist[]
+}
+
+model Checklist {
+  id          String   @id @default(cuid())
+  progressId  String
+  userId      String
+  category    ChecklistCategory
+  title       String
+  description String?
+  status      ChecklistStatus @default(PENDING)
+  dueDate     DateTime?
+  completedDate DateTime?
+  priority    Priority @default(MEDIUM)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  progress    Progress @relation(fields: [progressId], references: [id], onDelete: Cascade)
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Milestone {
+  id          String   @id @default(cuid())
+  userId      String
+  title       String
+  description String?
+  targetDate  DateTime?
+  achievedDate DateTime?
+  status      MilestoneStatus @default(PENDING)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Contribution {
+  id          String   @id @default(cuid())
+  userId      String
+  amount      Float
+  currency    String   @default("INR")
+  paymentMethod String?
+  status      PaymentStatus @default(PENDING)
+  paymentDate DateTime?
+  notes       String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+// Enums
+enum UserRole {
+  ADMIN
+  FOUNDER
+  MENTOR
+  STAFF
+}
+
+enum Persona {
+  DIY_FOUNDER
+  FRACTIONAL_SUPPORT
+}
+
+enum Stage {
+  IDEA_STAGE
+  MVP_STAGE
+  GROWTH_STAGE
+}
+
+enum Industry {
+  EDUCATION
+  REAL_ESTATE
+  SAAS_B2B
+}
+
+enum Location {
+  HSR_ONLY
+  WHITEFIELD_ONLY
+  BANGALORE_ONLY
+  KARNATAKA_WIDE
+  PAN_INDIA
+  SOUTH_INDIA
+}
+
+enum ProgressStatus {
+  NOT_STARTED
+  IN_PROGRESS
+  COMPLETED
+  BLOCKED
+}
+
+enum ChecklistStatus {
+  PENDING
+  IN_PROGRESS
+  COMPLETED
+  SKIPPED
+}
+
+enum MilestoneStatus {
+  PENDING
+  ACHIEVED
+  OVERDUE
+}
+
+enum PaymentStatus {
+  PENDING
+  PAID
+  FAILED
+  REFUNDED
+}
+
+enum ChecklistCategory {
+  LEGAL
+  BANKING
+  FINANCE
+  OPERATIONS
+  MARKETING
+  RECRUITMENT
+  DOCUMENTATION
+  TECHNOLOGY
+  PERSONAL
+}
+
+enum Priority {
+  LOW
+  MEDIUM
+  HIGH
+  CRITICAL
+}

@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { useSession, signOut } from 'next-auth/react';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { data: session } = useSession();
 
   return (
     <nav className="bg-white shadow-sm border-b sticky top-0 z-50">
@@ -28,6 +30,28 @@ export default function Navigation() {
             <a href="#contact" className="text-gray-600 hover:text-indigo-600 transition-colors">
               Contact
             </a>
+            {session ? (
+              <>
+                <Link href="/dashboard" className="text-gray-600 hover:text-indigo-600 transition-colors">
+                  Dashboard
+                </Link>
+                <button
+                  onClick={() => signOut()}
+                  className="text-gray-600 hover:text-indigo-600 transition-colors"
+                >
+                  Sign Out
+                </button>
+              </>
+            ) : (
+              <>
+                <Link href="/auth/signin" className="text-gray-600 hover:text-indigo-600 transition-colors">
+                  Sign In
+                </Link>
+                <Link href="/auth/register" className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors">
+                  Register
+                </Link>
+              </>
+            )}
           </div>
 
           {/* Mobile menu button */}
@@ -63,6 +87,28 @@ export default function Navigation() {
               <a href="#contact" className="block px-3 py-2 text-gray-600 hover:text-indigo-600 transition-colors">
                 Contact
               </a>
+              {session ? (
+                <>
+                  <Link href="/dashboard" className="block px-3 py-2 text-gray-600 hover:text-indigo-600 transition-colors">
+                    Dashboard
+                  </Link>
+                  <button
+                    onClick={() => signOut()}
+                    className="block w-full text-left px-3 py-2 text-gray-600 hover:text-indigo-600 transition-colors"
+                  >
+                    Sign Out
+                  </button>
+                </>
+              ) : (
+                <>
+                  <Link href="/auth/signin" className="block px-3 py-2 text-gray-600 hover:text-indigo-600 transition-colors">
+                    Sign In
+                  </Link>
+                  <Link href="/auth/register" className="block px-3 py-2 text-gray-600 hover:text-indigo-600 transition-colors">
+                    Register
+                  </Link>
+                </>
+              )}
             </div>
           </div>
         )}
