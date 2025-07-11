@@ -9,18 +9,18 @@ export default function Hero() {
           <div className="text-center lg:text-left">
             <div className="inline-flex items-center px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-medium mb-6">
               <span className="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>
-              HSR Layout SaaS B2B Venture Studio
+              Venture Studio for Founders
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-gray-900">
-              Build Your <span className="text-indigo-600">SaaS B2B</span> Product
+              Build Your <span className="text-indigo-600">Startup</span> Right
             </h1>
             <p className="text-lg md:text-xl mb-8 text-gray-600 leading-relaxed">
-              Join our exclusive venture studio for idea-stage DIY entrepreneurs in HSR Layout. 
-              Get a complete 12-phase roadmap, AI tools, and funding guidance.
+              Join our venture studio and get a personalized roadmap designed for your specific journey. 
+              From idea to scale, we provide the tools, guidance, and support you need.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a href="/venture-studio" className="inline-flex items-center px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105">
-                Join Venture Studio
+              <a href="#persona-selection" className="inline-flex items-center px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105">
+                Choose My Path
                 <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -68,8 +68,8 @@ export default function Hero() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>
                   </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">HSR Network</h3>
-                  <p className="text-sm text-gray-600">Local startup ecosystem</p>
+                  <h3 className="font-semibold text-gray-900 mb-2">Network Access</h3>
+                  <p className="text-sm text-gray-600">Startup ecosystem connections</p>
                 </div>
               </div>
             </div>

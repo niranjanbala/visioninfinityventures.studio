@@ -1,11 +1,86 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const VentureStudioLanding = () => {
+  const router = useRouter();
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [personaData, setPersonaData] = useState({
+    founderType: '',
+    stage: '',
+    industry: '',
+    location: ''
+  });
+
+  useEffect(() => {
+    if (router.isReady) {
+      const { founderType, stage, industry, location } = router.query;
+      setPersonaData({
+        founderType: founderType as string || '',
+        stage: stage as string || '',
+        industry: industry as string || '',
+        location: location as string || ''
+      });
+    }
+  }, [router.isReady, router.query]);
+
+  const getDisplayName = (type: string) => {
+    const founderMap = {
+      'diy-founder': 'DIY Founder',
+      'fractional-support': 'Fractional Support'
+    };
+    return founderMap[type as keyof typeof founderMap] || type;
+  };
+
+  const getStageName = (stage: string) => {
+    const stageMap = {
+      'idea-stage': 'Idea Stage',
+      'mvp-stage': 'MVP Stage'
+    };
+    return stageMap[stage as keyof typeof stageMap] || stage;
+  };
+
+  const getIndustryName = (industry: string) => {
+    const industryMap = {
+      'education': 'Education',
+      'saas-b2b': 'SaaS B2B',
+      'real-estate': 'Real Estate'
+    };
+    return industryMap[industry as keyof typeof industryMap] || industry;
+  };
+
+  const getLocationName = (location: string) => {
+    const locationMap = {
+      'hsr-only': 'HSR Layout, Bangalore',
+      'whitefield-only': 'Whitefield, Bangalore',
+      'bangalore-only': 'Bangalore',
+      'karnataka-wide': 'Karnataka',
+      'pan-india': 'Pan India',
+      'south-india': 'South India'
+    };
+    return locationMap[location as keyof typeof locationMap] || location;
+  };
+
+  const getPricing = () => {
+    // Different pricing based on persona
+    if (personaData.founderType === 'diy-founder' && personaData.location === 'hsr-only') {
+      return '₹25,000';
+    }
+    if (personaData.founderType === 'fractional-support') {
+      return '₹50,000';
+    }
+    return '₹35,000';
+  };
+
+  const getPersonaTitle = () => {
+    if (!personaData.founderType || !personaData.stage || !personaData.industry || !personaData.location) {
+      return 'Venture Studio';
+    }
+    return `${getDisplayName(personaData.founderType)} - ${getStageName(personaData.stage)} - ${getIndustryName(personaData.industry)} - ${getLocationName(personaData.location)}`;
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -21,14 +96,16 @@ const VentureStudioLanding = () => {
     setTimeout(() => setIsSubmitted(false), 3000);
   };
 
+  const isPersonaComplete = personaData.founderType && personaData.stage && personaData.industry && personaData.location;
+
   return (
     <>
       <Head>
-        <title>Vision Infinity Ventures - HSR SaaS B2B Venture Studio</title>
-        <meta name="description" content="Join our exclusive venture studio for idea-stage DIY entrepreneurs building SaaS B2B products in HSR Layout. Get 12-phase roadmap, AI tools, funding guidance, and personal expense planning." />
-        <meta name="keywords" content="venture studio, SaaS B2B, HSR Layout, startup, entrepreneur, funding, AI tools" />
-        <meta property="og:title" content="Vision Infinity Ventures - HSR SaaS B2B Venture Studio" />
-        <meta property="og:description" content="Exclusive venture studio for idea-stage DIY entrepreneurs in HSR Layout building SaaS B2B products." />
+        <title>{getPersonaTitle()} - Vision Infinity Ventures</title>
+        <meta name="description" content={`Personalized venture studio program for ${getPersonaTitle()}. Get your customized 12-phase roadmap, AI tools, and funding guidance.`} />
+        <meta name="keywords" content="venture studio, startup, entrepreneur, funding, AI tools" />
+        <meta property="og:title" content={`${getPersonaTitle()} - Vision Infinity Ventures`} />
+        <meta property="og:description" content={`Personalized venture studio program for ${getPersonaTitle()}.`} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://visioninfinityventures.studio/venture-studio" />
       </Head>
@@ -39,13 +116,13 @@ const VentureStudioLanding = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center py-4">
               <div className="flex items-center">
-                <div className="text-2xl font-bold text-indigo-600">Vision Infinity Ventures</div>
+                <Link href="/" className="text-2xl font-bold text-indigo-600">Vision Infinity Ventures</Link>
               </div>
               <div className="hidden md:flex space-x-8">
+                <Link href="/" className="text-gray-600 hover:text-indigo-600 transition-colors">Home</Link>
                 <a href="#how-it-works" className="text-gray-600 hover:text-indigo-600 transition-colors">How It Works</a>
                 <a href="#what-you-get" className="text-gray-600 hover:text-indigo-600 transition-colors">What You Get</a>
                 <a href="#pricing" className="text-gray-600 hover:text-indigo-600 transition-colors">Pricing</a>
-                <a href="#contact" className="text-gray-600 hover:text-indigo-600 transition-colors">Contact</a>
               </div>
             </div>
           </div>
@@ -55,36 +132,56 @@ const VentureStudioLanding = () => {
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
-              <div className="mb-8">
-                <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800">
-                  🚀 Limited to 10 Founders in HSR Layout
-                </span>
-              </div>
+              {isPersonaComplete && (
+                <div className="mb-8">
+                  <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-green-100 text-green-800">
+                    ✅ Personalized for {getPersonaTitle()}
+                  </span>
+                </div>
+              )}
               
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                Build Your SaaS B2B Product
-                <span className="block text-indigo-600">in 12 Phases</span>
+                {isPersonaComplete ? (
+                  <>
+                    Your {getIndustryName(personaData.industry)} Journey
+                    <span className="block text-indigo-600">Starts Here</span>
+                  </>
+                ) : (
+                  <>
+                    Build Your Startup
+                    <span className="block text-indigo-600">in 12 Phases</span>
+                  </>
+                )}
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto">
-                Join our exclusive venture studio for idea-stage DIY entrepreneurs in HSR Layout. 
-                Get a complete roadmap, AI-powered tools, funding guidance, and personal expense planning.
+                {isPersonaComplete ? (
+                  `Join our venture studio designed specifically for ${getDisplayName(personaData.founderType)}s at ${getStageName(personaData.stage)} building ${getIndustryName(personaData.industry)} products in ${getLocationName(personaData.location)}.`
+                ) : (
+                  "Join our venture studio and get a complete roadmap, AI-powered tools, funding guidance, and personalized support."
+                )}
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-                <div className="flex items-center text-gray-600">
-                  <span className="text-2xl mr-2">📍</span>
-                  <span>HSR Layout, Bangalore</span>
+              {isPersonaComplete && (
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                  <div className="flex items-center text-gray-600">
+                    <span className="text-2xl mr-2">👤</span>
+                    <span>{getDisplayName(personaData.founderType)}</span>
+                  </div>
+                  <div className="flex items-center text-gray-600">
+                    <span className="text-2xl mr-2">🎯</span>
+                    <span>{getStageName(personaData.stage)}</span>
+                  </div>
+                  <div className="flex items-center text-gray-600">
+                    <span className="text-2xl mr-2">💼</span>
+                    <span>{getIndustryName(personaData.industry)}</span>
+                  </div>
+                  <div className="flex items-center text-gray-600">
+                    <span className="text-2xl mr-2">📍</span>
+                    <span>{getLocationName(personaData.location)}</span>
+                  </div>
                 </div>
-                <div className="flex items-center text-gray-600">
-                  <span className="text-2xl mr-2">💼</span>
-                  <span>SaaS B2B Focus</span>
-                </div>
-                <div className="flex items-center text-gray-600">
-                  <span className="text-2xl mr-2">🎯</span>
-                  <span>Idea Stage Only</span>
-                </div>
-              </div>
+              )}
 
               {/* CTA Form */}
               <div className="max-w-md mx-auto">
@@ -115,7 +212,7 @@ const VentureStudioLanding = () => {
                 )}
                 
                 <p className="text-sm text-gray-500 mt-4">
-                  Join 10 exclusive founders. No spam, just actionable insights.
+                  Get your personalized roadmap and resources.
                 </p>
               </div>
             </div>
@@ -127,18 +224,18 @@ const VentureStudioLanding = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-8">
-                Why HSR Layout Founders Choose Us
+                Why Founders Choose Our Venture Studio
               </h2>
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="text-center">
                   <div className="text-4xl mb-4">🎯</div>
-                  <h3 className="text-xl font-semibold mb-2">Hyper-Local Focus</h3>
-                  <p className="text-gray-600">Tailored specifically for HSR Layout's unique startup ecosystem and market dynamics.</p>
+                  <h3 className="text-xl font-semibold mb-2">Personalized Approach</h3>
+                  <p className="text-gray-600">Tailored specifically for your founder type, stage, industry, and location.</p>
                 </div>
                 <div className="text-center">
                   <div className="text-4xl mb-4">🤖</div>
                   <h3 className="text-xl font-semibold mb-2">AI-Powered Tools</h3>
-                  <p className="text-gray-600">Access to cutting-edge AI tools and checklists designed for SaaS B2B success.</p>
+                  <p className="text-gray-600">Access to cutting-edge AI tools and checklists designed for your success.</p>
                 </div>
                 <div className="text-center">
                   <div className="text-4xl mb-4">💰</div>
@@ -158,7 +255,7 @@ const VentureStudioLanding = () => {
                 What You Get in Our Venture Studio
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Everything you need to go from idea to profitable SaaS B2B product in HSR Layout
+                Everything you need to go from idea to profitable product
               </p>
             </div>
 
@@ -170,7 +267,7 @@ const VentureStudioLanding = () => {
                   <li>• Step-by-step execution plan</li>
                   <li>• Phase-specific milestones</li>
                   <li>• Flexible timeline (founder-paced)</li>
-                  <li>• HSR Layout market insights</li>
+                  <li>• Market insights for your industry</li>
                 </ul>
               </div>
 
@@ -220,9 +317,9 @@ const VentureStudioLanding = () => {
 
               <div className="bg-white p-8 rounded-xl shadow-sm border">
                 <div className="text-3xl mb-4">🎯</div>
-                <h3 className="text-xl font-semibold mb-4">HSR Layout Network</h3>
+                <h3 className="text-xl font-semibold mb-4">Local Network</h3>
                 <ul className="text-gray-600 space-y-2">
-                  <li>• Local startup community</li>
+                  <li>• Startup community access</li>
                   <li>• Co-working space connections</li>
                   <li>• Investor introductions</li>
                   <li>• Mentor network access</li>
@@ -251,7 +348,7 @@ const VentureStudioLanding = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-4">Join & Get Matched</h3>
                 <p className="text-gray-600">
-                  Sign up and get matched with your personalized 12-phase journey based on your SaaS B2B idea and HSR Layout context.
+                  Sign up and get matched with your personalized 12-phase journey based on your profile and context.
                 </p>
               </div>
 
@@ -271,7 +368,7 @@ const VentureStudioLanding = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-4">Execute & Scale</h3>
                 <p className="text-gray-600">
-                  Follow your roadmap, track progress, and scale your SaaS B2B product with confidence and support.
+                  Follow your roadmap, track progress, and scale your product with confidence and support.
                 </p>
               </div>
             </div>
@@ -297,7 +394,7 @@ const VentureStudioLanding = () => {
                     Venture Studio Access
                   </h3>
                   <div className="text-5xl font-bold text-indigo-600 mb-2">
-                    ₹25,000
+                    {getPricing()}
                   </div>
                   <p className="text-gray-600 mb-8">One-time payment</p>
                   
@@ -328,7 +425,7 @@ const VentureStudioLanding = () => {
                     </div>
                     <div className="flex items-center">
                       <span className="text-green-500 mr-3">✓</span>
-                      <span>HSR Layout network access</span>
+                      <span>Local network access</span>
                     </div>
                     <div className="flex items-center">
                       <span className="text-green-500 mr-3">✓</span>
@@ -341,7 +438,7 @@ const VentureStudioLanding = () => {
                   </button>
                   
                   <p className="text-sm text-gray-500 mt-4">
-                    Limited to 10 founders. Join before spots fill up.
+                    Personalized for your specific journey.
                   </p>
                 </div>
               </div>
@@ -360,23 +457,16 @@ const VentureStudioLanding = () => {
 
             <div className="space-y-8">
               <div>
-                <h3 className="text-xl font-semibold mb-3">Why only 10 founders?</h3>
+                <h3 className="text-xl font-semibold mb-3">How is this personalized for me?</h3>
                 <p className="text-gray-600">
-                  We believe in quality over quantity. By limiting to 10 founders, we can provide personalized attention and ensure each founder gets the maximum value from our venture studio program.
+                  Based on your founder type, stage, industry, and location, we customize the roadmap, tools, and resources to match your specific needs and market context.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold mb-3">Is this only for HSR Layout?</h3>
+                <h3 className="text-xl font-semibold mb-3">What if I'm not sure about my stage?</h3>
                 <p className="text-gray-600">
-                  Yes, this specific program is tailored for founders in HSR Layout, Bangalore. Our resources, network, and market insights are specifically designed for this ecosystem.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold mb-3">What if I'm not at idea stage?</h3>
-                <p className="text-gray-600">
-                  This program is specifically designed for idea-stage founders. If you're already at MVP stage or beyond, we have different programs that might be more suitable for your needs.
+                  Choose the stage that best describes where you are now. You can always upgrade or adjust as you progress through the program.
                 </p>
               </div>
 
@@ -401,10 +491,10 @@ const VentureStudioLanding = () => {
         <section className="py-20 bg-indigo-600">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Build Your SaaS B2B Product?
+              Ready to Start Your Journey?
             </h2>
             <p className="text-xl text-indigo-100 mb-8">
-              Join 10 exclusive founders in HSR Layout and get everything you need to succeed.
+              Join our venture studio and get everything you need to succeed.
             </p>
             
             <form onSubmit={handleSubmit} className="max-w-md mx-auto">
@@ -428,7 +518,7 @@ const VentureStudioLanding = () => {
             </form>
             
             <p className="text-indigo-200 mt-4">
-              Only 10 spots available. Don't miss out.
+              Get your personalized roadmap today.
             </p>
           </div>
         </section>
@@ -440,7 +530,7 @@ const VentureStudioLanding = () => {
               <div>
                 <h3 className="text-xl font-bold mb-4">Vision Infinity Ventures</h3>
                 <p className="text-gray-400">
-                  Empowering founders to build successful SaaS B2B products in HSR Layout.
+                  Empowering founders to build successful products.
                 </p>
               </div>
               
@@ -465,7 +555,6 @@ const VentureStudioLanding = () => {
               <div>
                 <h4 className="font-semibold mb-4">Location</h4>
                 <p className="text-gray-400">
-                  HSR Layout<br />
                   Bangalore, Karnataka<br />
                   India
                 </p>
