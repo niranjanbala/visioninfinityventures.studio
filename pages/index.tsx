@@ -15,38 +15,103 @@ export default function Home() {
       <Head>
         <title>Vision Infinity Ventures | Legendary Venture Studio</title>
         <meta name="description" content="Legendary Venture Studio for Bangalore Founders" />
-        <meta name="theme-color" content="#6366f1" />
+        <meta name="theme-color" content="#2563eb" />
       </Head>
       <Hero />
       <Process />
       <Timeline />
       <Studios />
-      {/* New Founders Batch Section */}
-      <section className="py-20 bg-gradient-to-r from-yellow-400 via-pink-500 to-indigo-600 text-white text-center relative overflow-hidden">
-        <div className="absolute inset-0 opacity-20 pointer-events-none select-none">
-          <svg className="w-full h-full" viewBox="0 0 1440 320"><path fill="#fff" fillOpacity="0.3" d="M0,160L48,170.7C96,181,192,203,288,197.3C384,192,480,160,576,133.3C672,107,768,85,864,101.3C960,117,1056,171,1152,186.7C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-        </div>
-        <div className="max-w-2xl mx-auto px-4 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">Meet the First 100 Legendary Founders</h2>
-          <p className="mb-8 text-lg md:text-xl font-medium opacity-90">We're assembling our inaugural batch of 100 visionary founders from Bangalore. Be part of a legendary community, get exclusive access to resources, and shape the future with us.</p>
-          <Link href="/apply" className="inline-block px-10 py-4 bg-white text-pink-600 font-bold rounded-full shadow-xl transition text-lg hover:bg-pink-100 border-2 border-white">
-            Join the First 100
-          </Link>
+      
+      {/* First 100 Founders Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Join the First 100 Legendary Founders
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              We're assembling our inaugural batch of 100 visionary founders from Bangalore. 
+              Be part of a legendary community and shape the future with us.
+            </p>
+          </div>
+          
+          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 md:p-12">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  Exclusive Benefits
+                </h3>
+                <ul className="space-y-3">
+                  <li className="flex items-center text-gray-700">
+                    <svg className="w-5 h-5 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Direct access to our expert network
+                  </li>
+                  <li className="flex items-center text-gray-700">
+                    <svg className="w-5 h-5 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Priority funding opportunities
+                  </li>
+                  <li className="flex items-center text-gray-700">
+                    <svg className="w-5 h-5 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Exclusive workshops and events
+                  </li>
+                  <li className="flex items-center text-gray-700">
+                    <svg className="w-5 h-5 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Lifetime membership benefits
+                  </li>
+                </ul>
+              </div>
+              <div className="text-center">
+                <div className="bg-white rounded-xl p-8 shadow-sm">
+                  <div className="text-4xl font-bold text-blue-600 mb-2">$1,000</div>
+                  <div className="text-gray-600 mb-4">per founder commitment</div>
+                  <Link href="/apply" className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105">
+                    Apply Now
+                    <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-      {/* End Founders Batch Section */}
+      
       <FoundersWall />
       <Testimonials />
       <DonationCTA />
-      <section className="py-20 bg-gradient-to-br from-indigo-600 to-purple-800 text-white text-center">
-        <div className="max-w-2xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Build Something Legendary?</h2>
-          <p className="mb-8 text-lg opacity-90">Join Vision Infinity Ventures and turn your vision into a legendary company. Only accepting applications from Bangalore.</p>
-          <Link href="/apply" className="inline-block px-8 py-4 bg-white text-indigo-700 font-bold rounded-full shadow-lg transition text-lg hover:bg-indigo-100">
-            Apply Now
-          </Link>
+      
+      {/* Final CTA Section */}
+      <section className="py-20 bg-gray-900 text-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Build Something Legendary?
+          </h2>
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join Vision Infinity Ventures and turn your vision into a legendary company. 
+            We're only accepting applications from exceptional founders in Bangalore.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/apply" className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105">
+              Apply Now
+              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+            <a href="#process" className="inline-flex items-center px-8 py-4 bg-gray-700 hover:bg-gray-600 text-white font-semibold rounded-lg transition-all duration-200">
+              Learn More
+            </a>
+          </div>
         </div>
       </section>
     </>
   );
-} 
+}
