@@ -24,6 +24,9 @@ export default function Navigation() {
             <Link href="/venture-studio" className="text-gray-600 hover:text-indigo-600 transition-colors">
               Venture Studio
             </Link>
+            <Link href="/stages" className="text-gray-600 hover:text-indigo-600 transition-colors">
+              All Content
+            </Link>
             <a href="#process" className="text-gray-600 hover:text-indigo-600 transition-colors">
               Process
             </a>
@@ -80,6 +83,9 @@ export default function Navigation() {
               </Link>
               <Link href="/venture-studio" className="block px-3 py-2 text-gray-600 hover:text-indigo-600 transition-colors">
                 Venture Studio
+              </Link>
+              <Link href="/stages" className="block px-3 py-2 text-gray-600 hover:text-indigo-600 transition-colors">
+                All Content
               </Link>
               <a href="#process" className="block px-3 py-2 text-gray-600 hover:text-indigo-600 transition-colors">
                 Process
