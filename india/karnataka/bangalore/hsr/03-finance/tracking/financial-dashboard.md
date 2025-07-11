@@ -39,9 +39,9 @@ A2: [Date] | B2: Legal | C2: Incorporation Fees | D2: ₹25,000 | E2: [Name] | F
 ### **Template: founder_contributions.csv**
 ```csv
 Founder_ID,Name,Email,Phone,Contribution_Amount,Payment_Date,Payment_Method,Status,Notes
-F001,John Doe,john@example.com,+91-98765-43210,83000,2024-01-15,Razorpay,Paid,First batch
-F002,Jane Smith,jane@example.com,+91-98765-43211,83000,2024-01-16,UPI,Paid,Referral
-F003,Bob Wilson,bob@example.com,+91-98765-43212,83000,2024-01-17,Bank Transfer,Pending,Follow up needed
+F001,John Doe,john@example.com,+91-98765-43210,83000,2025-01-15,Razorpay,Paid,First batch
+F002,Jane Smith,jane@example.com,+91-98765-43211,83000,2025-01-16,UPI,Paid,Referral
+F003,Bob Wilson,bob@example.com,+91-98765-43212,83000,2025-01-17,Bank Transfer,Pending,Follow up needed
 ```
 
 ### **Tracking Metrics:**
@@ -57,17 +57,17 @@ F003,Bob Wilson,bob@example.com,+91-98765-43212,83000,2024-01-17,Bank Transfer,P
 #### **Sheet 1: Account Summary**
 ```
 Account Name | Account Number | Bank | Balance | Last Updated
-Main Current | XXXX-XXXX-1234 | HDFC | ₹50,000 | 2024-01-20
-Founder Pool | XXXX-XXXX-5678 | HDFC | ₹8,30,000 | 2024-01-20
-Investment | XXXX-XXXX-9012 | HDFC | ₹4,15,00,000 | 2024-01-20
-Reserve | XXXX-XXXX-3456 | Kotak | ₹25,000 | 2024-01-20
+Main Current | XXXX-XXXX-1234 | HDFC | ₹50,000 | 2025-01-20
+Founder Pool | XXXX-XXXX-5678 | HDFC | ₹8,30,000 | 2025-01-20
+Investment | XXXX-XXXX-9012 | HDFC | ₹4,15,00,000 | 2025-01-20
+Reserve | XXXX-XXXX-3456 | Kotak | ₹25,000 | 2025-01-20
 ```
 
 #### **Sheet 2: Transaction Log**
 ```
 Date | Account | Description | Debit | Credit | Balance | Category | Reference
-2024-01-15 | Main Current | Founder Contribution | 0 | 83000 | 83000 | Founder | F001
-2024-01-16 | Main Current | Legal Fees | 25000 | 0 | 58000 | Legal | LF001
+2025-01-15 | Main Current | Founder Contribution | 0 | 83000 | 83000 | Founder | F001
+2025-01-16 | Main Current | Legal Fees | 25000 | 0 | 58000 | Legal | LF001
 ```
 
 ## 📈 **Investment Portfolio Tracking**
@@ -77,8 +77,8 @@ Date | Account | Description | Debit | Credit | Balance | Category | Reference
 #### **Sheet 1: Portfolio Overview**
 ```
 Company | Sector | Investment Date | Amount | Equity % | Current Value | ROI | Status
-Startup A | SaaS | 2024-02-01 | 500000 | 10% | 750000 | 50% | Active
-Startup B | Fintech | 2024-02-15 | 750000 | 15% | 600000 | -20% | Active
+Startup A | SaaS | 2025-02-01 | 500000 | 10% | 750000 | 50% | Active
+Startup B | Fintech | 2025-02-15 | 750000 | 15% | 600000 | -20% | Active
 ```
 
 #### **Sheet 2: Investment Criteria**
@@ -108,9 +108,9 @@ Technology | 100000 | 20000 | 80000 | 20%
 #### **Sheet 2: Expense Log**
 ```
 Date | Category | Description | Amount | Approved By | Receipt | Status
-2024-01-15 | Legal | Incorporation | 25000 | CEO | Yes | Paid
-2024-01-16 | Banking | Account Opening | 5000 | CFO | Yes | Paid
-2024-01-17 | Marketing | Website Design | 15000 | CMO | Yes | Pending
+2025-01-15 | Legal | Incorporation | 25000 | CEO | Yes | Paid
+2025-01-16 | Banking | Account Opening | 5000 | CFO | Yes | Paid
+2025-01-17 | Marketing | Website Design | 15000 | CMO | Yes | Pending
 ```
 
 ## 📊 **Monthly Financial Reports**

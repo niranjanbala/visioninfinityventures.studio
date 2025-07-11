@@ -122,5 +122,5 @@
 
 ---
 
-*Last Updated: January 2024*  
+*Last Updated: January 2025*  
 *Location: HSR Layout, Bangalore, Karnataka, India*

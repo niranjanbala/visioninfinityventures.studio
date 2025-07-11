@@ -4,7 +4,7 @@
 
 This document provides a comprehensive guide for the first month of Vision Infinity Ventures operations, covering legal setup, banking infrastructure, founder recruitment, and operational launch.
 
-**Timeline:** January 1-31, 2024  
+**Timeline:** January 1-31, 2025  
 **Goal:** Establish foundation for ₹8.3 Crore bootstrap funding and 100-founder community  
 **Location:** HSR Layout, Bangalore, Karnataka, India
 
