@@ -686,15 +686,15 @@ const StagesPage = () => {
   const getContentColor = (type: string) => {
     switch (type) {
       case 'journey':
-        return 'bg-blue-50 border-blue-200 text-blue-800';
+        return 'bg-blue-500/20 border-blue-400/30 text-blue-400';
       case 'checklist':
-        return 'bg-green-50 border-green-200 text-green-800';
+        return 'bg-green-500/20 border-green-400/30 text-green-400';
       case 'funding':
-        return 'bg-yellow-50 border-yellow-200 text-yellow-800';
+        return 'bg-yellow-500/20 border-yellow-400/30 text-yellow-400';
       case 'guide':
-        return 'bg-purple-50 border-purple-200 text-purple-800';
+        return 'bg-purple-500/20 border-purple-400/30 text-purple-400';
       default:
-        return 'bg-gray-50 border-gray-200 text-gray-800';
+        return 'bg-gray-500/20 border-gray-400/30 text-gray-400';
     }
   };
 
@@ -711,35 +711,38 @@ const StagesPage = () => {
       </Head>
       <Navigation />
       
-      <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-blue-50">
+      <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 text-white">
         {/* Header */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-white/5 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                All Content by Stage
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+                Democratizing
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
+                  Startup Knowledge
+                </span>
               </h1>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-200 max-w-3xl mx-auto">
                 Explore our comprehensive library of startup resources organized by founder persona, stage, industry, and geography. 
-                Find the perfect content for your startup journey.
+                Every piece of content is designed to eliminate barriers and democratize access to startup success.
               </p>
             </div>
           </div>
         </section>
 
         {/* Navigation Filters */}
-        <section className="py-8 bg-gray-50 border-b">
+        <section className="py-8 bg-white/10 backdrop-blur-sm border-b border-white/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-5 gap-4">
               {/* Persona Filter */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-gray-200 mb-2">
                   Founder Type
                 </label>
                 <select
                   value={selectedPersona}
                   onChange={(e) => setSelectedPersona(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                  className="w-full px-3 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 text-white"
                 >
                   {contentData.map((persona) => (
                     <option key={persona.name} value={persona.name.toLowerCase().replace(' ', '-')}>
@@ -751,13 +754,13 @@ const StagesPage = () => {
 
               {/* Stage Filter */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-gray-200 mb-2">
                   Stage
                 </label>
                 <select
                   value={selectedStage}
                   onChange={(e) => setSelectedStage(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                  className="w-full px-3 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 text-white"
                 >
                   {selectedPersonaData?.stages.map((stage) => (
                     <option key={stage.name} value={stage.name.toLowerCase().replace(' ', '-')}>
@@ -769,13 +772,13 @@ const StagesPage = () => {
 
               {/* Industry Filter */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-gray-200 mb-2">
                   Industry
                 </label>
                 <select
                   value={selectedIndustry}
                   onChange={(e) => setSelectedIndustry(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                  className="w-full px-3 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 text-white"
                 >
                   {selectedStageData?.industries.map((industry) => (
                     <option key={industry.name} value={industry.name.toLowerCase().replace(' ', '-')}>
@@ -787,13 +790,13 @@ const StagesPage = () => {
 
               {/* Delivery Medium Filter */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-gray-200 mb-2">
                   Delivery Medium
                 </label>
                 <select
                   value={selectedDeliveryMedium}
                   onChange={(e) => setSelectedDeliveryMedium(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                  className="w-full px-3 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 text-white"
                 >
                   <option value="offline">Offline (In-person)</option>
                   <option value="online">Online (Virtual)</option>
@@ -802,11 +805,11 @@ const StagesPage = () => {
 
               {/* Summary */}
               <div className="flex items-end">
-                <div className="w-full p-3 bg-indigo-50 rounded-lg">
-                  <p className="text-sm text-indigo-800 font-medium">
+                <div className="w-full p-3 bg-green-500/20 backdrop-blur-sm rounded-lg border border-green-400/30">
+                  <p className="text-sm text-green-400 font-medium">
                     {selectedPersonaData?.name} • {selectedStageData?.name} • {selectedIndustryData?.name} • {selectedDeliveryMedium === 'offline' ? 'Offline' : 'Online'}
                   </p>
-                  <p className="text-xs text-indigo-600">
+                  <p className="text-xs text-green-300">
                     {selectedIndustryData?.geographies.length} locations available
                   </p>
                 </div>
@@ -821,10 +824,10 @@ const StagesPage = () => {
             {selectedIndustryData ? (
               <div className="space-y-8">
                 {selectedIndustryData.geographies.map((geography) => (
-                  <div key={geography.name} className="bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div className="bg-gradient-to-r from-indigo-600 to-blue-600 px-6 py-4">
+                  <div key={geography.name} className="bg-white/10 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden border border-white/20">
+                    <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 px-6 py-4 border-b border-white/20">
                       <h2 className="text-xl font-bold text-white">{geography.name}</h2>
-                      <p className="text-indigo-100">{geography.description}</p>
+                      <p className="text-gray-300">{geography.description}</p>
                     </div>
                     
                     <div className="p-6">
@@ -832,21 +835,21 @@ const StagesPage = () => {
                         {geography.content.map((item) => (
                           <div
                             key={item.title}
-                            className={`p-4 rounded-lg border-2 ${getContentColor(item.type)} hover:shadow-md transition-all duration-200`}
+                            className={`p-4 rounded-lg border-2 ${getContentColor(item.type)} hover:shadow-lg transition-all duration-200 backdrop-blur-sm`}
                           >
                             <div className="flex items-start justify-between mb-3">
                               <span className="text-2xl">{getContentIcon(item.type)}</span>
                               {item.completed && (
-                                <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">
+                                <span className="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded-full border border-green-400/30">
                                   Complete
                                 </span>
                               )}
                             </div>
-                            <h3 className="font-semibold text-sm mb-2">{item.title}</h3>
-                            <p className="text-xs opacity-75 mb-3">{item.description}</p>
+                            <h3 className="font-semibold text-sm mb-2 text-white">{item.title}</h3>
+                            <p className="text-xs opacity-75 mb-3 text-gray-300">{item.description}</p>
                             <Link
                               href={item.path}
-                              className="inline-flex items-center text-xs font-medium hover:underline"
+                              className="inline-flex items-center text-xs font-medium hover:underline text-green-400"
                             >
                               View Content
                               <svg className="ml-1 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -863,34 +866,34 @@ const StagesPage = () => {
             ) : (
               <div className="text-center py-12">
                 <div className="text-6xl mb-4">📚</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">No Content Available</h3>
-                <p className="text-gray-600">Please select different filters to view available content.</p>
+                <h3 className="text-xl font-semibold text-white mb-2">No Content Available</h3>
+                <p className="text-gray-300">Please select different filters to view available content.</p>
               </div>
             )}
           </div>
         </section>
 
         {/* Summary Stats */}
-        <section className="py-12 bg-gray-50">
+        <section className="py-12 bg-white/5 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h2 className="text-2xl font-bold text-gray-900 mb-8">Content Library Summary</h2>
+              <h2 className="text-2xl font-bold text-white mb-8">Content Library Summary</h2>
               <div className="grid md:grid-cols-4 gap-6">
-                <div className="bg-white p-6 rounded-lg shadow">
-                  <div className="text-3xl font-bold text-indigo-600 mb-2">2</div>
-                  <div className="text-sm text-gray-600">Founder Personas</div>
+                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
+                  <div className="text-3xl font-bold text-green-400 mb-2">2</div>
+                  <div className="text-sm text-gray-300">Founder Personas</div>
                 </div>
-                <div className="bg-white p-6 rounded-lg shadow">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">2</div>
-                  <div className="text-sm text-gray-600">Stages</div>
+                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
+                  <div className="text-3xl font-bold text-blue-400 mb-2">2</div>
+                  <div className="text-sm text-gray-300">Stages</div>
                 </div>
-                <div className="bg-white p-6 rounded-lg shadow">
-                  <div className="text-3xl font-bold text-green-600 mb-2">2</div>
-                  <div className="text-sm text-gray-600">Industries</div>
+                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
+                  <div className="text-3xl font-bold text-purple-400 mb-2">2</div>
+                  <div className="text-sm text-gray-300">Industries</div>
                 </div>
-                <div className="bg-white p-6 rounded-lg shadow">
-                  <div className="text-3xl font-bold text-purple-600 mb-2">16</div>
-                  <div className="text-sm text-gray-600">Complete Guides</div>
+                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
+                  <div className="text-3xl font-bold text-yellow-400 mb-2">16</div>
+                  <div className="text-sm text-gray-300">Complete Guides</div>
                 </div>
               </div>
             </div>

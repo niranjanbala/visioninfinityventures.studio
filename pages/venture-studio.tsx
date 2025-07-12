@@ -115,19 +115,19 @@ const VentureStudioLanding = () => {
         <meta property="og:url" content="https://visioninfinityventures.studio/venture-studio" />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+      <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 text-white">
         {/* Navigation */}
-        <nav className="bg-white shadow-sm border-b">
+        <nav className="bg-white/10 backdrop-blur-sm border-b border-white/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center py-4">
               <div className="flex items-center">
-                <Link href="/" className="text-2xl font-bold text-indigo-600">Vision Infinity Ventures</Link>
+                <Link href="/" className="text-2xl font-bold text-white">Vision Infinity Ventures</Link>
               </div>
               <div className="hidden md:flex space-x-8">
-                <Link href="/" className="text-gray-600 hover:text-indigo-600 transition-colors">Home</Link>
-                <a href="#how-it-works" className="text-gray-600 hover:text-indigo-600 transition-colors">How It Works</a>
-                <a href="#what-you-get" className="text-gray-600 hover:text-indigo-600 transition-colors">What You Get</a>
-                <a href="#pricing" className="text-gray-600 hover:text-indigo-600 transition-colors">Pricing</a>
+                <Link href="/" className="text-gray-200 hover:text-white transition-colors">Home</Link>
+                <a href="#how-it-works" className="text-gray-200 hover:text-white transition-colors">How It Works</a>
+                <a href="#what-you-get" className="text-gray-200 hover:text-white transition-colors">What You Get</a>
+                <a href="#pricing" className="text-gray-200 hover:text-white transition-colors">Pricing</a>
               </div>
             </div>
           </div>
@@ -139,53 +139,53 @@ const VentureStudioLanding = () => {
             <div className="text-center">
               {isPersonaComplete && (
                 <div className="mb-8">
-                  <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-green-100 text-green-800">
+                  <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-green-500/20 text-green-400 border border-green-400/30">
                     ✅ Personalized for {getPersonaTitle()}
                   </span>
                 </div>
               )}
               
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 {isPersonaComplete ? (
                   <>
                     Your {getIndustryName(personaData.industry)} Journey
-                    <span className="block text-indigo-600">Starts Here</span>
+                    <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">Starts Here</span>
                   </>
                 ) : (
                   <>
-                    Build Your Startup
-                    <span className="block text-indigo-600">in 12 Phases</span>
+                    Democratizing
+                    <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">Startup Success</span>
                   </>
                 )}
               </h1>
               
-              <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto">
+              <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto">
                 {isPersonaComplete ? (
                   `Join our venture studio designed specifically for ${getDisplayName(personaData.founderType)}s at ${getStageName(personaData.stage)} building ${getIndustryName(personaData.industry)} products in ${getLocationName(personaData.location)}.`
                 ) : (
-                  "Join our venture studio and get a complete roadmap, AI-powered tools, funding guidance, and personalized support."
+                  "We believe every founder deserves success. Our venture studio provides personalized roadmaps, AI-powered tools, and democratized access to the knowledge and support you need to build sustainable, scalable businesses."
                 )}
               </p>
 
               {isPersonaComplete && (
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-                  <div className="flex items-center text-gray-600">
+                  <div className="flex items-center text-gray-300">
                     <span className="text-2xl mr-2">👤</span>
                     <span>{getDisplayName(personaData.founderType)}</span>
                   </div>
-                  <div className="flex items-center text-gray-600">
+                  <div className="flex items-center text-gray-300">
                     <span className="text-2xl mr-2">🎯</span>
                     <span>{getStageName(personaData.stage)}</span>
                   </div>
-                  <div className="flex items-center text-gray-600">
+                  <div className="flex items-center text-gray-300">
                     <span className="text-2xl mr-2">💼</span>
                     <span>{getIndustryName(personaData.industry)}</span>
                   </div>
-                  <div className="flex items-center text-gray-600">
+                  <div className="flex items-center text-gray-300">
                     <span className="text-2xl mr-2">📍</span>
                     <span>{getLocationName(personaData.location)}</span>
                   </div>
-                  <div className="flex items-center text-gray-600">
+                  <div className="flex items-center text-gray-300">
                     <span className="text-2xl mr-2">📱</span>
                     <span>{getDeliveryMediumName(personaData.deliveryMedium)}</span>
                   </div>
@@ -200,381 +200,279 @@ const VentureStudioLanding = () => {
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      placeholder="Enter your email address"
-                      className="w-full px-6 py-4 text-lg border-2 border-gray-300 rounded-lg focus:border-indigo-500 focus:outline-none"
+                      placeholder="Enter your email to get started"
+                      className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500"
                       required
                     />
                   </div>
                   <button
                     type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-indigo-600 text-white py-4 px-8 rounded-lg text-lg font-semibold hover:bg-indigo-700 transition-colors disabled:opacity-50"
+                    disabled={isSubmitting || !email}
+                    className="w-full px-6 py-3 bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 disabled:bg-gray-600 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 disabled:transform-none"
                   >
-                    {isSubmitting ? 'Joining...' : 'Join the Venture Studio'}
+                    {isSubmitting ? (
+                      <span className="flex items-center justify-center">
+                        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Getting Started...
+                      </span>
+                    ) : (
+                      'Start Your Journey'
+                    )}
                   </button>
                 </form>
                 
                 {isSubmitted && (
-                  <div className="mt-4 p-4 bg-green-100 text-green-800 rounded-lg">
-                    ✅ Welcome! Check your email for next steps.
+                  <div className="mt-4 p-4 bg-green-500/20 border border-green-400/30 rounded-lg">
+                    <p className="text-green-400 text-center">Thank you! We'll be in touch soon with your personalized roadmap.</p>
                   </div>
                 )}
-                
-                <p className="text-sm text-gray-500 mt-4">
-                  Get your personalized roadmap and resources.
-                </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Social Proof */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">
-                Why Founders Choose Our Venture Studio
-              </h2>
-              <div className="grid md:grid-cols-3 gap-8">
-                <div className="text-center">
-                  <div className="text-4xl mb-4">🎯</div>
-                  <h3 className="text-xl font-semibold mb-2">Personalized Approach</h3>
-                  <p className="text-gray-600">Tailored specifically for your founder type, stage, industry, and location.</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl mb-4">🤖</div>
-                  <h3 className="text-xl font-semibold mb-2">AI-Powered Tools</h3>
-                  <p className="text-gray-600">Access to cutting-edge AI tools and checklists designed for your success.</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl mb-4">💰</div>
-                  <h3 className="text-xl font-semibold mb-2">Complete Financial Planning</h3>
-                  <p className="text-gray-600">Personal expense planning included - no hidden costs or surprises.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* What You Get */}
-        <section id="what-you-get" className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                What You Get in Our Venture Studio
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Everything you need to go from idea to profitable product
+        {/* Mission Statement */}
+        <section className="py-16 bg-white/5 backdrop-blur-sm">
+          <div className="max-w-4xl mx-auto px-4 text-center">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <h2 className="text-3xl font-bold mb-6 text-green-400">Our Mission</h2>
+              <p className="text-xl text-gray-200 leading-relaxed">
+                "To eliminate the barriers to startup success by providing every founder with 
+                the tools, knowledge, and support they need to build sustainable, scalable businesses."
               </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-xl shadow-sm border">
-                <div className="text-3xl mb-4">📋</div>
-                <h3 className="text-xl font-semibold mb-4">12-Phase Journey Roadmap</h3>
-                <ul className="text-gray-600 space-y-2">
-                  <li>• Step-by-step execution plan</li>
-                  <li>• Phase-specific milestones</li>
-                  <li>• Flexible timeline (founder-paced)</li>
-                  <li>• Market insights for your industry</li>
-                </ul>
-              </div>
-
-              <div className="bg-white p-8 rounded-xl shadow-sm border">
-                <div className="text-3xl mb-4">🤖</div>
-                <h3 className="text-xl font-semibold mb-4">AI-Focused People & Tools</h3>
-                <ul className="text-gray-600 space-y-2">
-                  <li>• AI tools and technology stack</li>
-                  <li>• Team composition guidelines</li>
-                  <li>• Skill requirements checklist</li>
-                  <li>• Cost estimates and ROI</li>
-                </ul>
-              </div>
-
-              <div className="bg-white p-8 rounded-xl shadow-sm border">
-                <div className="text-3xl mb-4">💰</div>
-                <h3 className="text-xl font-semibold mb-4">Complete Funding Guide</h3>
-                <ul className="text-gray-600 space-y-2">
-                  <li>• Phase-by-phase budget breakdown</li>
-                  <li>• Personal expense planning (6 months)</li>
-                  <li>• Funding sources and strategies</li>
-                  <li>• Risk mitigation approaches</li>
-                </ul>
-              </div>
-
-              <div className="bg-white p-8 rounded-xl shadow-sm border">
-                <div className="text-3xl mb-4">📊</div>
-                <h3 className="text-xl font-semibold mb-4">Success Metrics & KPIs</h3>
-                <ul className="text-gray-600 space-y-2">
-                  <li>• Measurable outcomes per phase</li>
-                  <li>• Progress tracking tools</li>
-                  <li>• Milestone validation</li>
-                  <li>• Performance benchmarks</li>
-                </ul>
-              </div>
-
-              <div className="bg-white p-8 rounded-xl shadow-sm border">
-                <div className="text-3xl mb-4">🛡️</div>
-                <h3 className="text-xl font-semibold mb-4">Risk Mitigation</h3>
-                <ul className="text-gray-600 space-y-2">
-                  <li>• Financial risk management</li>
-                  <li>• Operational safeguards</li>
-                  <li>• Market risk strategies</li>
-                  <li>• Emergency planning</li>
-                </ul>
-              </div>
-
-              <div className="bg-white p-8 rounded-xl shadow-sm border">
-                <div className="text-3xl mb-4">🎯</div>
-                <h3 className="text-xl font-semibold mb-4">Local Network</h3>
-                <ul className="text-gray-600 space-y-2">
-                  <li>• Startup community access</li>
-                  <li>• Co-working space connections</li>
-                  <li>• Investor introductions</li>
-                  <li>• Mentor network access</li>
-                </ul>
+              <div className="mt-8 grid md:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="font-semibold text-white mb-2">Inclusive</h3>
+                  <p className="text-sm text-gray-300">For every founder, regardless of background</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="font-semibold text-white mb-2">Transparent</h3>
+                  <p className="text-sm text-gray-300">Clear, actionable guidance</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <h3 className="font-semibold text-white mb-2">Innovative</h3>
+                  <p className="text-sm text-gray-300">AI-powered, personalized solutions</p>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* How It Works */}
-        <section id="how-it-works" className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="how-it-works" className="py-20 bg-white/5 backdrop-blur-sm">
+          <div className="max-w-6xl mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                How Our Venture Studio Works
-              </h2>
-              <p className="text-xl text-gray-600">
-                Simple 3-step process to get you started
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">How We Democratize Success</h2>
+              <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+                Our approach breaks down the traditional barriers that prevent founders from accessing the resources they need.
               </p>
             </div>
-
+            
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-2xl font-bold text-indigo-600">1</span>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+                <div className="w-16 h-16 bg-green-500/20 rounded-lg flex items-center justify-center mb-6">
+                  <svg className="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
                 </div>
-                <h3 className="text-xl font-semibold mb-4">Join & Get Matched</h3>
-                <p className="text-gray-600">
-                  Sign up and get matched with your personalized 12-phase journey based on your profile and context.
+                <h3 className="text-xl font-semibold text-white mb-4">Personalized Roadmaps</h3>
+                <p className="text-gray-300">
+                  Every founder gets a customized 12-phase journey tailored to their specific stage, industry, and location. 
+                  No more one-size-fits-all approaches.
                 </p>
               </div>
-
-              <div className="text-center">
-                <div className="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-2xl font-bold text-indigo-600">2</span>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+                <div className="w-16 h-16 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6">
+                  <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
                 </div>
-                <h3 className="text-xl font-semibold mb-4">Access Your Resources</h3>
-                <p className="text-gray-600">
-                  Get instant access to your complete guide, AI tools checklist, funding requirements, and personal expense planning.
+                <h3 className="text-xl font-semibold text-white mb-4">AI-Powered Tools</h3>
+                <p className="text-gray-300">
+                  Access to cutting-edge AI tools and checklists that were previously only available to well-funded startups. 
+                  Level the playing field with technology.
                 </p>
               </div>
-
-              <div className="text-center">
-                <div className="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-2xl font-bold text-indigo-600">3</span>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+                <div className="w-16 h-16 bg-purple-500/20 rounded-lg flex items-center justify-center mb-6">
+                  <svg className="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                  </svg>
                 </div>
-                <h3 className="text-xl font-semibold mb-4">Execute & Scale</h3>
-                <p className="text-gray-600">
-                  Follow your roadmap, track progress, and scale your product with confidence and support.
+                <h3 className="text-xl font-semibold text-white mb-4">Democratized Funding</h3>
+                <p className="text-gray-300">
+                  Complete financial planning and funding guidance that demystifies the capital-raising process. 
+                  Access the knowledge that was once gatekept by traditional networks.
                 </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* What You Get */}
+        <section id="what-you-get" className="py-20">
+          <div className="max-w-6xl mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">What You Get</h2>
+              <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+                Comprehensive support designed to eliminate every barrier between you and startup success.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                <div className="text-4xl mb-4">📋</div>
+                <h3 className="text-lg font-semibold text-white mb-3">12-Phase Roadmap</h3>
+                <p className="text-sm text-gray-300">Step-by-step execution plan tailored to your journey</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                <div className="text-4xl mb-4">🤖</div>
+                <h3 className="text-lg font-semibold text-white mb-3">AI Tools & Checklists</h3>
+                <p className="text-sm text-gray-300">Industry-specific resources and automation</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                <div className="text-4xl mb-4">💰</div>
+                <h3 className="text-lg font-semibold text-white mb-3">Funding Guidance</h3>
+                <p className="text-sm text-gray-300">Complete financial planning and capital access</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                <div className="text-4xl mb-4">👥</div>
+                <h3 className="text-lg font-semibold text-white mb-3">Community Access</h3>
+                <p className="text-sm text-gray-300">Inclusive network of founders and mentors</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* Pricing */}
-        <section id="pricing" className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="pricing" className="py-20 bg-white/5 backdrop-blur-sm">
+          <div className="max-w-4xl mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Simple, Transparent Pricing
-              </h2>
-              <p className="text-xl text-gray-600">
-                One-time access to everything you need
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Transparent, Accessible Pricing</h2>
+              <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+                We believe in transparent pricing that makes startup success accessible to everyone, 
+                not just those with deep pockets.
               </p>
             </div>
-
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-white rounded-2xl shadow-lg border-2 border-indigo-200 p-8 md:p-12">
-                <div className="text-center">
-                  <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                    Venture Studio Access
-                  </h3>
-                  <div className="text-5xl font-bold text-indigo-600 mb-2">
-                    {getPricing()}
-                  </div>
-                  <p className="text-gray-600 mb-8">One-time payment</p>
-                  
-                  <div className="text-left space-y-4 mb-8">
-                    <div className="flex items-center">
-                      <span className="text-green-500 mr-3">✓</span>
-                      <span>Complete 12-phase journey roadmap</span>
-                    </div>
-                    <div className="flex items-center">
-                      <span className="text-green-500 mr-3">✓</span>
-                      <span>AI-focused people & tools checklist</span>
-                    </div>
-                    <div className="flex items-center">
-                      <span className="text-green-500 mr-3">✓</span>
-                      <span>Detailed funding requirements & budget</span>
-                    </div>
-                    <div className="flex items-center">
-                      <span className="text-green-500 mr-3">✓</span>
-                      <span>Personal expense planning (6 months)</span>
-                    </div>
-                    <div className="flex items-center">
-                      <span className="text-green-500 mr-3">✓</span>
-                      <span>Success metrics & progress tracking</span>
-                    </div>
-                    <div className="flex items-center">
-                      <span className="text-green-500 mr-3">✓</span>
-                      <span>Risk mitigation strategies</span>
-                    </div>
-                    <div className="flex items-center">
-                      <span className="text-green-500 mr-3">✓</span>
-                      <span>Local network access</span>
-                    </div>
-                    <div className="flex items-center">
-                      <span className="text-green-500 mr-3">✓</span>
-                      <span>Lifetime updates & support</span>
-                    </div>
-                  </div>
-
-                  <button className="w-full bg-indigo-600 text-white py-4 px-8 rounded-lg text-xl font-semibold hover:bg-indigo-700 transition-colors">
-                    Get Started Now
-                  </button>
-                  
-                  <p className="text-sm text-gray-500 mt-4">
-                    Personalized for your specific journey.
-                  </p>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold text-white mb-4">Complete Venture Studio Program</h3>
+                <div className="text-4xl font-bold text-green-400 mb-2">{getPricing()}</div>
+                <p className="text-gray-300">One-time investment for lifetime access</p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h4 className="text-lg font-semibold text-white mb-4">What's Included:</h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-center text-gray-300">
+                      <svg className="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      Personalized 12-phase roadmap
+                    </li>
+                    <li className="flex items-center text-gray-300">
+                      <svg className="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      AI-powered tools and checklists
+                    </li>
+                    <li className="flex items-center text-gray-300">
+                      <svg className="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      Complete funding guidance
+                    </li>
+                    <li className="flex items-center text-gray-300">
+                      <svg className="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      Community access
+                    </li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 className="text-lg font-semibold text-white mb-4">Why This Pricing:</h4>
+                  <ul className="space-y-3">
+                    <li className="flex items-center text-gray-300">
+                      <svg className="w-5 h-5 text-blue-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                      Democratized access to success
+                    </li>
+                    <li className="flex items-center text-gray-300">
+                      <svg className="w-5 h-5 text-blue-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                      No hidden fees or equity requirements
+                    </li>
+                    <li className="flex items-center text-gray-300">
+                      <svg className="w-5 h-5 text-blue-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                      Transparent value proposition
+                    </li>
+                    <li className="flex items-center text-gray-300">
+                      <svg className="w-5 h-5 text-blue-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                      Your success is our success
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* FAQ */}
-        <section className="py-20 bg-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Frequently Asked Questions
-              </h2>
-            </div>
-
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-xl font-semibold mb-3">How is this personalized for me?</h3>
-                <p className="text-gray-600">
-                  Based on your founder type, stage, industry, and location, we customize the roadmap, tools, and resources to match your specific needs and market context.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold mb-3">What if I'm not sure about my stage?</h3>
-                <p className="text-gray-600">
-                  Choose the stage that best describes where you are now. You can always upgrade or adjust as you progress through the program.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold mb-3">Do you provide funding?</h3>
-                <p className="text-gray-600">
-                  We provide comprehensive funding guidance, including where to find funding, how to prepare, and what investors look for. However, we don't directly invest in companies.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold mb-3">Can I get a refund?</h3>
-                <p className="text-gray-600">
-                  We offer a 30-day money-back guarantee. If you're not satisfied with the program within 30 days, we'll provide a full refund.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Final CTA */}
-        <section className="py-20 bg-indigo-600">
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Start Your Journey?
+        <section className="py-20">
+          <div className="max-w-4xl mx-auto px-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Join the Movement?
             </h2>
-            <p className="text-xl text-indigo-100 mb-8">
-              Join our venture studio and get everything you need to succeed.
+            <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+              Be part of the revolution that's democratizing startup success. 
+              Every founder deserves the tools and support to build something extraordinary.
             </p>
-            
-            <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-              <div className="flex flex-col sm:flex-row gap-4">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter your email"
-                  className="flex-1 px-6 py-4 text-lg border-2 border-transparent rounded-lg focus:outline-none focus:border-indigo-300"
-                  required
-                />
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="bg-white text-indigo-600 py-4 px-8 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors disabled:opacity-50"
-                >
-                  {isSubmitting ? 'Joining...' : 'Join Now'}
-                </button>
-              </div>
-            </form>
-            
-            <p className="text-indigo-200 mt-4">
-              Get your personalized roadmap today.
-            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="#top" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-semibold rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105">
+                Start Your Journey
+                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+              <Link href="/stages" className="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-all duration-200 border border-white/20">
+                Explore All Content
+              </Link>
+            </div>
           </div>
         </section>
-
-        {/* Footer */}
-        <footer className="bg-gray-900 text-white py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-4 gap-8">
-              <div>
-                <h3 className="text-xl font-bold mb-4">Vision Infinity Ventures</h3>
-                <p className="text-gray-400">
-                  Empowering founders to build successful products.
-                </p>
-              </div>
-              
-              <div>
-                <h4 className="font-semibold mb-4">Program</h4>
-                <ul className="space-y-2 text-gray-400">
-                  <li><a href="#how-it-works" className="hover:text-white transition-colors">How It Works</a></li>
-                  <li><a href="#what-you-get" className="hover:text-white transition-colors">What You Get</a></li>
-                  <li><a href="#pricing" className="hover:text-white transition-colors">Pricing</a></li>
-                </ul>
-              </div>
-              
-              <div>
-                <h4 className="font-semibold mb-4">Support</h4>
-                <ul className="space-y-2 text-gray-400">
-                  <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">FAQ</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Terms</a></li>
-                </ul>
-              </div>
-              
-              <div>
-                <h4 className="font-semibold mb-4">Location</h4>
-                <p className="text-gray-400">
-                  Bangalore, Karnataka<br />
-                  India
-                </p>
-              </div>
-            </div>
-            
-            <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-              <p>&copy; 2025 Vision Infinity Ventures. All rights reserved.</p>
-            </div>
-          </div>
-        </footer>
       </div>
     </>
   );
