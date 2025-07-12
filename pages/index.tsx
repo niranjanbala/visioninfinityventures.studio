@@ -88,7 +88,7 @@ export default function Home() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We&apos;re building the category-defining venture studio platform that systematically creates 
               successful startups through rapid product-market fit and proven methodologies. 
-              Looking for a backer for an ask of $1M.
+              Looking for a backer for an ask of $1M (25% equity).
             </p>
           </div>
           

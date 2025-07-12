@@ -207,14 +207,14 @@ export default function Careers() {
           </h1>
           <p className="text-lg md:text-xl mb-8 text-gray-200 leading-relaxed max-w-3xl mx-auto">
             We&apos;re building the first systematic venture studio platform that creates successful startups 
-            through rapid product-market fit and proven methodologies. Seeking Accel Atom backing for $1M investment.
+            through rapid product-market fit and proven methodologies. Seeking Accel Atom backing for $1M (25% equity).
           </p>
           
           {/* Investment Context */}
           <div className="grid md:grid-cols-4 gap-6 mb-8">
                          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
                <div className="text-2xl font-bold text-green-400 mb-2">$1M</div>
-               <div className="text-sm text-gray-300">Investment Ask</div>
+               <div className="text-sm text-gray-300">For 25% Equity</div>
              </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
               <div className="text-2xl font-bold text-blue-400 mb-2">$3.2T</div>
@@ -450,7 +450,7 @@ export default function Careers() {
           </h2>
                      <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
              Join us in creating the category-defining venture studio platform that will transform 
-             how startups are created and scaled globally. Seeking Accel Atom backing for $1M investment.
+             how startups are created and scaled globally. Seeking Accel Atom backing for $1M (25% equity).
            </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 

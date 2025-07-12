@@ -7,7 +7,7 @@ Vision Infinity Ventures is building the category-defining venture studio platfo
 ## 💰 **INVESTMENT CONTEXT**
 
 - **Seeking Accel Atom Backing**: Prestigious accelerator program investment
-- **Investment Ask**: $1M for 50% equity
+- **Investment Ask**: $1M for 25% equity
 - **Market Opportunity**: $3.2T global startup ecosystem
 - **Competitive Position**: First systematic venture studio platform
 
@@ -278,14 +278,14 @@ Execute operational excellence and team coordination. Ensure systematic executio
 ### **Phase 1: Foundation (Months 1-6)**
 - **Total Monthly Cost**: ₹25-30 Lakhs
 - **Total Annual Cost**: ₹3-3.6 Crores
-- **Equity Allocation**: 15-20% for team
+- **Equity Allocation**: 10% for team
 - **Investment Required**: ₹2-3 Crores for 6 months
 
 ### **Equity Structure**
-- **Founder Team**: 50% (your ask)
-- **Accel Atom**: 50% (their potential investment)
-- **Team Equity Pool**: 15-20% (from founder portion)
-- **Advisory/Network**: 5-10% (from founder portion)
+- **Founder Team**: 60% (maintains control)
+- **Accel Atom**: 25% (their potential investment)
+- **Team Equity Pool**: 10% (from founder portion)
+- **Advisory/Network**: 5% (from founder portion)
 
 ## 🎯 **ACCEL ATOM ALIGNMENT**
 

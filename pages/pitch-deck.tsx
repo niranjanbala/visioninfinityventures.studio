@@ -540,18 +540,19 @@ const PitchDeckPage = () => {
     },
     {
       id: 9,
-      title: "Funding Ask",
-      subtitle: "Investment Opportunity",
+      title: "Accel Atom Investment Ask",
+      subtitle: "Seeking $1M for 25% Equity",
       content: (
         <div className="text-center">
           <div className="max-w-2xl mx-auto">
-            <h3 className="text-3xl font-bold text-indigo-600 mb-6">Investment Opportunity</h3>
+            <h3 className="text-3xl font-bold text-indigo-600 mb-6">Accel Atom Investment Opportunity</h3>
             
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div className="bg-indigo-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-indigo-800 mb-2">Series A</h4>
-                <p className="text-3xl font-bold text-indigo-600 mb-2">₹15 Crores</p>
-                <p className="text-sm text-indigo-600">For Bangalore market dominance</p>
+                <h4 className="text-xl font-semibold text-indigo-800 mb-2">Investment Ask</h4>
+                <p className="text-3xl font-bold text-indigo-600 mb-2">$1M</p>
+                <p className="text-sm text-indigo-600">For 25% equity</p>
+                <p className="text-sm text-indigo-600">$4M pre-money valuation</p>
               </div>
               <div className="bg-indigo-50 p-6 rounded-lg">
                 <h4 className="text-xl font-semibold text-indigo-800 mb-2">Use of Funds</h4>
@@ -563,35 +564,55 @@ const PitchDeckPage = () => {
             </div>
 
             <div className="bg-green-50 p-6 rounded-lg mb-8">
-              <h4 className="text-xl font-semibold text-green-800 mb-4">Expected Outcomes</h4>
-              <div className="grid md:grid-cols-3 gap-4">
+              <h4 className="text-xl font-semibold text-green-800 mb-4">Equity Structure</h4>
+              <div className="grid md:grid-cols-4 gap-4">
                 <div>
-                  <p className="text-2xl font-bold text-green-600">1,000+</p>
-                  <p className="text-sm text-green-600">Paying Founders</p>
+                  <p className="text-2xl font-bold text-green-600">60%</p>
+                  <p className="text-sm text-green-600">Founder Team</p>
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-green-600">₹6 Cr</p>
-                  <p className="text-sm text-green-600">Annual Revenue</p>
+                  <p className="text-2xl font-bold text-green-600">25%</p>
+                  <p className="text-sm text-green-600">Accel Atom</p>
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-green-600">10%+</p>
-                  <p className="text-sm text-green-600">Market Share</p>
+                  <p className="text-2xl font-bold text-green-600">10%</p>
+                  <p className="text-sm text-green-600">Team Pool</p>
+                </div>
+                <div>
+                  <p className="text-2xl font-bold text-green-600">5%</p>
+                  <p className="text-sm text-green-600">Advisory</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-blue-50 p-6 rounded-lg">
-              <h4 className="text-xl font-semibold text-blue-800 mb-4">Why Invest Now?</h4>
+            <div className="bg-blue-50 p-6 rounded-lg mb-8">
+              <h4 className="text-xl font-semibold text-blue-800 mb-4">Why Accel Atom Should Back Us?</h4>
               <div className="grid md:grid-cols-2 gap-4 text-left">
                 <div>
-                  <p className="text-sm text-blue-600">• First-mover advantage in emerging market</p>
-                  <p className="text-sm text-blue-600">• Proven unit economics (40:1 LTV/CAC)</p>
-                  <p className="text-sm text-blue-600">• Network effects create defensible moat</p>
+                  <p className="text-sm text-blue-600">• Category-defining venture studio platform</p>
+                  <p className="text-sm text-blue-600">• Aligns with Accel Atom&apos;s investment thesis</p>
+                  <p className="text-sm text-blue-600">• Rapid product-market fit methodology</p>
                 </div>
                 <div>
                   <p className="text-sm text-blue-600">• Massive market opportunity ($3.2T)</p>
-                  <p className="text-sm text-blue-600">• Strong team with local expertise</p>
-                  <p className="text-sm text-blue-600">• Clear path to global expansion</p>
+                  <p className="text-sm text-blue-600">• Systematic execution approach</p>
+                  <p className="text-sm text-blue-600">• Network effects and global scalability</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-purple-50 p-6 rounded-lg">
+              <h4 className="text-xl font-semibold text-purple-800 mb-4">Accel Atom Alignment</h4>
+              <div className="grid md:grid-cols-2 gap-4 text-left">
+                <div>
+                  <p className="text-sm text-purple-600">• Product-market fit focus</p>
+                  <p className="text-sm text-purple-600">• Category-defining companies</p>
+                  <p className="text-sm text-purple-600">• Systematic execution</p>
+                </div>
+                <div>
+                  <p className="text-sm text-purple-600">• Network effects</p>
+                  <p className="text-sm text-purple-600">• Global scale potential</p>
+                  <p className="text-sm text-purple-600">• Proven methodology</p>
                 </div>
               </div>
             </div>
