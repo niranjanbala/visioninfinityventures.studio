@@ -13,8 +13,14 @@ export default function Home() {
     stage: '',
     industry: '',
     location: '',
-    deliveryMedium: ''
+    deliveryMedium: '',
+    technologySkill: '',
+    marketingSkill: '',
+    salesSkill: '',
+    productSkill: '',
+    designSkill: ''
   });
+  const [currentStep, setCurrentStep] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -22,6 +28,18 @@ export default function Home() {
       ...formData,
       [e.target.name]: e.target.value
     });
+  };
+
+  const nextStep = () => {
+    setCurrentStep(currentStep + 1);
+  };
+
+  const prevStep = () => {
+    setCurrentStep(currentStep - 1);
+  };
+
+  const goToStep = (step: number) => {
+    setCurrentStep(step);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -37,13 +55,18 @@ export default function Home() {
       stage: formData.stage,
       industry: formData.industry,
       location: formData.location,
-      deliveryMedium: formData.deliveryMedium
+      deliveryMedium: formData.deliveryMedium,
+      technologySkill: formData.technologySkill,
+      marketingSkill: formData.marketingSkill,
+      salesSkill: formData.salesSkill,
+      productSkill: formData.productSkill,
+      designSkill: formData.designSkill
     });
     
     window.location.href = `/venture-studio?${params.toString()}`;
   };
 
-  const isFormComplete = formData.founderType && formData.stage && formData.industry && formData.location && formData.deliveryMedium;
+  const isFormComplete = formData.founderType && formData.stage && formData.industry && formData.location && formData.deliveryMedium && formData.technologySkill && formData.marketingSkill && formData.salesSkill && formData.productSkill && formData.designSkill;
 
   return (
     <>
@@ -69,109 +92,287 @@ export default function Home() {
           </div>
           
           <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-3 gap-6">
-                {/* Founder Type */}
-                <div>
-                  <label htmlFor="founderType" className="block text-sm font-medium text-gray-700 mb-2">
-                    I am a...
-                  </label>
+            {/* Progress Bar */}
+            <div className="mb-8">
+              <div className="flex justify-between items-center mb-2">
+                <span className="text-sm font-medium text-gray-700">Step {currentStep + 1} of 10</span>
+                <span className="text-sm text-gray-500">{Math.round(((currentStep + 1) / 10) * 100)}% Complete</span>
+              </div>
+              <div className="w-full bg-gray-200 rounded-full h-2">
+                <div 
+                  className="bg-indigo-600 h-2 rounded-full transition-all duration-300" 
+                  style={{ width: `${((currentStep + 1) / 10) * 100}%` }}
+                ></div>
+              </div>
+            </div>
+
+            {/* Step Content */}
+            <div className="min-h-[400px] flex flex-col justify-center">
+              {currentStep === 0 && (
+                <div className="text-center">
+                  <div className="text-6xl mb-6">👤</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">What type of founder are you?</h3>
+                  <p className="text-gray-600 mb-8 max-w-md mx-auto">
+                    This helps us understand your approach to building your startup and tailor our support accordingly.
+                  </p>
                   <select
-                    id="founderType"
                     name="founderType"
                     value={formData.founderType}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                    className="w-full max-w-md px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-lg"
                     required
                   >
                     <option value="">Select your type</option>
-                    <option value="diy-founder">DIY Founder</option>
-                    <option value="fractional-support">Need Fractional Support</option>
+                    <option value="diy-founder">DIY Founder - I want to do everything myself</option>
+                    <option value="fractional-support">Need Fractional Support - I want professional help</option>
                   </select>
                 </div>
+              )}
 
-                {/* Stage */}
-                <div>
-                  <label htmlFor="stage" className="block text-sm font-medium text-gray-700 mb-2">
-                    My startup is at...
-                  </label>
+              {currentStep === 1 && (
+                <div className="text-center">
+                  <div className="text-6xl mb-6">🎯</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">What stage is your startup at?</h3>
+                  <p className="text-gray-600 mb-8 max-w-md mx-auto">
+                    This determines the type of guidance and resources you'll receive in your personalized roadmap.
+                  </p>
                   <select
-                    id="stage"
                     name="stage"
                     value={formData.stage}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                    className="w-full max-w-md px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-lg"
                     required
                   >
                     <option value="">Select your stage</option>
-                    <option value="idea-stage">Idea Stage</option>
-                    <option value="mvp-stage">MVP Stage</option>
+                    <option value="idea-stage">Idea Stage - Validating my concept</option>
+                    <option value="mvp-stage">MVP Stage - Building my product</option>
                   </select>
                 </div>
+              )}
 
-                {/* Industry */}
-                <div>
-                  <label htmlFor="industry" className="block text-sm font-medium text-gray-700 mb-2">
-                    I'm building in...
-                  </label>
+              {currentStep === 2 && (
+                <div className="text-center">
+                  <div className="text-6xl mb-6">💼</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">What industry are you building in?</h3>
+                  <p className="text-gray-600 mb-8 max-w-md mx-auto">
+                    This helps us provide industry-specific insights, tools, and connections relevant to your market.
+                  </p>
                   <select
-                    id="industry"
                     name="industry"
                     value={formData.industry}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                    className="w-full max-w-md px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-lg"
                     required
                   >
                     <option value="">Select your industry</option>
-                    <option value="education">Education</option>
-                    <option value="others">Others</option>
+                    <option value="education">Education - EdTech, learning platforms, training</option>
+                    <option value="others">Others - Any other industry</option>
                   </select>
                 </div>
+              )}
 
-                {/* Location */}
-                <div>
-                  <label htmlFor="location" className="block text-sm font-medium text-gray-700 mb-2">
-                    I'm based in...
-                  </label>
+              {currentStep === 3 && (
+                <div className="text-center">
+                  <div className="text-6xl mb-6">📍</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Where are you based?</h3>
+                  <p className="text-gray-600 mb-8 max-w-md mx-auto">
+                    This enables us to provide hyperlocal resources, connections, and market insights specific to your area.
+                  </p>
                   <select
-                    id="location"
                     name="location"
                     value={formData.location}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                    className="w-full max-w-md px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-lg"
                     required
                   >
                     <option value="">Select your location</option>
-                    <option value="hsr-only">HSR Layout, Bangalore</option>
+                    <option value="hsr-only">HSR Layout, Bangalore - Tech hub area</option>
                     <option value="bangalore-only">Other parts of Bangalore</option>
                   </select>
                 </div>
+              )}
 
-                {/* Delivery Medium */}
-                <div>
-                  <label htmlFor="deliveryMedium" className="block text-sm font-medium text-gray-700 mb-2">
-                    I prefer...
-                  </label>
+              {currentStep === 4 && (
+                <div className="text-center">
+                  <div className="text-6xl mb-6">📱</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">How would you prefer to work with us?</h3>
+                  <p className="text-gray-600 mb-8 max-w-md mx-auto">
+                    Choose your preferred way of receiving guidance and support throughout your startup journey.
+                  </p>
                   <select
-                    id="deliveryMedium"
                     name="deliveryMedium"
                     value={formData.deliveryMedium}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                    className="w-full max-w-md px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-lg"
                     required
                   >
                     <option value="">Select delivery medium</option>
-                    <option value="offline">Offline (In-person)</option>
-                    <option value="online">Online (Virtual)</option>
+                    <option value="offline">Offline - In-person meetings and workshops</option>
+                    <option value="online">Online - Virtual sessions and digital tools</option>
                   </select>
                 </div>
+              )}
+
+              {currentStep === 5 && (
+                <div className="text-center">
+                  <div className="text-6xl mb-6">💻</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">How would you rate your technology skills?</h3>
+                  <p className="text-gray-600 mb-8 max-w-md mx-auto">
+                    This helps us understand your technical capabilities and recommend appropriate tools and resources.
+                  </p>
+                  <select
+                    name="technologySkill"
+                    value={formData.technologySkill}
+                    onChange={handleInputChange}
+                    className="w-full max-w-md px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-lg"
+                    required
+                  >
+                    <option value="">Select your level</option>
+                    <option value="1">1 - Beginner - Learning the basics</option>
+                    <option value="2">2 - Basic - Can use common tools</option>
+                    <option value="3">3 - Intermediate - Can build simple solutions</option>
+                    <option value="4">4 - Advanced - Can build complex systems</option>
+                    <option value="5">5 - Expert - Can architect entire platforms</option>
+                  </select>
+                </div>
+              )}
+
+              {currentStep === 6 && (
+                <div className="text-center">
+                  <div className="text-6xl mb-6">📢</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">How would you rate your marketing skills?</h3>
+                  <p className="text-gray-600 mb-8 max-w-md mx-auto">
+                    This helps us understand your ability to reach and engage your target audience effectively.
+                  </p>
+                  <select
+                    name="marketingSkill"
+                    value={formData.marketingSkill}
+                    onChange={handleInputChange}
+                    className="w-full max-w-md px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-lg"
+                    required
+                  >
+                    <option value="">Select your level</option>
+                    <option value="1">1 - Beginner - Learning marketing concepts</option>
+                    <option value="2">2 - Basic - Can run simple campaigns</option>
+                    <option value="3">3 - Intermediate - Can execute marketing strategies</option>
+                    <option value="4">4 - Advanced - Can optimize and scale campaigns</option>
+                    <option value="5">5 - Expert - Can build complete marketing systems</option>
+                  </select>
+                </div>
+              )}
+
+              {currentStep === 7 && (
+                <div className="text-center">
+                  <div className="text-6xl mb-6">💰</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">How would you rate your sales skills?</h3>
+                  <p className="text-gray-600 mb-8 max-w-md mx-auto">
+                    This helps us understand your ability to convert prospects into customers and generate revenue.
+                  </p>
+                  <select
+                    name="salesSkill"
+                    value={formData.salesSkill}
+                    onChange={handleInputChange}
+                    className="w-full max-w-md px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-lg"
+                    required
+                  >
+                    <option value="">Select your level</option>
+                    <option value="1">1 - Beginner - Learning sales fundamentals</option>
+                    <option value="2">2 - Basic - Can handle simple sales conversations</option>
+                    <option value="3">3 - Intermediate - Can close deals consistently</option>
+                    <option value="4">4 - Advanced - Can build sales processes</option>
+                    <option value="5">5 - Expert - Can scale sales operations</option>
+                  </select>
+                </div>
+              )}
+
+              {currentStep === 8 && (
+                <div className="text-center">
+                  <div className="text-6xl mb-6">🎯</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">How would you rate your product skills?</h3>
+                  <p className="text-gray-600 mb-8 max-w-md mx-auto">
+                    This helps us understand your ability to define, build, and iterate on your product effectively.
+                  </p>
+                  <select
+                    name="productSkill"
+                    value={formData.productSkill}
+                    onChange={handleInputChange}
+                    className="w-full max-w-md px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-lg"
+                    required
+                  >
+                    <option value="">Select your level</option>
+                    <option value="1">1 - Beginner - Learning product management</option>
+                    <option value="2">2 - Basic - Can define simple features</option>
+                    <option value="3">3 - Intermediate - Can manage product development</option>
+                    <option value="4">4 - Advanced - Can build product strategy</option>
+                    <option value="5">5 - Expert - Can scale product operations</option>
+                  </select>
+                </div>
+              )}
+
+              {currentStep === 9 && (
+                <div className="text-center">
+                  <div className="text-6xl mb-6">🎨</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">How would you rate your design skills?</h3>
+                  <p className="text-gray-600 mb-8 max-w-md mx-auto">
+                    This helps us understand your ability to create user experiences and visual elements for your product.
+                  </p>
+                  <select
+                    name="designSkill"
+                    value={formData.designSkill}
+                    onChange={handleInputChange}
+                    className="w-full max-w-md px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-lg"
+                    required
+                  >
+                    <option value="">Select your level</option>
+                    <option value="1">1 - Beginner - Learning design principles</option>
+                    <option value="2">2 - Basic - Can create simple layouts</option>
+                    <option value="3">3 - Intermediate - Can design user interfaces</option>
+                    <option value="4">4 - Advanced - Can create design systems</option>
+                    <option value="5">5 - Expert - Can lead design strategy</option>
+                  </select>
+                </div>
+              )}
+            </div>
+
+            {/* Navigation Buttons */}
+            <div className="flex justify-between items-center mt-8">
+              <button
+                type="button"
+                onClick={prevStep}
+                disabled={currentStep === 0}
+                className="px-6 py-3 text-gray-600 border border-gray-300 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                Previous
+              </button>
+              
+              <div className="flex space-x-2">
+                {Array.from({ length: 10 }, (_, i) => (
+                  <button
+                    key={i}
+                    type="button"
+                    onClick={() => goToStep(i)}
+                    className={`w-3 h-3 rounded-full ${
+                      i === currentStep ? 'bg-indigo-600' : 'bg-gray-300'
+                    }`}
+                  />
+                ))}
               </div>
 
-              <div className="text-center">
+              {currentStep < 9 ? (
                 <button
-                  type="submit"
+                  type="button"
+                  onClick={nextStep}
+                  disabled={!formData[Object.keys(formData)[currentStep] as keyof typeof formData]}
+                  className="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  Next
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  onClick={handleSubmit}
                   disabled={!isFormComplete || isSubmitting}
-                  className="inline-flex items-center px-8 py-4 bg-indigo-600 hover:bg-indigo-700 disabled:bg-gray-400 text-white font-semibold rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105 disabled:transform-none"
+                  className="inline-flex items-center px-6 py-3 bg-indigo-600 hover:bg-indigo-700 disabled:bg-gray-400 text-white font-semibold rounded-lg transition-all duration-200"
                 >
                   {isSubmitting ? (
                     <>
@@ -190,10 +391,11 @@ export default function Home() {
                     </>
                   )}
                 </button>
-              </div>
-            </form>
+              )}
+            </div>
+          </div>
 
-            {/* Preview of what they'll get */}
+          {/* Preview of what they'll get */}
             <div className="mt-8 pt-8 border-t border-gray-200">
               <h3 className="text-lg font-semibold text-gray-900 mb-4 text-center">What You'll Get:</h3>
               <div className="grid md:grid-cols-3 gap-4">
