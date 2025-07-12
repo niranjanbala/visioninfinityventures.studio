@@ -2,7 +2,7 @@
 
 ## 🚀 **OVERVIEW**
 
-Vision Infinity Ventures is building the category-defining open source and AI-native venture studio platform, backed by Accel Atom. We're seeking exceptional talent to join our mission of systematically creating successful startups through rapid product-market fit, proven methodologies, and transparent, collaborative technology.
+Vision Infinity Ventures is building the category-defining open source and AI-native venture studio platform, backed by Accel Atom. We're seeking exceptional fractional talent to join our mission of systematically creating successful startups through rapid product-market fit, proven methodologies, and transparent, collaborative technology. All roles are remote and fractional, allowing for flexible engagement and global talent access.
 
 ## 💰 **INVESTMENT CONTEXT**
 
@@ -10,14 +10,15 @@ Vision Infinity Ventures is building the category-defining open source and AI-na
 - **Investment Ask**: $1M for 25% equity
 - **Market Opportunity**: $3.2T global startup ecosystem
 - **Competitive Position**: First open source and AI-native venture studio platform
+- **Team Structure**: 100% fractional and remote positions
 
 ## 🎯 **CORE FUNCTIONS & ROLES**
 
 ### **1. PRODUCT-MARKET FIT FUNCTION**
 
-#### **VP Product Strategy (Strategist Role)**
+#### **VP Product Strategy (Fractional Strategist Role)**
 **Position Overview:**
-Lead product strategy and market opportunity identification for our category-defining open source and AI-native venture studio platform. This role is critical for achieving rapid product-market fit and positioning us as the first transparent, collaborative venture studio platform globally, seeking Accel Atom backing.
+Lead product strategy and market opportunity identification for our category-defining open source and AI-native venture studio platform. This remote fractional role is critical for achieving rapid product-market fit and positioning us as the first transparent, collaborative venture studio platform globally, seeking Accel Atom backing.
 
 **Key Responsibilities:**
 - **Market Opportunity Analysis**: Identify and validate massive market opportunities ($3.2T global startup ecosystem)
@@ -26,6 +27,7 @@ Lead product strategy and market opportunity identification for our category-def
 - **Competitive Positioning**: Position us as the first open source and AI-native venture studio platform
 - **Customer Discovery**: Lead customer discovery and validation frameworks
 - **Product Roadmap**: Create and execute product roadmap aligned with Accel Atom principles
+- **Remote Team Leadership**: Coordinate and lead remote product teams effectively
 
 **Required Experience:**
 - 8+ years in product strategy, preferably in venture capital or startup ecosystem
@@ -34,6 +36,7 @@ Lead product strategy and market opportunity identification for our category-def
 - Strong understanding of AI-native architecture and product-market fit methodologies
 - Experience with rapid iteration and validation frameworks
 - Background in AI/ML product strategy preferred
+- Proven experience in remote team leadership and coordination
 
 **Compensation:**
 - **Salary**: ₹16-20 Lakhs/month
@@ -42,9 +45,9 @@ Lead product strategy and market opportunity identification for our category-def
 
 ---
 
-#### **Product Manager (Executor Role)**
+#### **Product Manager (Fractional Executor Role)**
 **Position Overview:**
-Execute rapid MVP development and product-market fit achievement. Lead the technical implementation of our AI-powered venture studio platform with focus on rapid iteration and user feedback.
+Execute rapid MVP development and product-market fit achievement. Lead the technical implementation of our AI-powered venture studio platform with focus on rapid iteration and user feedback. Remote fractional role with flexible engagement.
 
 **Key Responsibilities:**
 - **MVP Development**: Lead rapid MVP development and testing cycles
@@ -52,6 +55,7 @@ Execute rapid MVP development and product-market fit achievement. Lead the techn
 - **Product Metrics**: Define and track product-market fit metrics
 - **Technical Implementation**: Work with engineering team on platform features
 - **Rapid Iteration**: Execute rapid iteration cycles based on user feedback
+- **Remote Collaboration**: Coordinate effectively with remote development teams
 
 **Required Experience:**
 - 5+ years in product management, preferably in B2B SaaS or AI platforms
@@ -59,6 +63,7 @@ Execute rapid MVP development and product-market fit achievement. Lead the techn
 - Strong analytical skills and data-driven decision making
 - Experience with AI/ML products preferred
 - Background in startup ecosystem or venture capital
+- Proven remote collaboration and communication skills
 
 **Compensation:**
 - **Salary**: ₹8-12 Lakhs/month
@@ -69,9 +74,9 @@ Execute rapid MVP development and product-market fit achievement. Lead the techn
 
 ### **2. VENTURE BUILDING FUNCTION**
 
-#### **VP Venture Strategy (Strategist Role)**
+#### **VP Venture Strategy (Fractional Strategist Role)**
 **Position Overview:**
-Lead venture studio methodology and founder success optimization. Develop systematic approaches to venture building that align with Accel Atom's investment principles.
+Lead venture studio methodology and founder success optimization. Develop systematic approaches to venture building that align with Accel Atom's investment principles. Remote fractional role with strategic focus.
 
 **Key Responsibilities:**
 - **Venture Studio Methodology**: Optimize and scale our 12-phase journey system
@@ -79,6 +84,7 @@ Lead venture studio methodology and founder success optimization. Develop system
 - **Strategic Partnerships**: Build partnerships with accelerators, investors, and ecosystem players
 - **Ecosystem Building**: Develop local and global startup ecosystems
 - **Success Metrics**: Define and optimize venture success metrics
+- **Remote Strategy Execution**: Lead strategic initiatives remotely
 
 **Required Experience:**
 - 8+ years in venture capital, startup acceleration, or venture building
@@ -86,6 +92,7 @@ Lead venture studio methodology and founder success optimization. Develop system
 - Strong network in startup ecosystem
 - Experience with founder success optimization
 - Background in multiple startup stages (idea to growth)
+- Proven remote leadership and strategic execution
 
 **Compensation:**
 - **Salary**: ₹16-20 Lakhs/month
@@ -94,9 +101,9 @@ Lead venture studio methodology and founder success optimization. Develop system
 
 ---
 
-#### **Venture Builder (Executor Role)**
+#### **Venture Builder (Fractional Executor Role)**
 **Position Overview:**
-Execute founder onboarding and journey management. Provide hands-on support to founders through our systematic venture building process.
+Execute founder onboarding and journey management. Provide hands-on support to founders through our systematic venture building process. Remote fractional role with operational focus.
 
 **Key Responsibilities:**
 - **Founder Onboarding**: Manage founder onboarding and journey setup
@@ -104,6 +111,7 @@ Execute founder onboarding and journey management. Provide hands-on support to f
 - **Resource Allocation**: Coordinate resources and support for founders
 - **Success Optimization**: Optimize founder outcomes and success rates
 - **Community Building**: Build and manage founder communities
+- **Remote Operations**: Execute operational tasks remotely
 
 **Required Experience:**
 - 5+ years in startup acceleration, founder support, or venture building
@@ -111,6 +119,7 @@ Execute founder onboarding and journey management. Provide hands-on support to f
 - Strong interpersonal and coaching skills
 - Experience with startup metrics and success tracking
 - Background in multiple industries (education, SaaS B2B)
+- Proven remote operational execution
 
 **Compensation:**
 - **Salary**: ₹8-12 Lakhs/month
@@ -121,9 +130,9 @@ Execute founder onboarding and journey management. Provide hands-on support to f
 
 ### **3. TECHNOLOGY & AI FUNCTION**
 
-#### **CTO/VP Technology Strategy (Strategist Role)**
+#### **CTO/VP Technology Strategy (Fractional Strategist Role)**
 **Position Overview:**
-Lead technology architecture and AI strategy for our scalable venture studio platform. Develop innovative technology solutions that create competitive moats.
+Lead technology architecture and AI strategy for our scalable venture studio platform. Develop innovative technology solutions that create competitive moats. Remote fractional role with technology leadership focus.
 
 **Key Responsibilities:**
 - **Technology Architecture**: Design scalable platform architecture
@@ -131,6 +140,7 @@ Lead technology architecture and AI strategy for our scalable venture studio pla
 - **Platform Scalability**: Ensure platform can scale to global markets
 - **Technology Partnerships**: Build strategic technology partnerships
 - **Innovation Leadership**: Lead technology innovation and competitive advantage
+- **Remote Technology Leadership**: Lead technology teams remotely
 
 **Required Experience:**
 - 10+ years in technology leadership, preferably in AI/ML platforms
@@ -138,6 +148,7 @@ Lead technology architecture and AI strategy for our scalable venture studio pla
 - Strong background in AI/ML and data science
 - Experience with global technology platforms
 - Background in startup technology or venture capital
+- Proven remote technology team leadership
 
 **Compensation:**
 - **Salary**: ₹20-24 Lakhs/month
@@ -146,9 +157,9 @@ Lead technology architecture and AI strategy for our scalable venture studio pla
 
 ---
 
-#### **Lead Engineer (Executor Role)**
+#### **Lead Engineer (Fractional Executor Role)**
 **Position Overview:**
-Execute platform development and AI implementation. Lead technical team in building our AI-powered venture studio platform.
+Execute platform development and AI implementation. Lead technical team in building our AI-powered venture studio platform. Remote fractional role with technical execution focus.
 
 **Key Responsibilities:**
 - **Platform Development**: Lead development of core platform features
@@ -156,6 +167,7 @@ Execute platform development and AI implementation. Lead technical team in build
 - **Technical Excellence**: Ensure high-quality, scalable code
 - **Performance Optimization**: Optimize platform performance and reliability
 - **Team Leadership**: Lead and mentor engineering team
+- **Remote Development**: Coordinate development efforts remotely
 
 **Required Experience:**
 - 7+ years in software engineering, preferably in AI/ML platforms
@@ -163,6 +175,7 @@ Execute platform development and AI implementation. Lead technical team in build
 - Strong background in AI/ML implementation
 - Experience with scalable systems and cloud platforms
 - Background in startup technology or B2B SaaS
+- Proven remote development coordination
 
 **Compensation:**
 - **Salary**: ₹12-16 Lakhs/month
@@ -173,9 +186,9 @@ Execute platform development and AI implementation. Lead technical team in build
 
 ### **4. GROWTH & SCALE FUNCTION**
 
-#### **VP Growth Strategy (Strategist Role)**
+#### **VP Growth Strategy (Fractional Strategist Role)**
 **Position Overview:**
-Lead growth strategy and market expansion for rapid scale. Develop strategies to achieve massive growth aligned with Accel Atom's investment principles.
+Lead growth strategy and market expansion for rapid scale. Develop strategies to achieve massive growth aligned with Accel Atom's investment principles. Remote fractional role with growth leadership focus.
 
 **Key Responsibilities:**
 - **Growth Strategy**: Develop comprehensive growth strategy for global scale
@@ -183,6 +196,7 @@ Lead growth strategy and market expansion for rapid scale. Develop strategies to
 - **Network Effects**: Optimize platform for network effects and viral growth
 - **Growth Metrics**: Define and optimize growth metrics and KPIs
 - **Strategic Partnerships**: Build partnerships for growth acceleration
+- **Remote Growth Leadership**: Lead growth initiatives remotely
 
 **Required Experience:**
 - 8+ years in growth strategy, preferably in high-growth startups
@@ -190,6 +204,7 @@ Lead growth strategy and market expansion for rapid scale. Develop strategies to
 - Strong understanding of network effects and viral growth
 - Experience with growth metrics and optimization
 - Background in venture capital or startup ecosystem
+- Proven remote growth team leadership
 
 **Compensation:**
 - **Salary**: ₹16-20 Lakhs/month
@@ -198,9 +213,9 @@ Lead growth strategy and market expansion for rapid scale. Develop strategies to
 
 ---
 
-#### **Growth Manager (Executor Role)**
+#### **Growth Manager (Fractional Executor Role)**
 **Position Overview:**
-Execute growth initiatives and user acquisition strategies. Lead community building and engagement for rapid platform growth.
+Execute growth initiatives and user acquisition strategies. Lead community building and engagement for rapid platform growth. Remote fractional role with growth execution focus.
 
 **Key Responsibilities:**
 - **User Acquisition**: Execute user acquisition strategies
@@ -208,6 +223,7 @@ Execute growth initiatives and user acquisition strategies. Lead community build
 - **Growth Experiments**: Run growth experiments and optimization
 - **Performance Marketing**: Manage performance marketing campaigns
 - **Engagement Optimization**: Optimize user engagement and retention
+- **Remote Community Management**: Manage communities remotely
 
 **Required Experience:**
 - 5+ years in growth marketing or community building
@@ -215,6 +231,7 @@ Execute growth initiatives and user acquisition strategies. Lead community build
 - Strong analytical skills and data-driven approach
 - Experience with performance marketing and campaigns
 - Background in startup ecosystem or B2B marketing
+- Proven remote community management
 
 **Compensation:**
 - **Salary**: ₹8-12 Lakhs/month
@@ -225,9 +242,9 @@ Execute growth initiatives and user acquisition strategies. Lead community build
 
 ### **5. FINANCE & OPERATIONS FUNCTION**
 
-#### **CFO/VP Finance Strategy (Strategist Role)**
+#### **CFO/VP Finance Strategy (Fractional Strategist Role)**
 **Position Overview:**
-Lead financial strategy and investment readiness for Accel Atom backing. Develop strong unit economics and sustainable growth models.
+Lead financial strategy and investment readiness for Accel Atom backing. Develop strong unit economics and sustainable growth models. Remote fractional role with financial leadership focus.
 
 **Key Responsibilities:**
 - **Financial Strategy**: Develop comprehensive financial strategy
@@ -235,6 +252,7 @@ Lead financial strategy and investment readiness for Accel Atom backing. Develop
 - **Investment Readiness**: Prepare for Accel Atom backing and future rounds
 - **Financial Planning**: Lead financial planning and budgeting
 - **Investor Relations**: Manage investor relations and reporting
+- **Remote Financial Leadership**: Lead financial operations remotely
 
 **Required Experience:**
 - 10+ years in finance, preferably in venture capital or high-growth startups
@@ -242,6 +260,7 @@ Lead financial strategy and investment readiness for Accel Atom backing. Develop
 - Strong background in investment readiness and fundraising
 - Experience with investor relations and reporting
 - Background in venture capital or startup finance
+- Proven remote financial team leadership
 
 **Compensation:**
 - **Salary**: ₹16-20 Lakhs/month
@@ -250,9 +269,9 @@ Lead financial strategy and investment readiness for Accel Atom backing. Develop
 
 ---
 
-#### **Operations Manager (Executor Role)**
+#### **Operations Manager (Fractional Executor Role)**
 **Position Overview:**
-Execute operational excellence and team coordination. Ensure systematic execution across all functions.
+Execute operational excellence and team coordination. Ensure systematic execution across all functions. Remote fractional role with operational focus.
 
 **Key Responsibilities:**
 - **Operational Processes**: Develop and optimize operational processes
@@ -260,6 +279,7 @@ Execute operational excellence and team coordination. Ensure systematic executio
 - **Process Optimization**: Continuously improve operational efficiency
 - **Resource Management**: Manage resource allocation and budgeting
 - **Performance Tracking**: Track operational metrics and KPIs
+- **Remote Operations**: Execute operational tasks remotely
 
 **Required Experience:**
 - 5+ years in operations management, preferably in high-growth startups
@@ -267,6 +287,7 @@ Execute operational excellence and team coordination. Ensure systematic executio
 - Strong project management and coordination skills
 - Experience with resource management and budgeting
 - Background in startup operations or venture building
+- Proven remote operational execution
 
 **Compensation:**
 - **Salary**: ₹8-12 Lakhs/month
@@ -325,7 +346,8 @@ Execute operational excellence and team coordination. Ensure systematic executio
 - **Email**: careers@visioninfinityventures.studio
 - **Subject Line**: [Role Name] - Accel Atom Team Application
 - **Response Time**: Within 48 hours
-- **Location**: Bangalore, India (with remote options)
+- **Location**: 100% Remote (Global)
+- **Engagement**: Fractional (Flexible hours)
 
 ---
 

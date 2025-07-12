@@ -7,139 +7,147 @@ export default function Careers() {
   const roles = [
     {
       id: 'vp-product-strategy',
-      title: 'VP Product Strategy',
+      title: 'VP Product Strategy (Fractional)',
       type: 'Strategist',
       function: 'Product & Design',
       salary: '₹16-20 Lakhs/month',
       equity: '2% over 4 years',
       experience: '8+ years',
-      description: 'Lead product strategy and market opportunity identification for our category-defining venture studio platform.',
+      description: 'Lead product strategy and market opportunity identification for our category-defining venture studio platform. Remote fractional role.',
       responsibilities: [
         'Market opportunity analysis ($110B Bangalore ecosystem)',
         'Bangalore-first product strategies',
         'Competitive positioning',
         'Customer discovery frameworks',
-        'Product roadmap execution'
+        'Product roadmap execution',
+        'Remote team coordination and leadership'
       ]
     },
     {
       id: 'product-manager',
-      title: 'Product Manager',
+      title: 'Product Manager (Fractional)',
       type: 'Executor',
       function: 'Product & Design',
       salary: '₹8-12 Lakhs/month',
       equity: '1% over 4 years',
       experience: '5+ years',
-      description: 'Execute rapid MVP development and product-market fit achievement through systematic iteration.',
+      description: 'Execute rapid MVP development and product-market fit achievement through systematic iteration. Remote fractional role.',
       responsibilities: [
         'Rapid MVP development and testing',
         'User feedback collection and analysis',
         'Product-market fit metrics',
         'Technical implementation',
-        'Rapid iteration cycles'
+        'Rapid iteration cycles',
+        'Remote collaboration with development team'
       ]
     },
     {
       id: 'ux-ui-designer',
-      title: 'UX/UI Designer',
+      title: 'UX/UI Designer (Fractional)',
       type: 'Executor',
       function: 'Product & Design',
       salary: '₹6-10 Lakhs/month',
       equity: '0.5% over 4 years',
       experience: '3+ years',
-      description: 'Create intuitive and engaging user experiences for our venture studio platform.',
+      description: 'Create intuitive and engaging user experiences for our venture studio platform. Remote fractional role.',
       responsibilities: [
         'User interface design and prototyping',
         'User experience research and testing',
         'Design system development',
         'Visual design and branding',
-        'Design-to-development handoff'
+        'Design-to-development handoff',
+        'Remote design collaboration and feedback'
       ]
     },
 
     {
       id: 'cto-vp-technology',
-      title: 'CTO/VP Technology Strategy',
+      title: 'CTO/VP Technology Strategy (Fractional)',
       type: 'Strategist',
       function: 'Technology & AI',
       salary: '₹20-24 Lakhs/month',
       equity: '3% over 4 years',
       experience: '10+ years',
-      description: 'Lead technology architecture and AI strategy for our scalable venture studio platform.',
+      description: 'Lead technology architecture and AI strategy for our scalable venture studio platform. Remote fractional role.',
       responsibilities: [
         'Scalable platform architecture',
         'AI/ML strategy development',
         'Bangalore platform scalability',
         'Technology partnerships',
-        'Innovation leadership'
+        'Innovation leadership',
+        'Remote technology team management'
       ]
     },
     {
       id: 'lead-engineer',
-      title: 'Lead Engineer',
+      title: 'Lead Engineer (Fractional)',
       type: 'Executor',
       function: 'Technology & AI',
       salary: '₹12-16 Lakhs/month',
       equity: '1.5% over 4 years',
       experience: '7+ years',
-      description: 'Execute platform development and AI implementation with technical excellence.',
+      description: 'Execute platform development and AI implementation with technical excellence. Remote fractional role.',
       responsibilities: [
         'Core platform feature development',
         'AI/ML model implementation',
         'Technical excellence and quality',
         'Performance optimization',
-        'Engineering team leadership'
+        'Engineering team leadership',
+        'Remote development coordination'
       ]
     },
     {
       id: 'vp-growth-strategy',
-      title: 'VP Growth Strategy',
+      title: 'VP Growth Strategy (Fractional)',
       type: 'Strategist',
       function: 'Growth & Customer Success',
       salary: '₹16-20 Lakhs/month',
       equity: '2% over 4 years',
       experience: '8+ years',
-      description: 'Lead growth strategy and customer success for rapid Bangalore market expansion.',
+      description: 'Lead growth strategy and customer success for rapid Bangalore market expansion. Remote fractional role.',
       responsibilities: [
         'Comprehensive growth strategy',
         'Bangalore market expansion',
         'Customer success optimization',
         'Growth metrics and KPIs',
-        'Strategic partnerships'
+        'Strategic partnerships',
+        'Remote growth team leadership'
       ]
     },
     {
       id: 'growth-manager',
-      title: 'Growth Manager',
+      title: 'Growth Manager (Fractional)',
       type: 'Executor',
       function: 'Growth & Customer Success',
       salary: '₹8-12 Lakhs/month',
       equity: '1% over 4 years',
       experience: '5+ years',
-      description: 'Execute growth initiatives and user acquisition strategies for rapid platform growth.',
+      description: 'Execute growth initiatives and user acquisition strategies for rapid platform growth. Remote fractional role.',
       responsibilities: [
         'User acquisition strategies',
         'Founder community building',
         'Growth experiments',
         'Performance marketing',
-        'Engagement optimization'
+        'Engagement optimization',
+        'Remote community management'
       ]
     },
     {
       id: 'customer-success-manager',
-      title: 'Customer Success Manager',
+      title: 'Customer Success Manager (Fractional)',
       type: 'Executor',
       function: 'Growth & Customer Success',
       salary: '₹6-10 Lakhs/month',
       equity: '0.5% over 4 years',
       experience: '3+ years',
-      description: 'Ensure founder success and satisfaction through proactive support and guidance.',
+      description: 'Ensure founder success and satisfaction through proactive support and guidance. Remote fractional role.',
       responsibilities: [
         'Founder onboarding and training',
         'Success metrics tracking',
         'Proactive support and guidance',
         'Feedback collection and analysis',
-        'Retention and expansion strategies'
+        'Retention and expansion strategies',
+        'Remote customer support coordination'
       ]
     },
 
@@ -175,7 +183,7 @@ export default function Careers() {
           </h1>
           <p className="text-lg md:text-xl mb-8 text-gray-200 leading-relaxed max-w-3xl mx-auto">
             We&apos;re building Bangalore&apos;s first open source and AI-native systematic venture studio platform that creates successful startups 
-            through rapid product-market fit and proven methodologies. Seeking Accel Atom backing for $1M (25% equity).
+            through rapid product-market fit and proven methodologies. All roles are fractional and remote. Seeking Accel Atom backing for $1M (25% equity).
           </p>
           
           {/* Investment Context */}
