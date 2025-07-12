@@ -194,22 +194,40 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params?.slug as string;
   const baseDir = path.join(process.cwd(), 'india');
-  const filePath = path.join(
-    baseDir,
-    ...slug.split('-')
-  ) + '.md';
-  
-  if (!fs.existsSync(filePath)) {
+
+  // Find the actual file by matching the slug to the generated slugs
+  function findFileBySlug(dir: string, targetSlug: string): string | null {
+    const list = fs.readdirSync(dir);
+    for (const file of list) {
+      const filePath = path.join(dir, file);
+      const stat = fs.statSync(filePath);
+      if (stat && stat.isDirectory()) {
+        const found = findFileBySlug(filePath, targetSlug);
+        if (found) return found;
+      } else if (file.endsWith('.md')) {
+        const relPath = filePath.replace(baseDir + path.sep, '');
+        const generatedSlug = relPath.replace(/\.[^/.]+$/, '').replace(/[\/]/g, '-');
+        if (generatedSlug === targetSlug) {
+          return filePath;
+        }
+      }
+    }
+    return null;
+  }
+
+  const filePath = findFileBySlug(baseDir, slug);
+
+  if (!filePath || !fs.existsSync(filePath)) {
     return { notFound: true };
   }
-  
+
   const fileContent = fs.readFileSync(filePath, 'utf-8');
   const { content, data } = matter(fileContent);
-  
+
   // Extract headings for table of contents
   const headings: Array<{ id: string; text: string; level: number }> = [];
   const lines = content.split('\n');
-  
+
   lines.forEach((line) => {
     const headingMatch = line.match(/^(#{1,6})\s+(.+)$/);
     if (headingMatch) {
@@ -219,7 +237,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       headings.push({ id, text, level });
     }
   });
-  
+
   // Configure marked for better rendering
   marked.setOptions({
     gfm: true,
@@ -227,9 +245,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     headerIds: true,
     mangle: false,
   });
-  
+
   const html = marked(content);
-  
+
   return {
     props: {
       content: html,
