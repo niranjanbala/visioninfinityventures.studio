@@ -55,7 +55,7 @@ const PitchDeckPage = () => {
                 <div className="flex items-center">
                   <div className="text-4xl mr-4">💰</div>
                   <div>
-                    <h4 className="font-semibold">$2.9T Lost Value</h4>
+                    <h4 className="font-semibold">₹2.4Q Lost Value</h4>
                     <p className="text-sm text-gray-600">Annual economic loss from failed startups</p>
                   </div>
                 </div>
@@ -80,7 +80,7 @@ const PitchDeckPage = () => {
               <div className="space-y-4">
                 <div className="bg-red-50 p-4 rounded-lg">
                   <h4 className="font-semibold text-red-800">Traditional Accelerators</h4>
-                  <p className="text-sm text-red-600">$50,000+, 2% acceptance, location-bound</p>
+                  <p className="text-sm text-red-600">₹41L+, 2% acceptance, location-bound</p>
                 </div>
                 <div className="bg-red-50 p-4 rounded-lg">
                   <h4 className="font-semibold text-red-800">Online Courses</h4>
@@ -88,7 +88,7 @@ const PitchDeckPage = () => {
                 </div>
                 <div className="bg-red-50 p-4 rounded-lg">
                   <h4 className="font-semibold text-red-800">Consulting Services</h4>
-                  <p className="text-sm text-red-600">$500+/hour, inconsistent quality</p>
+                  <p className="text-sm text-red-600">₹41K+/hour, inconsistent quality</p>
                 </div>
                 <div className="bg-red-50 p-4 rounded-lg">
                   <h4 className="font-semibold text-red-800">Bangalore Incubators</h4>
@@ -145,7 +145,7 @@ const PitchDeckPage = () => {
               <div className="space-y-4">
                 <div className="bg-green-50 p-4 rounded-lg">
                   <h4 className="font-semibold text-green-800">Affordable Access</h4>
-                  <p className="text-sm text-green-600">₹5,000-15,000/month vs $50,000+ accelerators</p>
+                  <p className="text-sm text-green-600">₹5,000-15,000/month vs ₹41L+ accelerators</p>
                 </div>
                 <div className="bg-green-50 p-4 rounded-lg">
                   <h4 className="font-semibold text-green-800">Bangalore Market Focus</h4>
@@ -181,17 +181,17 @@ const PitchDeckPage = () => {
               <div className="space-y-4">
                 <div className="bg-blue-50 p-4 rounded-lg">
                   <h4 className="font-semibold text-blue-800">Bangalore Startup Ecosystem</h4>
-                  <p className="text-2xl font-bold text-blue-600">$110B</p>
+                  <p className="text-2xl font-bold text-blue-600">₹9.1L Cr</p>
                   <p className="text-sm text-blue-600">8,000+ startups, 40+ unicorns</p>
                 </div>
                 <div className="bg-blue-50 p-4 rounded-lg">
                   <h4 className="font-semibold text-blue-800">Bangalore Tech Hub</h4>
-                  <p className="text-2xl font-bold text-blue-600">$110B</p>
+                  <p className="text-2xl font-bold text-blue-600">₹9.1L Cr</p>
                   <p className="text-sm text-blue-600">8,000+ startups, 40+ unicorns</p>
                 </div>
                 <div className="bg-blue-50 p-4 rounded-lg">
                   <h4 className="font-semibold text-blue-800">Bangalore Venture Studio Market</h4>
-                  <p className="text-2xl font-bold text-blue-600">$2B</p>
+                  <p className="text-2xl font-bold text-blue-600">₹16.6K Cr</p>
                   <p className="text-sm text-blue-600">Untapped market for systematic venture studio</p>
                 </div>
               </div>
@@ -224,7 +224,7 @@ const PitchDeckPage = () => {
                   <div className="text-3xl mr-3">💰</div>
                   <div>
                     <h4 className="font-semibold">Bangalore Investor Interest</h4>
-                    <p className="text-sm text-gray-600">$15B+ in Bangalore startup funding annually</p>
+                    <p className="text-sm text-gray-600">₹12.4L Cr+ in Bangalore startup funding annually</p>
                   </div>
                 </div>
               </div>
@@ -545,7 +545,7 @@ const PitchDeckPage = () => {
     {
       id: 9,
       title: "Accel Atom Investment Ask",
-      subtitle: "Seeking $1M for 15% Equity",
+      subtitle: "Seeking ₹8.3Cr for 15% Equity",
       content: (
         <div className="text-center">
           <div className="max-w-2xl mx-auto">
@@ -554,9 +554,9 @@ const PitchDeckPage = () => {
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div className="bg-indigo-50 p-6 rounded-lg">
                 <h4 className="text-xl font-semibold text-indigo-800 mb-2">Investment Ask</h4>
-                <p className="text-3xl font-bold text-indigo-600 mb-2">$1M</p>
+                <p className="text-3xl font-bold text-indigo-600 mb-2">₹8.3Cr</p>
                 <p className="text-sm text-indigo-600">For 15% equity</p>
-                <p className="text-sm text-indigo-600">$4M pre-money valuation</p>
+                <p className="text-sm text-indigo-600">₹33.2Cr pre-money valuation</p>
               </div>
               <div className="bg-indigo-50 p-6 rounded-lg">
                 <h4 className="text-xl font-semibold text-indigo-800 mb-2">Use of Funds</h4>
@@ -598,7 +598,7 @@ const PitchDeckPage = () => {
                   <p className="text-sm text-blue-600">• Rapid product-market fit methodology</p>
                 </div>
                 <div>
-                  <p className="text-sm text-blue-600">• Massive market opportunity ($110B Bangalore ecosystem)</p>
+                  <p className="text-sm text-blue-600">• Massive market opportunity (₹9.1L Cr Bangalore ecosystem)</p>
                   <p className="text-sm text-blue-600">• Systematic execution approach</p>
                   <p className="text-sm text-blue-600">• Network effects and regional scalability</p>
                 </div>

@@ -122,7 +122,7 @@ export default function Home() {
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">The Bangalore Market Opportunity</h3>
                   <p className="text-gray-600 leading-relaxed">
-                    $110B Bangalore startup ecosystem with 8,000+ startups and 40+ unicorns, 
+                    ₹9.1L Cr Bangalore startup ecosystem with 8,000+ startups and 40+ unicorns, 
                     but no systematic venture studio platform. Current solutions are fragmented, 
                     manual, and don&apos;t scale. We bring open source and AI-native solutions.
                   </p>

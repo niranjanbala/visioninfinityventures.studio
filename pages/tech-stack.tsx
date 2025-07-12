@@ -75,7 +75,7 @@ export default function TechStack() {
         {
           name: 'Development Tools',
           tools: [
-            { name: 'Cursor', description: 'AI-powered code editor with GitHub Copilot integration', status: 'Current', pricing: '$20/month' },
+            { name: 'Cursor', description: 'AI-powered code editor with GitHub Copilot integration', status: 'Current', pricing: '₹1,650/month' },
             { name: 'Cline', description: 'Open source AI-powered code editor alternative', status: 'Planned', pricing: 'Free' },
             { name: 'GitHub', description: 'Open source code repository and collaboration', status: 'Current', pricing: 'Free' },
             { name: 'Open Source Libraries', description: 'Transparent, community-driven development', status: 'Current', pricing: 'Free' },
@@ -299,7 +299,7 @@ export default function TechStack() {
             <div className="bg-blue-50 rounded-xl p-6 text-center">
               <div className="text-3xl font-bold text-blue-600 mb-2">₹1,650</div>
               <div className="text-sm text-gray-600">Monthly Fixed Costs</div>
-              <div className="text-xs text-gray-500 mt-1">Cursor IDE ($20/month ≈ ₹1,650)</div>
+              <div className="text-xs text-gray-500 mt-1">Cursor IDE (₹1,650/month)</div>
             </div>
             
             <div className="bg-purple-50 rounded-xl p-6 text-center">

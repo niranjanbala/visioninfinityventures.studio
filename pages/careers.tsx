@@ -15,7 +15,7 @@ export default function Careers() {
       experience: '8+ years',
       description: 'Lead product strategy and market opportunity identification for our category-defining venture studio platform. Remote fractional role.',
       responsibilities: [
-        'Market opportunity analysis ($110B Bangalore ecosystem)',
+        'Market opportunity analysis (₹9.1L Cr Bangalore ecosystem)',
         'Bangalore-first product strategies',
         'Competitive positioning',
         'Customer discovery frameworks',
@@ -183,17 +183,17 @@ export default function Careers() {
           </h1>
           <p className="text-lg md:text-xl mb-8 text-gray-200 leading-relaxed max-w-3xl mx-auto">
             We&apos;re building Bangalore&apos;s first open source and AI-native systematic venture studio platform that creates successful startups 
-            through rapid product-market fit and proven methodologies. All roles are fractional and remote. Seeking Accel Atom backing for $1M (15% equity).
+            through rapid product-market fit and proven methodologies. All roles are fractional and remote. Seeking Accel Atom backing for ₹8.3Cr (15% equity).
           </p>
           
           {/* Investment Context */}
           <div className="grid md:grid-cols-4 gap-6 mb-8">
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <div className="text-2xl font-bold text-green-400 mb-2">$1M</div>
+              <div className="text-2xl font-bold text-green-400 mb-2">₹8.3Cr</div>
               <div className="text-sm text-gray-300">For 15% Equity</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <div className="text-2xl font-bold text-blue-400 mb-2">$110B</div>
+              <div className="text-2xl font-bold text-blue-400 mb-2">₹9.1L Cr</div>
               <div className="text-sm text-gray-300">Bangalore Market</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
@@ -418,7 +418,7 @@ export default function Careers() {
           </h2>
           <p className="text-gray-400 text-sm text-center">
             Join us in building the category-defining venture studio platform that will transform 
-            how startups are created and scaled globally. Seeking Accel Atom backing for $1M (15% equity).
+            how startups are created and scaled globally. Seeking Accel Atom backing for ₹8.3Cr (15% equity).
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 

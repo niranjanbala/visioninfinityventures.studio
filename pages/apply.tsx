@@ -90,7 +90,7 @@ export default function Apply() {
               <div className="bg-indigo-50 rounded-lg p-4 border border-indigo-200">
                 <h3 className="font-semibold text-indigo-800 mb-2">Founder Investment</h3>
                 <div className="text-center mb-3">
-                  <div className="text-2xl font-bold text-indigo-600">$1,000</div>
+                  <div className="text-2xl font-bold text-indigo-600">₹83,000</div>
                   <div className="text-sm text-gray-600">One-time founder contribution</div>
                 </div>
                 <ul className="text-sm text-gray-700 space-y-1 mb-3">

@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/HkWFQrWXC2Pb0fs_lqqCN/_buildManifest.js",
-    "static/HkWFQrWXC2Pb0fs_lqqCN/_ssgManifest.js"
+    "static/iyJvEQK_ok1ni9eB7QSnW/_buildManifest.js",
+    "static/iyJvEQK_ok1ni9eB7QSnW/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -15,7 +15,7 @@
       "static/chunks/framework-bcaea2e08c6b85c1.js",
       "static/chunks/main-9c6c051fb60e01ed.js",
       "static/chunks/996-5abd08ae305d436b.js",
-      "static/chunks/pages/index-8381aa42506dae11.js"
+      "static/chunks/pages/index-6ac60aa2ca59fa65.js"
     ],
     "/_app": [
       "static/chunks/webpack-fa99431b15635937.js",
@@ -34,7 +34,7 @@
       "static/chunks/webpack-fa99431b15635937.js",
       "static/chunks/framework-bcaea2e08c6b85c1.js",
       "static/chunks/main-9c6c051fb60e01ed.js",
-      "static/chunks/pages/apply-973db9730287dfa0.js"
+      "static/chunks/pages/apply-90fbde1bf30e5540.js"
     ],
     "/auth/register": [
       "static/chunks/webpack-fa99431b15635937.js",
@@ -55,7 +55,7 @@
       "static/chunks/framework-bcaea2e08c6b85c1.js",
       "static/chunks/main-9c6c051fb60e01ed.js",
       "static/chunks/996-5abd08ae305d436b.js",
-      "static/chunks/pages/careers-b55e897fcf6c80a8.js"
+      "static/chunks/pages/careers-a90116f1002afe40.js"
     ],
     "/dashboard": [
       "static/chunks/webpack-fa99431b15635937.js",
@@ -68,7 +68,7 @@
       "static/chunks/framework-bcaea2e08c6b85c1.js",
       "static/chunks/main-9c6c051fb60e01ed.js",
       "static/chunks/996-5abd08ae305d436b.js",
-      "static/chunks/pages/pitch-deck-c87122968564ace1.js"
+      "static/chunks/pages/pitch-deck-b6c0ba76a6cf42f9.js"
     ],
     "/stages": [
       "static/chunks/webpack-fa99431b15635937.js",
@@ -82,7 +82,7 @@
       "static/chunks/framework-bcaea2e08c6b85c1.js",
       "static/chunks/main-9c6c051fb60e01ed.js",
       "static/chunks/996-5abd08ae305d436b.js",
-      "static/chunks/pages/tech-stack-9581642f438d485a.js"
+      "static/chunks/pages/tech-stack-780ab90cb3a6713d.js"
     ],
     "/venture-studio": [
       "static/chunks/webpack-fa99431b15635937.js",
