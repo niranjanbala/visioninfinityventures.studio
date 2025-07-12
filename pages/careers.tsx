@@ -201,8 +201,8 @@ export default function Careers() {
               <div className="text-sm text-gray-300">Open Positions</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <div className="text-2xl font-bold text-indigo-400 mb-2">₹70L</div>
-              <div className="text-sm text-gray-300">Monthly Team Cost</div>
+              <div className="text-2xl font-bold text-indigo-400 mb-2">₹100-110L</div>
+              <div className="text-sm text-gray-300">Annual Team Cost</div>
             </div>
           </div>
           
