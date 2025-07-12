@@ -12,17 +12,19 @@ const VentureStudioLanding = () => {
     founderType: '',
     stage: '',
     industry: '',
-    location: ''
+    location: '',
+    deliveryMedium: ''
   });
 
   useEffect(() => {
     if (router.isReady) {
-      const { founderType, stage, industry, location } = router.query;
+      const { founderType, stage, industry, location, deliveryMedium } = router.query;
       setPersonaData({
         founderType: founderType as string || '',
         stage: stage as string || '',
         industry: industry as string || '',
-        location: location as string || ''
+        location: location as string || '',
+        deliveryMedium: deliveryMedium as string || ''
       });
     }
   }, [router.isReady, router.query]);
@@ -59,6 +61,14 @@ const VentureStudioLanding = () => {
     return locationMap[location as keyof typeof locationMap] || location;
   };
 
+  const getDeliveryMediumName = (deliveryMedium: string) => {
+    const deliveryMap = {
+      'offline': 'Offline (In-person)',
+      'online': 'Online (Virtual)'
+    };
+    return deliveryMap[deliveryMedium as keyof typeof deliveryMap] || deliveryMedium;
+  };
+
   const getPricing = () => {
     // Different pricing based on persona
     if (personaData.founderType === 'diy-founder' && personaData.location === 'hsr-only') {
@@ -71,10 +81,10 @@ const VentureStudioLanding = () => {
   };
 
   const getPersonaTitle = () => {
-    if (!personaData.founderType || !personaData.stage || !personaData.industry || !personaData.location) {
+    if (!personaData.founderType || !personaData.stage || !personaData.industry || !personaData.location || !personaData.deliveryMedium) {
       return 'Venture Studio';
     }
-    return `${getDisplayName(personaData.founderType)} - ${getStageName(personaData.stage)} - ${getIndustryName(personaData.industry)} - ${getLocationName(personaData.location)}`;
+    return `${getDisplayName(personaData.founderType)} - ${getStageName(personaData.stage)} - ${getIndustryName(personaData.industry)} - ${getLocationName(personaData.location)} - ${getDeliveryMediumName(personaData.deliveryMedium)}`;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -91,7 +101,7 @@ const VentureStudioLanding = () => {
     setTimeout(() => setIsSubmitted(false), 3000);
   };
 
-  const isPersonaComplete = personaData.founderType && personaData.stage && personaData.industry && personaData.location;
+  const isPersonaComplete = personaData.founderType && personaData.stage && personaData.industry && personaData.location && personaData.deliveryMedium;
 
   return (
     <>
@@ -174,6 +184,10 @@ const VentureStudioLanding = () => {
                   <div className="flex items-center text-gray-600">
                     <span className="text-2xl mr-2">📍</span>
                     <span>{getLocationName(personaData.location)}</span>
+                  </div>
+                  <div className="flex items-center text-gray-600">
+                    <span className="text-2xl mr-2">📱</span>
+                    <span>{getDeliveryMediumName(personaData.deliveryMedium)}</span>
                   </div>
                 </div>
               )}

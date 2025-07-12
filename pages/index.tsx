@@ -12,7 +12,8 @@ export default function Home() {
     founderType: '',
     stage: '',
     industry: '',
-    location: ''
+    location: '',
+    deliveryMedium: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -35,13 +36,14 @@ export default function Home() {
       founderType: formData.founderType,
       stage: formData.stage,
       industry: formData.industry,
-      location: formData.location
+      location: formData.location,
+      deliveryMedium: formData.deliveryMedium
     });
     
     window.location.href = `/venture-studio?${params.toString()}`;
   };
 
-  const isFormComplete = formData.founderType && formData.stage && formData.industry && formData.location;
+  const isFormComplete = formData.founderType && formData.stage && formData.industry && formData.location && formData.deliveryMedium;
 
   return (
     <>
@@ -68,7 +70,7 @@ export default function Home() {
           
           <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-3 gap-6">
                 {/* Founder Type */}
                 <div>
                   <label htmlFor="founderType" className="block text-sm font-medium text-gray-700 mb-2">
@@ -142,6 +144,25 @@ export default function Home() {
                     <option value="">Select your location</option>
                     <option value="hsr-only">HSR Layout, Bangalore</option>
                     <option value="bangalore-only">Other parts of Bangalore</option>
+                  </select>
+                </div>
+
+                {/* Delivery Medium */}
+                <div>
+                  <label htmlFor="deliveryMedium" className="block text-sm font-medium text-gray-700 mb-2">
+                    I prefer...
+                  </label>
+                  <select
+                    id="deliveryMedium"
+                    name="deliveryMedium"
+                    value={formData.deliveryMedium}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                    required
+                  >
+                    <option value="">Select delivery medium</option>
+                    <option value="offline">Offline (In-person)</option>
+                    <option value="online">Online (Virtual)</option>
                   </select>
                 </div>
               </div>

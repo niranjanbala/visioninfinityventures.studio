@@ -35,6 +35,7 @@ const StagesPage = () => {
   const [selectedPersona, setSelectedPersona] = useState<string>('diy-founder');
   const [selectedStage, setSelectedStage] = useState<string>('idea-stage');
   const [selectedIndustry, setSelectedIndustry] = useState<string>('education');
+  const [selectedDeliveryMedium, setSelectedDeliveryMedium] = useState<string>('offline');
 
   const contentData: PersonaContent[] = [
     {
@@ -729,7 +730,7 @@ const StagesPage = () => {
         {/* Navigation Filters */}
         <section className="py-8 bg-gray-50 border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-4 gap-4">
+            <div className="grid md:grid-cols-5 gap-4">
               {/* Persona Filter */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -784,11 +785,26 @@ const StagesPage = () => {
                 </select>
               </div>
 
+              {/* Delivery Medium Filter */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Delivery Medium
+                </label>
+                <select
+                  value={selectedDeliveryMedium}
+                  onChange={(e) => setSelectedDeliveryMedium(e.target.value)}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                >
+                  <option value="offline">Offline (In-person)</option>
+                  <option value="online">Online (Virtual)</option>
+                </select>
+              </div>
+
               {/* Summary */}
               <div className="flex items-end">
                 <div className="w-full p-3 bg-indigo-50 rounded-lg">
                   <p className="text-sm text-indigo-800 font-medium">
-                    {selectedPersonaData?.name} • {selectedStageData?.name} • {selectedIndustryData?.name}
+                    {selectedPersonaData?.name} • {selectedStageData?.name} • {selectedIndustryData?.name} • {selectedDeliveryMedium === 'offline' ? 'Offline' : 'Online'}
                   </p>
                   <p className="text-xs text-indigo-600">
                     {selectedIndustryData?.geographies.length} locations available
