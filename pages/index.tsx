@@ -140,11 +140,7 @@ export default function Home() {
                   >
                     <option value="">Select your location</option>
                     <option value="hsr-only">HSR Layout, Bangalore</option>
-                    <option value="whitefield-only">Whitefield, Bangalore</option>
                     <option value="bangalore-only">Other parts of Bangalore</option>
-                    <option value="karnataka-wide">Karnataka</option>
-                    <option value="pan-india">Pan India</option>
-                    <option value="south-india">South India</option>
                   </select>
                 </div>
               </div>

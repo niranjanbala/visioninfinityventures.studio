@@ -96,12 +96,8 @@ export default function Dashboard() {
 
   const getLocationDisplayName = (location: string) => {
     switch (location) {
-      case 'HSR_ONLY': return 'HSR Only';
-      case 'WHITEFIELD_ONLY': return 'Whitefield Only';
-      case 'BANGALORE_ONLY': return 'Bangalore Only';
-      case 'KARNATAKA_WIDE': return 'Karnataka Wide';
-      case 'PAN_INDIA': return 'Pan India';
-      case 'SOUTH_INDIA': return 'South India';
+      case 'HSR_ONLY': return 'HSR Layout, Bangalore';
+      case 'BANGALORE_ONLY': return 'Other parts of Bangalore';
       default: return location;
     }
   };

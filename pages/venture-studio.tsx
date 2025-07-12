@@ -53,11 +53,7 @@ const VentureStudioLanding = () => {
   const getLocationName = (location: string) => {
     const locationMap = {
       'hsr-only': 'HSR Layout, Bangalore',
-      'whitefield-only': 'Whitefield, Bangalore',
-      'bangalore-only': 'Bangalore',
-      'karnataka-wide': 'Karnataka',
-      'pan-india': 'Pan India',
-      'south-india': 'South India'
+      'bangalore-only': 'Other parts of Bangalore'
     };
     return locationMap[location as keyof typeof locationMap] || location;
   };
