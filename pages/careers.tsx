@@ -148,8 +148,8 @@ export default function Careers() {
   return (
     <>
       <Head>
-        <title>Careers | Vision Infinity Ventures - Bangalore&apos;s First Venture Studio Platform</title>
-        <meta name="description" content="Join Bangalore&apos;s first venture studio platform seeking Accel Atom backing. Build the future of startup creation with rapid product-market fit and proven methodologies." />
+        <title>Careers | Vision Infinity Ventures - Open Source & AI Native Venture Studio</title>
+        <meta name="description" content="Join our open source and AI native venture studio platform seeking Accel Atom backing. Build the future of startup creation with rapid product-market fit and proven methodologies." />
         <meta name="theme-color" content="#2563eb" />
       </Head>
       <Navigation />
@@ -168,13 +168,13 @@ export default function Careers() {
             Seeking Accel Atom Backing
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Join Bangalore&apos;s First
+            Join Our Open Source & AI Native
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
               Venture Studio Platform
             </span>
           </h1>
           <p className="text-lg md:text-xl mb-8 text-gray-200 leading-relaxed max-w-3xl mx-auto">
-            We&apos;re building Bangalore&apos;s first systematic venture studio platform that creates successful startups 
+            We&apos;re building Bangalore&apos;s first open source and AI-native systematic venture studio platform that creates successful startups 
             through rapid product-market fit and proven methodologies. Seeking Accel Atom backing for $1M (25% equity).
           </p>
           

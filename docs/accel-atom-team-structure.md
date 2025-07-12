@@ -2,14 +2,14 @@
 
 ## 🚀 **OVERVIEW**
 
-Vision Infinity Ventures is building the category-defining venture studio platform, backed by Accel Atom. We're seeking exceptional talent to join our mission of systematically creating successful startups through rapid product-market fit and proven methodologies.
+Vision Infinity Ventures is building the category-defining open source and AI-native venture studio platform, backed by Accel Atom. We're seeking exceptional talent to join our mission of systematically creating successful startups through rapid product-market fit, proven methodologies, and transparent, collaborative technology.
 
 ## 💰 **INVESTMENT CONTEXT**
 
 - **Seeking Accel Atom Backing**: Prestigious accelerator program investment
 - **Investment Ask**: $1M for 25% equity
 - **Market Opportunity**: $3.2T global startup ecosystem
-- **Competitive Position**: First systematic venture studio platform
+- **Competitive Position**: First open source and AI-native venture studio platform
 
 ## 🎯 **CORE FUNCTIONS & ROLES**
 
@@ -17,19 +17,21 @@ Vision Infinity Ventures is building the category-defining venture studio platfo
 
 #### **VP Product Strategy (Strategist Role)**
 **Position Overview:**
-Lead product strategy and market opportunity identification for our category-defining venture studio platform. This role is critical for achieving rapid product-market fit and positioning us as the first systematic venture studio platform globally, seeking Accel Atom backing.
+Lead product strategy and market opportunity identification for our category-defining open source and AI-native venture studio platform. This role is critical for achieving rapid product-market fit and positioning us as the first transparent, collaborative venture studio platform globally, seeking Accel Atom backing.
 
 **Key Responsibilities:**
 - **Market Opportunity Analysis**: Identify and validate massive market opportunities ($3.2T global startup ecosystem)
-- **Product Strategy**: Develop category-defining product strategies that create new markets
-- **Competitive Positioning**: Position us as the first systematic venture studio platform
+- **Open Source Product Strategy**: Develop category-defining product strategies that create new markets through transparency
+- **AI-Native Architecture**: Ensure all products are built with AI-first principles
+- **Competitive Positioning**: Position us as the first open source and AI-native venture studio platform
 - **Customer Discovery**: Lead customer discovery and validation frameworks
 - **Product Roadmap**: Create and execute product roadmap aligned with Accel Atom principles
 
 **Required Experience:**
 - 8+ years in product strategy, preferably in venture capital or startup ecosystem
+- Experience with open source products and community-driven development
 - Experience with category-defining products and market creation
-- Strong understanding of product-market fit methodologies
+- Strong understanding of AI-native architecture and product-market fit methodologies
 - Experience with rapid iteration and validation frameworks
 - Background in AI/ML product strategy preferred
 

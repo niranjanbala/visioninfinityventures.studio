@@ -14,7 +14,7 @@ const PitchDeckPage = () => {
       content: (
         <div className="text-center">
           <h1 className="text-6xl font-bold text-indigo-600 mb-4">Vision Infinity Ventures</h1>
-          <p className="text-2xl text-gray-600 mb-8">Bangalore&apos;s First Venture Studio Platform</p>
+          <p className="text-2xl text-gray-600 mb-8">Open Source & AI Native Venture Studio Platform</p>
           <div className="grid md:grid-cols-3 gap-6 mt-12">
                           <div className="bg-white p-6 rounded-lg shadow-lg">
                 <div className="text-3xl mb-2">🏙️</div>
@@ -23,13 +23,13 @@ const PitchDeckPage = () => {
               </div>
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <div className="text-3xl mb-2">🤖</div>
-              <h3 className="text-lg font-semibold mb-2">AI-Powered</h3>
-              <p className="text-sm text-gray-600">Personalized guidance for every founder</p>
+              <h3 className="text-lg font-semibold mb-2">AI-Native</h3>
+              <p className="text-sm text-gray-600">Built from the ground up with AI architecture</p>
             </div>
                           <div className="bg-white p-6 rounded-lg shadow-lg">
-                <div className="text-3xl mb-2">📍</div>
-                <h3 className="text-lg font-semibold mb-2">Bangalore Intelligence</h3>
-                <p className="text-sm text-gray-600">Deep Bangalore market intelligence</p>
+                <div className="text-3xl mb-2">🔓</div>
+                <h3 className="text-lg font-semibold mb-2">Open Source</h3>
+                <p className="text-sm text-gray-600">Transparent, collaborative, and scalable platform</p>
               </div>
           </div>
         </div>
@@ -120,7 +120,7 @@ const PitchDeckPage = () => {
                 <div className="flex items-center">
                   <div className="text-4xl mr-4">🤖</div>
                   <div>
-                    <h4 className="font-semibold">AI-Powered Personalization</h4>
+                    <h4 className="font-semibold">AI-Native Personalization</h4>
                     <p className="text-sm text-gray-600">16 different personas, tailored guidance</p>
                   </div>
                 </div>
@@ -158,6 +158,10 @@ const PitchDeckPage = () => {
                 <div className="bg-green-50 p-4 rounded-lg">
                   <h4 className="font-semibold text-green-800">Scalable Platform</h4>
                   <p className="text-sm text-green-600">Can serve thousands simultaneously</p>
+                </div>
+                <div className="bg-green-50 p-4 rounded-lg">
+                  <h4 className="font-semibold text-green-800">Open Source Platform</h4>
+                  <p className="text-sm text-green-600">Transparent, collaborative, and scalable architecture</p>
                 </div>
               </div>
             </div>

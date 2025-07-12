@@ -63,6 +63,22 @@ export default function TechStack() {
             { name: 'PorkBun', description: 'Domain registration and SSL certificates', status: 'Current' },
             { name: 'PorkBun Email', description: 'Professional email hosting service', status: 'Current' }
           ]
+        },
+        {
+          name: 'AI & Machine Learning',
+          tools: [
+            { name: 'OpenAI API', description: 'AI-powered content generation and analysis', status: 'Current' },
+            { name: 'Custom AI Models', description: 'Proprietary algorithms for founder success prediction', status: 'Current' },
+            { name: 'Machine Learning Pipeline', description: 'Data-driven insights and recommendations', status: 'Current' }
+          ]
+        },
+        {
+          name: 'Open Source Tools',
+          tools: [
+            { name: 'GitHub', description: 'Open source code repository and collaboration', status: 'Current' },
+            { name: 'Open Source Libraries', description: 'Transparent, community-driven development', status: 'Current' },
+            { name: 'MIT License', description: 'Open source licensing for maximum accessibility', status: 'Current' }
+          ]
         }
       ]
     },
@@ -128,8 +144,8 @@ export default function TechStack() {
   return (
     <>
       <Head>
-        <title>Tech Stack | Vision Infinity Ventures - Technology Architecture</title>
-        <meta name="description" content="Explore our current technology stack organized by function. From frontend development to CRM, discover the tools powering Bangalore's first venture studio platform." />
+        <title>Tech Stack | Vision Infinity Ventures - Open Source & AI Native Architecture</title>
+        <meta name="description" content="Explore our open source and AI native technology stack organized by function. From frontend development to CRM, discover the transparent tools powering our venture studio platform." />
         <meta name="theme-color" content="#2563eb" />
       </Head>
       <Navigation />
@@ -148,14 +164,14 @@ export default function TechStack() {
             Current Technology Architecture
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Our Current
+            Our Open Source &
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
-              Technology Stack
+              AI Native Stack
             </span>
           </h1>
           <p className="text-lg md:text-xl mb-8 text-gray-200 leading-relaxed max-w-3xl mx-auto">
-            Discover the technology stack currently powering Bangalore&apos;s first venture studio platform. 
-            Organized by our 4 core functions to show what we&apos;re actively using today. Venture Building founder-led. Finance & Operations managed by fractional agency.
+            Discover the open source and AI-native technology stack powering Bangalore&apos;s first venture studio platform. 
+            Transparent, collaborative, and built from the ground up with AI-first principles. Venture Building founder-led. Finance & Operations managed by fractional agency.
           </p>
           
           {/* Tech Stack Overview */}

@@ -90,8 +90,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Vision Infinity Ventures | Venture Studio for Founders</title>
-        <meta name="description" content="Join our venture studio and get personalized guidance for your startup journey. Choose your path and get a customized roadmap." />
+        <title>Vision Infinity Ventures | Open Source & AI Native Venture Studio</title>
+        <meta name="description" content="Join our open source and AI native venture studio platform. Get personalized guidance for your startup journey with rapid product-market fit and proven methodologies." />
         <meta name="theme-color" content="#2563eb" />
       </Head>
       <Navigation />
@@ -106,7 +106,7 @@ export default function Home() {
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We&apos;re building the category-defining venture studio platform that systematically creates 
-              successful startups through rapid product-market fit and proven methodologies.
+              successful startups through rapid product-market fit, proven methodologies, and AI-native architecture.
             </p>
           </div>
           
@@ -124,7 +124,7 @@ export default function Home() {
                   <p className="text-gray-600 leading-relaxed">
                     $110B Bangalore startup ecosystem with 8,000+ startups and 40+ unicorns, 
                     but no systematic venture studio platform. Current solutions are fragmented, 
-                    manual, and don&apos;t scale.
+                    manual, and don&apos;t scale. We bring open source and AI-native solutions.
                   </p>
                 </div>
               </div>
@@ -139,7 +139,7 @@ export default function Home() {
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">Our Bangalore Advantage</h3>
                   <p className="text-gray-600 leading-relaxed">
                     First-mover advantage in Bangalore&apos;s systematic venture studio platform. AI-powered personalization, 
-                    proven 12-phase methodology, and deep local network effects.
+                    proven 12-phase methodology, deep local network effects, and open source architecture.
                   </p>
                 </div>
               </div>
@@ -163,7 +163,7 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className="text-gray-700">AI-powered rapid product-market fit</span>
+                  <span className="text-gray-700">AI-native rapid product-market fit</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-6 h-6 bg-indigo-500 rounded-full flex items-center justify-center">
@@ -171,7 +171,7 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className="text-gray-700">Category-defining market creation</span>
+                  <span className="text-gray-700">Open source category-defining platform</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-6 h-6 bg-indigo-500 rounded-full flex items-center justify-center">
@@ -193,10 +193,10 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Bangalore-First</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Open Source & AI Native</h3>
               <p className="text-gray-600 leading-relaxed">
-                We build Bangalore&apos;s first systematic venture studio platform, not compete in existing ones. 
-                Our platform creates the category of systematic venture studio methodology.
+                We build Bangalore&apos;s first open source and AI-native venture studio platform, not compete in existing ones. 
+                Our platform creates the category of systematic venture studio methodology with transparent, scalable architecture.
               </p>
             </div>
             

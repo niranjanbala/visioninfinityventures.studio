@@ -17,14 +17,14 @@ export default function Hero() {
           
           {/* Main Heading */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight">
-            Bangalore&apos;s First
+            Open Source & AI Native
             <span className="block text-indigo-600">Venture Studio Platform</span>
           </h1>
           
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed">
             We&apos;re building the category-defining venture studio platform that systematically creates 
-            successful startups through rapid product-market fit and proven methodologies.
+            successful startups through rapid product-market fit, proven methodologies, and AI-native architecture.
           </p>
           
           {/* Investment Context */}
