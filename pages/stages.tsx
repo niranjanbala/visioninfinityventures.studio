@@ -83,10 +83,116 @@ const StagesPage = () => {
                     }
                   ]
                 },
-
+                {
+                  name: 'Other parts of Bangalore',
+                  description: 'Focus on other parts of Bangalore',
+                  content: [
+                    {
+                      title: '12-Phase Journey',
+                      description: 'Complete roadmap for your startup journey',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/diy-founder/stage/idea-stage/industry/education/geography/bangalore-only/12-phase-journey.md',
+                      type: 'journey',
+                      completed: true
+                    },
+                    {
+                      title: 'AI People & Tools Checklist',
+                      description: 'Comprehensive AI-focused requirements',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/diy-founder/stage/idea-stage/industry/education/geography/bangalore-only/ai-people-tools-checklist.md',
+                      type: 'checklist',
+                      completed: true
+                    },
+                    {
+                      title: 'Funding Checklist',
+                      description: 'Complete financial planning guide',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/diy-founder/stage/idea-stage/industry/education/geography/bangalore-only/funding-checklist.md',
+                      type: 'funding',
+                      completed: true
+                    },
+                    {
+                      title: 'Complete Guide',
+                      description: 'All-in-one comprehensive guide',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/documents/diy-founder-idea-stage-education-bangalore-only-complete-guide.md',
+                      type: 'guide',
+                      completed: true
+                    }
+                  ]
+                }
               ]
             },
-
+            {
+              name: 'Others',
+              description: 'Other industries and sectors',
+              geographies: [
+                {
+                  name: 'HSR Layout, Bangalore',
+                  description: 'Hyperlocal focus on HSR Layout',
+                  content: [
+                    {
+                      title: '12-Phase Journey',
+                      description: 'Complete roadmap for your startup journey',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/diy-founder/stage/idea-stage/industry/others/geography/hsr-only/12-phase-journey.md',
+                      type: 'journey',
+                      completed: true
+                    },
+                    {
+                      title: 'AI People & Tools Checklist',
+                      description: 'Comprehensive AI-focused requirements',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/diy-founder/stage/idea-stage/industry/others/geography/hsr-only/ai-people-tools-checklist.md',
+                      type: 'checklist',
+                      completed: true
+                    },
+                    {
+                      title: 'Funding Checklist',
+                      description: 'Complete financial planning guide',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/diy-founder/stage/idea-stage/industry/others/geography/hsr-only/funding-checklist.md',
+                      type: 'funding',
+                      completed: true
+                    },
+                    {
+                      title: 'Complete Guide',
+                      description: 'All-in-one comprehensive guide',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/documents/diy-founder-idea-stage-others-hsr-only-complete-guide.md',
+                      type: 'guide',
+                      completed: true
+                    }
+                  ]
+                },
+                {
+                  name: 'Other parts of Bangalore',
+                  description: 'Focus on other parts of Bangalore',
+                  content: [
+                    {
+                      title: '12-Phase Journey',
+                      description: 'Complete roadmap for your startup journey',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/diy-founder/stage/idea-stage/industry/others/geography/bangalore-only/12-phase-journey.md',
+                      type: 'journey',
+                      completed: true
+                    },
+                    {
+                      title: 'AI People & Tools Checklist',
+                      description: 'Comprehensive AI-focused requirements',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/diy-founder/stage/idea-stage/industry/others/geography/bangalore-only/ai-people-tools-checklist.md',
+                      type: 'checklist',
+                      completed: true
+                    },
+                    {
+                      title: 'Funding Checklist',
+                      description: 'Complete financial planning guide',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/diy-founder/stage/idea-stage/industry/others/geography/bangalore-only/funding-checklist.md',
+                      type: 'funding',
+                      completed: true
+                    },
+                    {
+                      title: 'Complete Guide',
+                      description: 'All-in-one comprehensive guide',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/documents/diy-founder-idea-stage-others-bangalore-only-complete-guide.md',
+                      type: 'guide',
+                      completed: true
+                    }
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -131,10 +237,116 @@ const StagesPage = () => {
                     }
                   ]
                 },
-
+                {
+                  name: 'Other parts of Bangalore',
+                  description: 'Focus on other parts of Bangalore',
+                  content: [
+                    {
+                      title: '12-Phase Journey',
+                      description: 'Complete roadmap for your startup journey',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/diy-founder/stage/mvp-stage/industry/education/geography/bangalore-only/12-phase-journey.md',
+                      type: 'journey',
+                      completed: true
+                    },
+                    {
+                      title: 'AI People & Tools Checklist',
+                      description: 'Comprehensive AI-focused requirements',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/diy-founder/stage/mvp-stage/industry/education/geography/bangalore-only/ai-people-tools-checklist.md',
+                      type: 'checklist',
+                      completed: true
+                    },
+                    {
+                      title: 'Funding Checklist',
+                      description: 'Complete financial planning guide',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/diy-founder/stage/mvp-stage/industry/education/geography/bangalore-only/funding-checklist.md',
+                      type: 'funding',
+                      completed: true
+                    },
+                    {
+                      title: 'Complete Guide',
+                      description: 'All-in-one comprehensive guide',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/documents/diy-founder-mvp-stage-education-bangalore-only-complete-guide.md',
+                      type: 'guide',
+                      completed: true
+                    }
+                  ]
+                }
               ]
             },
-
+            {
+              name: 'Others',
+              description: 'Other industries and sectors',
+              geographies: [
+                {
+                  name: 'HSR Layout, Bangalore',
+                  description: 'Hyperlocal focus on HSR Layout',
+                  content: [
+                    {
+                      title: '12-Phase Journey',
+                      description: 'Complete roadmap for your startup journey',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/diy-founder/stage/mvp-stage/industry/others/geography/hsr-only/12-phase-journey.md',
+                      type: 'journey',
+                      completed: true
+                    },
+                    {
+                      title: 'AI People & Tools Checklist',
+                      description: 'Comprehensive AI-focused requirements',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/diy-founder/stage/mvp-stage/industry/others/geography/hsr-only/ai-people-tools-checklist.md',
+                      type: 'checklist',
+                      completed: true
+                    },
+                    {
+                      title: 'Funding Checklist',
+                      description: 'Complete financial planning guide',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/diy-founder/stage/mvp-stage/industry/others/geography/hsr-only/funding-checklist.md',
+                      type: 'funding',
+                      completed: true
+                    },
+                    {
+                      title: 'Complete Guide',
+                      description: 'All-in-one comprehensive guide',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/documents/diy-founder-mvp-stage-others-hsr-only-complete-guide.md',
+                      type: 'guide',
+                      completed: true
+                    }
+                  ]
+                },
+                {
+                  name: 'Other parts of Bangalore',
+                  description: 'Focus on other parts of Bangalore',
+                  content: [
+                    {
+                      title: '12-Phase Journey',
+                      description: 'Complete roadmap for your startup journey',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/diy-founder/stage/mvp-stage/industry/others/geography/bangalore-only/12-phase-journey.md',
+                      type: 'journey',
+                      completed: true
+                    },
+                    {
+                      title: 'AI People & Tools Checklist',
+                      description: 'Comprehensive AI-focused requirements',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/diy-founder/stage/mvp-stage/industry/others/geography/bangalore-only/ai-people-tools-checklist.md',
+                      type: 'checklist',
+                      completed: true
+                    },
+                    {
+                      title: 'Funding Checklist',
+                      description: 'Complete financial planning guide',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/diy-founder/stage/mvp-stage/industry/others/geography/bangalore-only/funding-checklist.md',
+                      type: 'funding',
+                      completed: true
+                    },
+                    {
+                      title: 'Complete Guide',
+                      description: 'All-in-one comprehensive guide',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/documents/diy-founder-mvp-stage-others-bangalore-only-complete-guide.md',
+                      type: 'guide',
+                      completed: true
+                    }
+                  ]
+                }
+              ]
+            }
           ]
         }
       ]
@@ -185,10 +397,116 @@ const StagesPage = () => {
                     }
                   ]
                 },
-
+                {
+                  name: 'Other parts of Bangalore',
+                  description: 'Focus on other parts of Bangalore',
+                  content: [
+                    {
+                      title: '12-Phase Journey',
+                      description: 'Complete roadmap for your startup journey',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/fractional-support/stage/idea-stage/industry/education/geography/bangalore-only/12-phase-journey.md',
+                      type: 'journey',
+                      completed: true
+                    },
+                    {
+                      title: 'AI People & Tools Checklist',
+                      description: 'Comprehensive AI-focused requirements',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/fractional-support/stage/idea-stage/industry/education/geography/bangalore-only/ai-people-tools-checklist.md',
+                      type: 'checklist',
+                      completed: true
+                    },
+                    {
+                      title: 'Funding Checklist',
+                      description: 'Complete financial planning guide',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/fractional-support/stage/idea-stage/industry/education/geography/bangalore-only/funding-checklist.md',
+                      type: 'funding',
+                      completed: true
+                    },
+                    {
+                      title: 'Complete Guide',
+                      description: 'All-in-one comprehensive guide',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/documents/fractional-support-idea-stage-education-bangalore-only-complete-guide.md',
+                      type: 'guide',
+                      completed: true
+                    }
+                  ]
+                }
               ]
             },
-
+            {
+              name: 'Others',
+              description: 'Other industries and sectors',
+              geographies: [
+                {
+                  name: 'HSR Layout, Bangalore',
+                  description: 'Hyperlocal focus on HSR Layout',
+                  content: [
+                    {
+                      title: '12-Phase Journey',
+                      description: 'Complete roadmap for your startup journey',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/fractional-support/stage/idea-stage/industry/others/geography/hsr-only/12-phase-journey.md',
+                      type: 'journey',
+                      completed: true
+                    },
+                    {
+                      title: 'AI People & Tools Checklist',
+                      description: 'Comprehensive AI-focused requirements',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/fractional-support/stage/idea-stage/industry/others/geography/hsr-only/ai-people-tools-checklist.md',
+                      type: 'checklist',
+                      completed: true
+                    },
+                    {
+                      title: 'Funding Checklist',
+                      description: 'Complete financial planning guide',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/fractional-support/stage/idea-stage/industry/others/geography/hsr-only/funding-checklist.md',
+                      type: 'funding',
+                      completed: true
+                    },
+                    {
+                      title: 'Complete Guide',
+                      description: 'All-in-one comprehensive guide',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/documents/fractional-support-idea-stage-others-hsr-only-complete-guide.md',
+                      type: 'guide',
+                      completed: true
+                    }
+                  ]
+                },
+                {
+                  name: 'Other parts of Bangalore',
+                  description: 'Focus on other parts of Bangalore',
+                  content: [
+                    {
+                      title: '12-Phase Journey',
+                      description: 'Complete roadmap for your startup journey',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/fractional-support/stage/idea-stage/industry/others/geography/bangalore-only/12-phase-journey.md',
+                      type: 'journey',
+                      completed: true
+                    },
+                    {
+                      title: 'AI People & Tools Checklist',
+                      description: 'Comprehensive AI-focused requirements',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/fractional-support/stage/idea-stage/industry/others/geography/bangalore-only/ai-people-tools-checklist.md',
+                      type: 'checklist',
+                      completed: true
+                    },
+                    {
+                      title: 'Funding Checklist',
+                      description: 'Complete financial planning guide',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/fractional-support/stage/idea-stage/industry/others/geography/bangalore-only/funding-checklist.md',
+                      type: 'funding',
+                      completed: true
+                    },
+                    {
+                      title: 'Complete Guide',
+                      description: 'All-in-one comprehensive guide',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/documents/fractional-support-idea-stage-others-bangalore-only-complete-guide.md',
+                      type: 'guide',
+                      completed: true
+                    }
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -233,10 +551,116 @@ const StagesPage = () => {
                     }
                   ]
                 },
-
+                {
+                  name: 'Other parts of Bangalore',
+                  description: 'Focus on other parts of Bangalore',
+                  content: [
+                    {
+                      title: '12-Phase Journey',
+                      description: 'Complete roadmap for your startup journey',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/fractional-support/stage/mvp-stage/industry/education/geography/bangalore-only/12-phase-journey.md',
+                      type: 'journey',
+                      completed: true
+                    },
+                    {
+                      title: 'AI People & Tools Checklist',
+                      description: 'Comprehensive AI-focused requirements',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/fractional-support/stage/mvp-stage/industry/education/geography/bangalore-only/ai-people-tools-checklist.md',
+                      type: 'checklist',
+                      completed: true
+                    },
+                    {
+                      title: 'Funding Checklist',
+                      description: 'Complete financial planning guide',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/fractional-support/stage/mvp-stage/industry/education/geography/bangalore-only/funding-checklist.md',
+                      type: 'funding',
+                      completed: true
+                    },
+                    {
+                      title: 'Complete Guide',
+                      description: 'All-in-one comprehensive guide',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/documents/fractional-support-mvp-stage-education-bangalore-only-complete-guide.md',
+                      type: 'guide',
+                      completed: true
+                    }
+                  ]
+                }
               ]
             },
-
+            {
+              name: 'Others',
+              description: 'Other industries and sectors',
+              geographies: [
+                {
+                  name: 'HSR Layout, Bangalore',
+                  description: 'Hyperlocal focus on HSR Layout',
+                  content: [
+                    {
+                      title: '12-Phase Journey',
+                      description: 'Complete roadmap for your startup journey',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/fractional-support/stage/mvp-stage/industry/others/geography/hsr-only/12-phase-journey.md',
+                      type: 'journey',
+                      completed: true
+                    },
+                    {
+                      title: 'AI People & Tools Checklist',
+                      description: 'Comprehensive AI-focused requirements',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/fractional-support/stage/mvp-stage/industry/others/geography/hsr-only/ai-people-tools-checklist.md',
+                      type: 'checklist',
+                      completed: true
+                    },
+                    {
+                      title: 'Funding Checklist',
+                      description: 'Complete financial planning guide',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/fractional-support/stage/mvp-stage/industry/others/geography/hsr-only/funding-checklist.md',
+                      type: 'funding',
+                      completed: true
+                    },
+                    {
+                      title: 'Complete Guide',
+                      description: 'All-in-one comprehensive guide',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/documents/fractional-support-mvp-stage-others-hsr-only-complete-guide.md',
+                      type: 'guide',
+                      completed: true
+                    }
+                  ]
+                },
+                {
+                  name: 'Other parts of Bangalore',
+                  description: 'Focus on other parts of Bangalore',
+                  content: [
+                    {
+                      title: '12-Phase Journey',
+                      description: 'Complete roadmap for your startup journey',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/fractional-support/stage/mvp-stage/industry/others/geography/bangalore-only/12-phase-journey.md',
+                      type: 'journey',
+                      completed: true
+                    },
+                    {
+                      title: 'AI People & Tools Checklist',
+                      description: 'Comprehensive AI-focused requirements',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/fractional-support/stage/mvp-stage/industry/others/geography/bangalore-only/ai-people-tools-checklist.md',
+                      type: 'checklist',
+                      completed: true
+                    },
+                    {
+                      title: 'Funding Checklist',
+                      description: 'Complete financial planning guide',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/fractional-support/stage/mvp-stage/industry/others/geography/bangalore-only/funding-checklist.md',
+                      type: 'funding',
+                      completed: true
+                    },
+                    {
+                      title: 'Complete Guide',
+                      description: 'All-in-one comprehensive guide',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/documents/fractional-support-mvp-stage-others-bangalore-only-complete-guide.md',
+                      type: 'guide',
+                      completed: true
+                    }
+                  ]
+                }
+              ]
+            }
           ]
         }
       ]
@@ -445,11 +869,11 @@ const StagesPage = () => {
                   <div className="text-sm text-gray-600">Stages</div>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow">
-                  <div className="text-3xl font-bold text-green-600 mb-2">1</div>
+                  <div className="text-3xl font-bold text-green-600 mb-2">2</div>
                   <div className="text-sm text-gray-600">Industries</div>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow">
-                  <div className="text-3xl font-bold text-purple-600 mb-2">4</div>
+                  <div className="text-3xl font-bold text-purple-600 mb-2">16</div>
                   <div className="text-sm text-gray-600">Complete Guides</div>
                 </div>
               </div>

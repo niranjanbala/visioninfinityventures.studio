@@ -45,7 +45,8 @@ const VentureStudioLanding = () => {
 
   const getIndustryName = (industry: string) => {
     const industryMap = {
-      'education': 'Education'
+      'education': 'Education',
+      'others': 'Others'
     };
     return industryMap[industry as keyof typeof industryMap] || industry;
   };

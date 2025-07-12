@@ -90,6 +90,7 @@ export default function Dashboard() {
   const getIndustryDisplayName = (industry: string) => {
     switch (industry) {
       case 'EDUCATION': return 'Education';
+      case 'OTHERS': return 'Others';
       default: return industry;
     }
   };
