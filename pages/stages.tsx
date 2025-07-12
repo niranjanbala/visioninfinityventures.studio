@@ -848,7 +848,12 @@ const StagesPage = () => {
                             <h3 className="font-semibold text-sm mb-2 text-white">{item.title}</h3>
                             <p className="text-xs opacity-75 mb-3 text-gray-300">{item.description}</p>
                             <Link
-                              href={item.path}
+                              href={
+                                '/content/' + item.path
+                                  .replace('india/', '')
+                                  .replace(/\.md$/, '')
+                                  .replace(/[\/]/g, '-')
+                              }
                               className="inline-flex items-center text-xs font-medium hover:underline text-green-400"
                             >
                               View Content
