@@ -23,8 +23,8 @@ export default function Navigation() {
             <Link href="/venture-studio" className="text-gray-600 hover:text-gray-900 transition-colors font-medium">
               Venture Studio
             </Link>
-            <Link href="/stages" className="text-gray-600 hover:text-gray-900 transition-colors font-medium">
-              Content
+            <Link href="/content" className="text-gray-600 hover:text-gray-900 transition-colors font-medium">
+              Content Library
             </Link>
             <Link href="/careers" className="text-gray-600 hover:text-gray-900 transition-colors font-medium">
               Careers
@@ -86,8 +86,8 @@ export default function Navigation() {
               <Link href="/venture-studio" className="block px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors font-medium rounded-lg hover:bg-gray-50">
                 Venture Studio
               </Link>
-              <Link href="/stages" className="block px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors font-medium rounded-lg hover:bg-gray-50">
-                Content
+              <Link href="/content" className="block px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors font-medium rounded-lg hover:bg-gray-50">
+                Content Library
               </Link>
               <Link href="/careers" className="block px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors font-medium rounded-lg hover:bg-gray-50">
                 Careers

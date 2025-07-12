@@ -3,8 +3,6 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/content/[slug]": "pages/content/[slug].js",
-  "/": "pages/index.js",
-  "/pitch-deck": "pages/pitch-deck.js",
-  "/pitch-deck-demo": "pages/pitch-deck-demo.js",
-  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js"
+  "/content": "pages/content.js",
+  "/": "pages/index.js"
 }

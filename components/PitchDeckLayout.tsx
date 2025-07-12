@@ -13,51 +13,23 @@ export default function PitchDeckLayout({ title, subtitle, children, slug, headi
   const [activeSlide, setActiveSlide] = useState(0);
   const [activeHeading, setActiveHeading] = useState<string>('');
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const headingElements = headings.map(h => document.getElementById(h.id)).filter(Boolean);
-      const scrollPosition = window.scrollY + 100;
-
-      for (let i = headingElements.length - 1; i >= 0; i--) {
-        const element = headingElements[i];
-        if (element && element.offsetTop <= scrollPosition) {
-          setActiveHeading(element.id);
-          setActiveSlide(i);
-          break;
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [headings]);
+  // Convert children to array for easier manipulation
+  const slidesArray = React.Children.toArray(children);
 
   const nextSlide = () => {
-    if (activeSlide < headings.length - 1) {
+    if (activeSlide < slidesArray.length - 1) {
       setActiveSlide(activeSlide + 1);
-      const nextHeading = headings[activeSlide + 1];
-      if (nextHeading) {
-        document.getElementById(nextHeading.id)?.scrollIntoView({ behavior: 'smooth' });
-      }
     }
   };
 
   const prevSlide = () => {
     if (activeSlide > 0) {
       setActiveSlide(activeSlide - 1);
-      const prevHeading = headings[activeSlide - 1];
-      if (prevHeading) {
-        document.getElementById(prevHeading.id)?.scrollIntoView({ behavior: 'smooth' });
-      }
     }
   };
 
   const goToSlide = (index: number) => {
     setActiveSlide(index);
-    const heading = headings[index];
-    if (heading) {
-      document.getElementById(heading.id)?.scrollIntoView({ behavior: 'smooth' });
-    }
   };
 
   const generateBreadcrumbs = (slug: string) => {
@@ -89,8 +61,8 @@ export default function PitchDeckLayout({ title, subtitle, children, slug, headi
                 Home
               </Link>
               <span className="text-gray-400">/</span>
-              <Link href="/stages" className="text-gray-500 hover:text-gray-700 transition-colors">
-                Content
+              <Link href="/content" className="text-gray-500 hover:text-gray-700 transition-colors">
+                Content Library
               </Link>
               {breadcrumbs.map((crumb, index) => (
                 <React.Fragment key={index}>
@@ -113,11 +85,11 @@ export default function PitchDeckLayout({ title, subtitle, children, slug, headi
                   </svg>
                 </button>
                 <span className="text-sm font-medium text-gray-700">
-                  {activeSlide + 1} / {headings.length}
+                  {activeSlide + 1} / {slidesArray.length}
                 </span>
                 <button
                   onClick={nextSlide}
-                  disabled={activeSlide === headings.length - 1}
+                  disabled={activeSlide === slidesArray.length - 1}
                   className="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -202,15 +174,26 @@ export default function PitchDeckLayout({ title, subtitle, children, slug, headi
               </div>
             </div>
 
-            {/* Content Slides */}
-            <div className="space-y-8">
-              {children}
+            {/* Content Slides - Only show active slide */}
+            <div className="relative">
+              {slidesArray.map((slide, index) => (
+                <div
+                  key={index}
+                  className={`transition-all duration-500 ease-in-out ${
+                    activeSlide === index
+                      ? 'opacity-100 transform translate-x-0'
+                      : 'opacity-0 transform translate-x-full absolute top-0 left-0 w-full'
+                  }`}
+                >
+                  {slide}
+                </div>
+              ))}
             </div>
 
             {/* Footer Navigation */}
             <div className="mt-16 flex flex-col sm:flex-row items-center justify-between gap-4">
               <Link 
-                href="/stages"
+                href="/content"
                 className="inline-flex items-center px-8 py-4 bg-gray-100 text-gray-700 rounded-xl hover:bg-gray-200 transition-all duration-200 font-semibold shadow-sm"
               >
                 <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -221,13 +204,13 @@ export default function PitchDeckLayout({ title, subtitle, children, slug, headi
               
               <div className="flex space-x-4">
                 <button
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  onClick={() => setActiveSlide(0)}
                   className="inline-flex items-center px-8 py-4 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition-all duration-200 font-semibold shadow-lg"
                 >
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
                   </svg>
-                  Back to Top
+                  Back to Start
                 </button>
               </div>
             </div>
@@ -261,7 +244,7 @@ export function Slide({
   return (
     <div 
       id={id}
-      className={`${bgClasses[background]} rounded-3xl shadow-xl border border-gray-200 overflow-hidden ${className} mb-8`}
+      className={`${bgClasses[background]} rounded-3xl shadow-xl border border-gray-200 overflow-hidden ${className}`}
     >
       <div className="px-12 py-12">
         <div className="text-center mb-8">

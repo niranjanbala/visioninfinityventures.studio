@@ -75,6 +75,8 @@ export default function ContentPage({ content, title, slug, headings }: ContentP
 export const getStaticPaths: GetStaticPaths = async () => {
   function getAllMarkdownFiles(dir: string): string[] {
     let results: string[] = [];
+    if (!fs.existsSync(dir)) return results;
+    
     const list = fs.readdirSync(dir);
     list.forEach((file) => {
       const filePath = path.join(dir, file);
@@ -88,13 +90,31 @@ export const getStaticPaths: GetStaticPaths = async () => {
     return results;
   }
   
-  const baseDir = path.join(process.cwd(), 'india');
-  const files = getAllMarkdownFiles(baseDir);
-  const paths = files.map((file) => {
-    const slug = file
-      .replace(baseDir + path.sep, '')
-      .replace(/\.[^/.]+$/, '')
-      .replace(/[\/]/g, '-');
+  // Get files from both india and content directories
+  const indiaDir = path.join(process.cwd(), 'india');
+  const contentDir = path.join(process.cwd(), 'content');
+  
+  const indiaFiles = getAllMarkdownFiles(indiaDir);
+  const contentFiles = getAllMarkdownFiles(contentDir);
+  
+  const allFiles = [...indiaFiles, ...contentFiles];
+  
+  const paths = allFiles.map((file) => {
+    let slug: string;
+    
+    if (file.startsWith(indiaDir)) {
+      // Original india directory structure
+      slug = file
+        .replace(indiaDir + path.sep, '')
+        .replace(/\.[^/.]+$/, '')
+        .replace(/[\/]/g, '-');
+    } else {
+      // New content directory structure
+      slug = file
+        .replace(contentDir + path.sep, '')
+        .replace(/\.[^/.]+$/, '');
+    }
+    
     return { params: { slug } };
   });
   
@@ -103,20 +123,32 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params?.slug as string;
-  const baseDir = path.join(process.cwd(), 'india');
+  const indiaDir = path.join(process.cwd(), 'india');
+  const contentDir = path.join(process.cwd(), 'content');
 
   // Find the actual file by matching the slug to the generated slugs
-  function findFileBySlug(dir: string, targetSlug: string): string | null {
+  function findFileBySlug(dir: string, targetSlug: string, isContentDir: boolean = false): string | null {
+    if (!fs.existsSync(dir)) return null;
+    
     const list = fs.readdirSync(dir);
     for (const file of list) {
       const filePath = path.join(dir, file);
       const stat = fs.statSync(filePath);
       if (stat && stat.isDirectory()) {
-        const found = findFileBySlug(filePath, targetSlug);
+        const found = findFileBySlug(filePath, targetSlug, isContentDir);
         if (found) return found;
       } else if (file.endsWith('.md')) {
-        const relPath = filePath.replace(baseDir + path.sep, '');
-        const generatedSlug = relPath.replace(/\.[^/.]+$/, '').replace(/[\/]/g, '-');
+        let generatedSlug: string;
+        
+        if (isContentDir) {
+          // For content directory, just use the filename without extension
+          generatedSlug = file.replace(/\.[^/.]+$/, '');
+        } else {
+          // For india directory, use the old logic
+          const relPath = filePath.replace(indiaDir + path.sep, '');
+          generatedSlug = relPath.replace(/\.[^/.]+$/, '').replace(/[\/]/g, '-');
+        }
+        
         if (generatedSlug === targetSlug) {
           return filePath;
         }
@@ -125,7 +157,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     return null;
   }
 
-  const filePath = findFileBySlug(baseDir, slug);
+  // First try to find in content directory (new structure)
+  let filePath = findFileBySlug(contentDir, slug, true);
+  
+  // If not found, try india directory (old structure)
+  if (!filePath) {
+    filePath = findFileBySlug(indiaDir, slug, false);
+  }
 
   if (!filePath || !fs.existsSync(filePath)) {
     return { notFound: true };
