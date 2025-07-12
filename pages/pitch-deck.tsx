@@ -544,12 +544,12 @@ const PitchDeckPage = () => {
     },
     {
       id: 9,
-      title: "Accel Atom Investment Ask",
+      title: "Strategic Investment Opportunity",
       subtitle: "Seeking ₹8.3Cr for 15% Equity",
       content: (
         <div className="text-center">
           <div className="max-w-2xl mx-auto">
-            <h3 className="text-3xl font-bold text-indigo-600 mb-6">Accel Atom Investment Opportunity</h3>
+            <h3 className="text-3xl font-bold text-indigo-600 mb-6">Strategic Investment Opportunity</h3>
             
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div className="bg-indigo-50 p-6 rounded-lg">
@@ -576,7 +576,7 @@ const PitchDeckPage = () => {
                 </div>
                 <div>
                   <p className="text-2xl font-bold text-green-600">15%</p>
-                  <p className="text-sm text-green-600">Accel Atom</p>
+                  <p className="text-sm text-green-600">Strategic Investor</p>
                 </div>
                 <div>
                   <p className="text-2xl font-bold text-green-600">10%</p>
@@ -590,11 +590,11 @@ const PitchDeckPage = () => {
             </div>
 
             <div className="bg-blue-50 p-6 rounded-lg mb-8">
-              <h4 className="text-xl font-semibold text-blue-800 mb-4">Why Accel Atom Should Back Us?</h4>
+              <h4 className="text-xl font-semibold text-blue-800 mb-4">Why Strategic Investors Should Back Us?</h4>
               <div className="grid md:grid-cols-2 gap-4 text-left">
                 <div>
                   <p className="text-sm text-blue-600">• Category-defining venture studio platform</p>
-                  <p className="text-sm text-blue-600">• Aligns with Accel Atom&apos;s investment thesis</p>
+                  <p className="text-sm text-blue-600">• Aligns with proven investment thesis</p>
                   <p className="text-sm text-blue-600">• Rapid product-market fit methodology</p>
                 </div>
                 <div>
@@ -606,7 +606,7 @@ const PitchDeckPage = () => {
             </div>
 
             <div className="bg-purple-50 p-6 rounded-lg">
-              <h4 className="text-xl font-semibold text-purple-800 mb-4">Accel Atom Alignment</h4>
+              <h4 className="text-xl font-semibold text-purple-800 mb-4">Strategic Alignment</h4>
               <div className="grid md:grid-cols-2 gap-4 text-left">
                 <div>
                   <p className="text-sm text-purple-600">• Product-market fit focus</p>
