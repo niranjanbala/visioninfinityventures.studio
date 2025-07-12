@@ -33,6 +33,9 @@ export default function Navigation() {
             <Link href="/careers" className="text-gray-600 hover:text-indigo-600 transition-colors">
               Careers
             </Link>
+            <Link href="/tech-stack" className="text-gray-600 hover:text-indigo-600 transition-colors">
+              Tech Stack
+            </Link>
             <a href="#process" className="text-gray-600 hover:text-indigo-600 transition-colors">
               Process
             </a>
@@ -98,6 +101,9 @@ export default function Navigation() {
               </Link>
               <Link href="/careers" className="block px-3 py-2 text-gray-600 hover:text-indigo-600 transition-colors">
                 Careers
+              </Link>
+              <Link href="/tech-stack" className="block px-3 py-2 text-gray-600 hover:text-indigo-600 transition-colors">
+                Tech Stack
               </Link>
               <a href="#process" className="block px-3 py-2 text-gray-600 hover:text-indigo-600 transition-colors">
                 Process
