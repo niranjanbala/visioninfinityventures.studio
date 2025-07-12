@@ -47,8 +47,8 @@ export default function Hero() {
             </div>
           </div>
           
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          {/* Primary CTA */}
+          <div className="mb-6">
             <Link 
               href="/apply" 
               className="inline-flex items-center justify-center px-8 py-4 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors shadow-sm"
@@ -58,11 +58,29 @@ export default function Hero() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>
+          </div>
+          
+          {/* Secondary Navigation */}
+          <div className="flex flex-wrap justify-center gap-4 text-sm">
             <Link 
               href="/pitch-deck" 
-              className="inline-flex items-center justify-center px-8 py-4 bg-white text-gray-900 font-semibold rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors shadow-sm"
+              className="text-indigo-600 hover:text-indigo-700 font-medium transition-colors"
             >
               View Pitch Deck
+            </Link>
+            <span className="text-gray-400">•</span>
+            <Link 
+              href="/careers" 
+              className="text-indigo-600 hover:text-indigo-700 font-medium transition-colors"
+            >
+              Join Our Team
+            </Link>
+            <span className="text-gray-400">•</span>
+            <Link 
+              href="/stages" 
+              className="text-indigo-600 hover:text-indigo-700 font-medium transition-colors"
+            >
+              Explore Content
             </Link>
           </div>
         </div>
