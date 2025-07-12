@@ -173,7 +173,7 @@ export default function Careers() {
         <div className="max-w-6xl mx-auto relative z-10 text-center">
           <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm text-white rounded-full text-sm font-medium mb-6 border border-white/20">
             <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
-            Strategic Investment Ready
+            Ready to Build
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             Join Our Open Source & AI Native
@@ -183,7 +183,7 @@ export default function Careers() {
           </h1>
           <p className="text-lg md:text-xl mb-8 text-gray-200 leading-relaxed max-w-3xl mx-auto">
             We&apos;re building Bangalore&apos;s first open source and AI-native systematic venture studio platform that creates successful startups 
-            through rapid product-market fit and proven methodologies. All roles are fractional and remote. Strategic investment ready for ₹8.3Cr (15% equity).
+            through rapid product-market fit and proven methodologies. All roles are fractional and remote. Ready to build for ₹8.3Cr (15% equity).
           </p>
           
           {/* Investment Context */}
@@ -338,7 +338,7 @@ export default function Careers() {
                     <strong>Experience:</strong> {role.experience}
                   </div>
                   <a 
-                    href={`mailto:careers@visioninfinityventures.studio?subject=${role.title} - Strategic Investment Ready`}
+                    href={`mailto:careers@visioninfinityventures.studio?subject=${role.title} - Ready to Build`}
                     className="inline-flex items-center px-6 py-2 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-200"
                   >
                     Apply Now
@@ -418,11 +418,11 @@ export default function Careers() {
           </h2>
           <p className="text-gray-400 text-sm text-center">
             Join us in building the category-defining venture studio platform that will transform 
-            how startups are created and scaled globally. Strategic investment ready for ₹8.3Cr (15% equity).
+            how startups are created and scaled globally. Ready to build for ₹8.3Cr (15% equity).
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="mailto:careers@visioninfinityventures.studio?subject=General Application - Strategic Investment Ready"
+              href="mailto:careers@visioninfinityventures.studio?subject=General Application - Ready to Build"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-semibold rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105"
             >
               Apply Now

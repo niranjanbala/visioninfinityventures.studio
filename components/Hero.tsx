@@ -12,7 +12,7 @@ export default function Hero() {
           {/* Badge */}
           <div className="inline-flex items-center px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-medium mb-8">
             <span className="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>
-            Strategic Investment Ready
+            Ready to Build
           </div>
           
           {/* Main Heading */}
