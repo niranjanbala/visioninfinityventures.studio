@@ -28,6 +28,52 @@ declare global {
 
 export default function HubSpotForm({ formData, onFormSubmitted }: HubSpotFormProps) {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isProcessing, setIsProcessing] = useState(false);
+
+  const handlePersonaCreation = async (formData: any) => {
+    try {
+      setIsProcessing(true);
+      
+      // Extract name and email from HubSpot form data
+      const firstName = formData.firstname || formData.first_name || '';
+      const lastName = formData.lastname || formData.last_name || '';
+      const email = formData.email || '';
+
+      // Prepare data for persona API
+      const personaData = {
+        ...formData,
+        firstName,
+        lastName,
+        email
+      };
+
+      // Call our persona API
+      const response = await fetch('/api/persona', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(personaData)
+      });
+
+      if (!response.ok) {
+        throw new Error(`Persona API failed: ${response.statusText}`);
+      }
+
+      const result = await response.json();
+      console.log('Persona created/updated:', result);
+      
+      // Call the original onFormSubmitted callback
+      onFormSubmitted();
+      
+    } catch (error) {
+      console.error('Error creating persona:', error);
+      // Still call onFormSubmitted even if persona creation fails
+      onFormSubmitted();
+    } finally {
+      setIsProcessing(false);
+    }
+  };
 
   useEffect(() => {
     // Load HubSpot script
@@ -45,8 +91,9 @@ export default function HubSpotForm({ formData, onFormSubmitted }: HubSpotFormPr
           formId: '52155d7a-44f5-4868-9f7c-ef38b74f6301',
           target: '#hubspot-form-container',
           onFormSubmitted: function(form: any) {
-            // Handle form submission
-            onFormSubmitted();
+            // Get form data and create persona
+            const formData = form.getData();
+            handlePersonaCreation(formData);
           },
           onFormReady: function(form: any) {
             // Set hidden field values
@@ -84,7 +131,7 @@ export default function HubSpotForm({ formData, onFormSubmitted }: HubSpotFormPr
         existingScript.remove();
       }
     };
-  }, [formData, onFormSubmitted]);
+  }, [formData, onFormSubmitted, handlePersonaCreation]);
 
   return (
     <div className="bg-white rounded-xl p-8 border border-gray-200 shadow-sm max-w-2xl mx-auto">
@@ -94,6 +141,14 @@ export default function HubSpotForm({ formData, onFormSubmitted }: HubSpotFormPr
             <div className="text-center">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600 mx-auto mb-4"></div>
               <p className="text-gray-600">Loading form...</p>
+            </div>
+          </div>
+        )}
+        {isProcessing && (
+          <div className="flex items-center justify-center h-64">
+            <div className="text-center">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600 mx-auto mb-4"></div>
+              <p className="text-gray-600">Creating your personalized experience...</p>
             </div>
           </div>
         )}
