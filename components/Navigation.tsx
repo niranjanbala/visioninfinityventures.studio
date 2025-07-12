@@ -30,6 +30,9 @@ export default function Navigation() {
             <Link href="/pitch-deck" className="text-gray-600 hover:text-indigo-600 transition-colors">
               Pitch Deck
             </Link>
+            <Link href="/careers" className="text-gray-600 hover:text-indigo-600 transition-colors">
+              Careers
+            </Link>
             <a href="#process" className="text-gray-600 hover:text-indigo-600 transition-colors">
               Process
             </a>
@@ -92,6 +95,9 @@ export default function Navigation() {
               </Link>
               <Link href="/pitch-deck" className="block px-3 py-2 text-gray-600 hover:text-indigo-600 transition-colors">
                 Pitch Deck
+              </Link>
+              <Link href="/careers" className="block px-3 py-2 text-gray-600 hover:text-indigo-600 transition-colors">
+                Careers
               </Link>
               <a href="#process" className="block px-3 py-2 text-gray-600 hover:text-indigo-600 transition-colors">
                 Process

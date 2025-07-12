@@ -83,11 +83,11 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Why We Exist
+              Why Accel Atom Backs Us
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              The startup world is broken. Success is concentrated among those with privilege, 
-              connections, and capital. We&apos;re here to change that.
+              We&apos;re building the category-defining venture studio platform that systematically creates 
+              successful startups through rapid product-market fit and proven methodologies.
             </p>
           </div>
           
@@ -101,11 +101,11 @@ export default function Home() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">The Problem</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">The Market Opportunity</h3>
                   <p className="text-gray-600">
-                    90% of startups fail, but not because founders lack talent or drive. 
-                    They fail because they lack access to the right knowledge, tools, and support systems 
-                    that are typically reserved for the privileged few.
+                    $3.2T global startup ecosystem with no systematic venture studio platform. 
+                    Current solutions are fragmented, manual, and don&apos;t scale. We&apos;re building 
+                    the category-defining platform that changes this.
                   </p>
                 </div>
               </div>
@@ -117,11 +117,11 @@ export default function Home() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">The Opportunity</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Our Competitive Advantage</h3>
                   <p className="text-gray-600">
-                    Every founder has the potential to build something extraordinary. 
-                    With the right guidance, tools, and support, we can unlock that potential 
-                    and create a more inclusive, successful startup ecosystem.
+                    First-mover advantage in systematic venture studio platform. AI-powered personalization, 
+                    proven 12-phase methodology, and network effects create an unassailable competitive moat 
+                    that scales globally.
                   </p>
                 </div>
               </div>
@@ -129,7 +129,7 @@ export default function Home() {
             
             {/* Solution */}
             <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-8 border border-green-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Solution</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Platform</h3>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
@@ -137,7 +137,7 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className="text-gray-700">Personalized roadmaps for every founder type</span>
+                  <span className="text-gray-700">Systematic venture creation methodology</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
@@ -145,7 +145,7 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className="text-gray-700">AI-powered tools and checklists</span>
+                  <span className="text-gray-700">AI-powered rapid product-market fit</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
@@ -153,7 +153,7 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className="text-gray-700">Democratized access to funding knowledge</span>
+                  <span className="text-gray-700">Category-defining market creation</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
@@ -161,7 +161,7 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className="text-gray-700">Inclusive community and network access</span>
+                  <span className="text-gray-700">Global scale with network effects</span>
                 </div>
               </div>
             </div>
@@ -175,10 +175,10 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Inclusivity</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Category-Defining</h3>
               <p className="text-gray-600">
-                We believe every founder deserves success, regardless of background, 
-                location, or access to traditional networks.
+                We build new markets, not compete in existing ones. Our platform creates 
+                the category of systematic venture studio methodology.
               </p>
             </div>
             
@@ -188,10 +188,10 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Transparency</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Rapid Iteration</h3>
               <p className="text-gray-600">
-                We provide clear, actionable guidance with no hidden agendas. 
-                Your success is our success, and we&apos;re transparent about how we help you achieve it.
+                We focus on rapid product-market fit achievement through systematic 
+                iteration and data-driven optimization.
               </p>
             </div>
             
@@ -201,10 +201,10 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Innovation</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Systematic Execution</h3>
               <p className="text-gray-600">
-                We leverage cutting-edge AI and technology to provide personalized, 
-                scalable solutions that adapt to your unique journey and needs.
+                We use proven methodologies and systematic approaches to ensure 
+                consistent, scalable results across all ventures.
               </p>
             </div>
           </div>
@@ -216,11 +216,11 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Find Your Perfect Venture Studio Path
+              Join the Category-Defining Venture Studio Platform
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Tell us about your startup journey and we&apos;ll create a personalized roadmap just for you. 
-              Get access to tailored resources, tools, and guidance specific to your needs.
+              Tell us about your startup journey and we&apos;ll create a systematic roadmap for rapid 
+              product-market fit achievement. Get access to proven methodologies and AI-powered tools.
             </p>
           </div>
           
