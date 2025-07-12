@@ -10,8 +10,8 @@ export default function Careers() {
       title: 'VP Product Strategy',
       type: 'Strategist',
       function: 'Product & Design',
-      salary: '₹8-10 Lakhs/month',
-      equity: '2-3% over 4 years',
+      salary: '₹16-20 Lakhs/month',
+      equity: '2% over 4 years',
       experience: '8+ years',
       description: 'Lead product strategy and market opportunity identification for our category-defining venture studio platform.',
       responsibilities: [
@@ -27,8 +27,8 @@ export default function Careers() {
       title: 'Product Manager',
       type: 'Executor',
       function: 'Product & Design',
-      salary: '₹4-6 Lakhs/month',
-      equity: '1-1.5% over 4 years',
+      salary: '₹8-12 Lakhs/month',
+      equity: '1% over 4 years',
       experience: '5+ years',
       description: 'Execute rapid MVP development and product-market fit achievement through systematic iteration.',
       responsibilities: [
@@ -44,8 +44,8 @@ export default function Careers() {
       title: 'UX/UI Designer',
       type: 'Executor',
       function: 'Product & Design',
-      salary: '₹3-5 Lakhs/month',
-      equity: '0.5-1% over 4 years',
+      salary: '₹6-10 Lakhs/month',
+      equity: '0.5% over 4 years',
       experience: '3+ years',
       description: 'Create intuitive and engaging user experiences for our venture studio platform.',
       responsibilities: [
@@ -62,8 +62,8 @@ export default function Careers() {
       title: 'CTO/VP Technology Strategy',
       type: 'Strategist',
       function: 'Technology & AI',
-      salary: '₹10-12 Lakhs/month',
-      equity: '3-4% over 4 years',
+      salary: '₹20-24 Lakhs/month',
+      equity: '3% over 4 years',
       experience: '10+ years',
       description: 'Lead technology architecture and AI strategy for our scalable venture studio platform.',
       responsibilities: [
@@ -79,8 +79,8 @@ export default function Careers() {
       title: 'Lead Engineer',
       type: 'Executor',
       function: 'Technology & AI',
-      salary: '₹6-8 Lakhs/month',
-      equity: '1.5-2% over 4 years',
+      salary: '₹12-16 Lakhs/month',
+      equity: '1.5% over 4 years',
       experience: '7+ years',
       description: 'Execute platform development and AI implementation with technical excellence.',
       responsibilities: [
@@ -96,8 +96,8 @@ export default function Careers() {
       title: 'VP Growth Strategy',
       type: 'Strategist',
       function: 'Growth & Customer Success',
-      salary: '₹8-10 Lakhs/month',
-      equity: '2-3% over 4 years',
+      salary: '₹16-20 Lakhs/month',
+      equity: '2% over 4 years',
       experience: '8+ years',
       description: 'Lead growth strategy and customer success for rapid Bangalore market expansion.',
       responsibilities: [
@@ -113,8 +113,8 @@ export default function Careers() {
       title: 'Growth Manager',
       type: 'Executor',
       function: 'Growth & Customer Success',
-      salary: '₹4-6 Lakhs/month',
-      equity: '1-1.5% over 4 years',
+      salary: '₹8-12 Lakhs/month',
+      equity: '1% over 4 years',
       experience: '5+ years',
       description: 'Execute growth initiatives and user acquisition strategies for rapid platform growth.',
       responsibilities: [
@@ -130,8 +130,8 @@ export default function Careers() {
       title: 'Customer Success Manager',
       type: 'Executor',
       function: 'Growth & Customer Success',
-      salary: '₹3-5 Lakhs/month',
-      equity: '0.5-1% over 4 years',
+      salary: '₹6-10 Lakhs/month',
+      equity: '0.5% over 4 years',
       experience: '3+ years',
       description: 'Ensure founder success and satisfaction through proactive support and guidance.',
       responsibilities: [
@@ -193,7 +193,7 @@ export default function Careers() {
               <div className="text-sm text-gray-300">Open Positions</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <div className="text-2xl font-bold text-indigo-400 mb-2">₹35L</div>
+              <div className="text-2xl font-bold text-indigo-400 mb-2">₹70L</div>
               <div className="text-sm text-gray-300">Monthly Team Cost</div>
             </div>
           </div>

@@ -36,9 +36,9 @@ Lead product strategy and market opportunity identification for our category-def
 - Background in AI/ML product strategy preferred
 
 **Compensation:**
-- **Salary**: ₹8-10 Lakhs/month
-- **Equity**: 2-3% over 4 years
-- **Total Package**: ₹10-12 Lakhs/month equivalent
+- **Salary**: ₹16-20 Lakhs/month
+- **Equity**: 2% over 4 years
+- **Total Package**: ₹18-22 Lakhs/month equivalent
 
 ---
 
@@ -61,9 +61,9 @@ Execute rapid MVP development and product-market fit achievement. Lead the techn
 - Background in startup ecosystem or venture capital
 
 **Compensation:**
-- **Salary**: ₹4-6 Lakhs/month
-- **Equity**: 1-1.5% over 4 years
-- **Total Package**: ₹5-7 Lakhs/month equivalent
+- **Salary**: ₹8-12 Lakhs/month
+- **Equity**: 1% over 4 years
+- **Total Package**: ₹9-13 Lakhs/month equivalent
 
 ---
 
@@ -88,9 +88,9 @@ Lead venture studio methodology and founder success optimization. Develop system
 - Background in multiple startup stages (idea to growth)
 
 **Compensation:**
-- **Salary**: ₹8-10 Lakhs/month
-- **Equity**: 2-3% over 4 years
-- **Total Package**: ₹10-12 Lakhs/month equivalent
+- **Salary**: ₹16-20 Lakhs/month
+- **Equity**: 2% over 4 years
+- **Total Package**: ₹18-22 Lakhs/month equivalent
 
 ---
 
@@ -113,9 +113,9 @@ Execute founder onboarding and journey management. Provide hands-on support to f
 - Background in multiple industries (education, SaaS B2B)
 
 **Compensation:**
-- **Salary**: ₹4-6 Lakhs/month
-- **Equity**: 1-1.5% over 4 years
-- **Total Package**: ₹5-7 Lakhs/month equivalent
+- **Salary**: ₹8-12 Lakhs/month
+- **Equity**: 1% over 4 years
+- **Total Package**: ₹9-13 Lakhs/month equivalent
 
 ---
 
@@ -140,9 +140,9 @@ Lead technology architecture and AI strategy for our scalable venture studio pla
 - Background in startup technology or venture capital
 
 **Compensation:**
-- **Salary**: ₹10-12 Lakhs/month
-- **Equity**: 3-4% over 4 years
-- **Total Package**: ₹13-16 Lakhs/month equivalent
+- **Salary**: ₹20-24 Lakhs/month
+- **Equity**: 3% over 4 years
+- **Total Package**: ₹23-27 Lakhs/month equivalent
 
 ---
 
@@ -165,9 +165,9 @@ Execute platform development and AI implementation. Lead technical team in build
 - Background in startup technology or B2B SaaS
 
 **Compensation:**
-- **Salary**: ₹6-8 Lakhs/month
-- **Equity**: 1.5-2% over 4 years
-- **Total Package**: ₹7.5-10 Lakhs/month equivalent
+- **Salary**: ₹12-16 Lakhs/month
+- **Equity**: 1.5% over 4 years
+- **Total Package**: ₹13.5-17.5 Lakhs/month equivalent
 
 ---
 
@@ -192,9 +192,9 @@ Lead growth strategy and market expansion for rapid scale. Develop strategies to
 - Background in venture capital or startup ecosystem
 
 **Compensation:**
-- **Salary**: ₹8-10 Lakhs/month
-- **Equity**: 2-3% over 4 years
-- **Total Package**: ₹10-12 Lakhs/month equivalent
+- **Salary**: ₹16-20 Lakhs/month
+- **Equity**: 2% over 4 years
+- **Total Package**: ₹18-22 Lakhs/month equivalent
 
 ---
 
@@ -217,9 +217,9 @@ Execute growth initiatives and user acquisition strategies. Lead community build
 - Background in startup ecosystem or B2B marketing
 
 **Compensation:**
-- **Salary**: ₹4-6 Lakhs/month
-- **Equity**: 1-1.5% over 4 years
-- **Total Package**: ₹5-7 Lakhs/month equivalent
+- **Salary**: ₹8-12 Lakhs/month
+- **Equity**: 1% over 4 years
+- **Total Package**: ₹9-13 Lakhs/month equivalent
 
 ---
 
@@ -244,9 +244,9 @@ Lead financial strategy and investment readiness for Accel Atom backing. Develop
 - Background in venture capital or startup finance
 
 **Compensation:**
-- **Salary**: ₹8-10 Lakhs/month
-- **Equity**: 2-3% over 4 years
-- **Total Package**: ₹10-12 Lakhs/month equivalent
+- **Salary**: ₹16-20 Lakhs/month
+- **Equity**: 2% over 4 years
+- **Total Package**: ₹18-22 Lakhs/month equivalent
 
 ---
 
@@ -269,19 +269,19 @@ Execute operational excellence and team coordination. Ensure systematic executio
 - Background in startup operations or venture building
 
 **Compensation:**
-- **Salary**: ₹4-6 Lakhs/month
-- **Equity**: 1-1.5% over 4 years
-- **Total Package**: ₹5-7 Lakhs/month equivalent
+- **Salary**: ₹8-12 Lakhs/month
+- **Equity**: 1% over 4 years
+- **Total Package**: ₹9-13 Lakhs/month equivalent
 
 ---
 
 ## 💰 **COMPENSATION SUMMARY**
 
 ### **Phase 1: Foundation (Months 1-6)**
-- **Total Monthly Cost**: ₹25-30 Lakhs
-- **Total Annual Cost**: ₹3-3.6 Crores
+- **Total Monthly Cost**: ₹50-60 Lakhs
+- **Total Annual Cost**: ₹6-7.2 Crores
 - **Equity Allocation**: 10% for team
-- **Investment Required**: ₹2-3 Crores for 6 months
+- **Investment Required**: ₹4-6 Crores for 6 months
 
 ### **Equity Structure**
 - **Founder Team**: 60% (maintains control)
