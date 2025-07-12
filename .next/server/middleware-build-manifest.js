@@ -1,1 +1,50 @@
-globalThis.__BUILD_MANIFEST={polyfillFiles:["static/chunks/polyfills-42372ed130431b0a.js"],devFiles:[],ampDevFiles:[],lowPriorityFiles:[],rootMainFiles:[],rootMainFilesTree:{},pages:{"/":["static/chunks/webpack-8cac0b4b405cede1.js","static/chunks/framework-f75312fc4004b783.js","static/chunks/main-7850b6b92ea53310.js","static/chunks/695-4c6f0c22551c1be6.js","static/chunks/pages/index-66d4effadff42d84.js"],"/_app":["static/chunks/webpack-8cac0b4b405cede1.js","static/chunks/framework-f75312fc4004b783.js","static/chunks/main-7850b6b92ea53310.js","static/css/f035a6e26dfc6f57.css","static/chunks/pages/_app-63d0f371e328e9f6.js"],"/_error":["static/chunks/webpack-8cac0b4b405cede1.js","static/chunks/framework-f75312fc4004b783.js","static/chunks/main-7850b6b92ea53310.js","static/chunks/pages/_error-41608b100cc61246.js"],"/apply":["static/chunks/webpack-8cac0b4b405cede1.js","static/chunks/framework-f75312fc4004b783.js","static/chunks/main-7850b6b92ea53310.js","static/chunks/pages/apply-f2b885abf4573f1b.js"],"/auth/register":["static/chunks/webpack-8cac0b4b405cede1.js","static/chunks/framework-f75312fc4004b783.js","static/chunks/main-7850b6b92ea53310.js","static/chunks/695-4c6f0c22551c1be6.js","static/chunks/pages/auth/register-220265aa98ade477.js"],"/auth/signin":["static/chunks/webpack-8cac0b4b405cede1.js","static/chunks/framework-f75312fc4004b783.js","static/chunks/main-7850b6b92ea53310.js","static/chunks/695-4c6f0c22551c1be6.js","static/chunks/pages/auth/signin-250b2af748e82e92.js"],"/careers":["static/chunks/webpack-8cac0b4b405cede1.js","static/chunks/framework-f75312fc4004b783.js","static/chunks/main-7850b6b92ea53310.js","static/chunks/695-4c6f0c22551c1be6.js","static/chunks/pages/careers-73a723e61febad5d.js"],"/content/[slug]":["static/chunks/webpack-8cac0b4b405cede1.js","static/chunks/framework-f75312fc4004b783.js","static/chunks/main-7850b6b92ea53310.js","static/chunks/695-4c6f0c22551c1be6.js","static/chunks/pages/content/[slug]-a44260ff67e5aaca.js"],"/dashboard":["static/chunks/webpack-8cac0b4b405cede1.js","static/chunks/framework-f75312fc4004b783.js","static/chunks/main-7850b6b92ea53310.js","static/chunks/pages/dashboard-c012d40e64e5ac39.js"],"/pitch-deck":["static/chunks/webpack-8cac0b4b405cede1.js","static/chunks/framework-f75312fc4004b783.js","static/chunks/main-7850b6b92ea53310.js","static/chunks/695-4c6f0c22551c1be6.js","static/chunks/pages/pitch-deck-65b3d5b26cae8bf6.js"],"/stages":["static/chunks/webpack-8cac0b4b405cede1.js","static/chunks/framework-f75312fc4004b783.js","static/chunks/main-7850b6b92ea53310.js","static/chunks/695-4c6f0c22551c1be6.js","static/chunks/pages/stages-5b0e41a18e6c4b79.js"],"/tech-stack":["static/chunks/webpack-8cac0b4b405cede1.js","static/chunks/framework-f75312fc4004b783.js","static/chunks/main-7850b6b92ea53310.js","static/chunks/695-4c6f0c22551c1be6.js","static/chunks/pages/tech-stack-0c74da3e9d991053.js"],"/venture-studio":["static/chunks/webpack-8cac0b4b405cede1.js","static/chunks/framework-f75312fc4004b783.js","static/chunks/main-7850b6b92ea53310.js","static/chunks/695-4c6f0c22551c1be6.js","static/chunks/pages/venture-studio-31ab65344efa3c39.js"]},ampFirstPages:[]},globalThis.__BUILD_MANIFEST.lowPriorityFiles=["/static/"+process.env.__NEXT_BUILD_ID+"/_buildManifest.js",,"/static/"+process.env.__NEXT_BUILD_ID+"/_ssgManifest.js"];
+globalThis.__BUILD_MANIFEST = {
+  "polyfillFiles": [
+    "static/chunks/polyfills.js"
+  ],
+  "devFiles": [
+    "static/chunks/react-refresh.js"
+  ],
+  "ampDevFiles": [],
+  "lowPriorityFiles": [],
+  "rootMainFiles": [],
+  "rootMainFilesTree": {},
+  "pages": {
+    "/": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/index.js"
+    ],
+    "/_app": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/_app.js"
+    ],
+    "/_error": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/_error.js"
+    ],
+    "/content/[slug]": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/content/[slug].js"
+    ],
+    "/pitch-deck": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/pitch-deck.js"
+    ],
+    "/pitch-deck-demo": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/pitch-deck-demo.js"
+    ]
+  },
+  "ampFirstPages": []
+};
+globalThis.__BUILD_MANIFEST.lowPriorityFiles = [
+"/static/" + process.env.__NEXT_BUILD_ID + "/_buildManifest.js",
+,"/static/" + process.env.__NEXT_BUILD_ID + "/_ssgManifest.js",
+
+];

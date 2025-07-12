@@ -5,6 +5,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import Navigation from '../../components/Navigation';
+import PitchDeckLayout, { Slide, FeatureGrid, Stats } from '../../components/PitchDeckLayout';
 import { marked } from 'marked';
 import React, { useState, useEffect } from 'react';
 
@@ -16,44 +17,44 @@ interface ContentPageProps {
 }
 
 export default function ContentPage({ content, title, slug, headings }: ContentPageProps) {
-  const [activeHeading, setActiveHeading] = useState<string>('');
+  const pageTitle = `${title} | Vision Infinity Ventures`;
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const headingElements = headings.map(h => document.getElementById(h.id)).filter(Boolean);
-      const scrollPosition = window.scrollY + 100;
-
-      for (let i = headingElements.length - 1; i >= 0; i--) {
-        const element = headingElements[i];
-        if (element && element.offsetTop <= scrollPosition) {
-          setActiveHeading(element.id);
-          break;
+  // Create slides from headings
+  const createSlides = () => {
+    return headings.map((heading, index) => {
+      // Extract content for this heading
+      let slideContent = '';
+      const headingRegex = new RegExp(`<h${heading.level}[^>]*id="${heading.id}"[^>]*>.*?</h${heading.level}>`, 's');
+      const match = content.match(headingRegex);
+      
+      if (match) {
+        // Get content after this heading until the next heading of same or higher level
+        const afterHeading = content.substring(content.indexOf(match[0]) + match[0].length);
+        const nextHeadingRegex = new RegExp(`<h[1-${heading.level}][^>]*>`, 'i');
+        const nextMatch = afterHeading.match(nextHeadingRegex);
+        
+        if (nextMatch) {
+          slideContent = afterHeading.substring(0, nextMatch.index);
+        } else {
+          slideContent = afterHeading;
         }
       }
-    };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [headings]);
-
-  const generateBreadcrumbs = (slug: string) => {
-    const parts = slug.split('-');
-    const breadcrumbs = [];
-    let currentPath = '';
-    
-    for (let i = 0; i < parts.length; i++) {
-      currentPath += (i > 0 ? '-' : '') + parts[i];
-      breadcrumbs.push({
-        name: parts[i].replace(/\b\w/g, l => l.toUpperCase()),
-        path: currentPath
-      });
-    }
-    
-    return breadcrumbs;
+      return (
+        <Slide 
+          key={heading.id} 
+          title={heading.text} 
+          id={heading.id}
+          background={index % 2 === 0 ? "white" : "gray"}
+        >
+          <div 
+            className="prose prose-lg max-w-none"
+            dangerouslySetInnerHTML={{ __html: slideContent }} 
+          />
+        </Slide>
+      );
+    });
   };
-
-  const breadcrumbs = generateBreadcrumbs(slug);
-  const pageTitle = `${title} | Vision Infinity Ventures`;
 
   return (
     <>
@@ -64,120 +65,9 @@ export default function ContentPage({ content, title, slug, headings }: ContentP
       </Head>
       <Navigation />
       
-      <div className="min-h-screen bg-gray-50">
-        {/* Breadcrumb Navigation */}
-        <div className="bg-white border-b border-gray-200">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <nav className="flex items-center space-x-2 py-4 text-sm">
-              <Link href="/" className="text-gray-500 hover:text-gray-700 transition-colors">
-                Home
-              </Link>
-              <span className="text-gray-400">/</span>
-              <Link href="/stages" className="text-gray-500 hover:text-gray-700 transition-colors">
-                Content
-              </Link>
-              {breadcrumbs.map((crumb, index) => (
-                <React.Fragment key={index}>
-                  <span className="text-gray-400">/</span>
-                  <span className="text-gray-900 font-medium">{crumb.name}</span>
-                </React.Fragment>
-              ))}
-            </nav>
-          </div>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="lg:grid lg:grid-cols-4 lg:gap-8">
-            {/* Table of Contents */}
-            <div className="lg:col-span-1">
-              <div className="sticky top-8">
-                <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-                  <h2 className="text-lg font-semibold text-gray-900 mb-4">Table of Contents</h2>
-                  <nav className="space-y-1">
-                    {headings.map((heading) => (
-                      <a
-                        key={heading.id}
-                        href={`#${heading.id}`}
-                        className={`block text-sm transition-all duration-200 rounded-md px-2 py-1 ${
-                          activeHeading === heading.id
-                            ? 'text-indigo-600 font-medium bg-indigo-50 border-l-2 border-indigo-600'
-                            : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
-                        }`}
-                        style={{ paddingLeft: `${(heading.level - 1) * 16 + 8}px` }}
-                      >
-                        {heading.text}
-                      </a>
-                    ))}
-                  </nav>
-                </div>
-              </div>
-            </div>
-
-            {/* Main Content */}
-            <div className="lg:col-span-3">
-              <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-                {/* Header */}
-                <div className="bg-gradient-to-r from-indigo-600 via-blue-600 to-indigo-700 px-8 py-8">
-                  <h1 className="text-4xl font-bold text-white mb-3 leading-tight">{title}</h1>
-                  <p className="text-indigo-100 text-lg">Vision Infinity Ventures Content Library</p>
-                </div>
-
-                {/* Content */}
-                <div className="p-8 lg:p-12">
-                  <div 
-                    className="prose prose-lg max-w-none
-                      prose-headings:scroll-mt-24 
-                      prose-h1:text-3xl prose-h1:font-bold prose-h1:text-gray-900 prose-h1:mb-6 prose-h1:mt-8
-                      prose-h2:text-2xl prose-h2:font-semibold prose-h2:text-gray-800 prose-h2:mb-4 prose-h2:mt-6 prose-h2:border-b prose-h2:border-gray-200 prose-h2:pb-2
-                      prose-h3:text-xl prose-h3:font-semibold prose-h3:text-gray-800 prose-h3:mb-3 prose-h3:mt-5
-                      prose-h4:text-lg prose-h4:font-medium prose-h4:text-gray-700 prose-h4:mb-2 prose-h4:mt-4
-                      prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-4
-                      prose-a:text-indigo-600 prose-a:no-underline hover:prose-a:underline prose-a:font-medium
-                      prose-strong:text-gray-900 prose-strong:font-semibold
-                      prose-em:text-gray-700 prose-em:italic
-                      prose-blockquote:border-l-4 prose-blockquote:border-indigo-300 prose-blockquote:bg-indigo-50 prose-blockquote:pl-4 prose-blockquote:py-3 prose-blockquote:rounded-r-lg prose-blockquote:my-6
-                      prose-code:bg-gray-100 prose-code:text-gray-800 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:font-mono prose-code:text-sm
-                      prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:p-4 prose-pre:rounded-lg prose-pre:overflow-x-auto prose-pre:my-6
-                      prose-ul:list-disc prose-ul:pl-6 prose-ul:my-4
-                      prose-ol:list-decimal prose-ol:pl-6 prose-ol:my-4
-                      prose-li:text-gray-700 prose-li:mb-1
-                      prose-table:border-collapse prose-table:w-full prose-table:my-6 prose-table:rounded-lg prose-table:overflow-hidden
-                      prose-th:bg-gray-50 prose-th:border prose-th:border-gray-200 prose-th:px-4 prose-th:py-3 prose-th:text-left prose-th:font-semibold prose-th:text-gray-900
-                      prose-td:border prose-td:border-gray-200 prose-td:px-4 prose-td:py-3 prose-td:text-gray-700
-                      prose-hr:border-gray-300 prose-hr:my-8"
-                    dangerouslySetInnerHTML={{ __html: content }}
-                  />
-                </div>
-              </div>
-
-              {/* Footer Navigation */}
-              <div className="mt-12 flex flex-col sm:flex-row items-center justify-between gap-4">
-                <Link 
-                  href="/stages"
-                  className="inline-flex items-center px-6 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors font-medium"
-                >
-                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                  </svg>
-                  Back to Content Library
-                </Link>
-                
-                <div className="flex space-x-4">
-                  <button
-                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                    className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium shadow-sm"
-                  >
-                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-                    </svg>
-                    Back to Top
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <PitchDeckLayout title={title} slug={slug} headings={headings}>
+        {createSlides()}
+      </PitchDeckLayout>
     </>
   );
 }
