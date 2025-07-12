@@ -5,6 +5,7 @@ import Hero from '../components/Hero';
 import Process from '../components/Process';
 import Timeline from '../components/Timeline';
 import Studios from '../components/Studios';
+import HubSpotForm from '../components/HubSpotForm';
 import Link from 'next/link';
 
 export default function Home() {
@@ -40,6 +41,24 @@ export default function Home() {
 
   const goToStep = (step: number) => {
     setCurrentStep(step);
+  };
+
+  const handleHubSpotFormSubmitted = () => {
+    setIsSubmitting(false);
+    // Navigate to personalized page
+    const params = new URLSearchParams({
+      founderType: formData.founderType,
+      stage: formData.stage,
+      industry: formData.industry,
+      location: formData.location,
+      deliveryMedium: formData.deliveryMedium,
+      technologySkill: formData.technologySkill,
+      marketingSkill: formData.marketingSkill,
+      salesSkill: formData.salesSkill,
+      productSkill: formData.productSkill,
+      designSkill: formData.designSkill
+    });
+    window.location.href = `/venture-studio?${params.toString()}`;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -227,7 +246,7 @@ export default function Home() {
               {/* Step Indicators */}
               <div className="flex justify-center mb-8">
                 <div className="flex space-x-2">
-                  {[0, 1, 2, 3, 4].map((step) => (
+                  {[0, 1, 2, 3, 4, 5].map((step) => (
                     <div
                       key={step}
                       className={`w-3 h-3 rounded-full transition-colors ${
@@ -475,18 +494,31 @@ export default function Home() {
                 </div>
               )}
 
+              {/* Step 5: HubSpot Form */}
+              {currentStep === 5 && (
+                <div className="text-center">
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">Get Your Personalized Roadmap</h3>
+                  <p className="text-gray-600 mb-8">Enter your details to receive your customized 12-phase journey</p>
+                  
+                  <HubSpotForm 
+                    formData={formData} 
+                    onFormSubmitted={handleHubSpotFormSubmitted} 
+                  />
+                </div>
+              )}
+
               {/* Navigation Buttons */}
-              <div className="flex justify-between items-center pt-8">
-                <button
-                  type="button"
-                  onClick={prevStep}
-                  disabled={currentStep === 0}
-                  className="px-6 py-3 text-gray-600 hover:text-gray-900 disabled:opacity-50 disabled:cursor-not-allowed font-medium"
-                >
-                  ← Back
-                </button>
-                
-                {currentStep < 4 ? (
+              {currentStep < 5 && (
+                <div className="flex justify-between items-center pt-8">
+                  <button
+                    type="button"
+                    onClick={prevStep}
+                    disabled={currentStep === 0}
+                    className="px-6 py-3 text-gray-600 hover:text-gray-900 disabled:opacity-50 disabled:cursor-not-allowed font-medium"
+                  >
+                    ← Back
+                  </button>
+                  
                   <button
                     type="button"
                     onClick={nextStep}
@@ -494,16 +526,8 @@ export default function Home() {
                   >
                     Next →
                   </button>
-                ) : (
-                  <button
-                    type="submit"
-                    disabled={!isFormComplete || isSubmitting}
-                    className="px-8 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors font-medium"
-                  >
-                    {isSubmitting ? 'Processing...' : 'Get My Roadmap'}
-                  </button>
-                )}
-              </div>
+                </div>
+              )}
             </form>
           </div>
         </div>
@@ -524,15 +548,15 @@ export default function Home() {
             how startups are created and scaled in Bangalore.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/apply"
+            <a 
+              href="#persona-selection"
               className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors shadow-sm"
             >
               Start Your Journey
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </Link>
+            </a>
             <Link 
               href="/pitch-deck" 
               className="inline-flex items-center px-8 py-4 bg-indigo-700 text-white font-semibold rounded-lg hover:bg-indigo-800 transition-colors"
