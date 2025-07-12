@@ -102,11 +102,12 @@ export default function Home() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">The Market Opportunity</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">The Bangalore Market Opportunity</h3>
                   <p className="text-gray-600">
-                    $3.2T global startup ecosystem with no systematic venture studio platform. 
-                    Current solutions are fragmented, manual, and don&apos;t scale. We&apos;re building 
-                    the category-defining platform that changes this.
+                    $110B Bangalore startup ecosystem with 8,000+ startups and 40+ unicorns, 
+                    but no systematic venture studio platform. Current solutions are fragmented, 
+                    manual, and don&apos;t scale. We&apos;re building the category-defining platform 
+                    that changes this for Bangalore founders.
                   </p>
                 </div>
               </div>
@@ -118,11 +119,11 @@ export default function Home() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Our Competitive Advantage</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Our Bangalore Advantage</h3>
                   <p className="text-gray-600">
-                    First-mover advantage in systematic venture studio platform. AI-powered personalization, 
-                    proven 12-phase methodology, and network effects create an unassailable competitive moat 
-                    that scales globally.
+                    First-mover advantage in Bangalore&apos;s systematic venture studio platform. AI-powered personalization, 
+                    proven 12-phase methodology, and deep local network effects create an unassailable competitive moat 
+                    in Bangalore&apos;s startup ecosystem.
                   </p>
                 </div>
               </div>
@@ -162,7 +163,7 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className="text-gray-700">Global scale with network effects</span>
+                  <span className="text-gray-700">Bangalore-focused with local network effects</span>
                 </div>
               </div>
             </div>
@@ -176,10 +177,10 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Category-Defining</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Bangalore-First</h3>
               <p className="text-gray-600">
-                We build new markets, not compete in existing ones. Our platform creates 
-                the category of systematic venture studio methodology.
+                We build Bangalore&apos;s first systematic venture studio platform, not compete in existing ones. 
+                Our platform creates the category of systematic venture studio methodology for Bangalore founders.
               </p>
             </div>
             
@@ -217,11 +218,12 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Join the Category-Defining Venture Studio Platform
+              Join Bangalore&apos;s First Venture Studio Platform
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Tell us about your startup journey and we&apos;ll create a systematic roadmap for rapid 
-              product-market fit achievement. Get access to proven methodologies and AI-powered tools.
+              product-market fit achievement. Get access to proven methodologies and AI-powered tools 
+              tailored for Bangalore&apos;s startup ecosystem.
             </p>
           </div>
           
@@ -310,7 +312,8 @@ export default function Home() {
                   <div className="text-6xl mb-6">📍</div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Where are you based?</h3>
                   <p className="text-gray-600 mb-8 max-w-md mx-auto">
-                    This enables us to provide hyperlocal resources, connections, and market insights specific to your area.
+                    This enables us to provide Bangalore-specific resources, connections, and market insights 
+                    tailored to your location within the city.
                   </p>
                   <select
                     name="location"

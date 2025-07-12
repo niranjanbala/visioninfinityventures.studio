@@ -14,23 +14,23 @@ const PitchDeckPage = () => {
       content: (
         <div className="text-center">
           <h1 className="text-6xl font-bold text-indigo-600 mb-4">Vision Infinity Ventures</h1>
-          <p className="text-2xl text-gray-600 mb-8">Democratizing Startup Success</p>
+          <p className="text-2xl text-gray-600 mb-8">Bangalore&apos;s First Venture Studio Platform</p>
           <div className="grid md:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <div className="text-3xl mb-2">🌍</div>
-              <h3 className="text-lg font-semibold mb-2">Global Vision</h3>
-              <p className="text-sm text-gray-600">Every founder, everywhere, has access to success</p>
-            </div>
+                          <div className="bg-white p-6 rounded-lg shadow-lg">
+                <div className="text-3xl mb-2">🏙️</div>
+                <h3 className="text-lg font-semibold mb-2">Bangalore-First</h3>
+                <p className="text-sm text-gray-600">Every Bangalore founder has access to systematic success</p>
+              </div>
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <div className="text-3xl mb-2">🤖</div>
               <h3 className="text-lg font-semibold mb-2">AI-Powered</h3>
               <p className="text-sm text-gray-600">Personalized guidance for every founder</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <div className="text-3xl mb-2">📍</div>
-              <h3 className="text-lg font-semibold mb-2">Hyperlocal</h3>
-              <p className="text-sm text-gray-600">Deep local market intelligence</p>
-            </div>
+                          <div className="bg-white p-6 rounded-lg shadow-lg">
+                <div className="text-3xl mb-2">📍</div>
+                <h3 className="text-lg font-semibold mb-2">Bangalore Intelligence</h3>
+                <p className="text-sm text-gray-600">Deep Bangalore market intelligence</p>
+              </div>
           </div>
         </div>
       )
@@ -60,10 +60,10 @@ const PitchDeckPage = () => {
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <div className="text-4xl mr-4">🌍</div>
+                  <div className="text-4xl mr-4">🏙️</div>
                   <div>
-                    <h4 className="font-semibold">Geographic Inequality</h4>
-                    <p className="text-sm text-gray-600">40% of global funding goes to Silicon Valley</p>
+                    <h4 className="font-semibold">Bangalore Ecosystem Gap</h4>
+                    <p className="text-sm text-gray-600">8,000+ startups but no systematic venture studio platform</p>
                   </div>
                 </div>
                 <div className="flex items-center">
@@ -91,8 +91,8 @@ const PitchDeckPage = () => {
                   <p className="text-sm text-red-600">$500+/hour, inconsistent quality</p>
                 </div>
                 <div className="bg-red-50 p-4 rounded-lg">
-                  <h4 className="font-semibold text-red-800">Local Incubators</h4>
-                  <p className="text-sm text-red-600">Limited resources, narrow focus</p>
+                  <h4 className="font-semibold text-red-800">Bangalore Incubators</h4>
+                  <p className="text-sm text-red-600">Limited resources, narrow focus, no systematic approach</p>
                 </div>
               </div>
             </div>
@@ -127,7 +127,7 @@ const PitchDeckPage = () => {
                 <div className="flex items-center">
                   <div className="text-4xl mr-4">📍</div>
                   <div>
-                    <h4 className="font-semibold">Hyperlocal Intelligence</h4>
+                    <h4 className="font-semibold">Bangalore Intelligence</h4>
                     <p className="text-sm text-gray-600">HSR Layout & Whitefield expertise</p>
                   </div>
                 </div>
@@ -148,7 +148,7 @@ const PitchDeckPage = () => {
                   <p className="text-sm text-green-600">₹5,000-15,000/month vs $50,000+ accelerators</p>
                 </div>
                 <div className="bg-green-50 p-4 rounded-lg">
-                  <h4 className="font-semibold text-green-800">Local Market Focus</h4>
+                  <h4 className="font-semibold text-green-800">Bangalore Market Focus</h4>
                   <p className="text-sm text-green-600">Deep understanding of Bangalore ecosystem</p>
                 </div>
                 <div className="bg-green-50 p-4 rounded-lg">
@@ -176,19 +176,19 @@ const PitchDeckPage = () => {
               <h3 className="text-2xl font-bold text-blue-600 mb-4">Market Size</h3>
               <div className="space-y-4">
                 <div className="bg-blue-50 p-4 rounded-lg">
-                  <h4 className="font-semibold text-blue-800">Global Startup Ecosystem</h4>
-                  <p className="text-2xl font-bold text-blue-600">$3.2T</p>
-                  <p className="text-sm text-blue-600">Growing 12-15% annually</p>
-                </div>
-                <div className="bg-blue-50 p-4 rounded-lg">
-                  <h4 className="font-semibold text-blue-800">Indian Startup Market</h4>
-                  <p className="text-2xl font-bold text-blue-600">$450B</p>
-                  <p className="text-sm text-blue-600">Expected to reach $1T by 2025</p>
+                  <h4 className="font-semibold text-blue-800">Bangalore Startup Ecosystem</h4>
+                  <p className="text-2xl font-bold text-blue-600">$110B</p>
+                  <p className="text-sm text-blue-600">8,000+ startups, 40+ unicorns</p>
                 </div>
                 <div className="bg-blue-50 p-4 rounded-lg">
                   <h4 className="font-semibold text-blue-800">Bangalore Tech Hub</h4>
                   <p className="text-2xl font-bold text-blue-600">$110B</p>
                   <p className="text-sm text-blue-600">8,000+ startups, 40+ unicorns</p>
+                </div>
+                <div className="bg-blue-50 p-4 rounded-lg">
+                  <h4 className="font-semibold text-blue-800">Bangalore Venture Studio Market</h4>
+                  <p className="text-2xl font-bold text-blue-600">$2B</p>
+                  <p className="text-sm text-blue-600">Untapped market for systematic venture studio</p>
                 </div>
               </div>
             </div>
@@ -210,17 +210,17 @@ const PitchDeckPage = () => {
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <div className="text-3xl mr-3">🇮🇳</div>
+                  <div className="text-3xl mr-3">🏙️</div>
                   <div>
-                    <h4 className="font-semibold">Indian Ecosystem Maturity</h4>
-                    <p className="text-sm text-gray-600">100+ unicorns, government support</p>
+                    <h4 className="font-semibold">Bangalore Ecosystem Maturity</h4>
+                    <p className="text-sm text-gray-600">40+ unicorns, strong tech community</p>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <div className="text-3xl mr-3">💰</div>
                   <div>
-                    <h4 className="font-semibold">Investor Interest</h4>
-                    <p className="text-sm text-gray-600">$42B in startup funding in 2021</p>
+                    <h4 className="font-semibold">Bangalore Investor Interest</h4>
+                    <p className="text-sm text-gray-600">$15B+ in Bangalore startup funding annually</p>
                   </div>
                 </div>
               </div>
@@ -305,12 +305,12 @@ const PitchDeckPage = () => {
                   <p className="text-sm text-indigo-600">Bangalore dominance, 1,000+ founders, ₹6Cr ARR</p>
                 </div>
                 <div className="bg-indigo-50 p-4 rounded-lg">
-                  <h4 className="font-semibold text-indigo-800">Phase 3: Expansion (Months 19-36)</h4>
-                  <p className="text-sm text-indigo-600">5 cities, 5,000+ founders, ₹30Cr ARR</p>
+                  <h4 className="font-semibold text-indigo-800">Phase 3: Bangalore Dominance (Months 19-36)</h4>
+                  <p className="text-sm text-indigo-600">Bangalore market leadership, 5,000+ founders, ₹30Cr ARR</p>
                 </div>
                 <div className="bg-indigo-50 p-4 rounded-lg">
-                  <h4 className="font-semibold text-indigo-800">Phase 4: Global (Months 37-60)</h4>
-                  <p className="text-sm text-indigo-600">10 countries, 20,000+ founders, ₹150Cr+ ARR</p>
+                  <h4 className="font-semibold text-indigo-800">Phase 4: Regional Expansion (Months 37-60)</h4>
+                  <p className="text-sm text-indigo-600">5 major Indian cities, 20,000+ founders, ₹150Cr+ ARR</p>
                 </div>
               </div>
             </div>
@@ -325,10 +325,10 @@ const PitchDeckPage = () => {
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <div className="text-3xl mr-3">🌍</div>
+                  <div className="text-3xl mr-3">🏙️</div>
                   <div>
-                    <h4 className="font-semibold">Geographic Expansion</h4>
-                    <p className="text-sm text-gray-600">Proven model replicates easily</p>
+                    <h4 className="font-semibold">Bangalore Market Expansion</h4>
+                    <p className="text-sm text-gray-600">Proven model replicates to other Indian cities</p>
                   </div>
                 </div>
                 <div className="flex items-center">
@@ -362,7 +362,7 @@ const PitchDeckPage = () => {
               <h3 className="text-2xl font-bold text-green-600 mb-4">Our Advantages</h3>
               <div className="space-y-4">
                 <div className="bg-green-50 p-4 rounded-lg">
-                  <h4 className="font-semibold text-green-800">Hyperlocal Intelligence</h4>
+                  <h4 className="font-semibold text-green-800">Bangalore Intelligence</h4>
                   <p className="text-sm text-green-600">Deep HSR & Whitefield expertise</p>
                 </div>
                 <div className="bg-green-50 p-4 rounded-lg">
@@ -392,7 +392,7 @@ const PitchDeckPage = () => {
                 <div className="flex items-center">
                   <div className="text-3xl mr-3">📍</div>
                   <div>
-                    <h4 className="font-semibold">Local Market Knowledge</h4>
+                    <h4 className="font-semibold">Bangalore Market Knowledge</h4>
                     <p className="text-sm text-gray-600">Years to build, hard to replicate</p>
                   </div>
                 </div>
@@ -406,8 +406,8 @@ const PitchDeckPage = () => {
                 <div className="flex items-center">
                   <div className="text-3xl mr-3">🤝</div>
                   <div>
-                    <h4 className="font-semibold">Community Network Effects</h4>
-                    <p className="text-sm text-gray-600">Local founder communities, switching costs</p>
+                    <h4 className="font-semibold">Bangalore Community Network Effects</h4>
+                    <p className="text-sm text-gray-600">Bangalore founder communities, switching costs</p>
                   </div>
                 </div>
               </div>
@@ -443,7 +443,7 @@ const PitchDeckPage = () => {
                 <div className="flex items-center">
                   <div className="text-3xl mr-3">📍</div>
                   <div>
-                    <h4 className="font-semibold">Local Networks</h4>
+                    <h4 className="font-semibold">Bangalore Networks</h4>
                     <p className="text-sm text-gray-600">Strong relationships in HSR and Whitefield</p>
                   </div>
                 </div>
@@ -464,16 +464,16 @@ const PitchDeckPage = () => {
                   <p className="text-sm text-blue-600">Flipkart, Freshworks, Swiggy success stories</p>
                 </div>
                 <div className="bg-blue-50 p-4 rounded-lg">
-                  <h4 className="font-semibold text-blue-800">Indian Market Expertise</h4>
-                  <p className="text-sm text-blue-600">Deep understanding of local ecosystem</p>
+                  <h4 className="font-semibold text-blue-800">Bangalore Market Expertise</h4>
+                  <p className="text-sm text-blue-600">Deep understanding of Bangalore ecosystem</p>
                 </div>
                 <div className="bg-blue-50 p-4 rounded-lg">
-                  <h4 className="font-semibold text-blue-800">Global Network</h4>
-                  <p className="text-sm text-blue-600">Access to international markets and partners</p>
+                  <h4 className="font-semibold text-blue-800">Regional Network</h4>
+                  <p className="text-sm text-blue-600">Access to Indian markets and partners</p>
                 </div>
                 <div className="bg-blue-50 p-4 rounded-lg">
                   <h4 className="font-semibold text-blue-800">Strategic Value</h4>
-                  <p className="text-sm text-blue-600">Help us scale and expand globally</p>
+                  <p className="text-sm text-blue-600">Help us scale and expand regionally</p>
                 </div>
               </div>
             </div>
@@ -509,7 +509,7 @@ const PitchDeckPage = () => {
                 <div className="bg-green-50 p-4 rounded-lg">
                   <h4 className="font-semibold text-green-800">Year 5</h4>
                   <p className="text-2xl font-bold text-green-600">₹1,000 Crores ARR</p>
-                  <p className="text-sm text-green-600">50,000+ founders, global presence</p>
+                  <p className="text-sm text-green-600">50,000+ founders, regional presence</p>
                 </div>
               </div>
             </div>
@@ -594,9 +594,9 @@ const PitchDeckPage = () => {
                   <p className="text-sm text-blue-600">• Rapid product-market fit methodology</p>
                 </div>
                 <div>
-                  <p className="text-sm text-blue-600">• Massive market opportunity ($3.2T)</p>
+                  <p className="text-sm text-blue-600">• Massive market opportunity ($110B Bangalore ecosystem)</p>
                   <p className="text-sm text-blue-600">• Systematic execution approach</p>
-                  <p className="text-sm text-blue-600">• Network effects and global scalability</p>
+                  <p className="text-sm text-blue-600">• Network effects and regional scalability</p>
                 </div>
               </div>
             </div>
@@ -611,7 +611,7 @@ const PitchDeckPage = () => {
                 </div>
                 <div>
                   <p className="text-sm text-purple-600">• Network effects</p>
-                  <p className="text-sm text-purple-600">• Global scale potential</p>
+                  <p className="text-sm text-purple-600">• Regional scale potential</p>
                   <p className="text-sm text-purple-600">• Proven methodology</p>
                 </div>
               </div>
@@ -638,7 +638,7 @@ const PitchDeckPage = () => {
     <>
       <Head>
         <title>Pitch Deck | Vision Infinity Ventures</title>
-        <meta name="description" content="Vision Infinity Ventures - Democratizing Startup Success. Comprehensive pitch deck for investors." />
+        <meta name="description" content="Vision Infinity Ventures - Bangalore's First Venture Studio Platform. Comprehensive pitch deck for investors." />
         <meta name="theme-color" content="#2563eb" />
       </Head>
       <Navigation />

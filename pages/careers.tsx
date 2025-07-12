@@ -15,8 +15,8 @@ export default function Careers() {
       experience: '8+ years',
       description: 'Lead product strategy and market opportunity identification for our category-defining venture studio platform.',
       responsibilities: [
-        'Market opportunity analysis ($3.2T global ecosystem)',
-        'Category-defining product strategies',
+        'Market opportunity analysis ($110B Bangalore ecosystem)',
+        'Bangalore-first product strategies',
         'Competitive positioning',
         'Customer discovery frameworks',
         'Product roadmap execution'
@@ -85,7 +85,7 @@ export default function Careers() {
       responsibilities: [
         'Scalable platform architecture',
         'AI/ML strategy development',
-        'Global platform scalability',
+        'Bangalore platform scalability',
         'Technology partnerships',
         'Innovation leadership'
       ]
@@ -118,7 +118,7 @@ export default function Careers() {
       description: 'Lead growth strategy and market expansion for rapid global scale.',
       responsibilities: [
         'Comprehensive growth strategy',
-        'Global market expansion',
+        'Bangalore market expansion',
         'Network effects optimization',
         'Growth metrics and KPIs',
         'Strategic partnerships'
@@ -180,8 +180,8 @@ export default function Careers() {
   return (
     <>
       <Head>
-        <title>Careers | Vision Infinity Ventures - Seeking Accel Atom Backing</title>
-        <meta name="description" content="Join the category-defining venture studio platform seeking Accel Atom backing. Build the future of startup creation with rapid product-market fit and proven methodologies." />
+        <title>Careers | Vision Infinity Ventures - Bangalore&apos;s First Venture Studio Platform</title>
+        <meta name="description" content="Join Bangalore&apos;s first venture studio platform seeking Accel Atom backing. Build the future of startup creation with rapid product-market fit and proven methodologies." />
         <meta name="theme-color" content="#2563eb" />
       </Head>
       <Navigation />
@@ -199,14 +199,14 @@ export default function Careers() {
             <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
             Seeking Accel Atom Backing
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Join the Category-Defining
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
-              Venture Studio Platform
-            </span>
-          </h1>
+                      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              Join Bangalore&apos;s First
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
+                Venture Studio Platform
+              </span>
+            </h1>
           <p className="text-lg md:text-xl mb-8 text-gray-200 leading-relaxed max-w-3xl mx-auto">
-            We&apos;re building the first systematic venture studio platform that creates successful startups 
+            We&apos;re building Bangalore&apos;s first systematic venture studio platform that creates successful startups 
             through rapid product-market fit and proven methodologies. Seeking Accel Atom backing for $1M (25% equity).
           </p>
           
@@ -217,8 +217,8 @@ export default function Careers() {
                <div className="text-sm text-gray-300">For 25% Equity</div>
              </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <div className="text-2xl font-bold text-blue-400 mb-2">$3.2T</div>
-              <div className="text-sm text-gray-300">Market Opportunity</div>
+              <div className="text-2xl font-bold text-blue-400 mb-2">$110B</div>
+              <div className="text-sm text-gray-300">Bangalore Market</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
               <div className="text-2xl font-bold text-purple-400 mb-2">10</div>
@@ -295,7 +295,7 @@ export default function Careers() {
                 </svg>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Growth & Scale</h3>
-              <p className="text-sm text-gray-600">Global expansion</p>
+              <p className="text-sm text-gray-600">Regional expansion</p>
             </div>
             
             <div className="text-center">
@@ -319,8 +319,8 @@ export default function Careers() {
                Open Positions
              </h2>
              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-               Join our mission to build the category-defining venture studio platform seeking Accel Atom backing. 
-               Each role is designed to contribute to rapid product-market fit and global scale.
+               Join our mission to build Bangalore&apos;s first venture studio platform seeking Accel Atom backing. 
+               Each role is designed to contribute to rapid product-market fit and regional scale.
              </p>
           </div>
           

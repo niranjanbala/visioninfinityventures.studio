@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/UxQMRudNXCsyluNjFJoao/_buildManifest.js",
-    "static/UxQMRudNXCsyluNjFJoao/_ssgManifest.js"
+    "static/VV05uApqZR9tY4YjqalxF/_buildManifest.js",
+    "static/VV05uApqZR9tY4YjqalxF/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -15,7 +15,7 @@
       "static/chunks/framework-bcaea2e08c6b85c1.js",
       "static/chunks/main-9c6c051fb60e01ed.js",
       "static/chunks/996-5abd08ae305d436b.js",
-      "static/chunks/pages/index-2f038abb308dd07d.js"
+      "static/chunks/pages/index-e08f6b03954b35b7.js"
     ],
     "/_app": [
       "static/chunks/webpack-fa99431b15635937.js",
@@ -55,7 +55,7 @@
       "static/chunks/framework-bcaea2e08c6b85c1.js",
       "static/chunks/main-9c6c051fb60e01ed.js",
       "static/chunks/996-5abd08ae305d436b.js",
-      "static/chunks/pages/careers-e414541d94987743.js"
+      "static/chunks/pages/careers-7601d50c874e902e.js"
     ],
     "/dashboard": [
       "static/chunks/webpack-fa99431b15635937.js",
@@ -68,7 +68,7 @@
       "static/chunks/framework-bcaea2e08c6b85c1.js",
       "static/chunks/main-9c6c051fb60e01ed.js",
       "static/chunks/996-5abd08ae305d436b.js",
-      "static/chunks/pages/pitch-deck-f086d3b36a5cd953.js"
+      "static/chunks/pages/pitch-deck-ca10d7f4ebe9b2fc.js"
     ],
     "/stages": [
       "static/chunks/webpack-fa99431b15635937.js",
