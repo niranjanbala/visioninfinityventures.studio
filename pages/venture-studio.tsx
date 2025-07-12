@@ -125,9 +125,9 @@ const VentureStudioLanding = () => {
               </div>
               <div className="hidden md:flex space-x-8">
                 <Link href="/" className="text-gray-200 hover:text-white transition-colors">Home</Link>
-                <a href="#how-it-works" className="text-gray-200 hover:text-white transition-colors">How It Works</a>
-                <a href="#what-you-get" className="text-gray-200 hover:text-white transition-colors">What You Get</a>
-                <a href="#pricing" className="text-gray-200 hover:text-white transition-colors">Pricing</a>
+                <Link href="#how-it-works" className="text-gray-200 hover:text-white transition-colors">How It Works</Link>
+                <Link href="#what-you-get" className="text-gray-200 hover:text-white transition-colors">What You Get</Link>
+                <Link href="#pricing" className="text-gray-200 hover:text-white transition-colors">Pricing</Link>
               </div>
             </div>
           </div>
@@ -461,12 +461,12 @@ const VentureStudioLanding = () => {
               Every founder deserves the tools and support to build something extraordinary.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#top" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-semibold rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105">
+              <Link href="#top" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-semibold rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105">
                 Start Your Journey
                 <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </a>
+              </Link>
               <Link href="/stages" className="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-all duration-200 border border-white/20">
                 Explore All Content
               </Link>

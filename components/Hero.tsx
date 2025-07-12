@@ -34,8 +34,8 @@ export default function Hero() {
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 mb-8 border border-white/10">
               <h3 className="text-lg font-semibold mb-3 text-green-400">Our Mission</h3>
               <p className="text-gray-200 text-sm leading-relaxed">
-                "To eliminate the barriers to startup success by providing every founder with 
-                the tools, knowledge, and support they need to build sustainable, scalable businesses."
+                &quot;To eliminate the barriers to startup success by providing every founder with 
+                the tools, knowledge, and support they need to build sustainable, scalable businesses.&quot;
               </p>
             </div>
             
