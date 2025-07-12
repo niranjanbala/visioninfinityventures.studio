@@ -2,7 +2,7 @@ import React from 'react';
 
 const features = [
   { name: 'HSR Layout Focus', icon: '📍', desc: 'Hyper-local focus on Bangalore\'s tech hub ecosystem.' },
-  { name: 'SaaS B2B Specialists', icon: '💼', desc: 'Deep expertise in B2B software and enterprise solutions.' },
+  { name: 'Education Specialists', icon: '🎓', desc: 'Deep expertise in educational technology and learning solutions.' },
   { name: 'AI-Powered Tools', icon: '🤖', desc: 'Cutting-edge AI tools and technology stack integration.' },
   { name: '12-Phase Roadmap', icon: '📋', desc: 'Proven step-by-step execution methodology.' },
 ];

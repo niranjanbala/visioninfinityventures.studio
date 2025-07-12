@@ -6,7 +6,7 @@ const founders = [
   { name: 'Anjali Patel', role: 'HealthTech Pioneer', location: 'Bangalore', avatar: '👩‍⚕️' },
   { name: 'Vikram Singh', role: 'EdTech Visionary', location: 'Bangalore', avatar: '👨‍🎓' },
   { name: 'Meera Reddy', role: 'E-commerce Disruptor', location: 'Bangalore', avatar: '👩‍🛒' },
-  { name: 'Arjun Menon', role: 'SaaS Builder', location: 'Bangalore', avatar: '👨‍💻' },
+  { name: 'Arjun Menon', role: 'EdTech Builder', location: 'Bangalore', avatar: '👨‍💻' },
   { name: 'Kavya Iyer', role: 'CleanTech Innovator', location: 'Bangalore', avatar: '👩‍🌱' },
   { name: 'Aditya Rao', role: 'Logistics Tech', location: 'Bangalore', avatar: '👨‍🚚' },
   { name: 'Zara Khan', role: 'Social Impact', location: 'Bangalore', avatar: '👩‍❤️' },

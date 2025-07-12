@@ -122,8 +122,6 @@ export default function Home() {
                   >
                     <option value="">Select your industry</option>
                     <option value="education">Education</option>
-                    <option value="saas-b2b">SaaS B2B</option>
-                    <option value="real-estate">Real Estate</option>
                   </select>
                 </div>
 

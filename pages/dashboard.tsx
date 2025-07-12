@@ -90,8 +90,6 @@ export default function Dashboard() {
   const getIndustryDisplayName = (industry: string) => {
     switch (industry) {
       case 'EDUCATION': return 'Education';
-      case 'REAL_ESTATE': return 'Real Estate';
-      case 'SAAS_B2B': return 'SaaS B2B';
       default: return industry;
     }
   };
