@@ -13,10 +13,10 @@ export default function TechStack() {
         {
           name: 'Frontend Development',
           tools: [
-            { name: 'Next.js 14', description: 'React framework for production', status: 'Current' },
-            { name: 'React 18', description: 'UI library with latest features', status: 'Current' },
-            { name: 'TypeScript', description: 'Type-safe JavaScript development', status: 'Current' },
-            { name: 'Tailwind CSS', description: 'Utility-first CSS framework', status: 'Current' }
+            { name: 'Next.js 14', description: 'React framework for production', status: 'Current', pricing: 'Free' },
+            { name: 'React 18', description: 'UI library with latest features', status: 'Current', pricing: 'Free' },
+            { name: 'TypeScript', description: 'Type-safe JavaScript development', status: 'Current', pricing: 'Free' },
+            { name: 'Tailwind CSS', description: 'Utility-first CSS framework', status: 'Current', pricing: 'Free' }
           ]
         }
       ]
@@ -29,8 +29,8 @@ export default function TechStack() {
         {
           name: 'Progress Tracking',
           tools: [
-            { name: 'Custom Dashboard', description: '12-phase journey tracking system', status: 'Current' },
-            { name: 'Prisma Database', description: 'Founder progress and milestone tracking', status: 'Current' }
+            { name: 'Custom Dashboard', description: '12-phase journey tracking system', status: 'Current', pricing: 'Free' },
+            { name: 'Prisma Database', description: 'Founder progress and milestone tracking', status: 'Current', pricing: 'Free' }
           ]
         }
       ]
@@ -43,41 +43,41 @@ export default function TechStack() {
         {
           name: 'Backend Development',
           tools: [
-            { name: 'Next.js API Routes', description: 'Serverless API endpoints', status: 'Current' },
-            { name: 'Prisma ORM', description: 'Database toolkit and ORM', status: 'Current' },
-            { name: 'SQLite', description: 'Lightweight database for development', status: 'Current' }
+            { name: 'Next.js API Routes', description: 'Serverless API endpoints', status: 'Current', pricing: 'Free' },
+            { name: 'Prisma ORM', description: 'Database toolkit and ORM', status: 'Current', pricing: 'Free' },
+            { name: 'SQLite', description: 'Lightweight database for development', status: 'Current', pricing: 'Free' }
           ]
         },
         {
           name: 'Authentication & Security',
           tools: [
-            { name: 'NextAuth.js', description: 'Authentication for Next.js', status: 'Current' },
-            { name: 'bcryptjs', description: 'Password hashing', status: 'Current' },
-            { name: 'JWT', description: 'JSON Web Tokens', status: 'Current' }
+            { name: 'NextAuth.js', description: 'Authentication for Next.js', status: 'Current', pricing: 'Free' },
+            { name: 'bcryptjs', description: 'Password hashing', status: 'Current', pricing: 'Free' },
+            { name: 'JWT', description: 'JSON Web Tokens', status: 'Current', pricing: 'Free' }
           ]
         },
         {
           name: 'Infrastructure & Hosting',
           tools: [
-            { name: 'Netlify', description: 'Website hosting and deployment platform', status: 'Current' },
-            { name: 'PorkBun', description: 'Domain registration and SSL certificates', status: 'Current' },
-            { name: 'PorkBun Email', description: 'Professional email hosting service', status: 'Current' }
+            { name: 'Netlify', description: 'Website hosting and deployment platform', status: 'Current', pricing: 'Free Plan' },
+            { name: 'PorkBun', description: 'Domain registration and SSL certificates', status: 'Current', pricing: '₹1,200/year' },
+            { name: 'PorkBun Email', description: 'Professional email hosting service', status: 'Current', pricing: '₹600/year' }
           ]
         },
         {
           name: 'AI & Machine Learning',
           tools: [
-            { name: 'OpenAI API', description: 'AI-powered content generation and analysis', status: 'Current' },
-            { name: 'Custom AI Models', description: 'Proprietary algorithms for founder success prediction', status: 'Current' },
-            { name: 'Machine Learning Pipeline', description: 'Data-driven insights and recommendations', status: 'Current' }
+            { name: 'OpenAI API', description: 'AI-powered content generation and analysis', status: 'Current', pricing: 'Pay-per-use' },
+            { name: 'Custom AI Models', description: 'Proprietary algorithms for founder success prediction', status: 'Current', pricing: 'Free' },
+            { name: 'Machine Learning Pipeline', description: 'Data-driven insights and recommendations', status: 'Current', pricing: 'Free' }
           ]
         },
         {
           name: 'Open Source Tools',
           tools: [
-            { name: 'GitHub', description: 'Open source code repository and collaboration', status: 'Current' },
-            { name: 'Open Source Libraries', description: 'Transparent, community-driven development', status: 'Current' },
-            { name: 'MIT License', description: 'Open source licensing for maximum accessibility', status: 'Current' }
+            { name: 'GitHub', description: 'Open source code repository and collaboration', status: 'Current', pricing: 'Free' },
+            { name: 'Open Source Libraries', description: 'Transparent, community-driven development', status: 'Current', pricing: 'Free' },
+            { name: 'MIT License', description: 'Open source licensing for maximum accessibility', status: 'Current', pricing: 'Free' }
           ]
         }
       ]
@@ -90,13 +90,13 @@ export default function TechStack() {
         {
           name: 'CRM & Marketing',
           tools: [
-            { name: 'HubSpot', description: 'Marketing, Sales, and Customer Success CRM platform', status: 'Current' }
+            { name: 'HubSpot', description: 'Marketing, Sales, and Customer Success CRM platform', status: 'Current', pricing: 'Free Plan' }
           ]
         },
         {
           name: 'Customer Support',
           tools: [
-            { name: 'Botpress', description: 'AI-powered customer support chatbot and automation platform', status: 'Current' }
+            { name: 'Botpress', description: 'AI-powered customer support chatbot and automation platform', status: 'Current', pricing: 'Free Plan' }
           ]
         }
       ]
@@ -247,6 +247,7 @@ export default function TechStack() {
                               <div>
                                 <div className="font-medium text-gray-900">{tool.name}</div>
                                 <div className="text-sm text-gray-600">{tool.description}</div>
+                                <div className="text-xs text-blue-600 font-medium mt-1">{tool.pricing}</div>
                               </div>
                               <span className={`px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(tool.status)}`}>
                                 {tool.status}
@@ -270,6 +271,70 @@ export default function TechStack() {
                 )}
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Summary Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Current Tech Stack Pricing
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Transparent breakdown of our current technology costs. Most tools are free or on free plans.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="bg-green-50 rounded-xl p-6 text-center">
+              <div className="text-3xl font-bold text-green-600 mb-2">₹1,800</div>
+              <div className="text-sm text-gray-600">Annual Fixed Costs</div>
+              <div className="text-xs text-gray-500 mt-1">Domain + Email</div>
+            </div>
+            
+            <div className="bg-blue-50 rounded-xl p-6 text-center">
+              <div className="text-3xl font-bold text-blue-600 mb-2">₹0</div>
+              <div className="text-sm text-gray-600">Monthly Fixed Costs</div>
+              <div className="text-xs text-gray-500 mt-1">All hosting on free plans</div>
+            </div>
+            
+            <div className="bg-purple-50 rounded-xl p-6 text-center">
+              <div className="text-3xl font-bold text-purple-600 mb-2">Pay-per-use</div>
+              <div className="text-sm text-gray-600">Variable Costs</div>
+              <div className="text-xs text-gray-500 mt-1">OpenAI API usage</div>
+            </div>
+          </div>
+          
+          <div className="bg-gray-50 rounded-xl p-6">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">Missing Tools Analysis</h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 className="font-medium text-gray-900 mb-2">Currently Missing:</h4>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li>• Analytics & Tracking (Google Analytics, Mixpanel)</li>
+                  <li>• Email Marketing (Mailchimp, ConvertKit)</li>
+                  <li>• Social Media Management (Buffer, Hootsuite)</li>
+                  <li>• Project Management (Notion, Asana, Trello)</li>
+                  <li>• Communication (Slack, Discord, Zoom)</li>
+                  <li>• Design Tools (Figma, Canva)</li>
+                  <li>• Accounting & Finance (QuickBooks, Xero)</li>
+                  <li>• Legal & Compliance (DocuSign, LegalZoom)</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-medium text-gray-900 mb-2">Priority Additions:</h4>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li>• Google Analytics (Free) - Website analytics</li>
+                  <li>• Mailchimp (Free) - Email marketing</li>
+                  <li>• Notion (Free) - Documentation & project management</li>
+                  <li>• Slack (Free) - Team communication</li>
+                  <li>• Figma (Free) - Design collaboration</li>
+                  <li>• Zoom (Free) - Video conferencing</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
