@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { signIn, getSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default function SignIn() {
   const [email, setEmail] = useState('');
@@ -101,13 +102,13 @@ export default function SignIn() {
 
             <div className="text-center">
               <p className="text-sm text-gray-300">
-                Don't have an account?{' '}
-                <a
+                Don&apos;t have an account?{' '}
+                <Link
                   href="/auth/register"
                   className="font-medium text-indigo-300 hover:text-indigo-200"
                 >
                   Register here
-                </a>
+                </Link>
               </p>
             </div>
           </form>

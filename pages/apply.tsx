@@ -15,7 +15,7 @@ export default function Apply() {
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (form.city.trim().toLowerCase() !== 'bangalore') {
-      setError('Sorry, we are only accepting applications from Bangalore.');
+      setError('Sorry, we&apos;re only accepting applications from Bangalore.');
       return;
     }
     if (!form.commitment) {
@@ -46,7 +46,7 @@ export default function Apply() {
                 Thank you for your application and commitment to the &apos;1,000&apos; founder contribution.
               </p>
               <p className="text-sm text-gray-600">
-                We'll be in touch within 24 hours with next steps for your investment and onboarding.
+                We&apos;ll be in touch within 24 hours with next steps for your investment and onboarding.
               </p>
             </div>
           ) : (

@@ -25,7 +25,7 @@ export default function Hero() {
               </span>
             </h1>
             <p className="text-lg md:text-xl mb-8 text-gray-200 leading-relaxed">
-              We believe startup success shouldn't be limited to those with connections or capital. 
+              We believe startup success shouldn&apos;t be limited to those with connections or capital. 
               Our mission is to democratize entrepreneurship through personalized, structured guidance 
               that works for every founder, regardless of background or resources.
             </p>

@@ -226,7 +226,7 @@ const VentureStudioLanding = () => {
                 
                 {isSubmitted && (
                   <div className="mt-4 p-4 bg-green-500/20 border border-green-400/30 rounded-lg">
-                    <p className="text-green-400 text-center">Thank you! We'll be in touch soon with your personalized roadmap.</p>
+                    <p className="text-green-400 text-center">Thank you! We&apos;ll be in touch soon with your personalized roadmap.</p>
                   </div>
                 )}
               </div>
@@ -240,8 +240,8 @@ const VentureStudioLanding = () => {
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
               <h2 className="text-3xl font-bold mb-6 text-green-400">Our Mission</h2>
               <p className="text-xl text-gray-200 leading-relaxed">
-                "To eliminate the barriers to startup success by providing every founder with 
-                the tools, knowledge, and support they need to build sustainable, scalable businesses."
+                &ldquo;To eliminate the barriers to startup success by providing every founder with 
+                the tools, knowledge, and support they need to build sustainable, scalable businesses.&rdquo;
               </p>
               <div className="mt-8 grid md:grid-cols-3 gap-6">
                 <div className="text-center">
@@ -387,7 +387,7 @@ const VentureStudioLanding = () => {
               
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h4 className="text-lg font-semibold text-white mb-4">What's Included:</h4>
+                  <h4 className="text-lg font-semibold text-white mb-4">What&apos;s Included:</h4>
                   <ul className="space-y-3">
                     <li className="flex items-center text-gray-300">
                       <svg className="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -457,7 +457,7 @@ const VentureStudioLanding = () => {
               Ready to Join the Movement?
             </h2>
             <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-              Be part of the revolution that's democratizing startup success. 
+              Be part of the revolution that&apos;s democratizing startup success. 
               Every founder deserves the tools and support to build something extraordinary.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

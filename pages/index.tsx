@@ -87,7 +87,7 @@ export default function Home() {
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               The startup world is broken. Success is concentrated among those with privilege, 
-              connections, and capital. We're here to change that.
+              connections, and capital. We&apos;re here to change that.
             </p>
           </div>
           
@@ -191,7 +191,7 @@ export default function Home() {
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Transparency</h3>
               <p className="text-gray-600">
                 We provide clear, actionable guidance with no hidden agendas. 
-                Your success is our success, and we're transparent about how we help you achieve it.
+                Your success is our success, and we&apos;re transparent about how we help you achieve it.
               </p>
             </div>
             
@@ -219,7 +219,7 @@ export default function Home() {
               Find Your Perfect Venture Studio Path
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Tell us about your startup journey and we'll create a personalized roadmap just for you. 
+              Tell us about your startup journey and we&apos;ll create a personalized roadmap just for you. 
               Get access to tailored resources, tools, and guidance specific to your needs.
             </p>
           </div>
@@ -267,7 +267,7 @@ export default function Home() {
                   <div className="text-6xl mb-6">🎯</div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">What stage is your startup at?</h3>
                   <p className="text-gray-600 mb-8 max-w-md mx-auto">
-                    This determines the type of guidance and resources you'll receive in your personalized roadmap.
+                    This determines the type of guidance and resources you&apos;ll receive in your personalized roadmap.
                   </p>
                   <select
                     name="stage"
@@ -530,7 +530,7 @@ export default function Home() {
 
           {/* Preview of what they'll get */}
             <div className="mt-8 pt-8 border-t border-gray-200">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4 text-center">What You'll Get:</h3>
+                              <h3 className="text-lg font-semibold text-gray-900 mb-4 text-center">What You&apos;ll Get:</h3>
               <div className="grid md:grid-cols-3 gap-4">
                 <div className="text-center p-4 bg-indigo-50 rounded-lg">
                   <div className="text-2xl mb-2">📋</div>
