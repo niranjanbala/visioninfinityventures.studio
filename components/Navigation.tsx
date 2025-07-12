@@ -51,12 +51,12 @@ export default function Navigation() {
                 <Link href="/auth/signin" className="text-gray-600 hover:text-gray-900 transition-colors font-medium">
                   Sign In
                 </Link>
-                <Link 
-                  href="/auth/register" 
+                <a 
+                  href="#persona-selection" 
                   className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors font-medium"
                 >
                   Get Started
-                </Link>
+                </a>
               </div>
             )}
           </div>
@@ -117,12 +117,12 @@ export default function Navigation() {
                   <Link href="/auth/signin" className="block px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors font-medium rounded-lg hover:bg-gray-50">
                     Sign In
                   </Link>
-                  <Link 
-                    href="/auth/register" 
+                  <a 
+                    href="#persona-selection" 
                     className="block px-3 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium text-center"
                   >
                     Get Started
-                  </Link>
+                  </a>
                 </>
               )}
             </div>
