@@ -23,11 +23,25 @@ DATABASE_URL="file:./dev.db"
 3. Create a new API key or use an existing one
 4. Copy the API key and paste it in your `.env.local` file
 
-## HubSpot Custom Properties Required
+## HubSpot Properties Required
 
-You need to create the following custom properties in your HubSpot account:
+The system will automatically handle both standard HubSpot properties and custom properties.
 
-### Contact Properties to Create:
+### Standard HubSpot Properties (Automatically Handled):
+- **firstname** - First Name
+- **lastname** - Last Name  
+- **email** - Email Address
+- **phone** - Phone Number
+- **company** - Company Name
+- **jobtitle** - Job Title
+- **website** - Website URL
+- **address** - Street Address
+- **city** - City
+- **state** - State/Province
+- **zip** - ZIP/Postal Code
+- **country** - Country
+
+### Custom Properties to Create:
 
 1. **founder_type** (Single-line text)
    - Label: Founder Type
@@ -107,6 +121,15 @@ This endpoint handles persona creation and HubSpot contact updates.
   "firstName": "John",
   "lastName": "Doe",
   "email": "john@example.com",
+  "phone": "+91-9876543210",
+  "company": "My Startup",
+  "jobTitle": "Founder & CEO",
+  "website": "https://mystartup.com",
+  "address": "123 Main Street",
+  "city": "Bangalore",
+  "state": "Karnataka",
+  "zip": "560102",
+  "country": "India",
   "technologySkill": "beginner",
   "marketingSkill": "intermediate",
   "salesSkill": "beginner",

@@ -14,6 +14,18 @@ interface PersonaData {
   firstName: string;
   lastName: string;
   email: string;
+  // Additional HubSpot form fields
+  phone?: string;
+  company?: string;
+  jobTitle?: string;
+  website?: string;
+  address?: string;
+  city?: string;
+  state?: string;
+  zip?: string;
+  country?: string;
+  // Any other fields from HubSpot form
+  [key: string]: any;
 }
 
 interface HubSpotContact {
@@ -34,6 +46,18 @@ interface HubSpotContact {
     persona_id: string;
     persona_name: string;
     persona_description: string;
+    // Additional standard HubSpot fields
+    phone?: string;
+    company?: string;
+    jobtitle?: string;
+    website?: string;
+    address?: string;
+    city?: string;
+    state?: string;
+    zip?: string;
+    country?: string;
+    // Any other custom fields
+    [key: string]: any;
   };
 }
 
@@ -140,25 +164,51 @@ async function createOrUpdateHubSpotContact(data: PersonaData, personaInfo: any)
     throw new Error('HubSpot API key not configured');
   }
 
-  const contactData: HubSpotContact = {
-    properties: {
-      firstname: data.firstName,
-      lastname: data.lastName,
-      email: data.email,
-      founder_type: data.founderType,
-      stage: data.stage,
-      industry: data.industry,
-      location: data.location,
-      delivery_medium: data.deliveryMedium,
-      technology_skill: data.technologySkill || '',
-      marketing_skill: data.marketingSkill || '',
-      sales_skill: data.salesSkill || '',
-      product_skill: data.productSkill || '',
-      design_skill: data.designSkill || '',
-      persona_id: personaInfo.id,
-      persona_name: personaInfo.name,
-      persona_description: personaInfo.description
+  // Build properties object dynamically to handle all fields
+  const properties: any = {
+    firstname: data.firstName,
+    lastname: data.lastName,
+    email: data.email,
+    founder_type: data.founderType,
+    stage: data.stage,
+    industry: data.industry,
+    location: data.location,
+    delivery_medium: data.deliveryMedium,
+    technology_skill: data.technologySkill || '',
+    marketing_skill: data.marketingSkill || '',
+    sales_skill: data.salesSkill || '',
+    product_skill: data.productSkill || '',
+    design_skill: data.designSkill || '',
+    persona_id: personaInfo.id,
+    persona_name: personaInfo.name,
+    persona_description: personaInfo.description
+  };
+
+  // Add additional standard HubSpot fields if they exist
+  if (data.phone) properties.phone = data.phone;
+  if (data.company) properties.company = data.company;
+  if (data.jobTitle) properties.jobtitle = data.jobTitle;
+  if (data.website) properties.website = data.website;
+  if (data.address) properties.address = data.address;
+  if (data.city) properties.city = data.city;
+  if (data.state) properties.state = data.state;
+  if (data.zip) properties.zip = data.zip;
+  if (data.country) properties.country = data.country;
+
+  // Add any other custom fields from the form data
+  Object.keys(data).forEach(key => {
+    if (!['founderType', 'stage', 'industry', 'location', 'deliveryMedium', 
+          'technologySkill', 'marketingSkill', 'salesSkill', 'productSkill', 'designSkill',
+          'firstName', 'lastName', 'email', 'phone', 'company', 'jobTitle', 'website',
+          'address', 'city', 'state', 'zip', 'country'].includes(key)) {
+      // Convert camelCase to snake_case for HubSpot
+      const hubspotKey = key.replace(/([A-Z])/g, '_$1').toLowerCase();
+      properties[hubspotKey] = data[key];
     }
+  });
+
+  const contactData: HubSpotContact = {
+    properties
   };
 
   try {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 
 interface HubSpotFormProps {
   formData: {
@@ -30,21 +30,44 @@ export default function HubSpotForm({ formData, onFormSubmitted }: HubSpotFormPr
   const [isLoaded, setIsLoaded] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
 
-  const handlePersonaCreation = async (formData: any) => {
+  const handlePersonaCreation = useCallback(async (hubspotFormData: any) => {
     try {
       setIsProcessing(true);
       
       // Extract name and email from HubSpot form data
-      const firstName = formData.firstname || formData.first_name || '';
-      const lastName = formData.lastname || formData.last_name || '';
-      const email = formData.email || '';
+      const firstName = hubspotFormData.firstname || hubspotFormData.first_name || '';
+      const lastName = hubspotFormData.lastname || hubspotFormData.last_name || '';
+      const email = hubspotFormData.email || '';
 
-      // Prepare data for persona API
+      // Prepare data for persona API - combine progressive form data with HubSpot form data
       const personaData = {
-        ...formData,
+        // Progressive form data
+        founderType: formData.founderType,
+        stage: formData.stage,
+        industry: formData.industry,
+        location: formData.location,
+        deliveryMedium: formData.deliveryMedium,
+        technologySkill: formData.technologySkill,
+        marketingSkill: formData.marketingSkill,
+        salesSkill: formData.salesSkill,
+        productSkill: formData.productSkill,
+        designSkill: formData.designSkill,
+        // HubSpot form data
         firstName,
         lastName,
-        email
+        email,
+        // Additional HubSpot fields
+        phone: hubspotFormData.phone || hubspotFormData.phone_number || '',
+        company: hubspotFormData.company || hubspotFormData.company_name || '',
+        jobTitle: hubspotFormData.jobtitle || hubspotFormData.job_title || hubspotFormData.title || '',
+        website: hubspotFormData.website || hubspotFormData.website_url || '',
+        address: hubspotFormData.address || hubspotFormData.street_address || '',
+        city: hubspotFormData.city || '',
+        state: hubspotFormData.state || hubspotFormData.province || '',
+        zip: hubspotFormData.zip || hubspotFormData.postal_code || hubspotFormData.zip_code || '',
+        country: hubspotFormData.country || '',
+        // Any other fields from HubSpot form
+        ...hubspotFormData
       };
 
       // Call our persona API
@@ -73,7 +96,7 @@ export default function HubSpotForm({ formData, onFormSubmitted }: HubSpotFormPr
     } finally {
       setIsProcessing(false);
     }
-  };
+  }, [formData, onFormSubmitted]);
 
   useEffect(() => {
     // Load HubSpot script
