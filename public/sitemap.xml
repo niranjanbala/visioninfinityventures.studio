@@ -75,6 +75,183 @@
     <priority>0.6</priority>
   </url>
 
+  <!-- Content Pages - High Priority -->
+  <url>
+    <loc>https://visioninfinityventures.studio/content/karnataka-bangalore-hsr-folder-structure</loc>
+    <lastmod>2025-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://visioninfinityventures.studio/content/karnataka-bangalore-hsr-tracks-01-diy-founder-readme</loc>
+    <lastmod>2025-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://visioninfinityventures.studio/content/karnataka-bangalore-hsr-tracks-02-fractional-support-readme</loc>
+    <lastmod>2025-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://visioninfinityventures.studio/content/karnataka-bangalore-hsr-tracks-track-comparison</loc>
+    <lastmod>2025-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Legal Content -->
+  <url>
+    <loc>https://visioninfinityventures.studio/content/karnataka-bangalore-hsr-tracks-01-diy-founder-01-legal-incorporation-company-details</loc>
+    <lastmod>2025-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://visioninfinityventures.studio/content/karnataka-bangalore-hsr-tracks-01-diy-founder-01-legal-consultants-legal-partners</loc>
+    <lastmod>2025-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://visioninfinityventures.studio/content/karnataka-bangalore-hsr-tracks-02-fractional-support-01-legal-incorporation-company-details</loc>
+    <lastmod>2025-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://visioninfinityventures.studio/content/karnataka-bangalore-hsr-tracks-02-fractional-support-01-legal-consultants-legal-partners</loc>
+    <lastmod>2025-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Banking Content -->
+  <url>
+    <loc>https://visioninfinityventures.studio/content/karnataka-bangalore-hsr-tracks-01-diy-founder-02-banking-accounts-bank-comparison</loc>
+    <lastmod>2025-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://visioninfinityventures.studio/content/karnataka-bangalore-hsr-tracks-02-fractional-support-02-banking-accounts-bank-comparison</loc>
+    <lastmod>2025-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Finance Content -->
+  <url>
+    <loc>https://visioninfinityventures.studio/content/karnataka-bangalore-hsr-tracks-01-diy-founder-03-finance-tracking-financial-dashboard</loc>
+    <lastmod>2025-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://visioninfinityventures.studio/content/karnataka-bangalore-hsr-tracks-02-fractional-support-03-finance-tracking-financial-dashboard</loc>
+    <lastmod>2025-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Operations Content -->
+  <url>
+    <loc>https://visioninfinityventures.studio/content/karnataka-bangalore-hsr-tracks-01-diy-founder-04-operations-office-office-setup-guide</loc>
+    <lastmod>2025-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://visioninfinityventures.studio/content/karnataka-bangalore-hsr-tracks-02-fractional-support-04-operations-office-fractional-office-setup</loc>
+    <lastmod>2025-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Marketing Content -->
+  <url>
+    <loc>https://visioninfinityventures.studio/content/karnataka-bangalore-hsr-tracks-01-diy-founder-05-marketing-campaigns-marketing-campaign-guide</loc>
+    <lastmod>2025-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://visioninfinityventures.studio/content/karnataka-bangalore-hsr-tracks-02-fractional-support-05-marketing-campaigns-fractional-marketing-strategy</loc>
+    <lastmod>2025-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Recruitment Content -->
+  <url>
+    <loc>https://visioninfinityventures.studio/content/karnataka-bangalore-hsr-tracks-01-diy-founder-06-recruitment-founders-founder-recruitment-guide</loc>
+    <lastmod>2025-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://visioninfinityventures.studio/content/karnataka-bangalore-hsr-tracks-02-fractional-support-06-recruitment-founders-fractional-founder-recruitment</loc>
+    <lastmod>2025-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Documentation Content -->
+  <url>
+    <loc>https://visioninfinityventures.studio/content/karnataka-bangalore-hsr-tracks-01-diy-founder-07-documentation-month-1-month-1-complete-guide</loc>
+    <lastmod>2025-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://visioninfinityventures.studio/content/karnataka-bangalore-hsr-tracks-01-diy-founder-07-documentation-month-1-resource-planning</loc>
+    <lastmod>2025-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://visioninfinityventures.studio/content/karnataka-bangalore-hsr-tracks-02-fractional-support-07-documentation-month-1-month-1-complete-guide</loc>
+    <lastmod>2025-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://visioninfinityventures.studio/content/karnataka-bangalore-hsr-tracks-02-fractional-support-07-documentation-month-1-resource-planning</loc>
+    <lastmod>2025-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Templates Content -->
+  <url>
+    <loc>https://visioninfinityventures.studio/content/karnataka-bangalore-hsr-tracks-01-diy-founder-08-templates-financial-monthly-budget-template</loc>
+    <lastmod>2025-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://visioninfinityventures.studio/content/karnataka-bangalore-hsr-tracks-02-fractional-support-08-templates-financial-fractional-budget-template</loc>
+    <lastmod>2025-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
   <!-- API Endpoints (for reference) -->
   <url>
     <loc>https://visioninfinityventures.studio/api/persona</loc>
