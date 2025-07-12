@@ -76,6 +76,7 @@ export default function TechStack() {
           name: 'Development Tools',
           tools: [
             { name: 'Cursor', description: 'AI-powered code editor with GitHub Copilot integration', status: 'Current', pricing: '$20/month' },
+            { name: 'Cline', description: 'Open source AI-powered code editor alternative', status: 'Planned', pricing: 'Free' },
             { name: 'GitHub', description: 'Open source code repository and collaboration', status: 'Current', pricing: 'Free' },
             { name: 'Open Source Libraries', description: 'Transparent, community-driven development', status: 'Current', pricing: 'Free' },
             { name: 'MIT License', description: 'Open source licensing for maximum accessibility', status: 'Current', pricing: 'Free' }
