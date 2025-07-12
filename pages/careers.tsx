@@ -9,7 +9,7 @@ export default function Careers() {
       id: 'vp-product-strategy',
       title: 'VP Product Strategy',
       type: 'Strategist',
-      function: 'Product-Market Fit',
+      function: 'Product & Design',
       salary: '₹8-10 Lakhs/month',
       equity: '2-3% over 4 years',
       experience: '8+ years',
@@ -26,7 +26,7 @@ export default function Careers() {
       id: 'product-manager',
       title: 'Product Manager',
       type: 'Executor',
-      function: 'Product-Market Fit',
+      function: 'Product & Design',
       salary: '₹4-6 Lakhs/month',
       equity: '1-1.5% over 4 years',
       experience: '5+ years',
@@ -37,6 +37,23 @@ export default function Careers() {
         'Product-market fit metrics',
         'Technical implementation',
         'Rapid iteration cycles'
+      ]
+    },
+    {
+      id: 'ux-ui-designer',
+      title: 'UX/UI Designer',
+      type: 'Executor',
+      function: 'Product & Design',
+      salary: '₹3-5 Lakhs/month',
+      equity: '0.5-1% over 4 years',
+      experience: '3+ years',
+      description: 'Create intuitive and engaging user experiences for our venture studio platform.',
+      responsibilities: [
+        'User interface design and prototyping',
+        'User experience research and testing',
+        'Design system development',
+        'Visual design and branding',
+        'Design-to-development handoff'
       ]
     },
     {
@@ -111,15 +128,15 @@ export default function Careers() {
       id: 'vp-growth-strategy',
       title: 'VP Growth Strategy',
       type: 'Strategist',
-      function: 'Growth & Scale',
+      function: 'Growth & Customer Success',
       salary: '₹8-10 Lakhs/month',
       equity: '2-3% over 4 years',
       experience: '8+ years',
-      description: 'Lead growth strategy and market expansion for rapid global scale.',
+      description: 'Lead growth strategy and customer success for rapid Bangalore market expansion.',
       responsibilities: [
         'Comprehensive growth strategy',
         'Bangalore market expansion',
-        'Network effects optimization',
+        'Customer success optimization',
         'Growth metrics and KPIs',
         'Strategic partnerships'
       ]
@@ -128,7 +145,7 @@ export default function Careers() {
       id: 'growth-manager',
       title: 'Growth Manager',
       type: 'Executor',
-      function: 'Growth & Scale',
+      function: 'Growth & Customer Success',
       salary: '₹4-6 Lakhs/month',
       equity: '1-1.5% over 4 years',
       experience: '5+ years',
@@ -139,6 +156,23 @@ export default function Careers() {
         'Growth experiments',
         'Performance marketing',
         'Engagement optimization'
+      ]
+    },
+    {
+      id: 'customer-success-manager',
+      title: 'Customer Success Manager',
+      type: 'Executor',
+      function: 'Growth & Customer Success',
+      salary: '₹3-5 Lakhs/month',
+      equity: '0.5-1% over 4 years',
+      experience: '3+ years',
+      description: 'Ensure founder success and satisfaction through proactive support and guidance.',
+      responsibilities: [
+        'Founder onboarding and training',
+        'Success metrics tracking',
+        'Proactive support and guidance',
+        'Feedback collection and analysis',
+        'Retention and expansion strategies'
       ]
     },
     {
@@ -199,12 +233,12 @@ export default function Careers() {
             <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
             Seeking Accel Atom Backing
           </div>
-                      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Join Bangalore&apos;s First
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
-                Venture Studio Platform
-              </span>
-            </h1>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            Join Bangalore&apos;s First
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
+              Venture Studio Platform
+            </span>
+          </h1>
           <p className="text-lg md:text-xl mb-8 text-gray-200 leading-relaxed max-w-3xl mx-auto">
             We&apos;re building Bangalore&apos;s first systematic venture studio platform that creates successful startups 
             through rapid product-market fit and proven methodologies. Seeking Accel Atom backing for $1M (25% equity).
@@ -212,20 +246,20 @@ export default function Careers() {
           
           {/* Investment Context */}
           <div className="grid md:grid-cols-4 gap-6 mb-8">
-                         <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-               <div className="text-2xl font-bold text-green-400 mb-2">$1M</div>
-               <div className="text-sm text-gray-300">For 25% Equity</div>
-             </div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+              <div className="text-2xl font-bold text-green-400 mb-2">$1M</div>
+              <div className="text-sm text-gray-300">For 25% Equity</div>
+            </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
               <div className="text-2xl font-bold text-blue-400 mb-2">$110B</div>
               <div className="text-sm text-gray-300">Bangalore Market</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <div className="text-2xl font-bold text-purple-400 mb-2">10</div>
+              <div className="text-2xl font-bold text-purple-400 mb-2">12</div>
               <div className="text-sm text-gray-300">Open Positions</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <div className="text-2xl font-bold text-indigo-400 mb-2">₹30L</div>
+              <div className="text-2xl font-bold text-indigo-400 mb-2">₹35L</div>
               <div className="text-sm text-gray-300">Monthly Team Cost</div>
             </div>
           </div>
@@ -264,8 +298,8 @@ export default function Careers() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Product-Market Fit</h3>
-              <p className="text-sm text-gray-600">Rapid iteration and validation</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Product & Design</h3>
+              <p className="text-sm text-gray-600">Rapid iteration and UX</p>
             </div>
             
             <div className="text-center">
@@ -294,8 +328,8 @@ export default function Careers() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Growth & Scale</h3>
-              <p className="text-sm text-gray-600">Regional expansion</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Growth & Customer Success</h3>
+              <p className="text-sm text-gray-600">Regional expansion & support</p>
             </div>
             
             <div className="text-center">
@@ -315,13 +349,13 @@ export default function Careers() {
       <section id="open-positions" className="py-20 bg-gradient-to-r from-indigo-50 to-blue-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-               Open Positions
-             </h2>
-             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-               Join our mission to build Bangalore&apos;s first venture studio platform seeking Accel Atom backing. 
-               Each role is designed to contribute to rapid product-market fit and regional scale.
-             </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Open Positions
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Join our mission to build Bangalore&apos;s first venture studio platform seeking Accel Atom backing. 
+              Each role is designed to contribute to rapid product-market fit and regional scale.
+            </p>
           </div>
           
           <div className="grid lg:grid-cols-2 gap-8">
@@ -370,7 +404,7 @@ export default function Careers() {
                     <strong>Experience:</strong> {role.experience}
                   </div>
                   <a 
-                                         href={`mailto:careers@visioninfinityventures.studio?subject=${role.title} - Seeking Accel Atom Backing`}
+                    href={`mailto:careers@visioninfinityventures.studio?subject=${role.title} - Seeking Accel Atom Backing`}
                     className="inline-flex items-center px-6 py-2 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-200"
                   >
                     Apply Now
@@ -392,10 +426,10 @@ export default function Careers() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Application Process
             </h2>
-                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-               Join our systematic approach to building the future of venture creation. 
-               Here&apos;s how to become part of our team seeking Accel Atom backing.
-             </p>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Join our systematic approach to building the future of venture creation. 
+              Here&apos;s how to become part of our team seeking Accel Atom backing.
+            </p>
           </div>
           
           <div className="grid md:grid-cols-5 gap-8">
@@ -448,13 +482,13 @@ export default function Careers() {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Build the Future?
           </h2>
-                     <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-             Join us in creating the category-defining venture studio platform that will transform 
-             how startups are created and scaled globally. Seeking Accel Atom backing for $1M (25% equity).
-           </p>
+          <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+            Join us in creating the category-defining venture studio platform that will transform 
+            how startups are created and scaled globally. Seeking Accel Atom backing for $1M (25% equity).
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-                             href="mailto:careers@visioninfinityventures.studio?subject=General Application - Seeking Accel Atom Backing"
+              href="mailto:careers@visioninfinityventures.studio?subject=General Application - Seeking Accel Atom Backing"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-semibold rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105"
             >
               Apply Now
