@@ -79,12 +79,7 @@ export default function TechStack() {
         }
       ]
     },
-    {
-      function: 'Finance & Operations',
-      color: 'red',
-      description: 'Sustainable growth and operational excellence',
-      categories: []
-    }
+
   ];
 
   const getStatusColor = (status: string) => {
@@ -154,13 +149,13 @@ export default function TechStack() {
           </h1>
           <p className="text-lg md:text-xl mb-8 text-gray-200 leading-relaxed max-w-3xl mx-auto">
             Discover the technology stack currently powering Bangalore&apos;s first venture studio platform. 
-            Organized by our 5 core functions to show what we&apos;re actively using today.
+            Organized by our 4 core functions to show what we&apos;re actively using today. Finance & Operations managed by fractional agency.
           </p>
           
           {/* Tech Stack Overview */}
           <div className="grid md:grid-cols-4 gap-6 mb-8">
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <div className="text-2xl font-bold text-green-400 mb-2">5</div>
+              <div className="text-2xl font-bold text-green-400 mb-2">4</div>
               <div className="text-sm text-gray-300">Core Functions</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
@@ -199,8 +194,8 @@ export default function TechStack() {
               Current Technology Stack by Function
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our technology architecture is organized around our 5 core functions, 
-              showing only the tools we&apos;re actively using today.
+              Our technology architecture is organized around our 4 core functions, 
+              showing only the tools we&apos;re actively using today. Finance & Operations managed by fractional agency.
             </p>
           </div>
           
@@ -269,7 +264,7 @@ export default function TechStack() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-5 gap-8">
+          <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -310,15 +305,7 @@ export default function TechStack() {
               <p className="text-sm text-gray-600">Netlify hosting, PorkBun domain & email</p>
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">CRM & Marketing</h3>
-              <p className="text-sm text-gray-600">HubSpot for marketing, sales & customer success</p>
-            </div>
+
           </div>
         </div>
       </section>

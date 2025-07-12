@@ -175,40 +175,7 @@ export default function Careers() {
         'Retention and expansion strategies'
       ]
     },
-    {
-      id: 'cfo-vp-finance',
-      title: 'CFO/VP Finance Strategy',
-      type: 'Strategist',
-      function: 'Finance & Operations',
-      salary: '₹8-10 Lakhs/month',
-      equity: '2-3% over 4 years',
-      experience: '10+ years',
-      description: 'Lead financial strategy and investment readiness for Accel Atom alignment.',
-      responsibilities: [
-        'Comprehensive financial strategy',
-        'Unit economics optimization',
-        'Investment readiness',
-        'Financial planning',
-        'Investor relations'
-      ]
-    },
-    {
-      id: 'operations-manager',
-      title: 'Operations Manager',
-      type: 'Executor',
-      function: 'Finance & Operations',
-      salary: '₹4-6 Lakhs/month',
-      equity: '1-1.5% over 4 years',
-      experience: '5+ years',
-      description: 'Execute operational excellence and team coordination across all functions.',
-      responsibilities: [
-        'Operational process optimization',
-        'Cross-functional coordination',
-        'Process efficiency improvement',
-        'Resource management',
-        'Performance tracking'
-      ]
-    }
+
   ];
 
   return (
@@ -255,7 +222,7 @@ export default function Careers() {
               <div className="text-sm text-gray-300">Bangalore Market</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <div className="text-2xl font-bold text-purple-400 mb-2">12</div>
+              <div className="text-2xl font-bold text-purple-400 mb-2">10</div>
               <div className="text-sm text-gray-300">Open Positions</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
@@ -286,12 +253,12 @@ export default function Careers() {
               Our Team Structure
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We&apos;ve designed a systematic team structure with 5 core functions, each with both strategist and executor roles 
-              to ensure rapid product-market fit and scalable growth.
+              We&apos;ve designed a systematic team structure with 4 core functions, each with both strategist and executor roles 
+              to ensure rapid product-market fit and scalable growth. Finance & Operations managed by fractional agency.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-5 gap-8">
+          <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -332,15 +299,7 @@ export default function Careers() {
               <p className="text-sm text-gray-600">Regional expansion & support</p>
             </div>
             
-            <div className="text-center">
-              <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Finance & Operations</h3>
-              <p className="text-sm text-gray-600">Sustainable growth</p>
-            </div>
+
           </div>
         </div>
       </section>
