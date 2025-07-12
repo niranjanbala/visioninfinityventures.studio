@@ -16,7 +16,7 @@ export default function Hero() {
           <div className="text-center lg:text-left">
             <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm text-white rounded-full text-sm font-medium mb-6 border border-white/20">
               <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
-              Backed by Accel Atom
+              Seeking Accel Atom Backing
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               The First Systematic

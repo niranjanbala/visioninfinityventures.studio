@@ -83,11 +83,12 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Why Accel Atom Backs Us
+              Why Should Accel Atom Back Us?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We&apos;re building the category-defining venture studio platform that systematically creates 
-              successful startups through rapid product-market fit and proven methodologies.
+              successful startups through rapid product-market fit and proven methodologies. 
+              Looking for a backer for an ask of $1M.
             </p>
           </div>
           

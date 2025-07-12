@@ -6,8 +6,8 @@ Vision Infinity Ventures is building the category-defining venture studio platfo
 
 ## 💰 **INVESTMENT CONTEXT**
 
-- **Accel Atom Backing**: Prestigious accelerator program investment
-- **Funding Ask**: $1M for 50% equity
+- **Seeking Accel Atom Backing**: Prestigious accelerator program investment
+- **Investment Ask**: $1M for 50% equity
 - **Market Opportunity**: $3.2T global startup ecosystem
 - **Competitive Position**: First systematic venture studio platform
 
@@ -17,7 +17,7 @@ Vision Infinity Ventures is building the category-defining venture studio platfo
 
 #### **VP Product Strategy (Strategist Role)**
 **Position Overview:**
-Lead product strategy and market opportunity identification for our category-defining venture studio platform. This role is critical for achieving rapid product-market fit and positioning us as the first systematic venture studio platform globally.
+Lead product strategy and market opportunity identification for our category-defining venture studio platform. This role is critical for achieving rapid product-market fit and positioning us as the first systematic venture studio platform globally, seeking Accel Atom backing.
 
 **Key Responsibilities:**
 - **Market Opportunity Analysis**: Identify and validate massive market opportunities ($3.2T global startup ecosystem)
@@ -225,12 +225,12 @@ Execute growth initiatives and user acquisition strategies. Lead community build
 
 #### **CFO/VP Finance Strategy (Strategist Role)**
 **Position Overview:**
-Lead financial strategy and investment readiness for Accel Atom alignment. Develop strong unit economics and sustainable growth models.
+Lead financial strategy and investment readiness for Accel Atom backing. Develop strong unit economics and sustainable growth models.
 
 **Key Responsibilities:**
 - **Financial Strategy**: Develop comprehensive financial strategy
 - **Unit Economics**: Optimize unit economics for sustainable growth
-- **Investment Readiness**: Prepare for Accel Atom investment and future rounds
+- **Investment Readiness**: Prepare for Accel Atom backing and future rounds
 - **Financial Planning**: Lead financial planning and budgeting
 - **Investor Relations**: Manage investor relations and reporting
 
@@ -283,7 +283,7 @@ Execute operational excellence and team coordination. Ensure systematic executio
 
 ### **Equity Structure**
 - **Founder Team**: 50% (your ask)
-- **Accel Atom**: 50% (their investment)
+- **Accel Atom**: 50% (their potential investment)
 - **Team Equity Pool**: 15-20% (from founder portion)
 - **Advisory/Network**: 5-10% (from founder portion)
 
@@ -327,4 +327,4 @@ Execute operational excellence and team coordination. Ensure systematic executio
 
 ---
 
-*Join us in building the category-defining venture studio platform that will transform how startups are created and scaled globally.* 
+*Join us in building the category-defining venture studio platform that will transform how startups are created and scaled globally. Seeking Accel Atom backing for $1M investment.* 

@@ -180,8 +180,8 @@ export default function Careers() {
   return (
     <>
       <Head>
-        <title>Careers | Vision Infinity Ventures - Accel Atom Team</title>
-        <meta name="description" content="Join the category-defining venture studio platform backed by Accel Atom. Build the future of startup creation with rapid product-market fit and proven methodologies." />
+        <title>Careers | Vision Infinity Ventures - Seeking Accel Atom Backing</title>
+        <meta name="description" content="Join the category-defining venture studio platform seeking Accel Atom backing. Build the future of startup creation with rapid product-market fit and proven methodologies." />
         <meta name="theme-color" content="#2563eb" />
       </Head>
       <Navigation />
@@ -197,7 +197,7 @@ export default function Careers() {
         <div className="max-w-6xl mx-auto relative z-10 text-center">
           <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm text-white rounded-full text-sm font-medium mb-6 border border-white/20">
             <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
-            Backed by Accel Atom
+            Seeking Accel Atom Backing
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             Join the Category-Defining
@@ -207,15 +207,15 @@ export default function Careers() {
           </h1>
           <p className="text-lg md:text-xl mb-8 text-gray-200 leading-relaxed max-w-3xl mx-auto">
             We&apos;re building the first systematic venture studio platform that creates successful startups 
-            through rapid product-market fit and proven methodologies. Backed by Accel Atom.
+            through rapid product-market fit and proven methodologies. Seeking Accel Atom backing for $1M investment.
           </p>
           
           {/* Investment Context */}
           <div className="grid md:grid-cols-4 gap-6 mb-8">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <div className="text-2xl font-bold text-green-400 mb-2">$1M</div>
-              <div className="text-sm text-gray-300">Funding Ask</div>
-            </div>
+                         <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+               <div className="text-2xl font-bold text-green-400 mb-2">$1M</div>
+               <div className="text-sm text-gray-300">Investment Ask</div>
+             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
               <div className="text-2xl font-bold text-blue-400 mb-2">$3.2T</div>
               <div className="text-sm text-gray-300">Market Opportunity</div>
@@ -315,13 +315,13 @@ export default function Careers() {
       <section id="open-positions" className="py-20 bg-gradient-to-r from-indigo-50 to-blue-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Open Positions
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Join our mission to build the category-defining venture studio platform. 
-              Each role is designed to contribute to rapid product-market fit and global scale.
-            </p>
+                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+               Open Positions
+             </h2>
+             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+               Join our mission to build the category-defining venture studio platform seeking Accel Atom backing. 
+               Each role is designed to contribute to rapid product-market fit and global scale.
+             </p>
           </div>
           
           <div className="grid lg:grid-cols-2 gap-8">
@@ -370,7 +370,7 @@ export default function Careers() {
                     <strong>Experience:</strong> {role.experience}
                   </div>
                   <a 
-                    href={`mailto:careers@visioninfinityventures.studio?subject=${role.title} - Accel Atom Team Application`}
+                                         href={`mailto:careers@visioninfinityventures.studio?subject=${role.title} - Seeking Accel Atom Backing`}
                     className="inline-flex items-center px-6 py-2 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-200"
                   >
                     Apply Now
@@ -392,10 +392,10 @@ export default function Careers() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Application Process
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Join our systematic approach to building the future of venture creation. 
-              Here&apos;s how to become part of our Accel Atom-backed team.
-            </p>
+                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+               Join our systematic approach to building the future of venture creation. 
+               Here&apos;s how to become part of our team seeking Accel Atom backing.
+             </p>
           </div>
           
           <div className="grid md:grid-cols-5 gap-8">
@@ -448,13 +448,13 @@ export default function Careers() {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Build the Future?
           </h2>
-          <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-            Join us in creating the category-defining venture studio platform that will transform 
-            how startups are created and scaled globally. Backed by Accel Atom.
-          </p>
+                     <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+             Join us in creating the category-defining venture studio platform that will transform 
+             how startups are created and scaled globally. Seeking Accel Atom backing for $1M investment.
+           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="mailto:careers@visioninfinityventures.studio?subject=General Application - Accel Atom Team"
+                             href="mailto:careers@visioninfinityventures.studio?subject=General Application - Seeking Accel Atom Backing"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-semibold rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105"
             >
               Apply Now
