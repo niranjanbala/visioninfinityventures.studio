@@ -76,6 +76,12 @@ export default function TechStack() {
           tools: [
             { name: 'HubSpot', description: 'Marketing, Sales, and Customer Success CRM platform', status: 'Current' }
           ]
+        },
+        {
+          name: 'Customer Support',
+          tools: [
+            { name: 'Botpress', description: 'AI-powered customer support chatbot and automation platform', status: 'Current' }
+          ]
         }
       ]
     },
@@ -167,7 +173,7 @@ export default function TechStack() {
               <div className="text-sm text-gray-300">Current Tools</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <div className="text-2xl font-bold text-indigo-400 mb-2">5</div>
+              <div className="text-2xl font-bold text-indigo-400 mb-2">6</div>
               <div className="text-sm text-gray-300">Tool Categories</div>
             </div>
           </div>
