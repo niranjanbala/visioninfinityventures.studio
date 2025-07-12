@@ -55,6 +55,14 @@ export default function TechStack() {
             { name: 'bcryptjs', description: 'Password hashing', status: 'Current' },
             { name: 'JWT', description: 'JSON Web Tokens', status: 'Current' }
           ]
+        },
+        {
+          name: 'Infrastructure & Hosting',
+          tools: [
+            { name: 'Netlify', description: 'Website hosting and deployment platform', status: 'Current' },
+            { name: 'PorkBun', description: 'Domain registration and SSL certificates', status: 'Current' },
+            { name: 'PorkBun Email', description: 'Professional email hosting service', status: 'Current' }
+          ]
         }
       ]
     },
@@ -113,7 +121,7 @@ export default function TechStack() {
     <>
       <Head>
         <title>Tech Stack | Vision Infinity Ventures - Technology Architecture</title>
-        <meta name="description" content="Explore our current technology stack organized by function. From frontend development to authentication, discover the tools powering Bangalore's first venture studio platform." />
+        <meta name="description" content="Explore our current technology stack organized by function. From frontend development to hosting, discover the tools powering Bangalore's first venture studio platform." />
         <meta name="theme-color" content="#2563eb" />
       </Head>
       <Navigation />
@@ -157,7 +165,7 @@ export default function TechStack() {
               <div className="text-sm text-gray-300">Current Tools</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <div className="text-2xl font-bold text-indigo-400 mb-2">3</div>
+              <div className="text-2xl font-bold text-indigo-400 mb-2">4</div>
               <div className="text-sm text-gray-300">Tool Categories</div>
             </div>
           </div>
@@ -254,7 +262,7 @@ export default function TechStack() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -283,6 +291,16 @@ export default function TechStack() {
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Progress Tracking</h3>
               <p className="text-sm text-gray-600">Custom dashboard with Prisma database</p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Infrastructure</h3>
+              <p className="text-sm text-gray-600">Netlify hosting, PorkBun domain & email</p>
             </div>
           </div>
         </div>

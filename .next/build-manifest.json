@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/zvlnEVAG29cmzXpHCcsJS/_buildManifest.js",
-    "static/zvlnEVAG29cmzXpHCcsJS/_ssgManifest.js"
+    "static/u5ZYfwOm11_N1b7cDhRRH/_buildManifest.js",
+    "static/u5ZYfwOm11_N1b7cDhRRH/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -82,7 +82,7 @@
       "static/chunks/framework-bcaea2e08c6b85c1.js",
       "static/chunks/main-9c6c051fb60e01ed.js",
       "static/chunks/996-5abd08ae305d436b.js",
-      "static/chunks/pages/tech-stack-5f1b44dbd008cbb8.js"
+      "static/chunks/pages/tech-stack-68d437952e2389ab.js"
     ],
     "/venture-studio": [
       "static/chunks/webpack-fa99431b15635937.js",
