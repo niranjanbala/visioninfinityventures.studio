@@ -1,1 +1,9 @@
- 
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" rx="128" fill="#6366f1"/>
+  <circle cx="256" cy="256" r="180" fill="#4f46e5"/>
+  <text x="256" y="280" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="120" font-weight="bold">VIV</text>
+  <circle cx="256" cy="120" r="20" fill="#fbbf24"/>
+  <circle cx="256" cy="392" r="20" fill="#fbbf24"/>
+  <circle cx="120" cy="256" r="20" fill="#fbbf24"/>
+  <circle cx="392" cy="256" r="20" fill="#fbbf24"/>
+</svg> 
