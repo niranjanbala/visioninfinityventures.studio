@@ -39,6 +39,10 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
+        
+        {/* Botpress Webchat */}
+        <script src="https://cdn.botpress.cloud/webchat/v3.2/inject.js" defer></script>
+        <script src="https://files.bpcontent.cloud/2025/07/12/10/20250712103437-I2K6APSJ.js" defer></script>
       </body>
     </Html>
   )
