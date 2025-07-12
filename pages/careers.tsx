@@ -56,40 +56,7 @@ export default function Careers() {
         'Design-to-development handoff'
       ]
     },
-    {
-      id: 'vp-venture-strategy',
-      title: 'VP Venture Strategy',
-      type: 'Strategist',
-      function: 'Venture Building',
-      salary: '₹8-10 Lakhs/month',
-      equity: '2-3% over 4 years',
-      experience: '8+ years',
-      description: 'Lead venture studio methodology and founder success optimization through systematic approaches.',
-      responsibilities: [
-        '12-phase journey system optimization',
-        'Founder success rate improvement',
-        'Strategic partnerships',
-        'Ecosystem building',
-        'Success metrics optimization'
-      ]
-    },
-    {
-      id: 'venture-builder',
-      title: 'Venture Builder',
-      type: 'Executor',
-      function: 'Venture Building',
-      salary: '₹4-6 Lakhs/month',
-      equity: '1-1.5% over 4 years',
-      experience: '5+ years',
-      description: 'Execute founder onboarding and journey management through hands-on support.',
-      responsibilities: [
-        'Founder onboarding and setup',
-        'Progress tracking through 12 phases',
-        'Resource allocation and coordination',
-        'Success optimization',
-        'Community building'
-      ]
-    },
+
     {
       id: 'cto-vp-technology',
       title: 'CTO/VP Technology Strategy',
@@ -222,7 +189,7 @@ export default function Careers() {
               <div className="text-sm text-gray-300">Bangalore Market</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <div className="text-2xl font-bold text-purple-400 mb-2">10</div>
+              <div className="text-2xl font-bold text-purple-400 mb-2">8</div>
               <div className="text-sm text-gray-300">Open Positions</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
@@ -253,8 +220,8 @@ export default function Careers() {
               Our Team Structure
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We&apos;ve designed a systematic team structure with 4 core functions, each with both strategist and executor roles 
-              to ensure rapid product-market fit and scalable growth. Finance & Operations managed by fractional agency.
+              We&apos;ve designed a systematic team structure with 4 core functions. Venture Building roles handled by founder. 
+              Finance & Operations managed by fractional agency.
             </p>
           </div>
           
@@ -276,7 +243,7 @@ export default function Careers() {
                 </svg>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Venture Building</h3>
-              <p className="text-sm text-gray-600">Systematic methodology</p>
+              <p className="text-sm text-gray-600">Founder-led methodology</p>
             </div>
             
             <div className="text-center">

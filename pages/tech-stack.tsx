@@ -24,7 +24,7 @@ export default function TechStack() {
     {
       function: 'Venture Building',
       color: 'blue',
-      description: 'Systematic methodology and founder journey management',
+      description: 'Founder-led methodology and journey management',
       categories: [
         {
           name: 'Progress Tracking',
@@ -149,7 +149,7 @@ export default function TechStack() {
           </h1>
           <p className="text-lg md:text-xl mb-8 text-gray-200 leading-relaxed max-w-3xl mx-auto">
             Discover the technology stack currently powering Bangalore&apos;s first venture studio platform. 
-            Organized by our 4 core functions to show what we&apos;re actively using today. Finance & Operations managed by fractional agency.
+            Organized by our 4 core functions to show what we&apos;re actively using today. Venture Building founder-led. Finance & Operations managed by fractional agency.
           </p>
           
           {/* Tech Stack Overview */}
@@ -195,7 +195,7 @@ export default function TechStack() {
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Our technology architecture is organized around our 4 core functions, 
-              showing only the tools we&apos;re actively using today. Finance & Operations managed by fractional agency.
+              showing only the tools we&apos;re actively using today. Venture Building founder-led. Finance & Operations managed by fractional agency.
             </p>
           </div>
           
