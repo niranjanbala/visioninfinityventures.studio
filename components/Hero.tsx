@@ -31,7 +31,7 @@ export default function Hero() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto">
             <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
               <div className="text-2xl font-bold text-indigo-600 mb-1">$1M</div>
-              <div className="text-sm text-gray-600">For 25% Equity</div>
+              <div className="text-sm text-gray-600">For 15% Equity</div>
             </div>
             <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
               <div className="text-2xl font-bold text-indigo-600 mb-1">$110B</div>

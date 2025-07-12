@@ -545,7 +545,7 @@ const PitchDeckPage = () => {
     {
       id: 9,
       title: "Accel Atom Investment Ask",
-      subtitle: "Seeking $1M for 25% Equity",
+      subtitle: "Seeking $1M for 15% Equity",
       content: (
         <div className="text-center">
           <div className="max-w-2xl mx-auto">
@@ -555,7 +555,7 @@ const PitchDeckPage = () => {
               <div className="bg-indigo-50 p-6 rounded-lg">
                 <h4 className="text-xl font-semibold text-indigo-800 mb-2">Investment Ask</h4>
                 <p className="text-3xl font-bold text-indigo-600 mb-2">$1M</p>
-                <p className="text-sm text-indigo-600">For 25% equity</p>
+                <p className="text-sm text-indigo-600">For 15% equity</p>
                 <p className="text-sm text-indigo-600">$4M pre-money valuation</p>
               </div>
               <div className="bg-indigo-50 p-6 rounded-lg">

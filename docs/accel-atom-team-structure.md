@@ -7,7 +7,7 @@ Vision Infinity Ventures is building the category-defining open source and AI-na
 ## 💰 **INVESTMENT CONTEXT**
 
 - **Seeking Accel Atom Backing**: Prestigious accelerator program investment
-- **Investment Ask**: $1M for 25% equity
+- **Investment Ask**: $1M for 15% equity
 - **Market Opportunity**: $3.2T global startup ecosystem
 - **Competitive Position**: First open source and AI-native venture studio platform
 - **Team Structure**: 100% fractional and remote positions
@@ -305,8 +305,8 @@ Execute operational excellence and team coordination. Ensure systematic executio
 - **Investment Required**: ₹4-6 Crores for 6 months
 
 ### **Equity Structure**
-- **Founder Team**: 60% (maintains control)
-- **Accel Atom**: 25% (their potential investment)
+- **Founder Team**: 70% (maintains control)
+- **Accel Atom**: 15% (their potential investment)
 - **Team Equity Pool**: 10% (from founder portion)
 - **Advisory/Network**: 5% (from founder portion)
 
