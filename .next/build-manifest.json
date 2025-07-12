@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/iyJvEQK_ok1ni9eB7QSnW/_buildManifest.js",
-    "static/iyJvEQK_ok1ni9eB7QSnW/_ssgManifest.js"
+    "static/bjYBATG2hAoeHrGtUJ28g/_buildManifest.js",
+    "static/bjYBATG2hAoeHrGtUJ28g/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -68,7 +68,7 @@
       "static/chunks/framework-bcaea2e08c6b85c1.js",
       "static/chunks/main-9c6c051fb60e01ed.js",
       "static/chunks/996-5abd08ae305d436b.js",
-      "static/chunks/pages/pitch-deck-b6c0ba76a6cf42f9.js"
+      "static/chunks/pages/pitch-deck-b2aab1df38d4d36a.js"
     ],
     "/stages": [
       "static/chunks/webpack-fa99431b15635937.js",

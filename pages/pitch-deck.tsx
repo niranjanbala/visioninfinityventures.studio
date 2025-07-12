@@ -571,11 +571,11 @@ const PitchDeckPage = () => {
               <h4 className="text-xl font-semibold text-green-800 mb-4">Equity Structure</h4>
               <div className="grid md:grid-cols-4 gap-4">
                 <div>
-                  <p className="text-2xl font-bold text-green-600">60%</p>
+                  <p className="text-2xl font-bold text-green-600">70%</p>
                   <p className="text-sm text-green-600">Founder Team</p>
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-green-600">25%</p>
+                  <p className="text-2xl font-bold text-green-600">15%</p>
                   <p className="text-sm text-green-600">Accel Atom</p>
                 </div>
                 <div>
