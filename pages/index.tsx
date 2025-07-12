@@ -246,7 +246,7 @@ export default function Home() {
               {/* Step Indicators */}
               <div className="flex justify-center mb-8">
                 <div className="flex space-x-2">
-                  {[0, 1, 2, 3, 4, 5].map((step) => (
+                  {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((step) => (
                     <div
                       key={step}
                       className={`w-3 h-3 rounded-full transition-colors ${
@@ -494,8 +494,308 @@ export default function Home() {
                 </div>
               )}
 
-              {/* Step 5: HubSpot Form */}
+              {/* Step 5: Technology & AI Skills */}
               {currentStep === 5 && (
+                <div className="text-center">
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">How proficient are you in Technology & AI?</h3>
+                  <p className="text-gray-600 mb-8">Rate your technical skills and AI knowledge</p>
+                  <div className="grid md:grid-cols-3 gap-6">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setFormData({ ...formData, technologySkill: 'beginner' });
+                        nextStep();
+                      }}
+                      className="p-6 text-center bg-white border-2 border-gray-200 rounded-xl hover:border-indigo-500 hover:shadow-md transition-all"
+                    >
+                      <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                      </div>
+                      <h4 className="text-lg font-semibold text-gray-900 mb-2">Beginner</h4>
+                      <p className="text-sm text-gray-600">Basic understanding, need guidance</p>
+                    </button>
+                    
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setFormData({ ...formData, technologySkill: 'intermediate' });
+                        nextStep();
+                      }}
+                      className="p-6 text-center bg-white border-2 border-gray-200 rounded-xl hover:border-indigo-500 hover:shadow-md transition-all"
+                    >
+                      <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      </div>
+                      <h4 className="text-lg font-semibold text-gray-900 mb-2">Intermediate</h4>
+                      <p className="text-sm text-gray-600">Some experience, can work independently</p>
+                    </button>
+                    
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setFormData({ ...formData, technologySkill: 'advanced' });
+                        nextStep();
+                      }}
+                      className="p-6 text-center bg-white border-2 border-gray-200 rounded-xl hover:border-indigo-500 hover:shadow-md transition-all"
+                    >
+                      <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                        </svg>
+                      </div>
+                      <h4 className="text-lg font-semibold text-gray-900 mb-2">Advanced</h4>
+                      <p className="text-sm text-gray-600">Expert level, can lead technical decisions</p>
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {/* Step 6: Marketing Skills */}
+              {currentStep === 6 && (
+                <div className="text-center">
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">How proficient are you in Marketing?</h3>
+                  <p className="text-gray-600 mb-8">Rate your marketing and growth skills</p>
+                  <div className="grid md:grid-cols-3 gap-6">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setFormData({ ...formData, marketingSkill: 'beginner' });
+                        nextStep();
+                      }}
+                      className="p-6 text-center bg-white border-2 border-gray-200 rounded-xl hover:border-indigo-500 hover:shadow-md transition-all"
+                    >
+                      <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                      </div>
+                      <h4 className="text-lg font-semibold text-gray-900 mb-2">Beginner</h4>
+                      <p className="text-sm text-gray-600">Basic understanding, need guidance</p>
+                    </button>
+                    
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setFormData({ ...formData, marketingSkill: 'intermediate' });
+                        nextStep();
+                      }}
+                      className="p-6 text-center bg-white border-2 border-gray-200 rounded-xl hover:border-indigo-500 hover:shadow-md transition-all"
+                    >
+                      <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      </div>
+                      <h4 className="text-lg font-semibold text-gray-900 mb-2">Intermediate</h4>
+                      <p className="text-sm text-gray-600">Some experience, can work independently</p>
+                    </button>
+                    
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setFormData({ ...formData, marketingSkill: 'advanced' });
+                        nextStep();
+                      }}
+                      className="p-6 text-center bg-white border-2 border-gray-200 rounded-xl hover:border-indigo-500 hover:shadow-md transition-all"
+                    >
+                      <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                        </svg>
+                      </div>
+                      <h4 className="text-lg font-semibold text-gray-900 mb-2">Advanced</h4>
+                      <p className="text-sm text-gray-600">Expert level, can lead marketing strategy</p>
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {/* Step 7: Sales Skills */}
+              {currentStep === 7 && (
+                <div className="text-center">
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">How proficient are you in Sales?</h3>
+                  <p className="text-gray-600 mb-8">Rate your sales and business development skills</p>
+                  <div className="grid md:grid-cols-3 gap-6">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setFormData({ ...formData, salesSkill: 'beginner' });
+                        nextStep();
+                      }}
+                      className="p-6 text-center bg-white border-2 border-gray-200 rounded-xl hover:border-indigo-500 hover:shadow-md transition-all"
+                    >
+                      <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                      </div>
+                      <h4 className="text-lg font-semibold text-gray-900 mb-2">Beginner</h4>
+                      <p className="text-sm text-gray-600">Basic understanding, need guidance</p>
+                    </button>
+                    
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setFormData({ ...formData, salesSkill: 'intermediate' });
+                        nextStep();
+                      }}
+                      className="p-6 text-center bg-white border-2 border-gray-200 rounded-xl hover:border-indigo-500 hover:shadow-md transition-all"
+                    >
+                      <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      </div>
+                      <h4 className="text-lg font-semibold text-gray-900 mb-2">Intermediate</h4>
+                      <p className="text-sm text-gray-600">Some experience, can work independently</p>
+                    </button>
+                    
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setFormData({ ...formData, salesSkill: 'advanced' });
+                        nextStep();
+                      }}
+                      className="p-6 text-center bg-white border-2 border-gray-200 rounded-xl hover:border-indigo-500 hover:shadow-md transition-all"
+                    >
+                      <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                        </svg>
+                      </div>
+                      <h4 className="text-lg font-semibold text-gray-900 mb-2">Advanced</h4>
+                      <p className="text-sm text-gray-600">Expert level, can lead sales strategy</p>
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {/* Step 8: Product Management Skills */}
+              {currentStep === 8 && (
+                <div className="text-center">
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">How proficient are you in Product Management?</h3>
+                  <p className="text-gray-600 mb-8">Rate your product strategy and management skills</p>
+                  <div className="grid md:grid-cols-3 gap-6">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setFormData({ ...formData, productSkill: 'beginner' });
+                        nextStep();
+                      }}
+                      className="p-6 text-center bg-white border-2 border-gray-200 rounded-xl hover:border-indigo-500 hover:shadow-md transition-all"
+                    >
+                      <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                      </div>
+                      <h4 className="text-lg font-semibold text-gray-900 mb-2">Beginner</h4>
+                      <p className="text-sm text-gray-600">Basic understanding, need guidance</p>
+                    </button>
+                    
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setFormData({ ...formData, productSkill: 'intermediate' });
+                        nextStep();
+                      }}
+                      className="p-6 text-center bg-white border-2 border-gray-200 rounded-xl hover:border-indigo-500 hover:shadow-md transition-all"
+                    >
+                      <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      </div>
+                      <h4 className="text-lg font-semibold text-gray-900 mb-2">Intermediate</h4>
+                      <p className="text-sm text-gray-600">Some experience, can work independently</p>
+                    </button>
+                    
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setFormData({ ...formData, productSkill: 'advanced' });
+                        nextStep();
+                      }}
+                      className="p-6 text-center bg-white border-2 border-gray-200 rounded-xl hover:border-indigo-500 hover:shadow-md transition-all"
+                    >
+                      <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                        </svg>
+                      </div>
+                      <h4 className="text-lg font-semibold text-gray-900 mb-2">Advanced</h4>
+                      <p className="text-sm text-gray-600">Expert level, can lead product strategy</p>
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {/* Step 9: Design Skills */}
+              {currentStep === 9 && (
+                <div className="text-center">
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">How proficient are you in Design?</h3>
+                  <p className="text-gray-600 mb-8">Rate your UX/UI and design skills</p>
+                  <div className="grid md:grid-cols-3 gap-6">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setFormData({ ...formData, designSkill: 'beginner' });
+                        nextStep();
+                      }}
+                      className="p-6 text-center bg-white border-2 border-gray-200 rounded-xl hover:border-indigo-500 hover:shadow-md transition-all"
+                    >
+                      <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                      </div>
+                      <h4 className="text-lg font-semibold text-gray-900 mb-2">Beginner</h4>
+                      <p className="text-sm text-gray-600">Basic understanding, need guidance</p>
+                    </button>
+                    
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setFormData({ ...formData, designSkill: 'intermediate' });
+                        nextStep();
+                      }}
+                      className="p-6 text-center bg-white border-2 border-gray-200 rounded-xl hover:border-indigo-500 hover:shadow-md transition-all"
+                    >
+                      <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      </div>
+                      <h4 className="text-lg font-semibold text-gray-900 mb-2">Intermediate</h4>
+                      <p className="text-sm text-gray-600">Some experience, can work independently</p>
+                    </button>
+                    
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setFormData({ ...formData, designSkill: 'advanced' });
+                        nextStep();
+                      }}
+                      className="p-6 text-center bg-white border-2 border-gray-200 rounded-xl hover:border-indigo-500 hover:shadow-md transition-all"
+                    >
+                      <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                        </svg>
+                      </div>
+                      <h4 className="text-lg font-semibold text-gray-900 mb-2">Advanced</h4>
+                      <p className="text-sm text-gray-600">Expert level, can lead design strategy</p>
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {/* Step 10: HubSpot Form */}
+              {currentStep === 9 && (
                 <div className="text-center">
                   <h3 className="text-2xl font-semibold text-gray-900 mb-4">Get Your Personalized Roadmap</h3>
                   <p className="text-gray-600 mb-8">Enter your details to receive your customized 12-phase journey</p>
@@ -508,7 +808,7 @@ export default function Home() {
               )}
 
               {/* Navigation Buttons */}
-              {currentStep < 5 && (
+              {currentStep < 9 && (
                 <div className="flex justify-between items-center pt-8">
                   <button
                     type="button"
