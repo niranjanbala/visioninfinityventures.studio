@@ -81,45 +81,48 @@ export default function PitchDeckLayout({ title, subtitle, children, slug, headi
   const breadcrumbs = generateBreadcrumbs(slug);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
-      {/* Navigation Bar */}
-      <div className="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <div className="min-h-screen bg-gradient-to-br from-viv-gray-50 via-white to-viv-gray-50">
+      {/* Enhanced Navigation Bar */}
+      <div className="bg-white/90 backdrop-blur-md border-b border-viv-gray-200 sticky top-0 z-50 shadow-viv-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center justify-between py-4">
             <div className="flex items-center space-x-2 text-sm">
-              <Link href="/" className="text-gray-500 hover:text-gray-700 transition-colors">
+              <Link href="/" className="nav-link flex items-center">
+                <svg className="w-5 h-5 mr-2 text-viv-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                </svg>
                 Home
               </Link>
-              <span className="text-gray-400">/</span>
-              <Link href="/content" className="text-gray-500 hover:text-gray-700 transition-colors">
+              <span className="text-viv-gray-400">/</span>
+              <Link href="/content" className="nav-link">
                 Content Library
               </Link>
               {breadcrumbs.map((crumb, index) => (
                 <React.Fragment key={index}>
-                  <span className="text-gray-400">/</span>
-                  <span className="text-gray-900 font-medium">{crumb.name}</span>
+                  <span className="text-viv-gray-400">/</span>
+                  <span className="text-viv-gray-900 font-medium">{crumb.name}</span>
                 </React.Fragment>
               ))}
             </div>
-            {/* Slide Navigation Controls */}
+            {/* Enhanced Slide Navigation Controls */}
             <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-3 bg-white rounded-xl p-2 shadow-viv border border-viv-gray-200">
                 <button
                   onClick={prevSlide}
                   disabled={activeSlide === 0}
-                  className="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                  className="p-2 rounded-lg bg-viv-gray-100 hover:bg-viv-primary hover:text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 transform hover:scale-105"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                   </svg>
                 </button>
-                <span className="text-sm font-medium text-gray-700">
+                <span className="text-sm font-semibold text-viv-gray-700 px-3 py-1 bg-viv-primary-lighter rounded-lg">
                   {activeSlide + 1} / {slidesArray.length}
                 </span>
                 <button
                   onClick={nextSlide}
                   disabled={activeSlide === slidesArray.length - 1}
-                  className="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                  className="p-2 rounded-lg bg-viv-gray-100 hover:bg-viv-primary hover:text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 transform hover:scale-105"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -131,48 +134,55 @@ export default function PitchDeckLayout({ title, subtitle, children, slug, headi
         </div>
       </div>
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Main Content - Full Width Slides */}
         <div>
-          {/* Title Slide */}
-          <div className="bg-gradient-to-br from-indigo-600 via-blue-600 to-indigo-700 rounded-3xl shadow-2xl overflow-hidden mb-8">
-            <div className="px-12 py-16 text-center">
-              <div className="max-w-4xl mx-auto">
-                <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                  {title}
-                </h1>
-                {subtitle && (
-                  <p className="text-xl md:text-2xl text-indigo-100 mb-8 leading-relaxed">
-                    {subtitle}
-                  </p>
-                )}
-                <div className="flex items-center justify-center space-x-4 text-indigo-200">
-                  <div className="flex items-center">
-                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <span>Vision Infinity Ventures</span>
-                  </div>
-                  <div className="w-1 h-1 bg-indigo-300 rounded-full"></div>
-                  <div className="flex items-center">
-                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </svg>
-                    <span>Interactive Presentation</span>
+          {/* Enhanced Title Slide */}
+          <div className="bg-gradient-viv-hero rounded-3xl shadow-viv-2xl overflow-hidden mb-12 relative">
+            {/* Background Pattern */}
+            <div className="absolute inset-0 opacity-10">
+              <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+            </div>
+            
+            <div className="px-12 py-20 text-center relative z-10">
+              <div className="max-w-5xl mx-auto">
+                <div className="animate-fade-in">
+                  <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight text-shadow-lg">
+                    {title}
+                  </h1>
+                  {subtitle && (
+                    <p className="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed max-w-4xl mx-auto">
+                      {subtitle}
+                    </p>
+                  )}
+                  <div className="flex items-center justify-center space-x-8 text-white/80">
+                    <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
+                      <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      <span className="font-medium">Vision Infinity Ventures</span>
+                    </div>
+                    <div className="w-2 h-2 bg-white/60 rounded-full"></div>
+                    <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
+                      <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                      </svg>
+                      <span className="font-medium">Interactive Presentation</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Content Slides - Only show active slide */}
+          {/* Enhanced Content Slides - Only show active slide */}
           <div className="relative w-full">
             {slidesArray.map((slide, index) => (
               <div
                 key={index}
-                className={`transition-all duration-500 ease-in-out w-full ${
+                className={`transition-all duration-700 ease-in-out w-full ${
                   activeSlide === index
-                    ? 'opacity-100 transform translate-x-0'
+                    ? 'opacity-100 transform translate-x-0 animate-fade-in'
                     : 'opacity-0 transform translate-x-full absolute top-0 left-0 w-full'
                 }`}
               >
@@ -181,13 +191,13 @@ export default function PitchDeckLayout({ title, subtitle, children, slug, headi
             ))}
           </div>
 
-          {/* Footer Navigation */}
-          <div className="mt-16 flex flex-col sm:flex-row items-center justify-between gap-4">
+          {/* Enhanced Footer Navigation */}
+          <div className="mt-20 flex flex-col sm:flex-row items-center justify-between gap-6">
             <Link 
               href="/content"
-              className="inline-flex items-center px-8 py-4 bg-gray-100 text-gray-700 rounded-xl hover:bg-gray-200 transition-all duration-200 font-semibold shadow-sm"
+              className="btn-secondary group"
             >
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 mr-3 group-hover:-translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
               </svg>
               Back to Content Library
@@ -195,9 +205,9 @@ export default function PitchDeckLayout({ title, subtitle, children, slug, headi
             <div className="flex space-x-4">
               <button
                 onClick={() => setActiveSlide(0)}
-                className="inline-flex items-center px-8 py-4 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition-all duration-200 font-semibold shadow-lg"
+                className="btn-gradient group"
               >
-                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 mr-3 group-hover:-translate-y-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
                 </svg>
                 Back to Start
@@ -210,7 +220,7 @@ export default function PitchDeckLayout({ title, subtitle, children, slug, headi
   );
 }
 
-// Slide Component for individual content sections
+// Enhanced Slide Component for individual content sections
 export function Slide({ 
   title, 
   children, 
@@ -221,47 +231,46 @@ export function Slide({
   title: string;
   children: React.ReactNode;
   className?: string;
-  background?: "white" | "gray" | "gradient";
+  background?: "white" | "gray" | "gradient" | "glass";
   id?: string;
 }) {
   const bgClasses = {
-    white: "bg-white",
-    gray: "bg-gray-50",
-    gradient: "bg-gradient-to-br from-indigo-50 to-blue-50"
+    white: "bg-white shadow-viv-lg border border-viv-gray-200",
+    gray: "bg-viv-gray-50 shadow-viv-lg border border-viv-gray-200",
+    gradient: "bg-gradient-viv-card shadow-viv-xl border border-viv-gray-200",
+    glass: "bg-white/80 backdrop-blur-md shadow-viv-xl border border-white/20"
   };
 
   return (
     <div 
       id={id}
-      className={`${bgClasses[background]} rounded-3xl shadow-xl border border-gray-200 overflow-hidden ${className}`}
+      className={`${bgClasses[background]} rounded-3xl overflow-hidden ${className} animate-scale-in`}
     >
-      <div className="px-12 py-12">
-        <div className="text-center mb-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+      <div className="px-12 py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold gradient-text-primary mb-6 leading-tight">
             {title}
           </h2>
-          <div className="w-24 h-1 bg-indigo-600 mx-auto rounded-full"></div>
+          <div className="w-32 h-1 bg-gradient-viv mx-auto rounded-full shadow-viv-sm"></div>
         </div>
         <div className="prose prose-lg max-w-none
           prose-headings:scroll-mt-24 
-          prose-h1:text-2xl prose-h1:font-bold prose-h1:text-gray-900 prose-h1:mb-4 prose-h1:mt-6
-          prose-h2:text-xl prose-h2:font-semibold prose-h2:text-gray-800 prose-h2:mb-3 prose-h2:mt-5 prose-h2:border-b prose-h2:border-gray-200 prose-h2:pb-2
-          prose-h3:text-lg prose-h3:font-semibold prose-h3:text-gray-800 prose-h3:mb-2 prose-h3:mt-4
-          prose-h4:text-base prose-h4:font-medium prose-h4:text-gray-700 prose-h4:mb-2 prose-h4:mt-3
-          prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-4
-          prose-a:text-indigo-600 prose-a:no-underline hover:prose-a:underline prose-a:font-medium
-          prose-strong:text-gray-900 prose-strong:font-semibold
-          prose-em:text-gray-700 prose-em:italic
-          prose-blockquote:border-l-4 prose-blockquote:border-indigo-300 prose-blockquote:bg-indigo-50 prose-blockquote:pl-4 prose-blockquote:py-3 prose-blockquote:rounded-r-lg prose-blockquote:my-6
-          prose-code:bg-gray-100 prose-code:text-gray-800 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:font-mono prose-code:text-sm
-          prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:p-4 prose-pre:rounded-lg prose-pre:overflow-x-auto prose-pre:my-6
-          prose-ul:list-disc prose-ul:pl-6 prose-ul:my-4
-          prose-ol:list-decimal prose-ol:pl-6 prose-ol:my-4
-          prose-li:text-gray-700 prose-li:mb-1
-          prose-table:border-collapse prose-table:w-full prose-table:my-6 prose-table:rounded-lg prose-table:overflow-hidden
-          prose-th:bg-gray-50 prose-th:border prose-th:border-gray-200 prose-th:px-4 prose-th:py-3 prose-th:text-left prose-th:font-semibold prose-th:text-gray-900
-          prose-td:border prose-td:border-gray-200 prose-td:px-4 prose-td:py-3 prose-td:text-gray-700
-          prose-hr:border-gray-300 prose-hr:my-8"
+          prose-h1:text-3xl prose-h1:font-bold prose-h1:text-viv-gray-900 prose-h1:mb-6 prose-h1:mt-8
+          prose-h2:text-2xl prose-h2:font-semibold prose-h2:text-viv-gray-800 prose-h2:mb-4 prose-h2:mt-6 prose-h2:border-b prose-h2:border-viv-gray-200 prose-h2:pb-3
+          prose-h3:text-xl prose-h3:font-semibold prose-h3:text-viv-gray-800 prose-h3:mb-3 prose-h3:mt-5
+          prose-h4:text-lg prose-h4:font-medium prose-h4:text-viv-gray-700 prose-h4:mb-3 prose-h4:mt-4
+          prose-p:text-viv-gray-700 prose-p:leading-relaxed prose-p:mb-4
+          prose-ul:text-viv-gray-700 prose-ul:leading-relaxed
+          prose-ol:text-viv-gray-700 prose-ol:leading-relaxed
+          prose-li:text-viv-gray-700 prose-li:leading-relaxed
+          prose-strong:text-viv-gray-900 prose-strong:font-semibold
+          prose-code:text-viv-primary prose-code:bg-viv-primary-lighter prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm
+          prose-pre:bg-viv-gray-900 prose-pre:text-viv-gray-100 prose-pre:p-6 prose-pre:rounded-xl prose-pre:shadow-viv-lg
+          prose-blockquote:border-l-4 prose-blockquote:border-viv-primary prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-viv-gray-700
+          prose-a:text-viv-primary prose-a:font-medium prose-a:no-underline hover:prose-a:underline
+          prose-table:border-collapse prose-table:w-full
+          prose-th:bg-viv-gray-100 prose-th:text-viv-gray-900 prose-th:font-semibold prose-th:p-3 prose-th:border prose-th:border-viv-gray-300
+          prose-td:p-3 prose-td:border prose-td:border-viv-gray-300 prose-td:text-viv-gray-700"
         >
           {children}
         </div>
@@ -270,7 +279,7 @@ export function Slide({
   );
 }
 
-// Feature Grid Component for highlighting key points
+// Enhanced Feature Grid Component
 export function FeatureGrid({ 
   features, 
   columns = 3 
@@ -283,24 +292,34 @@ export function FeatureGrid({
   }>;
   columns?: 2 | 3;
 }) {
-  const gridCols = columns === 2 ? "md:grid-cols-2" : "md:grid-cols-3";
+  const gridCols = columns === 2 ? 'md:grid-cols-2' : 'md:grid-cols-3';
 
   return (
-    <div className={`grid grid-cols-1 ${gridCols} gap-8 mt-8`}>
+    <div className={`grid grid-cols-1 ${gridCols} gap-8`}>
       {features.map((feature, index) => (
-        <div key={index} className="bg-white rounded-2xl p-8 border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-200">
-          <div className={`w-16 h-16 ${feature.color || 'bg-indigo-500'} rounded-2xl flex items-center justify-center mb-6`}>
-            {feature.icon}
+        <div 
+          key={index}
+          className="card-hover bg-white rounded-2xl p-8 border border-viv-gray-200 shadow-viv-md hover:shadow-viv-xl transition-all duration-300 animate-slide-up"
+          style={{ animationDelay: `${index * 100}ms` }}
+        >
+          <div className="flex items-center justify-center w-16 h-16 bg-gradient-viv rounded-2xl mb-6 mx-auto">
+            <div className="text-white text-2xl">
+              {feature.icon}
+            </div>
           </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
-          <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+          <h3 className="text-xl font-semibold text-viv-gray-900 mb-4 text-center">
+            {feature.title}
+          </h3>
+          <p className="text-viv-gray-600 leading-relaxed text-center">
+            {feature.description}
+          </p>
         </div>
       ))}
     </div>
   );
 }
 
-// Stats Component for highlighting numbers
+// Enhanced Stats Component
 export function Stats({ 
   stats 
 }: {
@@ -311,13 +330,19 @@ export function Stats({
   }>;
 }) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
       {stats.map((stat, index) => (
-        <div key={index} className="text-center">
-          <div className={`text-4xl md:text-5xl font-bold ${stat.color || 'text-indigo-600'} mb-2`}>
+        <div 
+          key={index}
+          className="text-center animate-bounce-in"
+          style={{ animationDelay: `${index * 150}ms` }}
+        >
+          <div className="text-4xl md:text-5xl font-bold gradient-text-primary mb-2">
             {stat.number}
           </div>
-          <div className="text-gray-600 font-medium">{stat.label}</div>
+          <div className="text-viv-gray-600 font-medium">
+            {stat.label}
+          </div>
         </div>
       ))}
     </div>
