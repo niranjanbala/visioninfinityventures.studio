@@ -65,43 +65,43 @@ interface HubSpotContact {
 const PERSONA_MAPPING = {
   'diy-founder-idea-stage-education-hsr-only': {
     id: 'diy-founder-idea-stage-education-hsr-only',
-    name: 'DIY Founder - Idea Stage - Education - HSR Only',
-    description: 'DIY founder in idea stage focusing on education industry, located in HSR Layout'
+          name: 'Do It Yourself Founder - Idea Stage - Education - HSR Only',
+      description: 'Do It Yourself founder in idea stage focusing on education industry, located in HSR Layout'
   },
   'diy-founder-idea-stage-education-whitefield-only': {
     id: 'diy-founder-idea-stage-education-whitefield-only',
-    name: 'DIY Founder - Idea Stage - Education - Whitefield Only',
-    description: 'DIY founder in idea stage focusing on education industry, located in Whitefield'
+          name: 'Do It Yourself Founder - Idea Stage - Education - Whitefield Only',
+      description: 'Do It Yourself founder in idea stage focusing on education industry, located in Whitefield'
   },
   'diy-founder-idea-stage-saas-b2b-hsr-only': {
     id: 'diy-founder-idea-stage-saas-b2b-hsr-only',
-    name: 'DIY Founder - Idea Stage - SaaS B2B - HSR Only',
-    description: 'DIY founder in idea stage focusing on SaaS B2B, located in HSR Layout'
+          name: 'Do It Yourself Founder - Idea Stage - SaaS B2B - HSR Only',
+      description: 'Do It Yourself founder in idea stage focusing on SaaS B2B, located in HSR Layout'
   },
   'diy-founder-idea-stage-saas-b2b-whitefield-only': {
     id: 'diy-founder-idea-stage-saas-b2b-whitefield-only',
-    name: 'DIY Founder - Idea Stage - SaaS B2B - Whitefield Only',
-    description: 'DIY founder in idea stage focusing on SaaS B2B, located in Whitefield'
+          name: 'Do It Yourself Founder - Idea Stage - SaaS B2B - Whitefield Only',
+      description: 'Do It Yourself founder in idea stage focusing on SaaS B2B, located in Whitefield'
   },
   'diy-founder-mvp-stage-education-hsr-only': {
     id: 'diy-founder-mvp-stage-education-hsr-only',
-    name: 'DIY Founder - MVP Stage - Education - HSR Only',
-    description: 'DIY founder in MVP stage focusing on education industry, located in HSR Layout'
+          name: 'Do It Yourself Founder - MVP Stage - Education - HSR Only',
+      description: 'Do It Yourself founder in MVP stage focusing on education industry, located in HSR Layout'
   },
   'diy-founder-mvp-stage-education-whitefield-only': {
     id: 'diy-founder-mvp-stage-education-whitefield-only',
-    name: 'DIY Founder - MVP Stage - Education - Whitefield Only',
-    description: 'DIY founder in MVP stage focusing on education industry, located in Whitefield'
+          name: 'Do It Yourself Founder - MVP Stage - Education - Whitefield Only',
+      description: 'Do It Yourself founder in MVP stage focusing on education industry, located in Whitefield'
   },
   'diy-founder-mvp-stage-saas-b2b-hsr-only': {
     id: 'diy-founder-mvp-stage-saas-b2b-hsr-only',
-    name: 'DIY Founder - MVP Stage - SaaS B2B - HSR Only',
-    description: 'DIY founder in MVP stage focusing on SaaS B2B, located in HSR Layout'
+          name: 'Do It Yourself Founder - MVP Stage - SaaS B2B - HSR Only',
+      description: 'Do It Yourself founder in MVP stage focusing on SaaS B2B, located in HSR Layout'
   },
   'diy-founder-mvp-stage-saas-b2b-whitefield-only': {
     id: 'diy-founder-mvp-stage-saas-b2b-whitefield-only',
-    name: 'DIY Founder - MVP Stage - SaaS B2B - Whitefield Only',
-    description: 'DIY founder in MVP stage focusing on SaaS B2B, located in Whitefield'
+          name: 'Do It Yourself Founder - MVP Stage - SaaS B2B - Whitefield Only',
+      description: 'Do It Yourself founder in MVP stage focusing on SaaS B2B, located in Whitefield'
   },
   'fractional-support-idea-stage-education-hsr-only': {
     id: 'fractional-support-idea-stage-education-hsr-only',

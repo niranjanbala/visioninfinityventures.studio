@@ -39,7 +39,7 @@ const StagesPage = () => {
 
   const contentData: PersonaContent[] = [
     {
-      name: 'DIY Founder',
+      name: 'Do It Yourself Founder',
       description: 'Solo founders who want to do everything themselves, maximize learning, and minimize cash burn.',
       stages: [
         {

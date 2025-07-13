@@ -72,7 +72,7 @@ export default function Dashboard() {
 
   const getPersonaDisplayName = (persona: string) => {
     switch (persona) {
-      case 'DIY_FOUNDER': return 'DIY Founder';
+      case 'DIY_FOUNDER': return 'Do It Yourself Founder';
       case 'FRACTIONAL_SUPPORT': return 'Fractional Support';
       default: return persona;
     }

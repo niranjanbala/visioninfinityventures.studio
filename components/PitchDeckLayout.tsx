@@ -101,7 +101,6 @@ export default function PitchDeckLayout({ title, subtitle, children, slug, headi
                 </React.Fragment>
               ))}
             </div>
-            
             {/* Slide Navigation Controls */}
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2">
@@ -132,117 +131,77 @@ export default function PitchDeckLayout({ title, subtitle, children, slug, headi
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="lg:grid lg:grid-cols-4 lg:gap-8">
-          {/* Slide Navigation */}
-          <div className="lg:col-span-1">
-            <div className="sticky top-24">
-              <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6">
-                <h2 className="text-lg font-bold text-gray-900 mb-6 flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
-                  Presentation Slides
-                </h2>
-                <nav className="space-y-2">
-                  {headings.map((heading, index) => (
-                    <button
-                      key={heading.id}
-                      onClick={() => goToSlide(index)}
-                      className={`w-full text-left block text-sm transition-all duration-200 rounded-lg px-3 py-2 ${
-                        activeSlide === index
-                          ? 'text-indigo-600 font-semibold bg-indigo-50 border-l-4 border-indigo-600'
-                          : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
-                      }`}
-                      style={{ paddingLeft: `${(heading.level - 1) * 12 + 12}px` }}
-                    >
-                      <div className="flex items-center">
-                        <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-medium mr-2 ${
-                          activeSlide === index ? 'bg-indigo-600 text-white' : 'bg-gray-200 text-gray-600'
-                        }`}>
-                          {index + 1}
-                        </span>
-                        {heading.text}
-                      </div>
-                    </button>
-                  ))}
-                </nav>
-              </div>
-            </div>
-          </div>
-
-          {/* Main Content - Pitch Deck Style */}
-          <div className="lg:col-span-3">
-            {/* Title Slide */}
-            <div className="bg-gradient-to-br from-indigo-600 via-blue-600 to-indigo-700 rounded-3xl shadow-2xl overflow-hidden mb-8">
-              <div className="px-12 py-16 text-center">
-                <div className="max-w-4xl mx-auto">
-                  <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                    {title}
-                  </h1>
-                  {subtitle && (
-                    <p className="text-xl md:text-2xl text-indigo-100 mb-8 leading-relaxed">
-                      {subtitle}
-                    </p>
-                  )}
-                  <div className="flex items-center justify-center space-x-4 text-indigo-200">
-                    <div className="flex items-center">
-                      <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      <span>Vision Infinity Ventures</span>
-                    </div>
-                    <div className="w-1 h-1 bg-indigo-300 rounded-full"></div>
-                    <div className="flex items-center">
-                      <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                      </svg>
-                      <span>Interactive Presentation</span>
-                    </div>
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Main Content - Full Width Slides */}
+        <div>
+          {/* Title Slide */}
+          <div className="bg-gradient-to-br from-indigo-600 via-blue-600 to-indigo-700 rounded-3xl shadow-2xl overflow-hidden mb-8">
+            <div className="px-12 py-16 text-center">
+              <div className="max-w-4xl mx-auto">
+                <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                  {title}
+                </h1>
+                {subtitle && (
+                  <p className="text-xl md:text-2xl text-indigo-100 mb-8 leading-relaxed">
+                    {subtitle}
+                  </p>
+                )}
+                <div className="flex items-center justify-center space-x-4 text-indigo-200">
+                  <div className="flex items-center">
+                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>Vision Infinity Ventures</span>
+                  </div>
+                  <div className="w-1 h-1 bg-indigo-300 rounded-full"></div>
+                  <div className="flex items-center">
+                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    <span>Interactive Presentation</span>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
 
-            {/* Content Slides - Only show active slide */}
-            <div className="relative">
-              {slidesArray.map((slide, index) => (
-                <div
-                  key={index}
-                  className={`transition-all duration-500 ease-in-out ${
-                    activeSlide === index
-                      ? 'opacity-100 transform translate-x-0'
-                      : 'opacity-0 transform translate-x-full absolute top-0 left-0 w-full'
-                  }`}
-                >
-                  {slide}
-                </div>
-              ))}
-            </div>
+          {/* Content Slides - Only show active slide */}
+          <div className="relative w-full">
+            {slidesArray.map((slide, index) => (
+              <div
+                key={index}
+                className={`transition-all duration-500 ease-in-out w-full ${
+                  activeSlide === index
+                    ? 'opacity-100 transform translate-x-0'
+                    : 'opacity-0 transform translate-x-full absolute top-0 left-0 w-full'
+                }`}
+              >
+                {slide}
+              </div>
+            ))}
+          </div>
 
-            {/* Footer Navigation */}
-            <div className="mt-16 flex flex-col sm:flex-row items-center justify-between gap-4">
-              <Link 
-                href="/content"
-                className="inline-flex items-center px-8 py-4 bg-gray-100 text-gray-700 rounded-xl hover:bg-gray-200 transition-all duration-200 font-semibold shadow-sm"
+          {/* Footer Navigation */}
+          <div className="mt-16 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <Link 
+              href="/content"
+              className="inline-flex items-center px-8 py-4 bg-gray-100 text-gray-700 rounded-xl hover:bg-gray-200 transition-all duration-200 font-semibold shadow-sm"
+            >
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+              </svg>
+              Back to Content Library
+            </Link>
+            <div className="flex space-x-4">
+              <button
+                onClick={() => setActiveSlide(0)}
+                className="inline-flex items-center px-8 py-4 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition-all duration-200 font-semibold shadow-lg"
               >
                 <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
                 </svg>
-                Back to Content Library
-              </Link>
-              
-              <div className="flex space-x-4">
-                <button
-                  onClick={() => setActiveSlide(0)}
-                  className="inline-flex items-center px-8 py-4 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition-all duration-200 font-semibold shadow-lg"
-                >
-                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-                  </svg>
-                  Back to Start
-                </button>
-              </div>
+                Back to Start
+              </button>
             </div>
           </div>
         </div>

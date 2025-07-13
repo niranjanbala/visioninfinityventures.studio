@@ -26,7 +26,7 @@ Explore our **Fractional Support Track** for guidance on accessing senior-level 
 
 ### 🛤️ Startup Tracks
 
-#### [DIY Founder Track](diy-founder-track.md)
+#### [Do It Yourself Founder Track](diy-founder-track.md)
 **Perfect for:** Entrepreneurs building independently with minimal external support
 
 **What you'll learn:**

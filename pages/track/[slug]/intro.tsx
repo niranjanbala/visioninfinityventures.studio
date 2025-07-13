@@ -12,12 +12,150 @@ import React from 'react';
 interface IntroPageProps {
   title: string;
   slug: string;
-  content: string;
+  content: string; // Raw markdown content
   trackTitle: string;
 }
 
 export default function IntroPage({ title, slug, content, trackTitle }: IntroPageProps) {
   const pageTitle = `${title} | ${trackTitle} | Vision Infinity Ventures`;
+
+  // Configure marked for better rendering
+  marked.setOptions({
+    gfm: true,
+    breaks: true,
+    headerIds: true,
+    mangle: false,
+  });
+
+  // Parse content and break into slides
+  const createSlides = () => {
+    const slides = [];
+    const lines = content.split('\n');
+    let currentSlide = '';
+    let currentSlideTitle = '';
+    let slideIndex = 0;
+
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      // Check for major section breaks (## headings)
+      if (line.startsWith('## ') && !line.startsWith('### ')) {
+        // Save previous slide if it exists
+        if (currentSlide.trim()) {
+          slides.push(
+            <Slide 
+              key={`slide-${slideIndex}`}
+              title={currentSlideTitle || 'Introduction'}
+              id={`slide-${slideIndex}`}
+              background={slideIndex % 2 === 0 ? "white" : "gray"}
+            >
+              <div 
+                className="prose prose-lg max-w-none"
+                dangerouslySetInnerHTML={{ __html: marked(currentSlide.trim()) }} 
+              />
+            </Slide>
+          );
+          slideIndex++;
+        }
+        
+        // Start new slide
+        currentSlideTitle = line.replace('## ', '').trim();
+        currentSlide = line + '\n';
+      } else if (line.startsWith('---') && currentSlide.trim()) {
+        // Save current slide at horizontal rule
+        slides.push(
+          <Slide 
+            key={`slide-${slideIndex}`}
+            title={currentSlideTitle || 'Introduction'}
+            id={`slide-${slideIndex}`}
+            background={slideIndex % 2 === 0 ? "white" : "gray"}
+          >
+            <div 
+              className="prose prose-lg max-w-none"
+              dangerouslySetInnerHTML={{ __html: marked(currentSlide.trim()) }} 
+            />
+          </Slide>
+        );
+        slideIndex++;
+        currentSlide = '';
+        currentSlideTitle = '';
+      } else {
+        // Add line to current slide
+        currentSlide += line + '\n';
+      }
+    }
+
+    // Add the last slide if there's content
+    if (currentSlide.trim()) {
+      slides.push(
+        <Slide 
+          key={`slide-${slideIndex}`}
+          title={currentSlideTitle || 'Introduction'}
+          id={`slide-${slideIndex}`}
+          background={slideIndex % 2 === 0 ? "white" : "gray"}
+        >
+          <div 
+            className="prose prose-lg max-w-none"
+            dangerouslySetInnerHTML={{ __html: marked(currentSlide.trim()) }} 
+          />
+        </Slide>
+      );
+    }
+
+    // If no slides were created, create a single slide with all content
+    if (slides.length === 0) {
+      slides.push(
+        <Slide 
+          key="intro-content" 
+          title={title} 
+          id="intro-content"
+          background="white"
+        >
+          <div 
+            className="prose prose-lg max-w-none"
+            dangerouslySetInnerHTML={{ __html: marked(content) }} 
+          />
+        </Slide>
+      );
+    }
+
+    return slides;
+  };
+
+  // Generate headings for navigation
+  const generateHeadings = () => {
+    const headings = [];
+    const lines = content.split('\n');
+    let slideIndex = 0;
+
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      if (line.startsWith('## ') && !line.startsWith('### ')) {
+        const title = line.replace('## ', '').trim();
+        headings.push({
+          id: `slide-${slideIndex}`,
+          text: title,
+          level: 1
+        });
+        slideIndex++;
+      }
+    }
+
+    // If no headings found, use default
+    if (headings.length === 0) {
+      headings.push({
+        id: 'intro-content',
+        text: title,
+        level: 1
+      });
+    }
+
+    return headings;
+  };
+
+  const slides = createSlides();
+  const headings = generateHeadings();
 
   return (
     <>
@@ -31,19 +169,9 @@ export default function IntroPage({ title, slug, content, trackTitle }: IntroPag
       <PitchDeckLayout 
         title={title} 
         slug={`${slug}/intro`} 
-        headings={[{ id: 'intro-content', text: title, level: 1 }]}
+        headings={headings}
       >
-        <Slide 
-          key="intro-content" 
-          title={title} 
-          id="intro-content"
-          background="white"
-        >
-          <div 
-            className="prose prose-lg max-w-none"
-            dangerouslySetInnerHTML={{ __html: content }} 
-          />
-        </Slide>
+        {slides}
       </PitchDeckLayout>
       
       {/* Intro Navigation Footer */}
@@ -61,7 +189,7 @@ export default function IntroPage({ title, slug, content, trackTitle }: IntroPag
             </Link>
             
             <Link 
-              href={`/track/${slug}/phase-1`}
+              href={`/track/${slug}/1`}
               className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium"
             >
               Start Phase 1
@@ -135,21 +263,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     trackTitle = data.title;
   }
 
-  // Configure marked for better rendering
-  marked.setOptions({
-    gfm: true,
-    breaks: true,
-    headerIds: true,
-    mangle: false,
-  });
-
-  const html = marked(content);
-
   return {
     props: {
       title,
       slug,
-      content: html,
+      content: content, // Pass raw markdown content, not HTML
       trackTitle,
     },
   };

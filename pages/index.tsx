@@ -277,7 +277,7 @@ export default function Home() {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                           </svg>
                         </div>
-                        <h4 className="text-lg font-semibold text-gray-900">DIY Founder</h4>
+                        <h4 className="text-lg font-semibold text-gray-900">Do It Yourself Founder</h4>
                       </div>
                       <p className="text-gray-600">I want to do everything myself, maximize learning, and minimize cash burn.</p>
                     </button>

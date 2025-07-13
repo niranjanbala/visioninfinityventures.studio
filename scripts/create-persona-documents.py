@@ -55,7 +55,7 @@ def parse_persona_name(persona):
 def get_display_name(persona_info):
     """Get human-readable display name"""
     founder_map = {
-        'diy-founder': 'DIY Founder',
+        'diy-founder': 'Do It Yourself Founder',
         'fractional-support': 'Fractional Support'
     }
     
@@ -292,8 +292,8 @@ This directory contains comprehensive guides for each founder persona in the Vis
         else:
             fractional_support.append((display_name, filename))
     
-    # Add DIY Founders section
-    index_content += "### DIY Founders\n\n"
+    # Add Do It Yourself Founders section
+    index_content += "### Do It Yourself Founders\n\n"
     for display_name, filename in sorted(diy_founders):
         index_content += f"- **[{display_name}](./{filename}-complete-guide.md)**\n"
     

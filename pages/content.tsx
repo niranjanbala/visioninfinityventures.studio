@@ -55,7 +55,7 @@ export default function ContentIndex({ newContent, originalContent }: ContentInd
               {sortedContent.filter(page => page.priority === 'high').map((page) => (
                 <Link 
                   key={page.slug} 
-                  href={`/content/${page.slug}`}
+                  href={page.category === 'track' ? `/track/${page.slug}` : `/content/${page.slug}`}
                   className="group block"
                 >
                   <div className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 h-full border-2 border-indigo-200 hover:border-indigo-400 relative">
@@ -90,7 +90,7 @@ export default function ContentIndex({ newContent, originalContent }: ContentInd
                       {page.description}
                     </p>
                     <div className="mt-4 flex items-center text-indigo-600 text-sm font-medium">
-                      Start Here
+                      {page.category === 'track' ? 'View Track' : 'Start Here'}
                       <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
@@ -110,7 +110,7 @@ export default function ContentIndex({ newContent, originalContent }: ContentInd
               {sortedContent.filter(page => page.priority !== 'high').map((page) => (
                 <Link 
                   key={page.slug} 
-                  href={`/content/${page.slug}`}
+                  href={page.category === 'track' ? `/track/${page.slug}` : `/content/${page.slug}`}
                   className="group block"
                 >
                   <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 h-full border border-gray-200 hover:border-blue-300">
@@ -136,7 +136,7 @@ export default function ContentIndex({ newContent, originalContent }: ContentInd
                       {page.description}
                     </p>
                     <div className="mt-4 flex items-center text-blue-600 text-sm font-medium">
-                      Read Guide
+                      {page.category === 'track' ? 'View Track' : 'Read Guide'}
                       <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
@@ -160,7 +160,7 @@ export default function ContentIndex({ newContent, originalContent }: ContentInd
                 {originalContent.slice(0, 12).map((page) => (
                   <Link 
                     key={page.slug} 
-                    href={`/content/${page.slug}`}
+                    href={page.category === 'track' ? `/track/${page.slug}` : `/content/${page.slug}`}
                     className="group block"
                   >
                     <div className="p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-all duration-200">
@@ -195,7 +195,7 @@ export default function ContentIndex({ newContent, originalContent }: ContentInd
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link 
-                  href="/content/diy-founder-track"
+                  href="/track/diy-founder-track"
                   className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Start with DIY Guide
@@ -225,7 +225,7 @@ export const getStaticProps: GetStaticProps = async () => {
   // New consolidated content with priority ordering
   const newContent: ContentPage[] = [
     {
-      title: "DIY Founder Track",
+              title: "Do It Yourself Founder Track",
       slug: "diy-founder-track",
       description: "Complete guide for entrepreneurs building independently with minimal external support.",
       category: "track",

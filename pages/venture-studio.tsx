@@ -31,7 +31,7 @@ const VentureStudioLanding = () => {
 
   const getDisplayName = (type: string) => {
     const founderMap = {
-      'diy-founder': 'DIY Founder',
+      'diy-founder': 'Do It Yourself Founder',
       'fractional-support': 'Fractional Support'
     };
     return founderMap[type as keyof typeof founderMap] || type;

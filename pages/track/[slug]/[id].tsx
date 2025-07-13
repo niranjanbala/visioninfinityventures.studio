@@ -64,7 +64,7 @@ export default function PhasePage({ title, slug, phaseId, content, trackTitle }:
             <div className="flex items-center space-x-4">
               {parseInt(phaseId) > 1 && (
                 <Link 
-                  href={`/track/${slug}/phase-${parseInt(phaseId) - 1}`}
+                  href={`/track/${slug}/${parseInt(phaseId) - 1}`}
                   className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium"
                 >
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -76,7 +76,7 @@ export default function PhasePage({ title, slug, phaseId, content, trackTitle }:
               
               {parseInt(phaseId) < 10 && (
                 <Link 
-                  href={`/track/${slug}/phase-${parseInt(phaseId) + 1}`}
+                  href={`/track/${slug}/${parseInt(phaseId) + 1}`}
                   className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium"
                 >
                   Next Phase
@@ -99,23 +99,26 @@ export const getStaticPaths: GetStaticPaths = async () => {
   
   if (fs.existsSync(contentDir)) {
     const items = fs.readdirSync(contentDir);
+    
     for (const item of items) {
       const itemPath = path.join(contentDir, item);
       const stat = fs.statSync(itemPath);
       
       if (stat.isDirectory()) {
         const phaseFilesPath = path.join(itemPath, 'phase-files');
+        
         if (fs.existsSync(phaseFilesPath) && fs.statSync(phaseFilesPath).isDirectory()) {
           // Generate paths for phases 1-10
           for (let i = 1; i <= 10; i++) {
             const phasePath = path.join(phaseFilesPath, `phase-${i}.md`);
             if (fs.existsSync(phasePath)) {
-              paths.push({
+              const pathObj = {
                 params: { 
                   slug: item,
-                  id: i.toString()
+                  id: `${i}` // Just the number, not 'phase-1'
                 }
-              });
+              };
+              paths.push(pathObj);
             }
           }
         }
@@ -128,11 +131,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params?.slug as string;
-  const phaseId = params?.id as string;
+  const phaseId = params?.id as string; // This is now just "1", "2", etc.
+  
   const contentDir = path.join(process.cwd(), 'content');
   const trackDir = path.join(contentDir, slug);
   const phaseFilesDir = path.join(trackDir, 'phase-files');
-  const phasePath = path.join(phaseFilesDir, `phase-${phaseId}.md`);
+  const phasePath = path.join(phaseFilesDir, `phase-${phaseId}.md`); // Use phaseId directly
 
   if (!fs.existsSync(phasePath)) {
     return { notFound: true };
@@ -178,7 +182,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     props: {
       title,
       slug,
-      phaseId,
+      phaseId: phaseId, // Use phaseId directly
       content: html,
       trackTitle,
     },

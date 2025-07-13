@@ -1,4 +1,4 @@
-# DIY Founder Persona
+# Do It Yourself Founder Persona
 
 This folder is for solo founders who want to do everything themselves, maximize learning, and minimize cash burn.
 

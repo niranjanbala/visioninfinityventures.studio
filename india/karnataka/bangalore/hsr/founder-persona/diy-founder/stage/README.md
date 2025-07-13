@@ -1,4 +1,4 @@
-# Stage Layer (DIY Founder)
+# Stage Layer (Do It Yourself Founder)
 
 This directory organizes resources by the stage of the startup:
 - **idea-stage/**: For founders validating their idea and preparing for MVP.

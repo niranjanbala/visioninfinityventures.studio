@@ -139,7 +139,7 @@ export default function Register() {
                   onChange={handleChange}
                 >
                   <option value="">Select Founder Type</option>
-                  <option value="DIY_FOUNDER">DIY Founder</option>
+                  <option value="DIY_FOUNDER">Do It Yourself Founder</option>
                   <option value="FRACTIONAL_SUPPORT">Fractional Support</option>
                 </select>
               </div>

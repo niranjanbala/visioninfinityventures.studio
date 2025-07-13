@@ -26,115 +26,98 @@ export default function TrackPage({ title, slug, description, phases }: TrackPag
 
   const createSlides = () => {
     const slides = [];
-    
-    // Introduction slide
+    // Welcome slide
     slides.push(
       <Slide 
-        key="introduction" 
-        title="Introduction" 
-        id="introduction"
+        key="welcome" 
+        title="Welcome" 
+        id="welcome"
         background="white"
       >
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">{title}</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">{title}</h2>
           <p className="text-xl text-gray-600 mb-8">{description}</p>
-          <div className="bg-blue-50 rounded-lg p-6 mb-8">
-            <h3 className="text-lg font-semibold text-blue-900 mb-4">Track Overview</h3>
-            <p className="text-blue-800">
-              This track consists of an introduction and 10 phases that will guide you through your entrepreneurial journey. 
-              Click on any phase below to get started.
+          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 mb-8">
+            <h3 className="text-2xl font-semibold text-blue-900 mb-4">Your Journey Awaits</h3>
+            <p className="text-blue-800 text-lg mb-6">
+              This comprehensive track will guide you through {phases.length} carefully crafted phases, 
+              each designed to build upon the previous one and accelerate your entrepreneurial success.
             </p>
+            <div className="flex items-center justify-center space-x-4 text-blue-700">
+              <div className="flex items-center">
+                <span className="text-2xl mr-2">📚</span>
+                <span className="font-medium">Introduction Guide</span>
+              </div>
+              <div className="flex items-center">
+                <span className="text-2xl mr-2">🎯</span>
+                <span className="font-medium">{phases.length} Phases</span>
+              </div>
+              <div className="flex items-center">
+                <span className="text-2xl mr-2">🚀</span>
+                <span className="font-medium">Step-by-Step</span>
+              </div>
+            </div>
           </div>
           <Link 
             href={`/track/${slug}/intro`}
-            className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors"
+            className="inline-flex items-center px-8 py-4 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors text-lg shadow-lg hover:shadow-xl"
           >
-            Read Introduction
-            <span className="ml-2">→</span>
+            Start Your Journey
+            <span className="ml-2 text-xl">→</span>
           </Link>
         </div>
       </Slide>
     );
-
-    // Phases overview slide
+    // Overview slide
     slides.push(
       <Slide 
-        key="phases-overview" 
-        title="All Phases" 
-        id="phases-overview"
+        key="overview" 
+        title="What You&apos;ll Learn" 
+        id="overview"
         background="gray"
       >
         <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Complete Entrepreneurial Journey</h3>
+            <p className="text-lg text-gray-600">From idea to execution, we&apos;ll cover every essential aspect</p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {phases.map((phase, index) => (
-              <Link 
-                key={phase.id} 
-                href={phase.link}
-                className="block group"
-              >
-                <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200 border-l-4 border-blue-500">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-sm font-medium text-blue-600 bg-blue-100 px-2 py-1 rounded">
-                      Phase {index + 1}
-                    </span>
-                    <span className="text-gray-400 group-hover:text-blue-500 transition-colors">
-                      →
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                    {phase.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm">
-                    {phase.description}
-                  </p>
+            {phases.slice(0, 6).map((phase, index) => (
+              <div key={phase.id} className="bg-white rounded-lg shadow-md p-6 border-l-4 border-blue-500">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-sm font-medium text-blue-600 bg-blue-100 px-2 py-1 rounded">
+                    Phase {index + 1}
+                  </span>
                 </div>
-              </Link>
+                <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                  {phase.title}
+                </h4>
+                <p className="text-gray-600 text-sm">
+                  {phase.description}
+                </p>
+              </div>
             ))}
           </div>
+          {phases.length > 6 && (
+            <div className="text-center mt-8">
+              <p className="text-gray-600 mb-4">And {phases.length - 6} more phases...</p>
+              <Link 
+                href={`/track/${slug}/intro`}
+                className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                See All Phases
+                <span className="ml-2">→</span>
+              </Link>
+            </div>
+          )}
         </div>
       </Slide>
     );
-
-    // Individual phase slides
-    phases.forEach((phase, index) => {
-      slides.push(
-        <Slide 
-          key={phase.id} 
-          title={phase.title} 
-          id={phase.id}
-          background={index % 2 === 0 ? "white" : "gray"}
-        >
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="mb-6">
-              <span className="inline-block bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
-                Phase {index + 1}
-              </span>
-            </div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">{phase.title}</h2>
-            <p className="text-lg text-gray-600 mb-8">{phase.description}</p>
-            <Link 
-              href={phase.link}
-              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              View Phase {index + 1}
-              <span className="ml-2">→</span>
-            </Link>
-          </div>
-        </Slide>
-      );
-    });
-    
     return slides;
   };
-
   const headings = [
-    { id: 'introduction', text: 'Introduction', level: 1 },
-    { id: 'phases-overview', text: 'All Phases', level: 1 },
-    ...phases.map((phase, index) => ({
-      id: phase.id,
-      text: phase.title,
-      level: 1
-    }))
+    { id: 'welcome', text: 'Welcome', level: 1 },
+    { id: 'overview', text: 'What You\u2019ll Learn', level: 1 }
   ];
 
   return (
@@ -248,7 +231,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         id: `phase-${i}`,
         title: phaseTitle,
         description: phaseDescription,
-        link: `/track/${slug}/phase-${i}`
+        link: `/track/${slug}/${i}`
       });
     }
   }
