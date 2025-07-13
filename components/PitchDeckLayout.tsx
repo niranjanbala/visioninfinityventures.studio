@@ -7,14 +7,44 @@ interface PitchDeckLayoutProps {
   children: React.ReactNode;
   slug: string;
   headings: Array<{ id: string; text: string; level: number }>;
+  initialSlide?: string;
 }
 
-export default function PitchDeckLayout({ title, subtitle, children, slug, headings }: PitchDeckLayoutProps) {
-  const [activeSlide, setActiveSlide] = useState(0);
-  const [activeHeading, setActiveHeading] = useState<string>('');
-
+export default function PitchDeckLayout({ title, subtitle, children, slug, headings, initialSlide }: PitchDeckLayoutProps) {
   // Convert children to array for easier manipulation
   const slidesArray = React.Children.toArray(children);
+
+  // Determine initial slide index
+  const getInitialSlideIndex = () => {
+    if (initialSlide) {
+      // Find the slide with matching id
+      const slideIndex = slidesArray.findIndex((slide: any) => 
+        slide.props.id === initialSlide
+      );
+      if (slideIndex !== -1) {
+        return slideIndex;
+      }
+      
+      // If not found by id, try to find by heading text
+      const headingIndex = headings.findIndex(h => 
+        h.id === initialSlide || h.text.toLowerCase().includes(initialSlide.toLowerCase())
+      );
+      if (headingIndex !== -1) {
+        return headingIndex;
+      }
+    }
+    return 0;
+  };
+
+  const [activeSlide, setActiveSlide] = useState(getInitialSlideIndex());
+  const [activeHeading, setActiveHeading] = useState<string>('');
+
+  // Update active heading when slide changes
+  useEffect(() => {
+    if (headings[activeSlide]) {
+      setActiveHeading(headings[activeSlide].id);
+    }
+  }, [activeSlide, headings]);
 
   const nextSlide = () => {
     if (activeSlide < slidesArray.length - 1) {

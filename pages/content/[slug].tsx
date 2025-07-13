@@ -8,6 +8,7 @@ import Navigation from '../../components/Navigation';
 import PitchDeckLayout, { Slide, FeatureGrid, Stats } from '../../components/PitchDeckLayout';
 import { marked } from 'marked';
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 interface ContentPageProps {
   content: string;
@@ -17,6 +18,8 @@ interface ContentPageProps {
 }
 
 export default function ContentPage({ content, title, slug, headings }: ContentPageProps) {
+  const router = useRouter();
+  const { phase } = router.query;
   const pageTitle = `${title} | Vision Infinity Ventures`;
 
   // Check if there's an introduction section
@@ -27,6 +30,21 @@ export default function ContentPage({ content, title, slug, headings }: ContentP
   const enhancedHeadings = hasIntroduction 
     ? [{ id: 'introduction', text: 'Introduction', level: 1 }, ...headings]
     : headings;
+
+  // Determine initial slide based on phase query parameter
+  const getInitialSlide = () => {
+    if (phase && typeof phase === 'string') {
+      const phaseNum = parseInt(phase);
+      if (!isNaN(phaseNum) && phaseNum >= 1 && phaseNum <= 10) {
+        // Find the phase heading
+        const phaseHeading = headings.find(h => h.text.toLowerCase().includes(`phase ${phaseNum}`));
+        if (phaseHeading) {
+          return phaseHeading.id;
+        }
+      }
+    }
+    return hasIntroduction ? 'introduction' : headings[0]?.id || 'introduction';
+  };
 
   // Create slides from headings
   const createSlides = () => {
@@ -110,9 +128,43 @@ export default function ContentPage({ content, title, slug, headings }: ContentP
       </Head>
       <Navigation />
       
-      <PitchDeckLayout title={title} slug={slug} headings={enhancedHeadings}>
+      <PitchDeckLayout 
+        title={title} 
+        slug={slug} 
+        headings={enhancedHeadings}
+        initialSlide={getInitialSlide()}
+      >
         {createSlides()}
       </PitchDeckLayout>
+      
+      {/* Track Navigation Footer */}
+      {slug.includes('-track') && (
+        <div className="bg-white border-t border-gray-200 py-6">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+              <Link 
+                href="/content"
+                className="inline-flex items-center px-6 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors font-medium"
+              >
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Back to Content Library
+              </Link>
+              
+              <Link 
+                href={`/track/${slug}`}
+                className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium"
+              >
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                Track Overview
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }
