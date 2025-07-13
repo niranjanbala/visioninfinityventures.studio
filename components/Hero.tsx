@@ -32,7 +32,7 @@ export default function Hero() {
           </h1>
           {/* Subtitle */}
           <p className="text-xl md:text-2xl lg:text-3xl text-white/90 mb-12 leading-relaxed max-w-4xl mx-auto animate-slide-up" style={{ animationDelay: '200ms' }}>
-            Building Bangalore's first systematic venture studio platform with
+            Building Bangalores first systematic venture studio platform with
             <span className="font-semibold text-white"> AI-powered personalization</span> and
             <span className="font-semibold text-white"> proven methodologies</span>
           </p>
