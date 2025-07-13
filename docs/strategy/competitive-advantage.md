@@ -61,7 +61,7 @@
 - Proprietary tools that lock founders in
 
 #### **What We Do:**
-- **12-Phase Journey**: Complete roadmap from idea to successful company
+- **10-phase Journey**: Complete roadmap from idea to successful company
 - **AI People & Tools Checklists**: Exact resources needed for each phase
 - **Funding Roadmaps**: Step-by-step path to capital with local investor networks
 - **Implementation Support**: Not just what to do, but how to do it
@@ -78,7 +78,7 @@
 - Keep methodologies proprietary and expensive
 
 #### **What We Do:**
-- **12-Phase System**: Proven methodology tested across multiple markets
+- **10-phase System**: Proven methodology tested across multiple markets
 - **Local Success Stories**: Real examples from HSR and Whitefield founders
 - **Data-Driven Insights**: AI analyzes thousands of founder journeys
 - **Continuous Validation**: System improves based on real outcomes
@@ -167,7 +167,7 @@
 - **Switching costs**
 
 ### **5. Knowledge Moat**
-- **12-phase methodology**
+- **10-phase methodology**
 - **Local market expertise**
 - **Proven success patterns**
 - **Open source documentation**

@@ -68,7 +68,7 @@ Explore our **Fractional Support Track** for guidance on accessing senior-level 
 - Education market analysis and opportunities
 - Technology stack for educational platforms
 - Go-to-market strategies for education
-- 12-phase journey for education startups
+- 10-phase journey for education startups
 - AI integration in education
 
 **Key Features:**

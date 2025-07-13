@@ -1,12 +1,12 @@
 # Funding Checklist: Fractional Support - B2B SaaS Solutions Mvp Stage (Whitefield Only)
 
 ## Overview
-This checklist provides comprehensive funding requirements for fractional support building b2b saas solutions in Whitefield, covering all 12 phases of the journey with detailed cost breakdowns.
+This checklist provides comprehensive funding requirements for fractional support building b2b saas solutions in Whitefield, covering all 10 phases of the journey with detailed cost breakdowns.
 
 ## 💰 **TOTAL FUNDING REQUIREMENTS**
 
 ### Overall Budget Summary
-- **Total 12-Phase Budget**: ₹46L - ₹91L (including personal expenses)
+- **Total 10-phase Budget**: ₹46L - ₹91L (including personal expenses)
 - **Duration**: 4-8 months (flexible timeline)
 - **Monthly Average**: ₹200K - ₹450K
 - **Funding Type**: Seed or Series A Funding

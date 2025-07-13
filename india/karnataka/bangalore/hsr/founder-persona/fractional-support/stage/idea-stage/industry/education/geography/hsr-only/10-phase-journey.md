@@ -1,8 +1,8 @@
-# 12-Phase Journey: Fractional Support → Idea Stage → Education → Whitefield-Only
+# 10-phase Journey: Fractional Support → Idea Stage → Education → HSR-Only
 
 ## 🎯 **Journey Overview**
 
-This 12-phase journey is designed for founders using fractional support to build educational ventures in Whitefield, Bangalore. Each phase has broad ideal timelines, but **you decide your own pace** based on your circumstances, resources, and team coordination needs.
+This 10-phase journey is designed for founders using fractional support to build educational ventures in HSR Layout, Bangalore. Each phase has broad ideal timelines, but **you decide your own pace** based on your circumstances, resources, and team coordination needs.
 
 ### **Your Journey, Your Timeline**
 - **Flexible Duration:** Each phase can take as long as you need
@@ -25,19 +25,19 @@ This 12-phase journey is designed for founders using fractional support to build
 
 #### **Objectives:**
 - Assemble fractional team
-- Understand Whitefield's education landscape
+- Understand HSR's education landscape
 - Identify specific problems in local education
 - Establish team coordination protocols
 
 #### **Key Activities:**
 - [ ] **Team Assembly:** Onboard fractional team members
-- [ ] **Whitefield Education Mapping:** Research schools, colleges, training centers
+- [ ] **HSR Education Mapping:** Research schools, colleges, training centers
 - [ ] **Stakeholder Interviews:** Conduct initial interviews with team support
 - [ ] **Team Coordination Setup:** Establish communication and workflow protocols
 
 #### **Success Criteria:**
 - [ ] Fractional team assembled and coordinated
-- [ ] Clear understanding of Whitefield education ecosystem
+- [ ] Clear understanding of HSR education ecosystem
 - [ ] 3-5 validated problems identified
 - [ ] Team coordination protocols established
 
@@ -440,10 +440,10 @@ This 12-phase journey is designed for founders using fractional support to build
 
 ## 🎉 **Journey Completion**
 
-### **Congratulations!** You've completed the 12-phase journey from idea to validated concept ready for MVP development, leveraging professional fractional support throughout.
+### **Congratulations!** You've completed the 10-phase journey from idea to validated concept ready for MVP development, leveraging professional fractional support throughout.
 
 ### **What You've Achieved:**
-- ✅ Deep understanding of Whitefield education market with professional insights
+- ✅ Deep understanding of HSR education market with professional insights
 - ✅ Validated problem and solution with team expertise
 - ✅ Developed business model and financial plan with CFO guidance
 - ✅ Built and launched MVP with marketing support

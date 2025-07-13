@@ -1,8 +1,8 @@
-# 12-Phase Journey: DIY Founder → MVP Stage → Education → Whitefield-Only
+# 10-phase Journey: DIY Founder → MVP Stage → Education → Whitefield-Only
 
 ## 🎯 **Journey Overview**
 
-This 12-phase journey is designed for DIY founders building educational MVPs in Whitefield, Bangalore. Each phase has broad ideal timelines, but **you decide your own pace** based on your circumstances, resources, and development needs.
+This 10-phase journey is designed for DIY founders building educational MVPs in Whitefield, Bangalore. Each phase has broad ideal timelines, but **you decide your own pace** based on your circumstances, resources, and development needs.
 
 ### **Your Journey, Your Timeline**
 - **Flexible Duration:** Each phase can take as long as you need
@@ -440,7 +440,7 @@ This 12-phase journey is designed for DIY founders building educational MVPs in 
 
 ## 🎉 **Journey Completion**
 
-### **Congratulations!** You've completed the 12-phase MVP journey and built a validated educational product for Whitefield.
+### **Congratulations!** You've completed the 10-phase MVP journey and built a validated educational product for Whitefield.
 
 ### **What You've Achieved:**
 - ✅ Built and launched functional education MVP

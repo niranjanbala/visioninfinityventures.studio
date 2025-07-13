@@ -15,7 +15,7 @@
 
 #### **Knowledge Democratization**
 - **16 Different Paths**: From DIY founders to fractional support, everyone finds their way
-- **12-Phase Journeys**: Structured, proven methodologies replace trial-and-error
+- **10-phase Journeys**: Structured, proven methodologies replace trial-and-error
 - **AI-Native Personalization**: Guidance adapts to each founder's unique situation
 - **Local Market Intelligence**: Founders understand their specific market before building
 - **Open Source Transparency**: All methodologies and tools are transparent and collaborative
@@ -28,7 +28,7 @@
 - **Open Source Platform**: Free access to core methodologies and tools
 
 #### **Success Democratization**
-- **Predictable Outcomes**: 12-phase system reduces failure rates
+- **Predictable Outcomes**: 10-phase system reduces failure rates
 - **Local Market Focus**: Founders build for markets they understand
 - **AI-Driven Insights**: Data helps founders make better decisions
 - **Continuous Learning**: Platform improves with every founder's journey
@@ -134,7 +134,7 @@
 #### **Phase 1: Foundation (Years 1-2)**
 - Establish Bangalore as proof of concept
 - Build core platform and AI-native capabilities
-- Validate 12-phase methodology
+- Validate 10-phase methodology
 - Create strong local communities
 - Launch open source core components
 

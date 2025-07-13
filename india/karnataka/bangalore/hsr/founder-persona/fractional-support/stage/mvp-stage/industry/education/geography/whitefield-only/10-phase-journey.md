@@ -1,4 +1,4 @@
-# 12-Phase Journey: Fractional Support Founder - Education MVP Stage (Whitefield Only)
+# 10-phase Journey: Fractional Support Founder - Education MVP Stage (Whitefield Only)
 
 ## Overview
 This journey is designed for founders who have an MVP in education and prefer professional guidance while scaling their startup in Whitefield. The timeline is flexible - you set your own pace while we provide expert support.

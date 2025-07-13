@@ -1,12 +1,12 @@
 # DIY Founder - MVP Stage - SaaS B2B - Whitefield - Complete Guide
 
 ## Overview
-This comprehensive guide provides everything you need to know as a DIY Founder - MVP Stage - SaaS B2B - Whitefield in the Vision Infinity Ventures ecosystem. It combines your 12-phase journey roadmap, AI-focused people and tools requirements, and detailed funding considerations.
+This comprehensive guide provides everything you need to know as a DIY Founder - MVP Stage - SaaS B2B - Whitefield in the Vision Infinity Ventures ecosystem. It combines your 10-phase journey roadmap, AI-focused people and tools requirements, and detailed funding considerations.
 
 ---
 
 ## Table of Contents
-1. [12-Phase Journey Roadmap](#12-phase-journey-roadmap)
+1. [10-phase Journey Roadmap](#10-phase-journey-roadmap)
 2. [AI-Focused People & Tools Checklist](#ai-focused-people--tools-checklist)
 3. [Funding Requirements & Budget](#funding-requirements--budget)
 4. [Success Metrics & KPIs](#success-metrics--kpis)
@@ -15,7 +15,7 @@ This comprehensive guide provides everything you need to know as a DIY Founder -
 
 ---
 
-## 12-Phase Journey Roadmap
+## 10-phase Journey Roadmap
 
 # Whitefield-Only Geography (MVP Stage) - SaaS B2B
 
@@ -298,12 +298,12 @@ This checklist provides comprehensive guidance on the people and tools needed fo
 # Funding Checklist: Diy Founder - B2B SaaS Solutions Mvp Stage (Whitefield Only)
 
 ## Overview
-This checklist provides comprehensive funding requirements for diy founder building b2b saas solutions in Whitefield, covering all 12 phases of the journey with detailed cost breakdowns.
+This checklist provides comprehensive funding requirements for diy founder building b2b saas solutions in Whitefield, covering all 10 phases of the journey with detailed cost breakdowns.
 
 ## 💰 **TOTAL FUNDING REQUIREMENTS**
 
 ### Overall Budget Summary
-- **Total 12-Phase Budget**: ₹33L - ₹69L (including personal expenses)
+- **Total 10-phase Budget**: ₹33L - ₹69L (including personal expenses)
 - **Duration**: 4-8 months (flexible timeline)
 - **Monthly Average**: ₹150K - ₹350K
 - **Funding Type**: Seed or Series A Funding

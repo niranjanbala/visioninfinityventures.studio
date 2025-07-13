@@ -71,7 +71,7 @@
 **Formula**: `Product Revenue = Core Platform + Add-on Products + Data Products`
 
 **Product Portfolio:**
-- **Core Platform**: 12-phase journey system
+- **Core Platform**: 10-phase journey system
 - **AI Tools**: Advanced analytics and prediction tools
 - **Marketplace**: Service provider booking platform
 - **Data Products**: Market insights and trend reports

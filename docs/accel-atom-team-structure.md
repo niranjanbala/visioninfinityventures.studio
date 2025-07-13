@@ -79,7 +79,7 @@ Execute rapid MVP development and product-market fit achievement. Lead the techn
 Lead venture studio methodology and founder success optimization. Develop systematic approaches to venture building that align with Accel Atom's investment principles. Remote fractional role with strategic focus.
 
 **Key Responsibilities:**
-- **Venture Studio Methodology**: Optimize and scale our 12-phase journey system
+- **Venture Studio Methodology**: Optimize and scale our 10-phase journey system
 - **Founder Success Rate**: Improve founder success rates through systematic approaches
 - **Strategic Partnerships**: Build partnerships with accelerators, investors, and ecosystem players
 - **Ecosystem Building**: Develop local and global startup ecosystems
@@ -107,7 +107,7 @@ Execute founder onboarding and journey management. Provide hands-on support to f
 
 **Key Responsibilities:**
 - **Founder Onboarding**: Manage founder onboarding and journey setup
-- **Progress Tracking**: Track founder progress through 12-phase journey
+- **Progress Tracking**: Track founder progress through 10-phase journey
 - **Resource Allocation**: Coordinate resources and support for founders
 - **Success Optimization**: Optimize founder outcomes and success rates
 - **Community Building**: Build and manage founder communities
@@ -322,7 +322,7 @@ Execute operational excellence and team coordination. Ensure systematic executio
 ### **Competitive Advantages**
 - **First-Mover Advantage**: First systematic venture studio platform
 - **AI-Powered Personalization**: Proprietary algorithms and data
-- **Proven Methodology**: 12-phase journey system with success metrics
+- **Proven Methodology**: 10-phase journey system with success metrics
 - **Network Effects**: More founders = better AI recommendations
 - **Global Scalability**: Platform designed for worldwide expansion
 

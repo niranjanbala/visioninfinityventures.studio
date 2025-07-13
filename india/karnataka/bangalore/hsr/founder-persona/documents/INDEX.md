@@ -1,7 +1,7 @@
 # Vision Infinity Ventures - Persona Documents Index
 
 ## Overview
-This directory contains comprehensive guides for each founder persona in the Vision Infinity Ventures ecosystem. Each document combines the 12-phase journey, AI-focused requirements, and funding considerations into a single, actionable guide.
+This directory contains comprehensive guides for each founder persona in the Vision Infinity Ventures ecosystem. Each document combines the 10-phase journey, AI-focused requirements, and funding considerations into a single, actionable guide.
 
 ---
 
@@ -35,7 +35,7 @@ This directory contains comprehensive guides for each founder persona in the Vis
 
 Each persona document contains:
 
-1. **12-Phase Journey Roadmap**: Detailed step-by-step execution plan
+1. **10-Phase Journey Roadmap**: Detailed step-by-step execution plan
 2. **AI-Focused People & Tools Checklist**: Specific requirements for AI implementation
 3. **Funding Requirements & Budget**: Complete financial planning including personal expenses
 4. **Success Metrics & KPIs**: Measurable outcomes for each phase

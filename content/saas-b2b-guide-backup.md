@@ -8,7 +8,7 @@ The SaaS B2B Guide provides comprehensive strategies and insights for entreprene
 2. [Product Strategy](#product-strategy)
 3. [Technology Architecture](#technology-architecture)
 4. [Go-to-Market Strategy](#go-to-market-strategy)
-5. [12-Phase Journey](#12-phase-journey)
+5. [10-phase Journey](#10-phase-journey)
 6. [AI, People & Tools Checklist](#ai-people--tools-checklist)
 7. [Funding Strategy](#funding-strategy)
 8. [Implementation Guide](#implementation-guide)

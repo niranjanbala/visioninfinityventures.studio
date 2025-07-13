@@ -1,7 +1,7 @@
 # Funding Checklist Summary: Vision Infinity Ventures
 
 ## Overview
-This document provides a comprehensive summary of all funding checklists created for Vision Infinity Ventures founders. Each checklist is tailored to specific personas, stages, industries, and geographies with detailed cost breakdowns for 12-phase execution.
+This document provides a comprehensive summary of all funding checklists created for Vision Infinity Ventures founders. Each checklist is tailored to specific personas, stages, industries, and geographies with detailed cost breakdowns for 10-phase execution.
 
 ## 📊 **Checklist Completion Status**
 
@@ -30,7 +30,7 @@ This document provides a comprehensive summary of all funding checklists created
 ## 💰 **BUDGET SUMMARY BY PERSONA**
 
 ### DIY Founder Budgets
-- **Total 12-Phase Budget**: ₹33L - ₹69L (including personal expenses)
+- **Total 10-Phase Budget**: ₹33L - ₹69L (including personal expenses)
 - **Business Budget**: ₹18L - ₹42L
 - **Personal Expenses**: ₹15L - ₹27L (6 months)
 - **Duration**: 6-12 months (flexible timeline)
@@ -39,7 +39,7 @@ This document provides a comprehensive summary of all funding checklists created
 - **Funding Type**: Bootstrapping or Seed Funding
 
 ### Fractional Support Budgets
-- **Total 12-Phase Budget**: ₹46L - ₹91L (including personal expenses)
+- **Total 10-Phase Budget**: ₹46L - ₹91L (including personal expenses)
 - **Business Budget**: ₹25L - ₹55L
 - **Personal Expenses**: ₹21L - ₹36L (6 months)
 - **Duration**: 6-12 months (flexible timeline)

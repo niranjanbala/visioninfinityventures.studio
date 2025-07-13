@@ -1,12 +1,12 @@
 # Funding Checklist: Diy Founder - B2B SaaS Solutions Idea Stage (Whitefield Only)
 
 ## Overview
-This checklist provides comprehensive funding requirements for diy founder building b2b saas solutions in Whitefield, covering all 12 phases of the journey with detailed cost breakdowns.
+This checklist provides comprehensive funding requirements for diy founder building b2b saas solutions in Whitefield, covering all 10 phases of the journey with detailed cost breakdowns.
 
 ## 💰 **TOTAL FUNDING REQUIREMENTS**
 
 ### Overall Budget Summary
-- **Total 12-Phase Budget**: ₹33L - ₹69L (including personal expenses)
+- **Total 10-phase Budget**: ₹33L - ₹69L (including personal expenses)
 - **Duration**: 6-12 months (flexible timeline)
 - **Monthly Average**: ₹150K - ₹350K
 - **Funding Type**: Bootstrapping or Seed Funding

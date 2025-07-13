@@ -8,7 +8,7 @@ The Education Industry Guide provides comprehensive insights and strategies for 
 2. [Business Models](#business-models)
 3. [Technology Stack](#technology-stack)
 4. [Location-Specific Strategies](#location-specific-strategies)
-5. [12-Phase Journey](#12-phase-journey)
+5. [10-phase Journey](#10-phase-journey)
 6. [AI, People & Tools Checklist](#ai-people--tools-checklist)
 7. [Funding Strategy](#funding-strategy)
 8. [Implementation Guide](#implementation-guide)
