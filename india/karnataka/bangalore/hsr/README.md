@@ -5,7 +5,7 @@
 **Company Name:** Vision Infinity Ventures Private Limited  
 **Location:** HSR Layout, Bangalore, Karnataka, India  
 **Business Type:** Venture Studio / Investment Company  
-**Target:** ₹8.3 Crore ($1M) Bootstrap Funding  
+**Target:** ₹10 Crore ($1.2M) Bootstrap Funding  
 **Founder Goal:** 100 Bangalore Founders @ ₹83,000 each  
 
 ## 📁 **Documentation Structure**

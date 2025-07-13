@@ -15,7 +15,7 @@ export default function DonationCTA() {
             Join the <span className="text-yellow-300">Legendary</span> 100
           </h2>
           <p className="text-xl md:text-2xl mb-8 opacity-90">
-            Each founder contributes ₹83,000 to bootstrap Vision Infinity Ventures and achieve our ₹8.3Cr first-year operations goal
+            Each founder contributes ₹83,000 to bootstrap Vision Infinity Ventures and achieve our ₹10Cr first-year operations goal
           </p>
         </div>
 
@@ -92,7 +92,7 @@ export default function DonationCTA() {
               <div>Per Founder</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-yellow-300">₹8.3Cr</div>
+              <div className="text-2xl font-bold text-yellow-300">₹10Cr</div>
               <div>Total Goal</div>
             </div>
             <div className="text-center">

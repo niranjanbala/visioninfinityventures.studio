@@ -67,7 +67,7 @@
 
 #### **2. Investment Structure**
 - How to structure the ₹83,000 founder contributions?
-- Legal framework for the ₹8.3 Crore funding pool?
+- Legal framework for the ₹10 Crore funding pool?
 - Investment agreements and terms?
 
 #### **3. Founder Agreements**

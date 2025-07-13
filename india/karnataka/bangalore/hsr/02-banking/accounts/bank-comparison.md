@@ -103,7 +103,7 @@
 
 #### **3. Investment Pool Account**
 - **Bank:** HDFC Bank
-- **Purpose:** Hold the ₹8.3 Crore funding pool
+- **Purpose:** Hold the ₹10 Crore funding pool
 - **MAB:** ₹1,00,000
 - **Features:** Fixed deposits, investment tracking
 

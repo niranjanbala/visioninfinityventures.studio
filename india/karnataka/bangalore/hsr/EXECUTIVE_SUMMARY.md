@@ -4,7 +4,7 @@
 
 **Company:** Vision Infinity Ventures Private Limited  
 **Location:** HSR Layout, Bangalore, Karnataka, India  
-**Target:** ₹8.3 Crore ($1M) Bootstrap Funding  
+**Target:** ₹10 Crore ($1.2M) Bootstrap Funding  
 **Founder Goal:** 100 Bangalore Founders @ ₹83,000 each  
 **Timeline:** Month 1 Launch (January 2025)
 
@@ -48,7 +48,7 @@ india/karnataka/bangalore/hsr/
 ### **3. Financial Documentation**
 - ✅ **Financial Dashboard** - Complete tracking system templates
 - ✅ **Founder Contributions** - ₹83,000 per founder tracking
-- ✅ **Investment Portfolio** - ₹8.3 Crore fund management
+- ✅ **Investment Portfolio** - ₹10 Crore fund management
 
 ### **4. Month 1 Planning**
 - ✅ **Complete Guide** - Week-by-week execution plan

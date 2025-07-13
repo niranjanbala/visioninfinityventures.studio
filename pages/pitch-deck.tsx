@@ -545,7 +545,7 @@ const PitchDeckPage = () => {
     {
       id: 9,
       title: "Strategic Investment Opportunity",
-      subtitle: "Seeking ₹8.3Cr for 15% Equity",
+              subtitle: "Seeking ₹10Cr for 10% Equity",
       content: (
         <div className="text-center">
           <div className="max-w-2xl mx-auto">
@@ -554,8 +554,8 @@ const PitchDeckPage = () => {
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div className="bg-indigo-50 p-6 rounded-lg">
                 <h4 className="text-xl font-semibold text-indigo-800 mb-2">Investment Ask</h4>
-                <p className="text-3xl font-bold text-indigo-600 mb-2">₹8.3Cr</p>
-                <p className="text-sm text-indigo-600">For 15% equity</p>
+                <p className="text-3xl font-bold text-indigo-600 mb-2">₹10Cr</p>
+                                  <p className="text-sm text-indigo-600">For 10% equity</p>
                 <p className="text-sm text-indigo-600">₹33.2Cr pre-money valuation</p>
               </div>
               <div className="bg-indigo-50 p-6 rounded-lg">
