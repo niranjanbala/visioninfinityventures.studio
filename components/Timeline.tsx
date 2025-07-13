@@ -11,16 +11,16 @@ const months = [
 
 export default function Timeline() {
   return (
-    <section className="py-20 bg-gradient-to-br from-indigo-50 to-white">
+    <section className="py-20 bg-gradient-to-br from-primary/5 to-background">
       <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-indigo-900">12-Month Legendary Journey</h2>
-        <ol className="relative border-l-4 border-indigo-300">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">12-Month Legendary Journey</h2>
+        <ol className="relative border-l-4 border-primary/30">
           {months.map((m, i) => (
             <li key={i} className="mb-10 ml-6">
-              <span className="absolute flex items-center justify-center w-10 h-10 bg-indigo-400 rounded-full -left-5 ring-4 ring-white text-white font-bold text-lg">{m.period}</span>
-              <div className="bg-white p-6 rounded-xl shadow-md">
-                <h3 className="font-semibold text-indigo-700 text-xl mb-1">{m.title}</h3>
-                <p className="text-gray-700">{m.desc}</p>
+              <span className="absolute flex items-center justify-center w-10 h-10 bg-primary rounded-full -left-5 ring-4 ring-background text-primary-foreground font-bold text-lg">{m.period}</span>
+              <div className="bg-background p-6 rounded-xl shadow-md border border-border">
+                <h3 className="font-semibold text-primary text-xl mb-1">{m.title}</h3>
+                <p className="text-muted-foreground">{m.desc}</p>
               </div>
             </li>
           ))}

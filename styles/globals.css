@@ -71,6 +71,60 @@
   --viv-space-xl: 3rem;
   --viv-space-2xl: 4rem;
   --viv-space-3xl: 6rem;
+
+  /* shadcn/ui CSS Variables - Updated to use VIV brand colors */
+  --background: 0 0% 100%;
+  --foreground: 224 71.4% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 224 71.4% 4.1%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 224 71.4% 4.1%;
+  --primary: 217 91% 60%; /* VIV Primary Blue */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 262 83% 58%; /* VIV Secondary Purple */
+  --secondary-foreground: 0 0% 100%;
+  --muted: 220 14.3% 95.9%;
+  --muted-foreground: 220 8.9% 46.1%;
+  --accent: 187 95% 43%; /* VIV Accent Cyan */
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 20% 98%;
+  --border: 220 13% 91%;
+  --input: 220 13% 91%;
+  --ring: 217 91% 60%; /* VIV Primary Blue */
+  --chart-1: 12 76% 61%;
+  --chart-2: 173 58% 39%;
+  --chart-3: 197 37% 24%;
+  --chart-4: 43 74% 66%;
+  --chart-5: 27 87% 67%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 224 71.4% 4.1%;
+  --foreground: 210 20% 98%;
+  --card: 224 71.4% 4.1%;
+  --card-foreground: 210 20% 98%;
+  --popover: 224 71.4% 4.1%;
+  --popover-foreground: 210 20% 98%;
+  --primary: 217 91% 60%; /* VIV Primary Blue */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 262 83% 58%; /* VIV Secondary Purple */
+  --secondary-foreground: 0 0% 100%;
+  --muted: 215 27.9% 16.9%;
+  --muted-foreground: 217.9 10.6% 64.9%;
+  --accent: 187 95% 43%; /* VIV Accent Cyan */
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 20% 98%;
+  --border: 215 27.9% 16.9%;
+  --input: 215 27.9% 16.9%;
+  --ring: 217 91% 60%; /* VIV Primary Blue */
+  --chart-1: 220 70% 50%;
+  --chart-2: 160 60% 45%;
+  --chart-3: 30 80% 55%;
+  --chart-4: 280 65% 60%;
+  --chart-5: 340 75% 55%;
 }
 
 @layer base {
@@ -145,82 +199,29 @@
   ::-webkit-scrollbar-thumb:hover {
     background: var(--viv-gray-400);
   }
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 224 71.4% 4.1%;
-    --card: 0 0% 100%;
-    --card-foreground: 224 71.4% 4.1%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 224 71.4% 4.1%;
-    --primary: 220.9 39.3% 11%;
-    --primary-foreground: 210 20% 98%;
-    --secondary: 220 14.3% 95.9%;
-    --secondary-foreground: 220.9 39.3% 11%;
-    --muted: 220 14.3% 95.9%;
-    --muted-foreground: 220 8.9% 46.1%;
-    --accent: 220 14.3% 95.9%;
-    --accent-foreground: 220.9 39.3% 11%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 20% 98%;
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 224 71.4% 4.1%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
-    --radius: 0.5rem;
-  }
-  .dark {
-    --background: 224 71.4% 4.1%;
-    --foreground: 210 20% 98%;
-    --card: 224 71.4% 4.1%;
-    --card-foreground: 210 20% 98%;
-    --popover: 224 71.4% 4.1%;
-    --popover-foreground: 210 20% 98%;
-    --primary: 210 20% 98%;
-    --primary-foreground: 220.9 39.3% 11%;
-    --secondary: 215 27.9% 16.9%;
-    --secondary-foreground: 210 20% 98%;
-    --muted: 215 27.9% 16.9%;
-    --muted-foreground: 217.9 10.6% 64.9%;
-    --accent: 215 27.9% 16.9%;
-    --accent-foreground: 210 20% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 20% 98%;
-    --border: 215 27.9% 16.9%;
-    --input: 215 27.9% 16.9%;
-    --ring: 216 12.2% 83.9%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-  }
 }
 
 @layer components {
   /* Button Components */
   .btn-primary {
-    @apply inline-flex items-center px-6 py-3 bg-primary hover:bg-primary text-white font-semibold rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+    @apply inline-flex items-center px-6 py-3 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2;
   }
   
   .btn-secondary {
-    @apply inline-flex items-center px-6 py-3 bg-white hover:bg-gray-50 text-gray-700 font-semibold rounded-lg border border-gray-200 transition-all duration-200 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+    @apply inline-flex items-center px-6 py-3 bg-white hover:bg-gray-50 text-gray-700 font-semibold rounded-lg border border-gray-200 transition-all duration-200 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2;
   }
   
   .btn-accent {
-    @apply inline-flex items-center px-6 py-3 bg-accent hover:bg-accent text-white font-semibold rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+    @apply inline-flex items-center px-6 py-3 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2;
   }
   
   .btn-gradient {
-    @apply inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary to-secondary hover:from-primary hover:to-secondary text-white font-semibold rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+    @apply inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white font-semibold rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2;
   }
   
   /* Card Components */
   .card {
-    @apply bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300;
+    @apply bg-card rounded-xl p-6 shadow-sm border border-border hover:shadow-lg transition-all duration-300;
   }
   
   .card-hover {
@@ -272,7 +273,7 @@
   
   /* Form Components */
   .form-input {
-    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200;
+    @apply w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-all duration-200;
   }
   
   .form-label {
@@ -285,7 +286,7 @@
   }
   
   .badge-primary {
-    @apply bg-primary-lighter text-primary;
+    @apply bg-primary/10 text-primary;
   }
   
   .badge-secondary {
@@ -331,31 +332,31 @@
     animation: bounceIn 0.6s ease-out;
   }
   
-  /* Hover Effects */
+  /* Hover Utilities */
   .hover-lift {
-    @apply transition-transform duration-300 hover:-translate-y-2;
+    @apply hover:-translate-y-1 hover:shadow-lg transition-all duration-300;
   }
   
   .hover-glow {
-    @apply transition-shadow duration-300 hover:shadow-lg hover:shadow-primary/25;
+    @apply hover:shadow-viv-glow transition-all duration-300;
   }
   
-  /* Text Effects */
+  /* Text Utilities */
   .text-shadow {
-    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   }
   
   .text-shadow-lg {
-    text-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   }
   
-  /* Background Effects */
+  /* Backdrop Blur Utilities */
   .backdrop-blur-sm {
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(4px);
   }
   
   .backdrop-blur-md {
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(8px);
   }
   
   .backdrop-blur-lg {
@@ -379,7 +380,7 @@
     background: var(--viv-gradient-card);
   }
   
-  /* Custom Spacing */
+  /* Spacing Utilities */
   .space-viv-xs { margin: var(--viv-space-xs); }
   .space-viv-sm { margin: var(--viv-space-sm); }
   .space-viv-md { margin: var(--viv-space-md); }
@@ -450,7 +451,7 @@
   }
 }
 
-/* Responsive Design Utilities */
+/* Responsive Design */
 @media (max-width: 640px) {
   .container-max {
     @apply px-4;
@@ -467,13 +468,15 @@
   }
 }
 
-
-
-@layer base {
+/* Print Styles */
+@media print {
   * {
-    @apply border-border;
+    background: transparent !important;
+    color: black !important;
   }
+  
   body {
-    @apply bg-background text-foreground;
+    font-size: 12pt;
+    line-height: 1.4;
   }
 }

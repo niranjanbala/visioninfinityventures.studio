@@ -36,13 +36,13 @@ export default function Process() {
   ];
 
   return (
-    <section id="process" className="py-20 bg-gray-50">
+    <section id="process" className="py-20 bg-muted/50">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Our Process
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             We follow a proven three-step methodology that has helped founders build successful companies.
           </p>
         </div>
@@ -51,27 +51,27 @@ export default function Process() {
           {steps.map((step, index) => (
             <div key={index} className="relative">
               {/* Step Number */}
-              <div className="absolute -top-4 left-8 bg-blue-600 text-white text-sm font-bold px-3 py-1 rounded-full">
+              <div className="absolute -top-4 left-8 bg-primary text-primary-foreground text-sm font-bold px-3 py-1 rounded-full shadow">
                 {step.number}
               </div>
               
               {/* Card */}
-              <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-                <div className="w-16 h-16 bg-blue-50 rounded-lg flex items-center justify-center mb-6 text-blue-600">
+              <div className="bg-background rounded-xl p-8 shadow-sm border border-border hover:shadow-lg transition-shadow duration-300">
+                <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6 text-primary">
                   {step.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                <h3 className="text-xl font-semibold text-foreground mb-4">
                   {step.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed">
                   {step.description}
                 </p>
               </div>
               
               {/* Connector Line */}
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gray-200 transform -translate-y-1/2">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full absolute right-0 top-1/2 transform -translate-y-1/2"></div>
+                <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-0.5 bg-border transform -translate-y-1/2">
+                  <div className="w-2 h-2 bg-primary rounded-full absolute right-0 top-1/2 transform -translate-y-1/2"></div>
                 </div>
               )}
             </div>

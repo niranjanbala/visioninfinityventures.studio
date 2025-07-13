@@ -35,20 +35,20 @@ export default function ContentIndex({ newContent, originalContent }: ContentInd
       </Head>
       <Navigation />
       
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="min-h-screen bg-gradient-to-br from-muted/50 to-background">
         <div className="container mx-auto px-4 py-8">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="text-4xl font-bold text-foreground mb-4">
               Content Library
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Comprehensive resources for startup founders in Bangalore. Start with our recommended guides for idea-stage entrepreneurs.
             </p>
           </div>
 
           {/* Priority Content Section */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
               🚀 Start Here - Recommended for Idea-Stage Entrepreneurs
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -58,14 +58,14 @@ export default function ContentIndex({ newContent, originalContent }: ContentInd
                   href={page.category === 'track' ? `/track/${page.slug}` : `/content/${page.slug}`}
                   className="group block"
                 >
-                  <div className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 h-full border-2 border-indigo-200 hover:border-indigo-400 relative">
+                  <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 h-full border-2 border-primary/20 hover:border-primary/40 relative">
                     {/* Priority Badge */}
-                    <div className="absolute -top-3 -right-3 bg-indigo-600 text-white px-3 py-1 rounded-full text-xs font-bold">
+                    <div className="absolute -top-3 -right-3 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-bold">
                       PRIORITY
                     </div>
                     
                     <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">
+                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
                         <span className="text-2xl">
                           {page.category === 'track' && '🛤️'}
                           {page.category === 'industry' && '🏭'}
@@ -74,22 +74,22 @@ export default function ContentIndex({ newContent, originalContent }: ContentInd
                         </span>
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">
+                        <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
                           {page.title}
                         </h3>
                         <div className="flex flex-wrap gap-1 mt-1">
                           {page.tags?.map((tag, index) => (
-                            <span key={index} className="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded-full">
+                            <span key={index} className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">
                               {tag}
                             </span>
                           ))}
                         </div>
                       </div>
                     </div>
-                    <p className="text-gray-600 text-sm leading-relaxed">
+                    <p className="text-muted-foreground text-sm leading-relaxed">
                       {page.description}
                     </p>
-                    <div className="mt-4 flex items-center text-indigo-600 text-sm font-medium">
+                    <div className="mt-4 flex items-center text-primary text-sm font-medium">
                       {page.category === 'track' ? 'View Track' : 'Start Here'}
                       <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -103,7 +103,7 @@ export default function ContentIndex({ newContent, originalContent }: ContentInd
 
           {/* Other Consolidated Content */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
               📚 Additional Guides & Resources
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -113,9 +113,9 @@ export default function ContentIndex({ newContent, originalContent }: ContentInd
                   href={page.category === 'track' ? `/track/${page.slug}` : `/content/${page.slug}`}
                   className="group block"
                 >
-                  <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 h-full border border-gray-200 hover:border-blue-300">
+                  <div className="bg-background rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 h-full border border-border hover:border-primary/30">
                     <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
                         <span className="text-2xl">
                           {page.category === 'track' && '🛤️'}
                           {page.category === 'industry' && '🏭'}
@@ -124,18 +124,18 @@ export default function ContentIndex({ newContent, originalContent }: ContentInd
                         </span>
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                        <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
                           {page.title}
                         </h3>
-                        <span className="text-sm text-gray-500 capitalize">
+                        <span className="text-sm text-muted-foreground capitalize">
                           {page.category} guide
                         </span>
                       </div>
                     </div>
-                    <p className="text-gray-600 text-sm leading-relaxed">
+                    <p className="text-muted-foreground text-sm leading-relaxed">
                       {page.description}
                     </p>
-                    <div className="mt-4 flex items-center text-blue-600 text-sm font-medium">
+                    <div className="mt-4 flex items-center text-primary text-sm font-medium">
                       {page.category === 'track' ? 'View Track' : 'Read Guide'}
                       <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -149,11 +149,11 @@ export default function ContentIndex({ newContent, originalContent }: ContentInd
 
           {/* Original Content */}
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
               📖 Detailed Content Library
             </h2>
-            <div className="bg-white rounded-xl shadow-lg p-6">
-              <p className="text-gray-600 mb-6 text-center">
+            <div className="bg-background rounded-xl shadow-lg p-6 border border-border">
+              <p className="text-muted-foreground mb-6 text-center">
                 Explore our comprehensive collection of detailed guides, templates, and resources organized by founder persona, stage, industry, and location.
               </p>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -163,11 +163,11 @@ export default function ContentIndex({ newContent, originalContent }: ContentInd
                     href={page.category === 'track' ? `/track/${page.slug}` : `/content/${page.slug}`}
                     className="group block"
                   >
-                    <div className="p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-all duration-200">
-                      <h4 className="font-medium text-gray-900 group-hover:text-blue-600 transition-colors text-sm">
+                    <div className="p-4 rounded-lg border border-border hover:border-primary/30 hover:bg-primary/5 transition-all duration-200">
+                      <h4 className="font-medium text-foreground group-hover:text-primary transition-colors text-sm">
                         {page.title}
                       </h4>
-                      <p className="text-xs text-gray-500 mt-1">
+                      <p className="text-xs text-muted-foreground mt-1">
                         {page.description}
                       </p>
                     </div>
@@ -176,7 +176,7 @@ export default function ContentIndex({ newContent, originalContent }: ContentInd
               </div>
               {originalContent.length > 12 && (
                 <div className="text-center mt-6">
-                  <p className="text-gray-500 text-sm">
+                  <p className="text-muted-foreground text-sm">
                     And {originalContent.length - 12} more detailed guides...
                   </p>
                 </div>
@@ -185,7 +185,7 @@ export default function ContentIndex({ newContent, originalContent }: ContentInd
           </div>
 
           {/* Quick Start Section */}
-          <div className="mt-16 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-xl p-8 text-white">
+          <div className="mt-16 bg-gradient-to-r from-primary to-secondary rounded-xl p-8 text-primary-foreground">
             <div className="text-center">
               <h2 className="text-3xl font-bold mb-4">
                 Ready to Start Your Journey?
@@ -196,19 +196,19 @@ export default function ContentIndex({ newContent, originalContent }: ContentInd
               <div className="flex flex-wrap justify-center gap-4">
                 <Link 
                   href="/track/diy-founder-track"
-                  className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  className="bg-background text-primary px-6 py-3 rounded-lg font-semibold hover:bg-background/90 transition-colors"
                 >
                   Start with DIY Guide
                 </Link>
                 <Link 
                   href="/content/education-industry-guide"
-                  className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+                  className="bg-transparent border-2 border-background text-background px-6 py-3 rounded-lg font-semibold hover:bg-background hover:text-primary transition-colors"
                 >
                   Education Industry Guide
                 </Link>
                 <Link 
                   href="/content/resources"
-                  className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+                  className="bg-transparent border-2 border-background text-background px-6 py-3 rounded-lg font-semibold hover:bg-background hover:text-primary transition-colors"
                 >
                   Download Templates
                 </Link>

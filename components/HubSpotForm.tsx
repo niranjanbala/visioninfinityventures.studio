@@ -1,4 +1,8 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Card, CardContent } from "@/components/ui/card";
 
 interface HubSpotFormProps {
   formData: {
@@ -18,28 +22,30 @@ interface HubSpotFormProps {
 
 declare global {
   interface Window {
-    hbspt: {
-      forms: {
-        create: (config: any) => void;
-      };
-    };
+    hubspotScriptLoaded?: boolean;
   }
 }
 
 export default function HubSpotForm({ formData, onFormSubmitted }: HubSpotFormProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
+  const [useFallback, setUseFallback] = useState(false);
+  const [fallbackData, setFallbackData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    company: ''
+  });
+  const containerRef = useRef<HTMLDivElement>(null);
+  const formDivRef = useRef<HTMLDivElement>(null);
+  const scriptRef = useRef<HTMLScriptElement | null>(null);
 
-  const handlePersonaCreation = useCallback(async (hubspotFormData: any) => {
+  const handlePersonaCreation = useCallback(async (userData: any) => {
     try {
       setIsProcessing(true);
       
-      // Extract name and email from HubSpot form data
-      const firstName = hubspotFormData.firstname || hubspotFormData.first_name || '';
-      const lastName = hubspotFormData.lastname || hubspotFormData.last_name || '';
-      const email = hubspotFormData.email || '';
-
-      // Prepare data for persona API - combine progressive form data with HubSpot form data
+      // Prepare data for persona API - combine progressive form data with user data
       const personaData = {
         // Progressive form data
         founderType: formData.founderType,
@@ -52,22 +58,21 @@ export default function HubSpotForm({ formData, onFormSubmitted }: HubSpotFormPr
         salesSkill: formData.salesSkill,
         productSkill: formData.productSkill,
         designSkill: formData.designSkill,
-        // HubSpot form data
-        firstName,
-        lastName,
-        email,
-        // Additional HubSpot fields
-        phone: hubspotFormData.phone || hubspotFormData.phone_number || '',
-        company: hubspotFormData.company || hubspotFormData.company_name || '',
-        jobTitle: hubspotFormData.jobtitle || hubspotFormData.job_title || hubspotFormData.title || '',
-        website: hubspotFormData.website || hubspotFormData.website_url || '',
-        address: hubspotFormData.address || hubspotFormData.street_address || '',
-        city: hubspotFormData.city || '',
-        state: hubspotFormData.state || hubspotFormData.province || '',
-        zip: hubspotFormData.zip || hubspotFormData.postal_code || hubspotFormData.zip_code || '',
-        country: hubspotFormData.country || '',
-        // Any other fields from HubSpot form
-        ...hubspotFormData
+        // User form data
+        firstName: userData.firstName || userData.firstname || '',
+        lastName: userData.lastName || userData.lastname || '',
+        email: userData.email || '',
+        phone: userData.phone || userData.phone_number || '',
+        company: userData.company || userData.company_name || '',
+        jobTitle: userData.jobTitle || userData.jobtitle || userData.job_title || userData.title || '',
+        website: userData.website || userData.website_url || '',
+        address: userData.address || userData.street_address || '',
+        city: userData.city || '',
+        state: userData.state || userData.province || '',
+        zip: userData.zip || userData.postal_code || userData.zip_code || '',
+        country: userData.country || '',
+        // Any other fields
+        ...userData
       };
 
       // Call our persona API
@@ -98,81 +103,230 @@ export default function HubSpotForm({ formData, onFormSubmitted }: HubSpotFormPr
     }
   }, [formData, onFormSubmitted]);
 
-  useEffect(() => {
-    // Load HubSpot script
-    const script = document.createElement('script');
-    script.src = 'https://js-na2.hsforms.net/forms/embed/243281589.js';
-    script.defer = true;
-    script.onload = () => {
-      setIsLoaded(true);
-      
-      // Initialize the form with hidden fields
-      if (window.hbspt) {
-        window.hbspt.forms.create({
-          region: 'na2',
-          portalId: '243281589',
-          formId: '52155d7a-44f5-4868-9f7c-ef38b74f6301',
-          target: '#hubspot-form-container',
-          onFormSubmitted: function(form: any) {
-            // Get form data and create persona
-            const formData = form.getData();
-            handlePersonaCreation(formData);
-          },
-          onFormReady: function(form: any) {
-            // Set hidden field values
-            const hiddenFields = {
-              founder_type: formData.founderType,
-              stage: formData.stage,
-              industry: formData.industry,
-              location: formData.location,
-              delivery_medium: formData.deliveryMedium,
-              technology_skill: formData.technologySkill,
-              marketing_skill: formData.marketingSkill,
-              sales_skill: formData.salesSkill,
-              product_skill: formData.productSkill,
-              design_skill: formData.designSkill
-            };
-            
-            // Set hidden field values
-            Object.entries(hiddenFields).forEach(([fieldName, value]) => {
-              const field = form.find(`input[name="${fieldName}"]`);
-              if (field.length) {
-                field.val(value);
-              }
-            });
-          }
-        });
+  const loadHubSpotScript = useCallback(() => {
+    return new Promise<void>((resolve, reject) => {
+      // Check if script is already loaded
+      if (window.hubspotScriptLoaded) {
+        resolve();
+        return;
       }
-    };
-    
-    document.head.appendChild(script);
 
-    return () => {
-      // Cleanup script when component unmounts
-      const existingScript = document.querySelector('script[src*="hsforms"]');
-      if (existingScript) {
-        existingScript.remove();
+      // Check if script is already in the process of loading
+      if (document.querySelector('script[src*="hsforms"]')) {
+        // Wait for the existing script to load
+        const checkScript = () => {
+          if (window.hubspotScriptLoaded) {
+            resolve();
+          } else {
+            setTimeout(checkScript, 100);
+          }
+        };
+        checkScript();
+        return;
       }
+
+      console.log("Loading HubSpot script");
+      // Load HubSpot script
+      const script = document.createElement('script');
+      script.src = 'https://js-na2.hsforms.net/forms/embed/243281589.js';
+      script.defer = true;
+      script.onload = () => {
+        window.hubspotScriptLoaded = true;
+        scriptRef.current = script;
+        resolve();
+      };
+      script.onerror = () => {
+        reject(new Error('Failed to load HubSpot script'));
+      };
+      
+      document.head.appendChild(script);
+    });
+  }, []);
+
+  const createForm = useCallback(async () => {
+    try {
+      await loadHubSpotScript();
+      
+      if (containerRef.current) {
+        // Safely clear the container
+        while (containerRef.current.firstChild) {
+          containerRef.current.removeChild(containerRef.current.firstChild);
+        }
+        
+        // Create the modern HubSpot form embed
+        const formDiv = document.createElement('div');
+        formDiv.className = 'hs-form-frame';
+        formDiv.setAttribute('data-region', 'na2');
+        formDiv.setAttribute('data-form-id', '52155d7a-44f5-4868-9f7c-ef38b74f6301');
+        formDiv.setAttribute('data-portal-id', '243281589');
+        formDivRef.current = formDiv;
+        
+        containerRef.current.appendChild(formDiv);
+        
+        // Set up form submission listener with proper cleanup
+        const handleFormSubmit = (event: any) => {
+          // Extract form data from the HubSpot form
+          const form = event.target;
+          if (form && form.tagName === 'FORM') {
+            const formData = new FormData(form);
+            const userData: any = {};
+            
+            for (const [key, value] of formData.entries()) {
+              userData[key] = value;
+            }
+            
+            handlePersonaCreation(userData);
+          }
+        };
+        
+        // Listen for form submission
+        containerRef.current.addEventListener('submit', handleFormSubmit);
+        
+        setIsLoaded(true);
+      }
+    } catch (error) {
+      console.error('Error creating HubSpot form:', error);
+      // Fallback to a simple form if HubSpot fails
+      setUseFallback(true);
+      setIsLoaded(true);
+    }
+  }, [loadHubSpotScript, handlePersonaCreation]);
+
+  const handleFallbackSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    await handlePersonaCreation(fallbackData);
+  };
+
+  const handleFallbackChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFallbackData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }));
+  };
+
+  // Cleanup function
+  const cleanup = useCallback(() => {
+    if (containerRef.current) {
+      // Remove event listeners
+      containerRef.current.removeEventListener('submit', () => {});
+      
+      // Safely clear container
+      try {
+        while (containerRef.current.firstChild) {
+          containerRef.current.removeChild(containerRef.current.firstChild);
+        }
+      } catch (error) {
+        console.warn('Error during cleanup:', error);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    createForm();
+    
+    // Cleanup on unmount
+    return () => {
+      cleanup();
     };
-  }, [formData, onFormSubmitted, handlePersonaCreation]);
+  }, [createForm, cleanup]);
 
   return (
-    <div className="bg-white rounded-xl p-8 border border-gray-200 shadow-sm max-w-2xl mx-auto">
-      <div id="hubspot-form-container" className="min-h-[400px]">
+    <div className="bg-background rounded-xl p-8 border border-border shadow-sm max-w-2xl mx-auto">
+      <div ref={containerRef} id="hubspot-form-container" className="min-h-[400px]">
         {!isLoaded && (
           <div className="flex items-center justify-center h-64">
             <div className="text-center">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600 mx-auto mb-4"></div>
-              <p className="text-gray-600">Loading form...</p>
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-4"></div>
+              <p className="text-muted-foreground">Loading form...</p>
             </div>
           </div>
         )}
+        
         {isProcessing && (
           <div className="flex items-center justify-center h-64">
             <div className="text-center">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600 mx-auto mb-4"></div>
-              <p className="text-gray-600">Creating your personalized experience...</p>
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-4"></div>
+              <p className="text-muted-foreground">Creating your personalized experience...</p>
             </div>
+          </div>
+        )}
+
+        {useFallback && isLoaded && !isProcessing && (
+          <div className="space-y-6">
+            <div className="text-center mb-6">
+              <h3 className="text-xl font-semibold text-foreground mb-2">Get Your Personalized Roadmap</h3>
+              <p className="text-muted-foreground">Enter your details to receive your customized 10-phase journey</p>
+            </div>
+            
+            <form onSubmit={handleFallbackSubmit} className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <Label htmlFor="firstName">First Name *</Label>
+                  <Input
+                    id="firstName"
+                    name="firstName"
+                    type="text"
+                    required
+                    value={fallbackData.firstName}
+                    onChange={handleFallbackChange}
+                    className="mt-1"
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="lastName">Last Name *</Label>
+                  <Input
+                    id="lastName"
+                    name="lastName"
+                    type="text"
+                    required
+                    value={fallbackData.lastName}
+                    onChange={handleFallbackChange}
+                    className="mt-1"
+                  />
+                </div>
+              </div>
+              
+              <div>
+                <Label htmlFor="email">Email Address *</Label>
+                <Input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  value={fallbackData.email}
+                  onChange={handleFallbackChange}
+                  className="mt-1"
+                />
+              </div>
+              
+              <div>
+                <Label htmlFor="phone">Phone Number</Label>
+                <Input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  value={fallbackData.phone}
+                  onChange={handleFallbackChange}
+                  className="mt-1"
+                />
+              </div>
+              
+              <div>
+                <Label htmlFor="company">Company Name</Label>
+                <Input
+                  id="company"
+                  name="company"
+                  type="text"
+                  value={fallbackData.company}
+                  onChange={handleFallbackChange}
+                  className="mt-1"
+                />
+              </div>
+              
+              <Button type="submit" className="w-full" disabled={isProcessing}>
+                {isProcessing ? 'Creating Your Roadmap...' : 'Get My Personalized Roadmap'}
+              </Button>
+            </form>
           </div>
         )}
       </div>

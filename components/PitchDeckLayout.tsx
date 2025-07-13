@@ -10,6 +10,135 @@ interface PitchDeckLayoutProps {
   initialSlide?: string;
 }
 
+// Enhanced Slide Component for individual content sections
+function Slide({ 
+  title, 
+  children, 
+  className = "", 
+  background = "white",
+  id 
+}: {
+  title: string;
+  children: React.ReactNode;
+  className?: string;
+  background?: "white" | "gray" | "gradient" | "glass";
+  id?: string;
+}) {
+  const bgClasses = {
+    white: "bg-background shadow-lg border border-border",
+    gray: "bg-muted/50 shadow-lg border border-border",
+    gradient: "bg-gradient-viv-card shadow-xl border border-border",
+    glass: "bg-background/80 backdrop-blur-md shadow-xl border border-border/20"
+  };
+
+  return (
+    <div 
+      id={id}
+      className={`${bgClasses[background]} rounded-3xl overflow-hidden ${className} animate-scale-in`}
+    >
+      <div className="px-12 py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold gradient-text-primary mb-6 leading-tight">
+            {title}
+          </h2>
+          <div className="w-32 h-1 bg-gradient-viv mx-auto rounded-full shadow-sm"></div>
+        </div>
+        <div className="prose prose-lg max-w-none
+          prose-headings:scroll-mt-24 
+          prose-h1:text-3xl prose-h1:font-bold prose-h1:text-foreground prose-h1:mb-6 prose-h1:mt-8
+          prose-h2:text-2xl prose-h2:font-semibold prose-h2:text-foreground prose-h2:mb-4 prose-h2:mt-6 prose-h2:border-b prose-h2:border-border prose-h2:pb-3
+          prose-h3:text-xl prose-h3:font-semibold prose-h3:text-foreground prose-h3:mb-3 prose-h3:mt-5
+          prose-h4:text-lg prose-h4:font-medium prose-h4:text-muted-foreground prose-h4:mb-3 prose-h4:mt-4
+          prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-4
+          prose-ul:text-muted-foreground prose-ul:leading-relaxed
+          prose-ol:text-muted-foreground prose-ol:leading-relaxed
+          prose-li:text-muted-foreground prose-li:leading-relaxed
+          prose-strong:text-foreground prose-strong:font-semibold
+          prose-code:text-primary prose-code:bg-primary/10 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm
+          prose-pre:bg-muted prose-pre:text-muted-foreground prose-pre:p-6 prose-pre:rounded-xl prose-pre:shadow-lg
+          prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-muted-foreground
+          prose-a:text-primary prose-a:font-medium prose-a:no-underline hover:prose-a:underline
+          prose-table:border-collapse prose-table:w-full
+          prose-th:bg-muted prose-th:text-foreground prose-th:font-semibold prose-th:p-3 prose-th:border prose-th:border-border
+          prose-td:p-3 prose-td:border prose-td:border-border prose-td:text-muted-foreground"
+        >
+          {children}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Enhanced Feature Grid Component
+function FeatureGrid({ 
+  features, 
+  columns = 3 
+}: {
+  features: Array<{
+    icon: React.ReactNode;
+    title: string;
+    description: string;
+    color?: string;
+  }>;
+  columns?: 2 | 3;
+}) {
+  const gridCols = columns === 2 ? 'md:grid-cols-2' : 'md:grid-cols-3';
+
+  return (
+    <div className={`grid grid-cols-1 ${gridCols} gap-8`}>
+      {features.map((feature, index) => (
+        <div 
+          key={index}
+          className="card-hover bg-background rounded-2xl p-8 border border-border shadow-md hover:shadow-xl transition-all duration-300 animate-slide-up"
+          style={{ animationDelay: `${index * 100}ms` }}
+        >
+          <div className="flex items-center justify-center w-16 h-16 bg-gradient-viv rounded-2xl mb-6 mx-auto">
+            <div className="text-white text-2xl">
+              {feature.icon}
+            </div>
+          </div>
+          <h3 className="text-xl font-semibold text-foreground mb-4 text-center">
+            {feature.title}
+          </h3>
+          <p className="text-muted-foreground leading-relaxed text-center">
+            {feature.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// Enhanced Stats Component
+function Stats({ 
+  stats 
+}: {
+  stats: Array<{
+    number: string;
+    label: string;
+    color?: string;
+  }>;
+}) {
+  return (
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      {stats.map((stat, index) => (
+        <div 
+          key={index}
+          className="text-center animate-bounce-in"
+          style={{ animationDelay: `${index * 150}ms` }}
+        >
+          <div className="text-4xl md:text-5xl font-bold gradient-text-primary mb-2">
+            {stat.number}
+          </div>
+          <div className="text-muted-foreground font-medium">
+            {stat.label}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default function PitchDeckLayout({ title, subtitle, children, slug, headings, initialSlide }: PitchDeckLayoutProps) {
   // Convert children to array for easier manipulation
   const slidesArray = React.Children.toArray(children);
@@ -81,48 +210,48 @@ export default function PitchDeckLayout({ title, subtitle, children, slug, headi
   const breadcrumbs = generateBreadcrumbs(slug);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-viv-gray-50 via-white to-viv-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-muted/50 via-background to-muted/50">
       {/* Enhanced Navigation Bar */}
-      <div className="bg-white/90 backdrop-blur-md border-b border-viv-gray-200 sticky top-0 z-50 shadow-viv-sm">
+      <div className="bg-white/90 backdrop-blur-md border-b border-border sticky top-0 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center justify-between py-4">
             <div className="flex items-center space-x-2 text-sm">
               <Link href="/" className="nav-link flex items-center">
-                <svg className="w-5 h-5 mr-2 text-viv-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                 </svg>
                 Home
               </Link>
-              <span className="text-viv-gray-400">/</span>
+              <span className="text-muted-foreground">/</span>
               <Link href="/content" className="nav-link">
                 Content Library
               </Link>
               {breadcrumbs.map((crumb, index) => (
                 <React.Fragment key={index}>
-                  <span className="text-viv-gray-400">/</span>
-                  <span className="text-viv-gray-900 font-medium">{crumb.name}</span>
+                  <span className="text-muted-foreground">/</span>
+                  <span className="text-foreground font-medium">{crumb.name}</span>
                 </React.Fragment>
               ))}
             </div>
             {/* Enhanced Slide Navigation Controls */}
             <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-3 bg-white rounded-xl p-2 shadow-viv border border-viv-gray-200">
+              <div className="flex items-center space-x-3 bg-background rounded-xl p-2 shadow border border-border">
                 <button
                   onClick={prevSlide}
                   disabled={activeSlide === 0}
-                  className="p-2 rounded-lg bg-viv-gray-100 hover:bg-viv-primary hover:text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 transform hover:scale-105"
+                  className="p-2 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 transform hover:scale-105"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                   </svg>
                 </button>
-                <span className="text-sm font-semibold text-viv-gray-700 px-3 py-1 bg-viv-primary-lighter rounded-lg">
+                <span className="text-sm font-semibold text-muted-foreground px-3 py-1 bg-primary/10 rounded-lg">
                   {activeSlide + 1} / {slidesArray.length}
                 </span>
                 <button
                   onClick={nextSlide}
                   disabled={activeSlide === slidesArray.length - 1}
-                  className="p-2 rounded-lg bg-viv-gray-100 hover:bg-viv-primary hover:text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 transform hover:scale-105"
+                  className="p-2 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 transform hover:scale-105"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -138,11 +267,11 @@ export default function PitchDeckLayout({ title, subtitle, children, slug, headi
         {/* Main Content - Full Width Slides */}
         <div>
           {/* Enhanced Title Slide */}
-          <div className="bg-gradient-viv-hero rounded-3xl shadow-viv-2xl overflow-hidden mb-12 relative">
+          <div className="bg-gradient-viv-hero rounded-3xl shadow-2xl overflow-hidden mb-12 relative">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-10">
-  <div className={`absolute top-0 left-0 w-full h-full bg-[url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")]`}></div>
-</div>
+              <div className={`absolute top-0 left-0 w-full h-full bg-[url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")]`}></div>
+            </div>
 
             <div className="px-12 py-20 text-center relative z-10">
               <div className="max-w-5xl mx-auto">
@@ -220,131 +349,5 @@ export default function PitchDeckLayout({ title, subtitle, children, slug, headi
   );
 }
 
-// Enhanced Slide Component for individual content sections
-export function Slide({ 
-  title, 
-  children, 
-  className = "", 
-  background = "white",
-  id 
-}: {
-  title: string;
-  children: React.ReactNode;
-  className?: string;
-  background?: "white" | "gray" | "gradient" | "glass";
-  id?: string;
-}) {
-  const bgClasses = {
-    white: "bg-white shadow-viv-lg border border-viv-gray-200",
-    gray: "bg-viv-gray-50 shadow-viv-lg border border-viv-gray-200",
-    gradient: "bg-gradient-viv-card shadow-viv-xl border border-viv-gray-200",
-    glass: "bg-white/80 backdrop-blur-md shadow-viv-xl border border-white/20"
-  };
-
-  return (
-    <div 
-      id={id}
-      className={`${bgClasses[background]} rounded-3xl overflow-hidden ${className} animate-scale-in`}
-    >
-      <div className="px-12 py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold gradient-text-primary mb-6 leading-tight">
-            {title}
-          </h2>
-          <div className="w-32 h-1 bg-gradient-viv mx-auto rounded-full shadow-viv-sm"></div>
-        </div>
-        <div className="prose prose-lg max-w-none
-          prose-headings:scroll-mt-24 
-          prose-h1:text-3xl prose-h1:font-bold prose-h1:text-viv-gray-900 prose-h1:mb-6 prose-h1:mt-8
-          prose-h2:text-2xl prose-h2:font-semibold prose-h2:text-viv-gray-800 prose-h2:mb-4 prose-h2:mt-6 prose-h2:border-b prose-h2:border-viv-gray-200 prose-h2:pb-3
-          prose-h3:text-xl prose-h3:font-semibold prose-h3:text-viv-gray-800 prose-h3:mb-3 prose-h3:mt-5
-          prose-h4:text-lg prose-h4:font-medium prose-h4:text-viv-gray-700 prose-h4:mb-3 prose-h4:mt-4
-          prose-p:text-viv-gray-700 prose-p:leading-relaxed prose-p:mb-4
-          prose-ul:text-viv-gray-700 prose-ul:leading-relaxed
-          prose-ol:text-viv-gray-700 prose-ol:leading-relaxed
-          prose-li:text-viv-gray-700 prose-li:leading-relaxed
-          prose-strong:text-viv-gray-900 prose-strong:font-semibold
-          prose-code:text-viv-primary prose-code:bg-viv-primary-lighter prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm
-          prose-pre:bg-viv-gray-900 prose-pre:text-viv-gray-100 prose-pre:p-6 prose-pre:rounded-xl prose-pre:shadow-viv-lg
-          prose-blockquote:border-l-4 prose-blockquote:border-viv-primary prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-viv-gray-700
-          prose-a:text-viv-primary prose-a:font-medium prose-a:no-underline hover:prose-a:underline
-          prose-table:border-collapse prose-table:w-full
-          prose-th:bg-viv-gray-100 prose-th:text-viv-gray-900 prose-th:font-semibold prose-th:p-3 prose-th:border prose-th:border-viv-gray-300
-          prose-td:p-3 prose-td:border prose-td:border-viv-gray-300 prose-td:text-viv-gray-700"
-        >
-          {children}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-// Enhanced Feature Grid Component
-export function FeatureGrid({ 
-  features, 
-  columns = 3 
-}: {
-  features: Array<{
-    icon: React.ReactNode;
-    title: string;
-    description: string;
-    color?: string;
-  }>;
-  columns?: 2 | 3;
-}) {
-  const gridCols = columns === 2 ? 'md:grid-cols-2' : 'md:grid-cols-3';
-
-  return (
-    <div className={`grid grid-cols-1 ${gridCols} gap-8`}>
-      {features.map((feature, index) => (
-        <div 
-          key={index}
-          className="card-hover bg-white rounded-2xl p-8 border border-viv-gray-200 shadow-viv-md hover:shadow-viv-xl transition-all duration-300 animate-slide-up"
-          style={{ animationDelay: `${index * 100}ms` }}
-        >
-          <div className="flex items-center justify-center w-16 h-16 bg-gradient-viv rounded-2xl mb-6 mx-auto">
-            <div className="text-white text-2xl">
-              {feature.icon}
-            </div>
-          </div>
-          <h3 className="text-xl font-semibold text-viv-gray-900 mb-4 text-center">
-            {feature.title}
-          </h3>
-          <p className="text-viv-gray-600 leading-relaxed text-center">
-            {feature.description}
-          </p>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-// Enhanced Stats Component
-export function Stats({ 
-  stats 
-}: {
-  stats: Array<{
-    number: string;
-    label: string;
-    color?: string;
-  }>;
-}) {
-  return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-      {stats.map((stat, index) => (
-        <div 
-          key={index}
-          className="text-center animate-bounce-in"
-          style={{ animationDelay: `${index * 150}ms` }}
-        >
-          <div className="text-4xl md:text-5xl font-bold gradient-text-primary mb-2">
-            {stat.number}
-          </div>
-          <div className="text-viv-gray-600 font-medium">
-            {stat.label}
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-} 
+export { Slide, FeatureGrid, Stats };
+       

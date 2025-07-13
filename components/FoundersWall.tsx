@@ -1,47 +1,43 @@
 import React from 'react';
 
 const founders = [
-  { name: 'Priya Sharma', role: 'AI/ML Startup', location: 'Bangalore', avatar: '👩‍💻' },
-  { name: 'Rahul Kumar', role: 'FinTech Innovation', location: 'Bangalore', avatar: '👨‍💼' },
-  { name: 'Anjali Patel', role: 'HealthTech Pioneer', location: 'Bangalore', avatar: '👩‍⚕️' },
-  { name: 'Vikram Singh', role: 'EdTech Visionary', location: 'Bangalore', avatar: '👨‍🎓' },
-  { name: 'Meera Reddy', role: 'E-commerce Disruptor', location: 'Bangalore', avatar: '👩‍🛒' },
-  { name: 'Arjun Menon', role: 'EdTech Builder', location: 'Bangalore', avatar: '👨‍💻' },
-  { name: 'Kavya Iyer', role: 'CleanTech Innovator', location: 'Bangalore', avatar: '👩‍🌱' },
-  { name: 'Aditya Rao', role: 'Logistics Tech', location: 'Bangalore', avatar: '👨‍🚚' },
-  { name: 'Zara Khan', role: 'Social Impact', location: 'Bangalore', avatar: '👩‍❤️' },
-  { name: 'Rohan Gupta', role: 'Gaming & Entertainment', location: 'Bangalore', avatar: '👨‍🎮' },
-  { name: 'Nisha Verma', role: 'Real Estate Tech', location: 'Bangalore', avatar: '👩‍🏠' },
-  { name: 'Karthik Nair', role: 'Cybersecurity Expert', location: 'Bangalore', avatar: '👨‍🔒' },
+  { name: 'Priya Sharma', role: 'EdTech Founder', location: 'HSR Layout', avatar: '👩‍💼' },
+  { name: 'Rajesh Kumar', role: 'SaaS Builder', location: 'Whitefield', avatar: '👨‍💻' },
+  { name: 'Anjali Patel', role: 'AI Innovator', location: 'HSR Layout', avatar: '👩‍🔬' },
+  { name: 'Vikram Singh', role: 'Product Leader', location: 'Whitefield', avatar: '👨‍🎯' },
+  { name: 'Meera Reddy', role: 'Growth Hacker', location: 'HSR Layout', avatar: '👩‍🚀' },
+  { name: 'Arjun Malhotra', role: 'Tech Architect', location: 'Whitefield', avatar: '👨‍🏗️' },
+  { name: 'Kavya Iyer', role: 'UX Designer', location: 'HSR Layout', avatar: '👩‍🎨' },
+  { name: 'Rahul Verma', role: 'Data Scientist', location: 'Whitefield', avatar: '👨‍📊' },
 ];
 
 export default function FoundersWall() {
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+    <section className="py-20 bg-gradient-to-br from-muted/50 to-background">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Meet Our Legendary Founders</h2>
-          <p className="text-lg text-gray-600">The first 100 visionaries building the future from Bangalore</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Meet Our Legendary Founders</h2>
+          <p className="text-lg text-muted-foreground">The first 100 visionaries building the future from Bangalore</p>
         </div>
         
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {founders.map((founder, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center group">
+            <div key={index} className="bg-background rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center group border border-border">
               <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
                 {founder.avatar}
               </div>
-              <h3 className="font-semibold text-gray-900 mb-1">{founder.name}</h3>
-              <p className="text-sm text-indigo-600 mb-1">{founder.role}</p>
-              <p className="text-xs text-gray-500">{founder.location}</p>
+              <h3 className="font-semibold text-foreground mb-1">{founder.name}</h3>
+              <p className="text-sm text-primary mb-1">{founder.role}</p>
+              <p className="text-xs text-muted-foreground">{founder.location}</p>
             </div>
           ))}
         </div>
         
         <div className="text-center mt-12">
-          <p className="text-gray-600 mb-4">More legendary founders joining every week...</p>
-          <div className="inline-flex items-center space-x-2 bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full">
+          <p className="text-muted-foreground mb-4">More legendary founders joining every week...</p>
+          <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full">
             <span className="text-sm font-medium">100 spots available</span>
-            <span className="bg-indigo-600 text-white text-xs px-2 py-1 rounded-full">Limited</span>
+            <span className="bg-primary text-primary-foreground text-xs px-2 py-1 rounded-full">Limited</span>
           </div>
         </div>
       </div>
