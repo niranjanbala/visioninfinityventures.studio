@@ -10,6 +10,8 @@ interface ContentPage {
   slug: string;
   description: string;
   category: string;
+  priority?: 'high' | 'medium' | 'low';
+  tags?: string[];
 }
 
 interface ContentIndexProps {
@@ -18,6 +20,12 @@ interface ContentIndexProps {
 }
 
 export default function ContentIndex({ newContent, originalContent }: ContentIndexProps) {
+  // Sort content by priority
+  const sortedContent = [...newContent].sort((a, b) => {
+    const priorityOrder = { high: 3, medium: 2, low: 1 };
+    return (priorityOrder[b.priority || 'low'] || 0) - (priorityOrder[a.priority || 'low'] || 0);
+  });
+
   return (
     <>
       <Head>
@@ -34,17 +42,72 @@ export default function ContentIndex({ newContent, originalContent }: ContentInd
               Content Library
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive resources for startup founders in Bangalore. Choose from our consolidated guides or explore detailed content by category.
+              Comprehensive resources for startup founders in Bangalore. Start with our recommended guides for idea-stage entrepreneurs.
             </p>
           </div>
 
-          {/* New Consolidated Content */}
+          {/* Priority Content Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              🚀 Consolidated Guides
+              🚀 Start Here - Recommended for Idea-Stage Entrepreneurs
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {newContent.map((page) => (
+              {sortedContent.filter(page => page.priority === 'high').map((page) => (
+                <Link 
+                  key={page.slug} 
+                  href={`/content/${page.slug}`}
+                  className="group block"
+                >
+                  <div className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 h-full border-2 border-indigo-200 hover:border-indigo-400 relative">
+                    {/* Priority Badge */}
+                    <div className="absolute -top-3 -right-3 bg-indigo-600 text-white px-3 py-1 rounded-full text-xs font-bold">
+                      PRIORITY
+                    </div>
+                    
+                    <div className="flex items-center mb-4">
+                      <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">
+                        <span className="text-2xl">
+                          {page.category === 'track' && '🛤️'}
+                          {page.category === 'industry' && '🏭'}
+                          {page.category === 'location' && '📍'}
+                          {page.category === 'resources' && '🛠️'}
+                        </span>
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">
+                          {page.title}
+                        </h3>
+                        <div className="flex flex-wrap gap-1 mt-1">
+                          {page.tags?.map((tag, index) => (
+                            <span key={index} className="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded-full">
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {page.description}
+                    </p>
+                    <div className="mt-4 flex items-center text-indigo-600 text-sm font-medium">
+                      Start Here
+                      <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Other Consolidated Content */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              📚 Additional Guides & Resources
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {sortedContent.filter(page => page.priority !== 'high').map((page) => (
                 <Link 
                   key={page.slug} 
                   href={`/content/${page.slug}`}
@@ -87,7 +150,7 @@ export default function ContentIndex({ newContent, originalContent }: ContentInd
           {/* Original Content */}
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              📚 Detailed Content Library
+              📖 Detailed Content Library
             </h2>
             <div className="bg-white rounded-xl shadow-lg p-6">
               <p className="text-gray-600 mb-6 text-center">
@@ -122,24 +185,30 @@ export default function ContentIndex({ newContent, originalContent }: ContentInd
           </div>
 
           {/* Quick Start Section */}
-          <div className="mt-16 bg-blue-600 rounded-xl p-8 text-white">
+          <div className="mt-16 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-xl p-8 text-white">
             <div className="text-center">
               <h2 className="text-3xl font-bold mb-4">
                 Ready to Start Your Journey?
               </h2>
               <p className="text-xl mb-6 opacity-90">
-                Choose your path and begin building your startup today
+                Begin with our recommended guides for idea-stage entrepreneurs
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link 
                   href="/content/diy-founder-track"
-                  className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Start with DIY Guide
                 </Link>
                 <Link 
+                  href="/content/education-industry-guide"
+                  className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+                >
+                  Education Industry Guide
+                </Link>
+                <Link 
                   href="/content/resources"
-                  className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                  className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
                 >
                   Download Templates
                 </Link>
@@ -153,49 +222,63 @@ export default function ContentIndex({ newContent, originalContent }: ContentInd
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  // New consolidated content
+  // New consolidated content with priority ordering
   const newContent: ContentPage[] = [
     {
       title: "DIY Founder Track",
       slug: "diy-founder-track",
       description: "Complete guide for entrepreneurs building independently with minimal external support.",
-      category: "track"
-    },
-    {
-      title: "Fractional Support Track",
-      slug: "fractional-support-track",
-      description: "Guide for accessing senior-level expertise on a part-time basis.",
-      category: "track"
+      category: "track",
+      priority: "high",
+      tags: ["DIY", "Idea Stage", "Recommended"]
     },
     {
       title: "Education Industry Guide",
       slug: "education-industry-guide",
       description: "Comprehensive strategies for EdTech startups and educational services.",
-      category: "industry"
-    },
-    {
-      title: "SaaS B2B Guide",
-      slug: "saas-b2b-guide",
-      description: "Complete guide for Software-as-a-Service companies targeting businesses.",
-      category: "industry"
+      category: "industry",
+      priority: "high",
+      tags: ["Education", "Idea Stage", "Priority"]
     },
     {
       title: "HSR Layout Guide",
       slug: "hsr-layout-guide",
       description: "Everything you need to know about setting up in HSR Layout startup hub.",
-      category: "location"
+      category: "location",
+      priority: "high",
+      tags: ["HSR", "Location", "Priority"]
     },
     {
       title: "Whitefield Guide",
       slug: "whitefield-guide",
       description: "Complete resource for establishing in Bangalore's premier IT corridor.",
-      category: "location"
+      category: "location",
+      priority: "medium",
+      tags: ["Whitefield", "Location"]
+    },
+    {
+      title: "SaaS B2B Guide",
+      slug: "saas-b2b-guide",
+      description: "Complete guide for Software-as-a-Service companies targeting businesses.",
+      category: "industry",
+      priority: "medium",
+      tags: ["SaaS", "B2B"]
+    },
+    {
+      title: "Fractional Support Track",
+      slug: "fractional-support-track",
+      description: "Guide for accessing senior-level expertise on a part-time basis.",
+      category: "track",
+      priority: "medium",
+      tags: ["Fractional", "Support"]
     },
     {
       title: "Resources & Templates",
       slug: "resources",
       description: "Complete collection of templates, tools, and practical resources.",
-      category: "resources"
+      category: "resources",
+      priority: "medium",
+      tags: ["Templates", "Tools"]
     }
   ];
 
