@@ -7,6 +7,11 @@ import Timeline from '../components/Timeline';
 import Studios from '../components/Studios';
 import HubSpotForm from '../components/HubSpotForm';
 import Link from 'next/link';
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Select, SelectTrigger, SelectContent, SelectItem, SelectValue } from "@/components/ui/select";
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -263,7 +268,7 @@ export default function Home() {
                   <h3 className="text-2xl font-semibold text-gray-900 mb-4">What type of founder are you?</h3>
                   <p className="text-gray-600 mb-8">Choose the approach that best describes your style</p>
                   <div className="grid md:grid-cols-2 gap-6">
-                    <button
+                    <Button
                       type="button"
                       onClick={() => {
                         setFormData({ ...formData, founderType: 'diy-founder' });
@@ -280,9 +285,9 @@ export default function Home() {
                         <h4 className="text-lg font-semibold text-gray-900">Do It Yourself Founder</h4>
                       </div>
                       <p className="text-gray-600">I want to do everything myself, maximize learning, and minimize cash burn.</p>
-                    </button>
+                    </Button>
                     
-                    <button
+                    <Button
                       type="button"
                       onClick={() => {
                         setFormData({ ...formData, founderType: 'fractional-support' });
@@ -299,7 +304,7 @@ export default function Home() {
                         <h4 className="text-lg font-semibold text-gray-900">Fractional Support</h4>
                       </div>
                       <p className="text-gray-600">I want expert support for specific functions while maintaining control.</p>
-                    </button>
+                    </Button>
                   </div>
                 </div>
               )}
@@ -310,7 +315,7 @@ export default function Home() {
                   <h3 className="text-2xl font-semibold text-gray-900 mb-4">What stage is your startup in?</h3>
                   <p className="text-gray-600 mb-8">Select the phase that best describes your current situation</p>
                   <div className="grid md:grid-cols-2 gap-6">
-                    <button
+                    <Button
                       type="button"
                       onClick={() => {
                         setFormData({ ...formData, stage: 'idea-stage' });
@@ -327,9 +332,9 @@ export default function Home() {
                         <h4 className="text-lg font-semibold text-gray-900">Idea Stage</h4>
                       </div>
                       <p className="text-gray-600">I have an idea and want to validate it before building an MVP.</p>
-                    </button>
+                    </Button>
                     
-                    <button
+                    <Button
                       type="button"
                       onClick={() => {
                         setFormData({ ...formData, stage: 'mvp-stage' });
@@ -346,7 +351,7 @@ export default function Home() {
                         <h4 className="text-lg font-semibold text-gray-900">MVP Stage</h4>
                       </div>
                       <p className="text-gray-600">I have an MVP and want to achieve product-market fit.</p>
-                    </button>
+                    </Button>
                   </div>
                 </div>
               )}
@@ -357,7 +362,7 @@ export default function Home() {
                   <h3 className="text-2xl font-semibold text-gray-900 mb-4">What industry are you in?</h3>
                   <p className="text-gray-600 mb-8">Select the sector that best matches your business</p>
                   <div className="grid md:grid-cols-2 gap-6">
-                    <button
+                    <Button
                       type="button"
                       onClick={() => {
                         setFormData({ ...formData, industry: 'education' });
@@ -374,9 +379,9 @@ export default function Home() {
                         <h4 className="text-lg font-semibold text-gray-900">Education</h4>
                       </div>
                       <p className="text-gray-600">EdTech, online learning, educational products and services.</p>
-                    </button>
+                    </Button>
                     
-                    <button
+                    <Button
                       type="button"
                       onClick={() => {
                         setFormData({ ...formData, industry: 'saas-b2b' });
@@ -393,7 +398,7 @@ export default function Home() {
                         <h4 className="text-lg font-semibold text-gray-900">SaaS B2B</h4>
                       </div>
                       <p className="text-gray-600">Software-as-a-Service for business customers.</p>
-                    </button>
+                    </Button>
                   </div>
                 </div>
               )}
@@ -404,7 +409,7 @@ export default function Home() {
                   <h3 className="text-2xl font-semibold text-gray-900 mb-4">Where are you located?</h3>
                   <p className="text-gray-600 mb-8">Select your primary location in Bangalore</p>
                   <div className="grid md:grid-cols-2 gap-6">
-                    <button
+                    <Button
                       type="button"
                       onClick={() => {
                         setFormData({ ...formData, location: 'hsr-layout' });
@@ -422,9 +427,9 @@ export default function Home() {
                         <h4 className="text-lg font-semibold text-gray-900">HSR Layout</h4>
                       </div>
                       <p className="text-gray-600">HSR Layout and surrounding areas in South Bangalore.</p>
-                    </button>
+                    </Button>
                     
-                    <button
+                    <Button
                       type="button"
                       onClick={() => {
                         setFormData({ ...formData, location: 'whitefield' });
@@ -442,7 +447,7 @@ export default function Home() {
                         <h4 className="text-lg font-semibold text-gray-900">Whitefield</h4>
                       </div>
                       <p className="text-gray-600">Whitefield and surrounding areas in East Bangalore.</p>
-                    </button>
+                    </Button>
                   </div>
                 </div>
               )}
@@ -453,7 +458,7 @@ export default function Home() {
                   <h3 className="text-2xl font-semibold text-gray-900 mb-4">How do you prefer to receive guidance?</h3>
                   <p className="text-gray-600 mb-8">Choose your preferred delivery method</p>
                   <div className="grid md:grid-cols-2 gap-6">
-                    <button
+                    <Button
                       type="button"
                       onClick={() => {
                         setFormData({ ...formData, deliveryMedium: 'offline' });
@@ -470,9 +475,9 @@ export default function Home() {
                         <h4 className="text-lg font-semibold text-gray-900">Offline</h4>
                       </div>
                       <p className="text-gray-600">In-person meetings, workshops, and local community events.</p>
-                    </button>
+                    </Button>
                     
-                    <button
+                    <Button
                       type="button"
                       onClick={() => {
                         setFormData({ ...formData, deliveryMedium: 'online' });
@@ -489,7 +494,7 @@ export default function Home() {
                         <h4 className="text-lg font-semibold text-gray-900">Online</h4>
                       </div>
                       <p className="text-gray-600">Virtual meetings, online courses, and digital resources.</p>
-                    </button>
+                    </Button>
                   </div>
                 </div>
               )}
@@ -500,7 +505,7 @@ export default function Home() {
                   <h3 className="text-2xl font-semibold text-gray-900 mb-4">How proficient are you in Technology & AI?</h3>
                   <p className="text-gray-600 mb-8">Rate your technical skills and AI knowledge</p>
                   <div className="grid md:grid-cols-3 gap-6">
-                    <button
+                    <Button
                       type="button"
                       onClick={() => {
                         setFormData({ ...formData, technologySkill: 'beginner' });
@@ -515,9 +520,9 @@ export default function Home() {
                       </div>
                       <h4 className="text-lg font-semibold text-gray-900 mb-2">Beginner</h4>
                       <p className="text-sm text-gray-600">Basic understanding, need guidance</p>
-                    </button>
+                    </Button>
                     
-                    <button
+                    <Button
                       type="button"
                       onClick={() => {
                         setFormData({ ...formData, technologySkill: 'intermediate' });
@@ -532,9 +537,9 @@ export default function Home() {
                       </div>
                       <h4 className="text-lg font-semibold text-gray-900 mb-2">Intermediate</h4>
                       <p className="text-sm text-gray-600">Some experience, can work independently</p>
-                    </button>
+                    </Button>
                     
-                    <button
+                    <Button
                       type="button"
                       onClick={() => {
                         setFormData({ ...formData, technologySkill: 'advanced' });
@@ -549,7 +554,7 @@ export default function Home() {
                       </div>
                       <h4 className="text-lg font-semibold text-gray-900 mb-2">Advanced</h4>
                       <p className="text-sm text-gray-600">Expert level, can lead technical decisions</p>
-                    </button>
+                    </Button>
                   </div>
                 </div>
               )}
@@ -560,7 +565,7 @@ export default function Home() {
                   <h3 className="text-2xl font-semibold text-gray-900 mb-4">How proficient are you in Marketing?</h3>
                   <p className="text-gray-600 mb-8">Rate your marketing and growth skills</p>
                   <div className="grid md:grid-cols-3 gap-6">
-                    <button
+                    <Button
                       type="button"
                       onClick={() => {
                         setFormData({ ...formData, marketingSkill: 'beginner' });
@@ -575,9 +580,9 @@ export default function Home() {
                       </div>
                       <h4 className="text-lg font-semibold text-gray-900 mb-2">Beginner</h4>
                       <p className="text-sm text-gray-600">Basic understanding, need guidance</p>
-                    </button>
+                    </Button>
                     
-                    <button
+                    <Button
                       type="button"
                       onClick={() => {
                         setFormData({ ...formData, marketingSkill: 'intermediate' });
@@ -592,9 +597,9 @@ export default function Home() {
                       </div>
                       <h4 className="text-lg font-semibold text-gray-900 mb-2">Intermediate</h4>
                       <p className="text-sm text-gray-600">Some experience, can work independently</p>
-                    </button>
+                    </Button>
                     
-                    <button
+                    <Button
                       type="button"
                       onClick={() => {
                         setFormData({ ...formData, marketingSkill: 'advanced' });
@@ -609,7 +614,7 @@ export default function Home() {
                       </div>
                       <h4 className="text-lg font-semibold text-gray-900 mb-2">Advanced</h4>
                       <p className="text-sm text-gray-600">Expert level, can lead marketing strategy</p>
-                    </button>
+                    </Button>
                   </div>
                 </div>
               )}
@@ -620,7 +625,7 @@ export default function Home() {
                   <h3 className="text-2xl font-semibold text-gray-900 mb-4">How proficient are you in Sales?</h3>
                   <p className="text-gray-600 mb-8">Rate your sales and business development skills</p>
                   <div className="grid md:grid-cols-3 gap-6">
-                    <button
+                    <Button
                       type="button"
                       onClick={() => {
                         setFormData({ ...formData, salesSkill: 'beginner' });
@@ -635,9 +640,9 @@ export default function Home() {
                       </div>
                       <h4 className="text-lg font-semibold text-gray-900 mb-2">Beginner</h4>
                       <p className="text-sm text-gray-600">Basic understanding, need guidance</p>
-                    </button>
+                    </Button>
                     
-                    <button
+                    <Button
                       type="button"
                       onClick={() => {
                         setFormData({ ...formData, salesSkill: 'intermediate' });
@@ -652,9 +657,9 @@ export default function Home() {
                       </div>
                       <h4 className="text-lg font-semibold text-gray-900 mb-2">Intermediate</h4>
                       <p className="text-sm text-gray-600">Some experience, can work independently</p>
-                    </button>
+                    </Button>
                     
-                    <button
+                    <Button
                       type="button"
                       onClick={() => {
                         setFormData({ ...formData, salesSkill: 'advanced' });
@@ -669,7 +674,7 @@ export default function Home() {
                       </div>
                       <h4 className="text-lg font-semibold text-gray-900 mb-2">Advanced</h4>
                       <p className="text-sm text-gray-600">Expert level, can lead sales strategy</p>
-                    </button>
+                    </Button>
                   </div>
                 </div>
               )}
@@ -680,7 +685,7 @@ export default function Home() {
                   <h3 className="text-2xl font-semibold text-gray-900 mb-4">How proficient are you in Product Management?</h3>
                   <p className="text-gray-600 mb-8">Rate your product strategy and management skills</p>
                   <div className="grid md:grid-cols-3 gap-6">
-                    <button
+                    <Button
                       type="button"
                       onClick={() => {
                         setFormData({ ...formData, productSkill: 'beginner' });
@@ -695,9 +700,9 @@ export default function Home() {
                       </div>
                       <h4 className="text-lg font-semibold text-gray-900 mb-2">Beginner</h4>
                       <p className="text-sm text-gray-600">Basic understanding, need guidance</p>
-                    </button>
+                    </Button>
                     
-                    <button
+                    <Button
                       type="button"
                       onClick={() => {
                         setFormData({ ...formData, productSkill: 'intermediate' });
@@ -712,9 +717,9 @@ export default function Home() {
                       </div>
                       <h4 className="text-lg font-semibold text-gray-900 mb-2">Intermediate</h4>
                       <p className="text-sm text-gray-600">Some experience, can work independently</p>
-                    </button>
+                    </Button>
                     
-                    <button
+                    <Button
                       type="button"
                       onClick={() => {
                         setFormData({ ...formData, productSkill: 'advanced' });
@@ -729,7 +734,7 @@ export default function Home() {
                       </div>
                       <h4 className="text-lg font-semibold text-gray-900 mb-2">Advanced</h4>
                       <p className="text-sm text-gray-600">Expert level, can lead product strategy</p>
-                    </button>
+                    </Button>
                   </div>
                 </div>
               )}
@@ -740,7 +745,7 @@ export default function Home() {
                   <h3 className="text-2xl font-semibold text-gray-900 mb-4">How proficient are you in Design?</h3>
                   <p className="text-gray-600 mb-8">Rate your UX/UI and design skills</p>
                   <div className="grid md:grid-cols-3 gap-6">
-                    <button
+                    <Button
                       type="button"
                       onClick={() => {
                         setFormData({ ...formData, designSkill: 'beginner' });
@@ -755,9 +760,9 @@ export default function Home() {
                       </div>
                       <h4 className="text-lg font-semibold text-gray-900 mb-2">Beginner</h4>
                       <p className="text-sm text-gray-600">Basic understanding, need guidance</p>
-                    </button>
+                    </Button>
                     
-                    <button
+                    <Button
                       type="button"
                       onClick={() => {
                         setFormData({ ...formData, designSkill: 'intermediate' });
@@ -772,9 +777,9 @@ export default function Home() {
                       </div>
                       <h4 className="text-lg font-semibold text-gray-900 mb-2">Intermediate</h4>
                       <p className="text-sm text-gray-600">Some experience, can work independently</p>
-                    </button>
+                    </Button>
                     
-                    <button
+                    <Button
                       type="button"
                       onClick={() => {
                         setFormData({ ...formData, designSkill: 'advanced' });
@@ -789,7 +794,7 @@ export default function Home() {
                       </div>
                       <h4 className="text-lg font-semibold text-gray-900 mb-2">Advanced</h4>
                       <p className="text-sm text-gray-600">Expert level, can lead design strategy</p>
-                    </button>
+                    </Button>
                   </div>
                 </div>
               )}
@@ -810,22 +815,22 @@ export default function Home() {
               {/* Navigation Buttons */}
               {currentStep < 9 && (
                 <div className="flex justify-between items-center pt-8">
-                  <button
+                  <Button
                     type="button"
                     onClick={prevStep}
                     disabled={currentStep === 0}
                     className="px-6 py-3 text-gray-600 hover:text-gray-900 disabled:opacity-50 disabled:cursor-not-allowed font-medium"
                   >
                     ← Back
-                  </button>
+                  </Button>
                   
-                  <button
+                  <Button
                     type="button"
                     onClick={nextStep}
                     className="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium"
                   >
                     Next →
-                  </button>
+                  </Button>
                 </div>
               )}
             </form>
@@ -848,15 +853,15 @@ export default function Home() {
             how startups are created and scaled in Bangalore.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="#persona-selection"
+            <Button 
+              onClick={() => window.location.href = '#persona-selection'}
               className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors shadow-sm"
             >
               Start Your Journey
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </a>
+            </Button>
             <Link 
               href="/pitch-deck" 
               className="inline-flex items-center px-8 py-4 bg-indigo-700 text-white font-semibold rounded-lg hover:bg-indigo-800 transition-colors"
