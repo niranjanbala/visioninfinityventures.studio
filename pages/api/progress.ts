@@ -32,7 +32,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // If no progress exists, create initial progress
     if (progress.length === 0) {
       const progressRecords = [];
-      for (let phase = 1; phase <= 12; phase++) {
+      for (let phase = 1; phase <= 10; phase++) {
         progressRecords.push({
           userId,
           phase,

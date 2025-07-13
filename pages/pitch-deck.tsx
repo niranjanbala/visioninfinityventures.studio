@@ -113,7 +113,7 @@ const PitchDeckPage = () => {
                 <div className="flex items-center">
                   <div className="text-4xl mr-4">🗺️</div>
                   <div>
-                    <h4 className="font-semibold">12-Phase Journey</h4>
+                    <h4 className="font-semibold">10-Phase Journey</h4>
                     <p className="text-sm text-gray-600">Complete roadmap from idea to success</p>
                   </div>
                 </div>
@@ -375,7 +375,7 @@ const PitchDeckPage = () => {
                 </div>
                 <div className="bg-green-50 p-4 rounded-lg">
                   <h4 className="font-semibold text-green-800">Complete Ecosystem</h4>
-                  <p className="text-sm text-green-600">12-phase journey, tools, networks</p>
+                  <p className="text-sm text-green-600">10-phase journey, tools, networks</p>
                 </div>
                 <div className="bg-green-50 p-4 rounded-lg">
                   <h4 className="font-semibold text-green-800">Proven Methodology</h4>

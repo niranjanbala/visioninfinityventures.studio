@@ -76,7 +76,7 @@ model VerificationToken {
 model Progress {
   id          String   @id @default(cuid())
   userId      String
-  phase       Int      // 1-12 phases
+  phase       Int      // 1-10 phases
   status      ProgressStatus @default(NOT_STARTED)
   startDate   DateTime?
   completedDate DateTime?

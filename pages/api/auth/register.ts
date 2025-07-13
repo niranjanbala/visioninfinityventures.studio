@@ -49,9 +49,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       },
     });
 
-    // Create initial progress records for all 12 phases
+    // Create initial progress records for all 10 phases
     const progressRecords = [];
-    for (let phase = 1; phase <= 12; phase++) {
+    for (let phase = 1; phase <= 10; phase++) {
       progressRecords.push({
         userId: user.id,
         phase,

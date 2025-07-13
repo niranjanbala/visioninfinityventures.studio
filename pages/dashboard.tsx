@@ -164,7 +164,7 @@ export default function Dashboard() {
                 </div>
               </div>
               <span className="text-sm font-medium text-gray-600">
-                {completedPhases}/12 phases completed
+                {completedPhases}/10 phases completed
               </span>
             </div>
           </div>

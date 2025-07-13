@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Script to create comprehensive individual persona documents
-Combines 12-phase journey, AI-focused checklists, and funding requirements
+Combines 10-phase journey, AI-focused checklists, and funding requirements
 """
 
 import os
@@ -105,12 +105,12 @@ def create_persona_document(persona):
     document = f"""# {display_name} - Complete Guide
 
 ## Overview
-This comprehensive guide provides everything you need to know as a {display_name} in the Vision Infinity Ventures ecosystem. It combines your 12-phase journey roadmap, AI-focused people and tools requirements, and detailed funding considerations.
+This comprehensive guide provides everything you need to know as a {display_name} in the Vision Infinity Ventures ecosystem. It combines your 10-phase journey roadmap, AI-focused people and tools requirements, and detailed funding considerations.
 
 ---
 
 ## Table of Contents
-1. [12-Phase Journey Roadmap](#12-phase-journey-roadmap)
+1. [10-Phase Journey Roadmap](#10-phase-journey-roadmap)
 2. [AI-Focused People & Tools Checklist](#ai-focused-people--tools-checklist)
 3. [Funding Requirements & Budget](#funding-requirements--budget)
 4. [Success Metrics & KPIs](#success-metrics--kpis)
@@ -119,7 +119,7 @@ This comprehensive guide provides everything you need to know as a {display_name
 
 ---
 
-## 12-Phase Journey Roadmap
+## 10-Phase Journey Roadmap
 
 {journey_content}
 
@@ -269,7 +269,7 @@ def create_index_document(created_files):
     index_content = """# Vision Infinity Ventures - Persona Documents Index
 
 ## Overview
-This directory contains comprehensive guides for each founder persona in the Vision Infinity Ventures ecosystem. Each document combines the 12-phase journey, AI-focused requirements, and funding considerations into a single, actionable guide.
+This directory contains comprehensive guides for each founder persona in the Vision Infinity Ventures ecosystem. Each document combines the 10-phase journey, AI-focused requirements, and funding considerations into a single, actionable guide.
 
 ---
 
@@ -308,7 +308,7 @@ This directory contains comprehensive guides for each founder persona in the Vis
 
 Each persona document contains:
 
-1. **12-Phase Journey Roadmap**: Detailed step-by-step execution plan
+1. **10-Phase Journey Roadmap**: Detailed step-by-step execution plan
 2. **AI-Focused People & Tools Checklist**: Specific requirements for AI implementation
 3. **Funding Requirements & Budget**: Complete financial planning including personal expenses
 4. **Success Metrics & KPIs**: Measurable outcomes for each phase

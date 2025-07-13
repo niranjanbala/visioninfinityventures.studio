@@ -139,7 +139,7 @@ export default function Home() {
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">Our Bangalore Advantage</h3>
                   <p className="text-gray-600 leading-relaxed">
                     First-mover advantage in Bangalore&apos;s systematic venture studio platform. AI-powered personalization, 
-                    proven 12-phase methodology, deep local network effects, and open source architecture.
+                    proven 10-phase methodology, deep local network effects, and open source architecture.
                   </p>
                 </div>
               </div>
@@ -237,7 +237,7 @@ export default function Home() {
               Start Your Journey
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Tell us about yourself and get a personalized 12-phase roadmap tailored to your specific journey.
+              Tell us about yourself and get a personalized 10-phase roadmap tailored to your specific journey.
             </p>
           </div>
           
@@ -798,7 +798,7 @@ export default function Home() {
               {currentStep === 9 && (
                 <div className="text-center">
                   <h3 className="text-2xl font-semibold text-gray-900 mb-4">Get Your Personalized Roadmap</h3>
-                  <p className="text-gray-600 mb-8">Enter your details to receive your customized 12-phase journey</p>
+                  <p className="text-gray-600 mb-8">Enter your details to receive your customized 10-phase journey</p>
                   
                   <HubSpotForm 
                     formData={formData} 

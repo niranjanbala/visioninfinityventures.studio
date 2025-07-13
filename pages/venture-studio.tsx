@@ -107,7 +107,7 @@ const VentureStudioLanding = () => {
     <>
       <Head>
         <title>{getPersonaTitle()} - Vision Infinity Ventures</title>
-        <meta name="description" content={`Personalized venture studio program for ${getPersonaTitle()}. Get your customized 12-phase roadmap, AI tools, and funding guidance.`} />
+        <meta name="description" content={`Personalized venture studio program for ${getPersonaTitle()}. Get your customized 10-phase roadmap, AI tools, and funding guidance.`} />
         <meta name="keywords" content="venture studio, startup, entrepreneur, funding, AI tools" />
         <meta property="og:title" content={`${getPersonaTitle()} - Vision Infinity Ventures`} />
         <meta property="og:description" content={`Personalized venture studio program for ${getPersonaTitle()}.`} />
@@ -295,7 +295,7 @@ const VentureStudioLanding = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Personalized Roadmaps</h3>
                 <p className="text-gray-300">
-                  Every founder gets a customized 12-phase journey tailored to their specific stage, industry, and location. 
+                  Every founder gets a customized 10-phase journey tailored to their specific stage, industry, and location. 
                   No more one-size-fits-all approaches.
                 </p>
               </div>
@@ -342,7 +342,7 @@ const VentureStudioLanding = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
                 <div className="text-4xl mb-4">📋</div>
-                <h3 className="text-lg font-semibold text-white mb-3">12-Phase Roadmap</h3>
+                <h3 className="text-lg font-semibold text-white mb-3">10-Phase Roadmap</h3>
                 <p className="text-sm text-gray-300">Step-by-step execution plan tailored to your journey</p>
               </div>
               
@@ -393,7 +393,7 @@ const VentureStudioLanding = () => {
                       <svg className="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
-                      Personalized 12-phase roadmap
+                      Personalized 10-phase roadmap
                     </li>
                     <li className="flex items-center text-gray-300">
                       <svg className="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">

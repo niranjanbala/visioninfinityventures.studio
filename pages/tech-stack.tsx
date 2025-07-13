@@ -29,7 +29,7 @@ export default function TechStack() {
         {
           name: 'Progress Tracking',
           tools: [
-            { name: 'Custom Dashboard', description: '12-phase journey tracking system', status: 'Current', pricing: 'Free' },
+            { name: 'Custom Dashboard', description: '10-phase journey tracking system', status: 'Current', pricing: 'Free' },
             { name: 'Prisma Database', description: 'Founder progress and milestone tracking', status: 'Current', pricing: 'Free' }
           ]
         }

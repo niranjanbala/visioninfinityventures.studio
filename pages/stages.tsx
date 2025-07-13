@@ -55,9 +55,9 @@ const StagesPage = () => {
                   description: 'Hyperlocal focus on HSR Layout',
                   content: [
                     {
-                      title: '12-Phase Journey',
+                      title: '10-Phase Journey',
                       description: 'Complete roadmap for your startup journey',
-                      path: '/india/karnataka/bangalore/hsr/founder-persona/diy-founder/stage/idea-stage/industry/education/geography/hsr-only/12-phase-journey.md',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/diy-founder/stage/idea-stage/industry/education/geography/hsr-only/10-phase-journey.md',
                       type: 'journey',
                       completed: true
                     },
@@ -89,9 +89,9 @@ const StagesPage = () => {
                   description: 'Focus on other parts of Bangalore',
                   content: [
                     {
-                      title: '12-Phase Journey',
+                      title: '10-Phase Journey',
                       description: 'Complete roadmap for your startup journey',
-                      path: '/india/karnataka/bangalore/hsr/founder-persona/diy-founder/stage/idea-stage/industry/education/geography/bangalore-only/12-phase-journey.md',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/diy-founder/stage/idea-stage/industry/education/geography/bangalore-only/10-phase-journey.md',
                       type: 'journey',
                       completed: true
                     },
@@ -129,9 +129,9 @@ const StagesPage = () => {
                   description: 'Hyperlocal focus on HSR Layout',
                   content: [
                     {
-                      title: '12-Phase Journey',
+                      title: '10-Phase Journey',
                       description: 'Complete roadmap for your startup journey',
-                      path: '/india/karnataka/bangalore/hsr/founder-persona/diy-founder/stage/idea-stage/industry/others/geography/hsr-only/12-phase-journey.md',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/diy-founder/stage/idea-stage/industry/others/geography/hsr-only/10-phase-journey.md',
                       type: 'journey',
                       completed: true
                     },
@@ -163,9 +163,9 @@ const StagesPage = () => {
                   description: 'Focus on other parts of Bangalore',
                   content: [
                     {
-                      title: '12-Phase Journey',
+                      title: '10-Phase Journey',
                       description: 'Complete roadmap for your startup journey',
-                      path: '/india/karnataka/bangalore/hsr/founder-persona/diy-founder/stage/idea-stage/industry/others/geography/bangalore-only/12-phase-journey.md',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/diy-founder/stage/idea-stage/industry/others/geography/bangalore-only/10-phase-journey.md',
                       type: 'journey',
                       completed: true
                     },
@@ -209,9 +209,9 @@ const StagesPage = () => {
                   description: 'Hyperlocal focus on HSR Layout',
                   content: [
                     {
-                      title: '12-Phase Journey',
+                      title: '10-Phase Journey',
                       description: 'Complete roadmap for your startup journey',
-                      path: '/india/karnataka/bangalore/hsr/founder-persona/diy-founder/stage/mvp-stage/industry/education/geography/hsr-only/12-phase-journey.md',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/diy-founder/stage/mvp-stage/industry/education/geography/hsr-only/10-phase-journey.md',
                       type: 'journey',
                       completed: true
                     },
@@ -243,9 +243,9 @@ const StagesPage = () => {
                   description: 'Focus on other parts of Bangalore',
                   content: [
                     {
-                      title: '12-Phase Journey',
+                      title: '10-Phase Journey',
                       description: 'Complete roadmap for your startup journey',
-                      path: '/india/karnataka/bangalore/hsr/founder-persona/diy-founder/stage/mvp-stage/industry/education/geography/bangalore-only/12-phase-journey.md',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/diy-founder/stage/mvp-stage/industry/education/geography/bangalore-only/10-phase-journey.md',
                       type: 'journey',
                       completed: true
                     },
@@ -283,9 +283,9 @@ const StagesPage = () => {
                   description: 'Hyperlocal focus on HSR Layout',
                   content: [
                     {
-                      title: '12-Phase Journey',
+                      title: '10-Phase Journey',
                       description: 'Complete roadmap for your startup journey',
-                      path: '/india/karnataka/bangalore/hsr/founder-persona/diy-founder/stage/mvp-stage/industry/others/geography/hsr-only/12-phase-journey.md',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/diy-founder/stage/mvp-stage/industry/others/geography/hsr-only/10-phase-journey.md',
                       type: 'journey',
                       completed: true
                     },
@@ -317,9 +317,9 @@ const StagesPage = () => {
                   description: 'Focus on other parts of Bangalore',
                   content: [
                     {
-                      title: '12-Phase Journey',
+                      title: '10-Phase Journey',
                       description: 'Complete roadmap for your startup journey',
-                      path: '/india/karnataka/bangalore/hsr/founder-persona/diy-founder/stage/mvp-stage/industry/others/geography/bangalore-only/12-phase-journey.md',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/diy-founder/stage/mvp-stage/industry/others/geography/bangalore-only/10-phase-journey.md',
                       type: 'journey',
                       completed: true
                     },
@@ -369,9 +369,9 @@ const StagesPage = () => {
                   description: 'Hyperlocal focus on HSR Layout',
                   content: [
                     {
-                      title: '12-Phase Journey',
+                      title: '10-Phase Journey',
                       description: 'Complete roadmap for your startup journey',
-                      path: '/india/karnataka/bangalore/hsr/founder-persona/fractional-support/stage/idea-stage/industry/education/geography/hsr-only/12-phase-journey.md',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/fractional-support/stage/idea-stage/industry/education/geography/hsr-only/10-phase-journey.md',
                       type: 'journey',
                       completed: true
                     },
@@ -403,9 +403,9 @@ const StagesPage = () => {
                   description: 'Focus on other parts of Bangalore',
                   content: [
                     {
-                      title: '12-Phase Journey',
+                      title: '10-Phase Journey',
                       description: 'Complete roadmap for your startup journey',
-                      path: '/india/karnataka/bangalore/hsr/founder-persona/fractional-support/stage/idea-stage/industry/education/geography/bangalore-only/12-phase-journey.md',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/fractional-support/stage/idea-stage/industry/education/geography/bangalore-only/10-phase-journey.md',
                       type: 'journey',
                       completed: true
                     },
@@ -443,9 +443,9 @@ const StagesPage = () => {
                   description: 'Hyperlocal focus on HSR Layout',
                   content: [
                     {
-                      title: '12-Phase Journey',
+                      title: '10-Phase Journey',
                       description: 'Complete roadmap for your startup journey',
-                      path: '/india/karnataka/bangalore/hsr/founder-persona/fractional-support/stage/idea-stage/industry/others/geography/hsr-only/12-phase-journey.md',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/fractional-support/stage/idea-stage/industry/others/geography/hsr-only/10-phase-journey.md',
                       type: 'journey',
                       completed: true
                     },
@@ -477,9 +477,9 @@ const StagesPage = () => {
                   description: 'Focus on other parts of Bangalore',
                   content: [
                     {
-                      title: '12-Phase Journey',
+                      title: '10-Phase Journey',
                       description: 'Complete roadmap for your startup journey',
-                      path: '/india/karnataka/bangalore/hsr/founder-persona/fractional-support/stage/idea-stage/industry/others/geography/bangalore-only/12-phase-journey.md',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/fractional-support/stage/idea-stage/industry/others/geography/bangalore-only/10-phase-journey.md',
                       type: 'journey',
                       completed: true
                     },
@@ -523,9 +523,9 @@ const StagesPage = () => {
                   description: 'Hyperlocal focus on HSR Layout',
                   content: [
                     {
-                      title: '12-Phase Journey',
+                      title: '10-Phase Journey',
                       description: 'Complete roadmap for your startup journey',
-                      path: '/india/karnataka/bangalore/hsr/founder-persona/fractional-support/stage/mvp-stage/industry/education/geography/hsr-only/12-phase-journey.md',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/fractional-support/stage/mvp-stage/industry/education/geography/hsr-only/10-phase-journey.md',
                       type: 'journey',
                       completed: true
                     },
@@ -557,9 +557,9 @@ const StagesPage = () => {
                   description: 'Focus on other parts of Bangalore',
                   content: [
                     {
-                      title: '12-Phase Journey',
+                      title: '10-Phase Journey',
                       description: 'Complete roadmap for your startup journey',
-                      path: '/india/karnataka/bangalore/hsr/founder-persona/fractional-support/stage/mvp-stage/industry/education/geography/bangalore-only/12-phase-journey.md',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/fractional-support/stage/mvp-stage/industry/education/geography/bangalore-only/10-phase-journey.md',
                       type: 'journey',
                       completed: true
                     },
@@ -597,9 +597,9 @@ const StagesPage = () => {
                   description: 'Hyperlocal focus on HSR Layout',
                   content: [
                     {
-                      title: '12-Phase Journey',
+                      title: '10-Phase Journey',
                       description: 'Complete roadmap for your startup journey',
-                      path: '/india/karnataka/bangalore/hsr/founder-persona/fractional-support/stage/mvp-stage/industry/others/geography/hsr-only/12-phase-journey.md',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/fractional-support/stage/mvp-stage/industry/others/geography/hsr-only/10-phase-journey.md',
                       type: 'journey',
                       completed: true
                     },
@@ -631,9 +631,9 @@ const StagesPage = () => {
                   description: 'Focus on other parts of Bangalore',
                   content: [
                     {
-                      title: '12-Phase Journey',
+                      title: '10-Phase Journey',
                       description: 'Complete roadmap for your startup journey',
-                      path: '/india/karnataka/bangalore/hsr/founder-persona/fractional-support/stage/mvp-stage/industry/others/geography/bangalore-only/12-phase-journey.md',
+                      path: '/india/karnataka/bangalore/hsr/founder-persona/fractional-support/stage/mvp-stage/industry/others/geography/bangalore-only/10-phase-journey.md',
                       type: 'journey',
                       completed: true
                     },
