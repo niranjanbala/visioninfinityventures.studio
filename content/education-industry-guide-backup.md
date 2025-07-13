@@ -37,7 +37,7 @@ The Education Industry Guide provides comprehensive insights and strategies for 
 ### B2C (Business to Consumer)
 - **Online Courses**: Self-paced learning modules
 - **Live Classes**: Real-time interactive sessions
-- **Tutoring Services**: One-on-one or small group sessions
+- **Tutoring Services**: 1-on-1 or small group sessions
 - **Test Preparation**: Competitive exam coaching
 
 ### B2B (Business to Business)
@@ -123,7 +123,7 @@ The Education Industry Guide provides comprehensive insights and strategies for 
 - International school networks
 - Professional associations
 
-## 12-Phase Journey
+## Phase 12: Phase Journey
 
 ### Phase 1: Ideation & Research (Weeks 1-2)
 - **Market Research**: Analyze competition and opportunities

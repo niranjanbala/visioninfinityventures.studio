@@ -120,7 +120,7 @@ The SaaS B2B Guide provides comprehensive strategies and insights for entreprene
 - **Retention**: Renewal and churn prevention
 - **Advocacy**: Customer referrals and testimonials
 
-## 12-Phase Journey
+## Phase 12: Phase Journey
 
 ### Phase 1: Market Research & Validation (Weeks 1-4)
 - **Market Analysis**: Industry research and competitive analysis

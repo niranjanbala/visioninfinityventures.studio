@@ -620,7 +620,7 @@ STARTUP READING LIST
 
 Business Strategy:
 - "The Lean Startup" by Eric Ries
-- "Zero to One" by Peter Thiel
+- "Zero to 1" by Peter Thiel
 - "The Hard Thing About Hard Things" by Ben Horowitz
 - "Good to Great" by Jim Collins
 

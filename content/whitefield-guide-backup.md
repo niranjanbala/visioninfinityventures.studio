@@ -1,7 +1,7 @@
 # Whitefield Guide - Complete Resource
 
 ## Overview
-Whitefield is Bangalore's premier IT corridor and one of the most sought-after locations for startups and established companies. Known for its international community, excellent infrastructure, and proximity to major tech parks, Whitefield offers unique opportunities for entrepreneurs.
+Whitefield is Bangalore's premier IT corridor and 1 of the most sought-after locations for startups and established companies. Known for its international community, excellent infrastructure, and proximity to major tech parks, Whitefield offers unique opportunities for entrepreneurs.
 
 ## Table of Contents
 1. [Location Overview](#location-overview)

@@ -527,4 +527,4 @@ This comprehensive guide is designed for **entrepreneurs building in HSR Layout,
 
 ---
 
-*This 0-to-1 HSR journey is designed to take you from HSR idea to Product-Market Fit systematically. Remember, your timeline is flexible - focus on quality completion rather than speed. Each phase builds on the previous one, creating a solid foundation for sustainable HSR growth.*
+*This 0-to-1 HSR journey is designed to take you from HSR idea to Product-Market Fit systematically. Remember, your timeline is flexible - focus on quality completion rather than speed. Each phase builds on the previous 1, creating a solid foundation for sustainable HSR growth.*

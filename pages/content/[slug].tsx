@@ -174,7 +174,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   // Find the actual file by matching the slug to the generated slugs
   function findFileBySlug(dir: string, targetSlug: string, isContentDir: boolean = false): string | null {
     if (!fs.existsSync(dir)) return null;
-    
     const list = fs.readdirSync(dir);
     for (const file of list) {
       const filePath = path.join(dir, file);
@@ -184,16 +183,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         if (found) return found;
       } else if (file.endsWith('.md')) {
         let generatedSlug: string;
-        
         if (isContentDir) {
-          // For content directory, just use the filename without extension
           generatedSlug = file.replace(/\.[^/.]+$/, '');
         } else {
-          // For india directory, use the old logic
           const relPath = filePath.replace(indiaDir + path.sep, '');
           generatedSlug = relPath.replace(/\.[^/.]+$/, '').replace(/[\/]/g, '-');
         }
-        
         if (generatedSlug === targetSlug) {
           return filePath;
         }
@@ -204,23 +199,59 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   // First try to find in content directory (new structure)
   let filePath = findFileBySlug(contentDir, slug, true);
-  
-  // If not found, try india directory (old structure)
-  if (!filePath) {
-    filePath = findFileBySlug(indiaDir, slug, false);
+  let usePhaseFiles = false;
+  let phaseFilesDir = '';
+  let combinedContent = '';
+  let data: { title?: string } = {};
+
+  if (filePath) {
+    // Check for phase-files subdirectory
+    const baseDir = filePath.replace(/\.md$/, '');
+    const phaseDir = path.join(baseDir, 'phase-files');
+    if (fs.existsSync(phaseDir) && fs.statSync(phaseDir).isDirectory()) {
+      usePhaseFiles = true;
+      phaseFilesDir = phaseDir;
+    }
   }
 
-  if (!filePath || !fs.existsSync(filePath)) {
-    return { notFound: true };
+  if (usePhaseFiles) {
+    // Load intro.md and phase-1.md to phase-10.md
+    const filesToLoad = ['intro.md'];
+    for (let i = 1; i <= 10; i++) {
+      filesToLoad.push(`phase-${i}.md`);
+    }
+    let allContent = '';
+    for (const fname of filesToLoad) {
+      const fpath = path.join(phaseFilesDir, fname);
+      if (fs.existsSync(fpath)) {
+        const fileContent = fs.readFileSync(fpath, 'utf-8');
+        allContent += fileContent + '\n';
+      }
+    }
+    // Use gray-matter on intro only for frontmatter
+    const introPath = path.join(phaseFilesDir, 'intro.md');
+    if (fs.existsSync(introPath)) {
+      const introMatter = matter(fs.readFileSync(introPath, 'utf-8'));
+      data = introMatter.data || {};
+    }
+    combinedContent = allContent;
+  } else {
+    // If not found, try india directory (old structure)
+    if (!filePath) {
+      filePath = findFileBySlug(indiaDir, slug, false);
+    }
+    if (!filePath || !fs.existsSync(filePath)) {
+      return { notFound: true };
+    }
+    const fileContent = fs.readFileSync(filePath, 'utf-8');
+    const matterResult = matter(fileContent);
+    combinedContent = matterResult.content;
+    data = matterResult.data;
   }
-
-  const fileContent = fs.readFileSync(filePath, 'utf-8');
-  const { content, data } = matter(fileContent);
 
   // Extract headings for table of contents
   const headings: Array<{ id: string; text: string; level: number }> = [];
-  const lines = content.split('\n');
-
+  const lines = combinedContent.split('\n');
   lines.forEach((line) => {
     const headingMatch = line.match(/^(#{1,6})\s+(.+)$/);
     if (headingMatch) {
@@ -239,7 +270,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     mangle: false,
   });
 
-  const html = marked(content);
+  const html = marked(combinedContent);
 
   return {
     props: {

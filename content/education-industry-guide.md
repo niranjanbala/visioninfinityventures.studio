@@ -528,4 +528,4 @@ This comprehensive guide is designed for **education entrepreneurs** building Ed
 
 ---
 
-*This 0-to-1 education journey is designed to take you from education idea to Product-Market Fit systematically. Remember, your timeline is flexible - focus on quality completion rather than speed. Each phase builds on the previous one, creating a solid foundation for sustainable education growth.*
+*This 0-to-1 education journey is designed to take you from education idea to Product-Market Fit systematically. Remember, your timeline is flexible - focus on quality completion rather than speed. Each phase builds on the previous 1, creating a solid foundation for sustainable education growth.*

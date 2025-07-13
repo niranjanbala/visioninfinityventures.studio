@@ -1,7 +1,7 @@
 # HSR Layout Guide - Complete Resource
 
 ## Overview
-HSR Layout is one of Bangalore's most vibrant startup hubs, known for its tech-savvy population, excellent infrastructure, and thriving entrepreneurial ecosystem. This comprehensive guide covers everything entrepreneurs need to know about setting up and scaling their business in HSR Layout.
+HSR Layout is 1 of Bangalore's most vibrant startup hubs, known for its tech-savvy population, excellent infrastructure, and thriving entrepreneurial ecosystem. This comprehensive guide covers everything entrepreneurs need to know about setting up and scaling their business in HSR Layout.
 
 ## Table of Contents
 1. [Location Overview](#location-overview)
