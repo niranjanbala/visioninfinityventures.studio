@@ -19,33 +19,76 @@ interface ContentPageProps {
 export default function ContentPage({ content, title, slug, headings }: ContentPageProps) {
   const pageTitle = `${title} | Vision Infinity Ventures`;
 
+  // Check if there's an introduction section
+  const firstHeadingStart = content.search(/<h[1-6][^>]*>/);
+  const hasIntroduction = firstHeadingStart > 0 && content.substring(0, firstHeadingStart).trim();
+  
+  // Create enhanced headings array with introduction if needed
+  const enhancedHeadings = hasIntroduction 
+    ? [{ id: 'introduction', text: 'Introduction', level: 1 }, ...headings]
+    : headings;
+
   // Create slides from headings
   const createSlides = () => {
-    return headings.map((heading, index) => {
+    const slides = [];
+    
+    // Add introduction slide if there's content before the first heading
+    const firstHeadingStart = content.search(/<h[1-6][^>]*>/);
+    if (firstHeadingStart > 0) {
+      const introContent = content.substring(0, firstHeadingStart);
+      if (introContent.trim()) {
+        slides.push(
+          <Slide 
+            key="introduction" 
+            title="Introduction" 
+            id="introduction"
+            background="white"
+          >
+            <div 
+              className="prose prose-lg max-w-none"
+              dangerouslySetInnerHTML={{ __html: introContent }} 
+            />
+          </Slide>
+        );
+      }
+    }
+    
+    // Create slides from headings
+    headings.forEach((heading, index) => {
       // Extract content for this heading
       let slideContent = '';
-      const headingRegex = new RegExp(`<h${heading.level}[^>]*id="${heading.id}"[^>]*>.*?</h${heading.level}>`, 's');
-      const match = content.match(headingRegex);
       
-      if (match) {
-        // Get content after this heading until the next heading of same or higher level
-        const afterHeading = content.substring(content.indexOf(match[0]) + match[0].length);
-        const nextHeadingRegex = new RegExp(`<h[1-${heading.level}][^>]*>`, 'i');
-        const nextMatch = afterHeading.match(nextHeadingRegex);
+      // Find the position of this heading in the HTML content
+      const headingStart = content.indexOf(`<h${heading.level}[^>]*id="${heading.id}"`);
+      if (headingStart !== -1) {
+        // Find the end of this heading tag
+        const headingEnd = content.indexOf('>', headingStart) + 1;
         
-        if (nextMatch) {
-          slideContent = afterHeading.substring(0, nextMatch.index);
+        // Get content after this heading until the next heading of same or higher level
+        const afterHeading = content.substring(headingEnd);
+        
+        // Find the next heading of same or higher level
+        let nextHeadingStart = -1;
+        for (let level = 1; level <= heading.level; level++) {
+          const nextMatch = afterHeading.search(new RegExp(`<h${level}[^>]*>`, 'i'));
+          if (nextMatch !== -1 && (nextHeadingStart === -1 || nextMatch < nextHeadingStart)) {
+            nextHeadingStart = nextMatch;
+          }
+        }
+        
+        if (nextHeadingStart !== -1) {
+          slideContent = afterHeading.substring(0, nextHeadingStart);
         } else {
           slideContent = afterHeading;
         }
       }
 
-      return (
+      slides.push(
         <Slide 
           key={heading.id} 
           title={heading.text} 
           id={heading.id}
-          background={index % 2 === 0 ? "white" : "gray"}
+          background={(slides.length + index) % 2 === 0 ? "white" : "gray"}
         >
           <div 
             className="prose prose-lg max-w-none"
@@ -54,6 +97,8 @@ export default function ContentPage({ content, title, slug, headings }: ContentP
         </Slide>
       );
     });
+    
+    return slides;
   };
 
   return (
@@ -65,7 +110,7 @@ export default function ContentPage({ content, title, slug, headings }: ContentP
       </Head>
       <Navigation />
       
-      <PitchDeckLayout title={title} slug={slug} headings={headings}>
+      <PitchDeckLayout title={title} slug={slug} headings={enhancedHeadings}>
         {createSlides()}
       </PitchDeckLayout>
     </>
